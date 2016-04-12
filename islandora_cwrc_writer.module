@@ -238,6 +238,8 @@ function islandora_cwrc_writer_libraries_info() {
   // display.
   $default_js_properties = $default_css_properties = array(
     ISLANDORA_CWRC_WRITER_RESOURCE_FLAG => TRUE,
+    'weight' => 500,      // Load absolutely last
+    'group' => JS_THEME,  // Load after our theme scripts so require.js doesn't interfere
   );
   return array(
     'CWRC-Writer' => array(
