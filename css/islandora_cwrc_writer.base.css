@@ -4,9 +4,6 @@
  */
 
 /* Allow the CWRC-Writer to be used outside of an iframe */
-body {
-  overflow: auto;
-}
 #cwrc_wrapper {
   overflow: hidden;
 }
