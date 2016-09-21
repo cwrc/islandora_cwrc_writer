@@ -985,11 +985,13 @@ function islandora_cwrc_writer_get_schemas() {
   PREFIX cwrc: <$cwrc_namespace>
   PREFIX fedora-model: <info:fedora/fedora-system:def/model#>
   PREFIX fedora-view: <info:fedora/fedora-system:def/model#>
-  SELECT ?pid ?label ?mapping
+  SELECT ?pid ?label ?mapping ?entityTemplateNote ?entityTemplateCitation
   WHERE {
     ?pid <fedora-model:hasModel> <info:fedora/$content_model> .
     ?pid <fedora-model:label> ?label .
     ?pid <cwrc:hasSchemaMapping> ?mapping .
+    ?pid <cwrc:hasEntityTemplateNote> ?entityTemplateNote .
+    ?pid <cwrc:hasEntityTemplateCitation> ?entityTemplateCitation .
   }
 EOT;
   $connection = islandora_get_tuque_connection();
@@ -1003,11 +1005,17 @@ EOT;
       if (!isset($schema_object['SCHEMA']) || !isset($schema_object['CSS'])) {
         continue;
       }
+      // template info.
+      $entityTemplates = array(
+        'note' => $result['entityTemplateNote']['value'],
+        'citation' => $result['entityTemplateCitation']['value'],
+      );
       // Base info.
       $schema = array(
         'pid' => $schema_object->id,
         'name' => $result['label']['value'],
         'schemaMappingsId' => $result['mapping']['value'],
+        'entityTemplates' => $entityTemplates,
       );
       // Determine where to set the RNG URL from.
       if ($schema_object['SCHEMA']->controlGroup == 'X' || $schema_object['SCHEMA']->controlGroup == 'M') {
