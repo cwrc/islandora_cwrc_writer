@@ -1006,9 +1006,11 @@ EOT;
         continue;
       }
       // template info.
+      $cwrc_writer_path = libraries_get_path(ISLANDORA_CWRC_WRITER_LIB);
       $entityTemplates = array(
-        'note' => $result['entityTemplateNote']['value'],
-        'citation' => $result['entityTemplateCitation']['value'],
+        'note' => file_create_url($cwrc_writer_path."/src/".$result['entityTemplateNote']['value']),
+        'citation' => file_create_url($cwrc_writer_path."/src/".$result['entityTemplateCitation']['value']),
+
       );
       // Base info.
       $schema = array(
