@@ -25,6 +25,10 @@ if (!defined('CWRC_RELS_EXT_URI')) {
 }
 // Defines the schema used to validate a given document / page.
 define('ISLANDORA_CWRC_WRITER_SCHEMA_RELATIONSHIP', 'hasSchema');
+// Defines the template used for 'notes' within a document
+define('ISLANDORA_CWRC_WRITER_SCHEMA_NOTE_TEMPLATE', 'hasEntityTemplateNote');
+// Defines the template used for 'citations' within a document
+define('ISLANDORA_CWRC_WRITER_SCHEMA_CITATION_TEMPLATE', 'hasEntityTemplateCitation');
 // Defines the schema's mapping, it is assumed to be a valid mapping defined
 // by CWRC-Writer.
 define('ISLANDORA_CWRC_WRITER_SCHEMA_MAPPING_RELATIONSHIP', 'hasSchemaMapping');
@@ -328,10 +332,10 @@ function islandora_cwrc_writer_islandora_required_objects(IslandoraTuque $connec
 
   $tei_schema->ingestDatastream($datastream);
   // Add the CSS datastream.
-  $datastream = $tei_schema->constructDatastream('CSS', 'M');
+  $datastream = $tei_schema->constructDatastream('CSS', 'R');
   $datastream->label = 'CSS';
   $datastream->mimetype = 'text/css';
-  $datastream->setContentFromFile("{$cwrc_writer_path}/src/css/tei_converted.css", FALSE);
+  $datastream->url = 'http://cwrc.ca/templates/css/tei.css';
   $tei_schema->ingestDatastream($datastream);
 
   // CWRC TEI Lite Schema.
@@ -350,10 +354,10 @@ function islandora_cwrc_writer_islandora_required_objects(IslandoraTuque $connec
 
   $tei_lite_schema->ingestDatastream($datastream);
   // Add the CSS datastream.
-  $datastream = $tei_lite_schema->constructDatastream('CSS', 'M');
+  $datastream = $tei_lite_schema->constructDatastream('CSS', 'R');
   $datastream->label = 'CSS';
   $datastream->mimetype = 'text/css';
-  $datastream->setContentFromFile("{$cwrc_writer_path}/src/css/tei_converted.css", FALSE);
+  $datastream->url = 'http://cwrc.ca/templates/css/tei.css';
   $tei_lite_schema->ingestDatastream($datastream);
 
   // Events Schema.
@@ -371,10 +375,10 @@ function islandora_cwrc_writer_islandora_required_objects(IslandoraTuque $connec
   $datastream->setContentFromFile("$cwrc_rng_path/orlando_events.rng", FALSE);
   $event_schema->ingestDatastream($datastream);
   // Add the CSS datastream.
-  $datastream = $event_schema->constructDatastream('CSS', 'M');
+  $datastream = $event_schema->constructDatastream('CSS', 'R');
   $datastream->label = 'CSS';
   $datastream->mimetype = 'text/css';
-  $datastream->setContentFromFile("{$cwrc_writer_path}/src/css/orlando_converted.css", FALSE);
+  $datastream->url = 'http://cwrc.ca/templates/css/orlando.css';
   $event_schema->ingestDatastream($datastream);
 
   // Biography Schema.
@@ -392,10 +396,10 @@ function islandora_cwrc_writer_islandora_required_objects(IslandoraTuque $connec
   $datastream->setContentFromFile("$cwrc_rng_path/orlando_biography.rng", FALSE);
   $biography_schema->ingestDatastream($datastream);
   // Add the CSS datastream.
-  $datastream = $biography_schema->constructDatastream('CSS', 'M');
+  $datastream = $biography_schema->constructDatastream('CSS', 'R');
   $datastream->label = 'CSS';
   $datastream->mimetype = 'text/css';
-  $datastream->setContentFromFile("{$cwrc_writer_path}/src/css/orlando_converted.css", FALSE);
+  $datastream->url = 'http://cwrc.ca/templates/css/orlando.css';
   $biography_schema->ingestDatastream($datastream);
 
   // Writing Schema.
@@ -405,19 +409,34 @@ function islandora_cwrc_writer_islandora_required_objects(IslandoraTuque $connec
   $writing_schema->models = ISLANDORA_CWRC_WRITER_SCHEMA_CONTENT_MODEL;
   $writing_schema->relationships->add(FEDORA_RELS_EXT_URI, 'isMemberOfCollection', ISLANDORA_CWRC_WRITER_SCHEMA_COLLECTION);
   islandora_cwrc_writer_set_schema_mapping($writing_schema, ISLANDORA_CWRC_WRITER_SCHEMA_MAPPING_ORLANDO);
+  $writing_schema->relationships->registerNamespace('cwrc', CWRC_RELS_EXT_URI);
+  $writing_schema->relationships->add(
+    CWRC_RELS_EXT_URI, 
+    ISLANDORA_CWRC_WRITER_SCHEMA_NOTE_TEMPLATE,
+    'js/schema/orlando/xml/note_writing.xml' 
+    );
+  $writing_schema->relationships->add(
+    CWRC_RELS_EXT_URI, 
+    ISLANDORA_CWRC_WRITER_SCHEMA_CITATION_TEMPLATE,
+    '' 
+    );
 
   // Add the schema datastream.
-  $datastream = $writing_schema->constructDatastream('SCHEMA', 'M');
+  $datastream = $writing_schema->constructDatastream('SCHEMA', 'R');
   $datastream->label = 'SCHEMA';
   $datastream->mimetype = 'application/xml';
-  $datastream->setContentFromFile("$cwrc_rng_path/orlando_writing.rng", FALSE);
+  $datastream->url = 'http://cwrc.ca/schemas/orlando_writing.rng';
+  //$datastream->setContentFromFile("$cwrc_rng_path/orlando_writing.rng", FALSE);
   $writing_schema->ingestDatastream($datastream);
+
   // Add the CSS datastream.
-  $datastream = $writing_schema->constructDatastream('CSS', 'M');
+  $datastream = $writing_schema->constructDatastream('CSS', 'R');
   $datastream->label = 'CSS';
   $datastream->mimetype = 'text/css';
-  $datastream->setContentFromFile("{$cwrc_writer_path}/src/css/orlando_converted.css", FALSE);
+  $datastream->url = 'http://cwrc.ca/templates/css/orlando.css';
   $writing_schema->ingestDatastream($datastream);
+
+
 
   // CWRC Entry Schema.
   $entry_schema = $connection->repository->constructObject('cwrc:entrySchema');
@@ -434,10 +453,10 @@ function islandora_cwrc_writer_islandora_required_objects(IslandoraTuque $connec
   $datastream->setContentFromFile("$cwrc_rng_path/cwrc_entry.rng", FALSE);
   $entry_schema->ingestDatastream($datastream);
   // Add the CSS datastream.
-  $datastream = $entry_schema->constructDatastream('CSS', 'M');
+  $datastream = $entry_schema->constructDatastream('CSS', 'R');
   $datastream->label = 'CSS';
   $datastream->mimetype = 'text/css';
-  $datastream->setContentFromFile("{$cwrc_writer_path}/src/css/cwrc_converted.css", FALSE);
+  $datastream->url = 'http://cwrc.ca/templates/css/cwrc.css';
   $entry_schema->ingestDatastream($datastream);
 
   // Entity Collection.
