@@ -211,7 +211,7 @@ function islandora_cwrc_writer_default_config() {
         'url' => islandora_cwrc_writer_get_absolute_url('islandora/object/cwrc:eventsSchema/datastream/SCHEMA/view'),
         'cssUrl' => islandora_cwrc_writer_get_absolute_url('islandora/object/cwrc:eventsSchema/datastream/CSS/view'),
         'aliases' => array(
-          'http://cwrc.ca/schemas/orlando_event.rng',
+          'http://cwrc.ca/schemas/orlando_event_v2.rng',
           // XXX: Generate an alias to match the old concatenated structure
           // (without URL-encoding).
           "$base_url/islandora/object/cwrc:eventsSchema/datastream/SCHEMA/view",
@@ -224,7 +224,7 @@ function islandora_cwrc_writer_default_config() {
         'url' => islandora_cwrc_writer_get_absolute_url('islandora/object/cwrc:biographySchema/datastream/SCHEMA/view'),
         'cssUrl' => islandora_cwrc_writer_get_absolute_url('islandora/object/cwrc:biographySchema/datastream/CSS/view'),
         'aliases' => array(
-          'http://cwrc.ca/schemas/orlando_biography.rng',
+          'http://cwrc.ca/schemas/orlando_biography_v2.rng',
           // XXX: Generate an alias to match the old concatenated structure
           // (without URL-encoding).
           "$base_url/islandora/object/cwrc:biographySchema/datastream/SCHEMA/view",
@@ -237,7 +237,7 @@ function islandora_cwrc_writer_default_config() {
         'url' => islandora_cwrc_writer_get_absolute_url('islandora/object/cwrc:writingSchema/datastream/SCHEMA/view'),
         'cssUrl' => islandora_cwrc_writer_get_absolute_url('islandora/object/cwrc:writingSchema/datastream/CSS/view'),
         'aliases' => array(
-          'http://cwrc.ca/schemas/orlando_writing.rng',
+          'http://cwrc.ca/schemas/orlando_writing_v2.rng',
           // XXX: Generate an alias to match the old concatenated structure
           // (without URL-encoding).
           "$base_url/islandora/object/cwrc:writingSchema/datastream/SCHEMA/view",
