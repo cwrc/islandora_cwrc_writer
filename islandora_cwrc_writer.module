@@ -71,6 +71,8 @@ function islandora_cwrc_writer_menu() {
       'access callback' => TRUE,
     ),
     // Stand alone editor rendered in it's own page.
+    // Depricated with embedded editor - 2016-09-27
+    // use islandora_cwrc_document instead
     'cwrc/editor/note.htm' => array(
       'page callback' => 'islandora_cwrc_writer_note',
       'file' => 'includes/callbacks.inc',

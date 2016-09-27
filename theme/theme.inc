@@ -230,6 +230,7 @@ function template_preprocess_islandora_cwrc_writer_note(array &$variables) {
   libraries_load(ISLANDORA_CWRC_WRITER_LIB);
   $module_path = drupal_get_path('module', 'islandora_cwrc_writer');
   // We need to use the same default as the main CWRC-Writer.
+  $variables['settings']['schemaId'] = $variables['schema'];
   _template_preprocess_islandora_cwrc_writer_schema_settings($variables);
   // Override CWRC-Writer Settings / startup behaviour.
   drupal_add_js(array('CWRCWriter' => $variables['settings']), array('type' => 'setting'));

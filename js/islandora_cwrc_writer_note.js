@@ -99,6 +99,8 @@ function cwrcWriterInit($, Writer, Delegator) {
     }, 250);
   }
 
+
+
   config.id = config.id || 'editor';
   config.delegator = Delegator;
   config.mode = 'xml';
@@ -115,4 +117,49 @@ function cwrcWriterInit($, Writer, Delegator) {
       setup_layout_and_modules(writer, EntitiesList, StructureTree, Validation);
     });
   });
+
+  // writer.schemaManager.schemaId and writer.schemaManager.getCurrentSchema().pid
+  // in converter.doProcessing therefore usein Drupal.settings.CWRCWriter.schemaId
+  // 2016-09-26
+  //writer.schemaManager.schemaId = Drupal.settings.CWRCWriter.schemaId;
+
+
+  /**
+  * Override so we can pass a schemaId to converter.processDocument.
+  */
+  writer.fileManager.loadDocumentFromXml = function(docXml) {
+    writer.event('loadingDocument').publish();
+    window.location.hash = '';
+    writer.converter.processDocument(docXml,Drupal.settings.CWRCWriter.schemaId);
+  }
+
+
+  /**
+  * Override so we can pass a schemaId to converter.processDocument.
+  */
+  writer.fileManager.loadDocumentFromUrl = function(docUrl) {
+      writer.currentDocId = docUrl;
+      writer.event('loadingDocument').publish();
+      $.ajax({
+          url: docUrl,
+          type: 'GET',
+          success: function(doc, status, xhr) {
+              window.location.hash = '';
+              writer.converter.processDocument(doc,Drupal.settings.CWRCWriter.schemaId);
+          },
+          error: function(xhr, status, error) {
+              writer.currentDocId = null;
+              writer.dialogManager.show('message', {
+                  title: 'Error',
+                  msg: 'An error ('+status+') occurred and '+docUrl+' was not loaded.',
+                  type: 'error'
+              });
+              writer.event('documentLoaded').publish(false, null);
+          },
+          dataType: 'xml'
+      });
+  };
+
+
+
 }
