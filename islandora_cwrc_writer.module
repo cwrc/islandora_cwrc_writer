@@ -31,7 +31,7 @@ define('ISLANDORA_CWRC_WRITER_SCHEMA_NOTE_ORLANDO_WRITING', 'js/schema/orlando/x
 define('ISLANDORA_CWRC_WRITER_SCHEMA_NOTE_ORLANDO_BIOGRAPHY', 'js/schema/orlando/xml/note_biography.xml');
 define('ISLANDORA_CWRC_WRITER_SCHEMA_NOTE_ORLANDO_EVENT', 'js/schema/orlando/xml/note_events.xml');
 define('ISLANDORA_CWRC_WRITER_SCHEMA_NOTE_TEI', 'js/schema/tei/xml/note.xml');
-define('ISLANDORA_CWRC_WRITER_SCHEMA_NOTE_CWRC', 'js/schema/cwrcEntry/xml/note.xml');
+define('ISLANDORA_CWRC_WRITER_SCHEMA_NOTE_ENTRY', 'js/schema/cwrcEntry/xml/note.xml');
 
 // Defines the template used for 'citations' within a document
 define('ISLANDORA_CWRC_WRITER_SCHEMA_CITATION_TEMPLATE', 'hasEntityTemplateCitation');
@@ -521,7 +521,7 @@ function islandora_cwrc_writer_islandora_required_objects(IslandoraTuque $connec
   $entry_schema->relationships->add(
     CWRC_RELS_EXT_URI, 
     ISLANDORA_CWRC_WRITER_SCHEMA_NOTE_TEMPLATE,
-    ISLANDORA_CWRC_WRITER_SCHEMA_NOTE_CWRC,
+    ISLANDORA_CWRC_WRITER_SCHEMA_NOTE_ENTRY,
     RELS_TYPE_PLAIN_LITERAL
     );
   $entry_schema->relationships->add(

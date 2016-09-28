@@ -606,6 +606,31 @@ function islandora_cwrc_writer_get_schema_mapping(AbstractObject $schema) {
 }
 
 /**
+ * Gets the template mapping from the given schema object if defined.
+ *
+ * The mapping is used to determine what elements and dialog boxes the
+ * CWRC-Writer will use.
+ *
+ * @param AbstractObject $schema
+ *   The schema object to check.
+ *
+ * @return string|bool
+ *   The mapping if the given schema defines one, FALSE otherwise.
+ *   The valid values for a mapping are: 'tei', 'orlando', 'cwrcEntry'.
+ */
+function islandora_cwrc_writer_get_template_mapping(AbstractObject $schema) {
+  $note_rel = $schema->relationships->get(CWRC_RELS_EXT_URI, ISLANDORA_CWRC_WRITER_SCHEMA_NOTE_TEMPLATE);
+  $cite_rel = $schema->relationships->get(CWRC_RELS_EXT_URI, ISLANDORA_CWRC_WRITER_SCHEMA_CITATION_TEMPLATE);
+  if ($note_rel && $cite_rel) {
+    return array(
+      ISLANDORA_CWRC_WRITER_SCHEMA_NOTE_TEMPLATE => $note_rel[0]['object']['value'],
+      ISLANDORA_CWRC_WRITER_SCHEMA_CITATION_TEMPLATE => $cite_rel[0]['object']['value']
+    );
+  }
+  return FALSE;
+}
+
+/**
  * Sets the given Schema objects mapping.
  *
  * @param AbstractObject $schema
@@ -623,6 +648,31 @@ function islandora_cwrc_writer_set_schema_mapping(AbstractObject $schema, $mappi
     }
     $relationships->registerNamespace('cwrc', CWRC_RELS_EXT_URI);
     $relationships->add(CWRC_RELS_EXT_URI, ISLANDORA_CWRC_WRITER_SCHEMA_MAPPING_RELATIONSHIP, $mapping, RELS_TYPE_PLAIN_LITERAL);
+    $relationships->commitRelationships();
+  }
+}
+
+
+/**
+ * Sets the given Schema objects template mapping.
+ *
+ * @param AbstractObject $schema
+ *   The schema object to whose mapping will be set.
+ *
+ * @param array $mapping
+ *   The mapping to use, expected to be valid mapping.
+ */
+function islandora_cwrc_writer_set_template_mapping(AbstractObject $schema, $mapping) {
+  if (islandora_cwrc_writer_is_valid_schema_mapping($mapping[ISLANDORA_CWRC_WRITER_SCHEMA_MAPPING_RELATIONSHIP])) {
+    $relationships = $schema->relationships;
+    $relationships->autoCommit = FALSE;
+    if (islandora_cwrc_writer_get_schema_mapping($schema) !== FALSE) {
+      $relationships->remove(CWRC_RELS_EXT_URI, ISLANDORA_CWRC_WRITER_SCHEMA_NOTE_TEMPLATE);
+      $relationships->remove(CWRC_RELS_EXT_URI, ISLANDORA_CWRC_WRITER_SCHEMA_CITATION_TEMPLATE);
+    }
+    $relationships->registerNamespace('cwrc', CWRC_RELS_EXT_URI);
+    $relationships->add(CWRC_RELS_EXT_URI, ISLANDORA_CWRC_WRITER_SCHEMA_NOTE_TEMPLATE, $mapping[ISLANDORA_CWRC_WRITER_SCHEMA_NOTE_TEMPLATE], RELS_TYPE_PLAIN_LITERAL);
+    $relationships->add(CWRC_RELS_EXT_URI, ISLANDORA_CWRC_WRITER_SCHEMA_CITATION_TEMPLATE, $mapping[ISLANDORA_CWRC_WRITER_SCHEMA_CITATION_TEMPLATE], RELS_TYPE_PLAIN_LITERAL);
     $relationships->commitRelationships();
   }
 }
@@ -653,20 +703,53 @@ function islandora_cwrc_writer_guess_schema_mapping_from_schema($file) {
   if ($doc->documentElement->hasAttribute('ns')) {
     $namespace = $doc->documentElement->getAttribute('ns');
     if ($namespace === 'http://www.tei-c.org/ns/1.0') {
-      return ISLANDORA_CWRC_WRITER_SCHEMA_MAPPING_TEI;
+      return array(
+        ISLANDORA_CWRC_WRITER_SCHEMA_MAPPING_RELATIONSHIP => ISLANDORA_CWRC_WRITER_SCHEMA_MAPPING_TEI,
+        ISLANDORA_CWRC_WRITER_SCHEMA_NOTE_TEMPLATE => ISLANDORA_CWRC_WRITER_SCHEMA_NOTE_TEI,
+        ISLANDORA_CWRC_WRITER_SCHEMA_CITATION_TEMPLATE => ISLANDORA_CWRC_WRITER_SCHEMA_CITATION_TEI 
+      );
     }
   }
+
   // Orlando.
   $xpath = new DOMXPath($doc);
   $xpath->registerNamespace('rng', 'http://relaxng.org/ns/structure/1.0');
-  $results = $xpath->query('//rng:start/rng:element[@name="BIOGRAPHY" or @name="EVENTS" or @name="EVENT" or @name="WRITING"]');
+  // Orlando Biography
+  $results = $xpath->query('//rng:start/rng:element[@name="BIOGRAPHY"]');
   if ($results->length !== 0) {
-    return ISLANDORA_CWRC_WRITER_SCHEMA_MAPPING_ORLANDO;
+    return array(
+      ISLANDORA_CWRC_WRITER_SCHEMA_MAPPING_RELATIONSHIP => ISLANDORA_CWRC_WRITER_SCHEMA_MAPPING_ORLANDO,
+      ISLANDORA_CWRC_WRITER_SCHEMA_NOTE_TEMPLATE => ISLANDORA_CWRC_WRITER_SCHEMA_NOTE_ORLANDO_BIOGRAPHY,
+      ISLANDORA_CWRC_WRITER_SCHEMA_CITATION_TEMPLATE => ''
+    );
   }
+  // Orlando Writing
+  $results = $xpath->query('//rng:start/rng:element[@name="WRITING"]');
+  if ($results->length !== 0) {
+    return array(
+      ISLANDORA_CWRC_WRITER_SCHEMA_MAPPING_RELATIONSHIP => ISLANDORA_CWRC_WRITER_SCHEMA_MAPPING_ORLANDO,
+      ISLANDORA_CWRC_WRITER_SCHEMA_NOTE_TEMPLATE => ISLANDORA_CWRC_WRITER_SCHEMA_NOTE_ORLANDO_WRITING,
+      ISLANDORA_CWRC_WRITER_SCHEMA_CITATION_TEMPLATE => ''
+    );
+  }
+  // Orlando Events  
+  $results = $xpath->query('//rng:start/rng:element[@name="EVENTS" or @name="EVENT"]');
+  if ($results->length !== 0) {
+    return array(
+      ISLANDORA_CWRC_WRITER_SCHEMA_MAPPING_RELATIONSHIP => ISLANDORA_CWRC_WRITER_SCHEMA_MAPPING_ORLANDO,
+      ISLANDORA_CWRC_WRITER_SCHEMA_NOTE_TEMPLATE => ISLANDORA_CWRC_WRITER_SCHEMA_NOTE_ORLANDO_EVENT,
+      ISLANDORA_CWRC_WRITER_SCHEMA_CITATION_TEMPLATE => ''
+    );
+  }
+
   // CWRC Entry.
   $results = $xpath->query('//rng:start/rng:choice/rng:element[@name="CWRC"]');
   if ($results->length !== 0) {
-    return ISLANDORA_CWRC_WRITER_SCHEMA_MAPPING_ENTRY;
+    return array(
+      ISLANDORA_CWRC_WRITER_SCHEMA_MAPPING_RELATIONSHIP => ISLANDORA_CWRC_WRITER_SCHEMA_MAPPING_ENTRY,
+      ISLANDORA_CWRC_WRITER_SCHEMA_NOTE_TEMPLATE => ISLANDORA_CWRC_WRITER_SCHEMA_NOTE_ENTRY,
+      ISLANDORA_CWRC_WRITER_SCHEMA_CITATION_TEMPLATE => ''
+    );
   }
   return FALSE;
 }

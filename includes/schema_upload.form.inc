@@ -307,7 +307,8 @@ function _islandora_cwrc_writer_schema_create_managed(AbstractObject $object, ar
   $ds->setContentFromFile($rng_path, FALSE);
 
   $mapping = islandora_cwrc_writer_guess_schema_mapping_from_schema($rng_path);
-  islandora_cwrc_writer_set_schema_mapping($object, $mapping);
+  islandora_cwrc_writer_set_schema_mapping($object, $mapping[ISLANDORA_CWRC_WRITER_SCHEMA_MAPPING_RELATIONSHIP]);
+  islandora_cwrc_writer_set_template_mapping($object, $mapping);
 
   if ($ds->label !== $rng_file->filename) {
     $ds->label = $rng_file->filename;
@@ -348,11 +349,14 @@ function _islandora_cwrc_writer_schema_create_external(AbstractObject $object, a
     $ds = $object['SCHEMA'];
   }
   $ds->url = $form_state['values']['rng_url'];
+
   // Its possible that we might not be able to download the file again even
   // though it passed the validation step, but for now we're ignoring it.
   $filename = _islandora_cwrc_writer_schema_get_file_from_url($ds->url);
   $mapping = islandora_cwrc_writer_guess_schema_mapping_from_schema($filename);
-  islandora_cwrc_writer_set_schema_mapping($object, $mapping);
+  islandora_cwrc_writer_set_schema_mapping($object, $mapping[ISLANDORA_CWRC_WRITER_SCHEMA_MAPPING_RELATIONSHIP]);
+  islandora_cwrc_writer_set_template_mapping($object, $mapping);
+  
   file_unmanaged_delete($filename);
 
   if (empty($object['CSS'])) {
