@@ -332,23 +332,16 @@ function islandora_cwrc_writer_islandora_required_objects(IslandoraTuque $connec
   // CWRC Basic TEI Schema.
   $tei_schema = $connection->repository->constructObject('cwrc:teiSchema');
   $tei_schema->owner = 'fedoraAdmin';
-  $tei_schema->label = 'CWRC Lite TEI Schema';
+  $tei_schema->label = 'CWRC Basic TEI Schema';
   $tei_schema->models = ISLANDORA_CWRC_WRITER_SCHEMA_CONTENT_MODEL;
   $tei_schema->relationships->add(FEDORA_RELS_EXT_URI, 'isMemberOfCollection', ISLANDORA_CWRC_WRITER_SCHEMA_COLLECTION);
-  $tei_schema->relationships->registerNamespace('cwrc', CWRC_RELS_EXT_URI);
-  islandora_cwrc_writer_set_schema_mapping($tei_schema, ISLANDORA_CWRC_WRITER_SCHEMA_MAPPING_TEI);
-  $tei_schema->relationships->add(
-    CWRC_RELS_EXT_URI, 
-    ISLANDORA_CWRC_WRITER_SCHEMA_NOTE_TEMPLATE,
-    ISLANDORA_CWRC_WRITER_SCHEMA_NOTE_TEI,
-    RELS_TYPE_PLAIN_LITERAL
+  $tmp_mappings = array(
+      ISLANDORA_CWRC_WRITER_SCHEMA_MAPPING_RELATIONSHIP => ISLANDORA_CWRC_WRITER_SCHEMA_MAPPING_TEI,
+      ISLANDORA_CWRC_WRITER_SCHEMA_NOTE_TEMPLATE => ISLANDORA_CWRC_WRITER_SCHEMA_NOTE_TEI,
+      ISLANDORA_CWRC_WRITER_SCHEMA_CITATION_TEMPLATE => ISLANDORA_CWRC_WRITER_SCHEMA_CITATION_TEI,
     );
-  $tei_schema->relationships->add(
-    CWRC_RELS_EXT_URI, 
-    ISLANDORA_CWRC_WRITER_SCHEMA_CITATION_TEMPLATE,
-    ISLANDORA_CWRC_WRITER_SCHEMA_CITATION_TEI,
-    RELS_TYPE_PLAIN_LITERAL
-  );
+  islandora_cwrc_writer_set_schema_mapping($tei_schema, ISLANDORA_CWRC_WRITER_SCHEMA_MAPPING_TEI);
+  islandora_cwrc_writer_set_template_mapping($tei_schema, $tmp_mappings);
 
   // Add the schema datastream.
   $datastream = $tei_schema->constructDatastream('SCHEMA', 'R');
@@ -371,20 +364,13 @@ function islandora_cwrc_writer_islandora_required_objects(IslandoraTuque $connec
   $tei_lite_schema->label = 'CWRC Lite TEI Schema';
   $tei_lite_schema->models = ISLANDORA_CWRC_WRITER_SCHEMA_CONTENT_MODEL;
   $tei_lite_schema->relationships->add(FEDORA_RELS_EXT_URI, 'isMemberOfCollection', ISLANDORA_CWRC_WRITER_SCHEMA_COLLECTION);
-  $tei_lite_schema->relationships->registerNamespace('cwrc', CWRC_RELS_EXT_URI);
-  islandora_cwrc_writer_set_schema_mapping($tei_lite_schema, ISLANDORA_CWRC_WRITER_SCHEMA_MAPPING_TEI);
-  $tei_lite_schema->relationships->add(
-    CWRC_RELS_EXT_URI, 
-    ISLANDORA_CWRC_WRITER_SCHEMA_NOTE_TEMPLATE,
-    ISLANDORA_CWRC_WRITER_SCHEMA_NOTE_TEI,
-    RELS_TYPE_PLAIN_LITERAL
+  $tmp_mappings = array(
+      ISLANDORA_CWRC_WRITER_SCHEMA_MAPPING_RELATIONSHIP => ISLANDORA_CWRC_WRITER_SCHEMA_MAPPING_TEI,
+      ISLANDORA_CWRC_WRITER_SCHEMA_NOTE_TEMPLATE => ISLANDORA_CWRC_WRITER_SCHEMA_NOTE_TEI,
+      ISLANDORA_CWRC_WRITER_SCHEMA_CITATION_TEMPLATE => ISLANDORA_CWRC_WRITER_SCHEMA_CITATION_TEI,
     );
-  $tei_lite_schema->relationships->add(
-    CWRC_RELS_EXT_URI, 
-    ISLANDORA_CWRC_WRITER_SCHEMA_CITATION_TEMPLATE,
-    ISLANDORA_CWRC_WRITER_SCHEMA_CITATION_TEI,
-    RELS_TYPE_PLAIN_LITERAL
-  );
+  islandora_cwrc_writer_set_schema_mapping($tei_lite_schema, ISLANDORA_CWRC_WRITER_SCHEMA_MAPPING_TEI);
+  islandora_cwrc_writer_set_template_mapping($tei_lite_schema, $tmp_mappings);
 
   // Add the schema datastream.
   $datastream = $tei_lite_schema->constructDatastream('SCHEMA', 'R');
@@ -404,23 +390,16 @@ function islandora_cwrc_writer_islandora_required_objects(IslandoraTuque $connec
   // Events Schema.
   $event_schema = $connection->repository->constructObject('cwrc:eventsSchema');
   $event_schema->owner = 'fedoraAdmin';
-  $event_schema->label = 'CWRC Events Schema';
+  $event_schema->label = 'Orlando Events Schema';
   $event_schema->models = ISLANDORA_CWRC_WRITER_SCHEMA_CONTENT_MODEL;
   $event_schema->relationships->add(FEDORA_RELS_EXT_URI, 'isMemberOfCollection', ISLANDORA_CWRC_WRITER_SCHEMA_COLLECTION);
-  $event_schema->relationships->registerNamespace('cwrc', CWRC_RELS_EXT_URI);
-  islandora_cwrc_writer_set_schema_mapping($event_schema, ISLANDORA_CWRC_WRITER_SCHEMA_MAPPING_ORLANDO);
-  $event_schema->relationships->add(
-    CWRC_RELS_EXT_URI, 
-    ISLANDORA_CWRC_WRITER_SCHEMA_NOTE_TEMPLATE,
-    ISLANDORA_CWRC_WRITER_SCHEMA_NOTE_ORLANDO_EVENT,
-    RELS_TYPE_PLAIN_LITERAL
+  $tmp_mappings = array(
+      ISLANDORA_CWRC_WRITER_SCHEMA_MAPPING_RELATIONSHIP => ISLANDORA_CWRC_WRITER_SCHEMA_MAPPING_TEI,
+      ISLANDORA_CWRC_WRITER_SCHEMA_NOTE_TEMPLATE => ISLANDORA_CWRC_WRITER_SCHEMA_NOTE_ORLANDO_EVENT,
+      ISLANDORA_CWRC_WRITER_SCHEMA_CITATION_TEMPLATE => '',
     );
-  $event_schema->relationships->add(
-    CWRC_RELS_EXT_URI, 
-    ISLANDORA_CWRC_WRITER_SCHEMA_CITATION_TEMPLATE,
-    '',
-    RELS_TYPE_PLAIN_LITERAL
-  );
+  islandora_cwrc_writer_set_schema_mapping($event_schema, ISLANDORA_CWRC_WRITER_SCHEMA_MAPPING_ORLANDO);
+  islandora_cwrc_writer_set_template_mapping($event_schema, $tmp_mappings);
 
   // Add the schema datastream.
   $datastream = $event_schema->constructDatastream('SCHEMA', 'R');
@@ -440,23 +419,16 @@ function islandora_cwrc_writer_islandora_required_objects(IslandoraTuque $connec
   // Biography Schema.
   $biography_schema = $connection->repository->constructObject('cwrc:biographySchema');
   $biography_schema->owner = 'fedoraAdmin';
-  $biography_schema->label = 'CWRC Biography Schema';
+  $biography_schema->label = 'Orlando Biography Schema';
   $biography_schema->models = ISLANDORA_CWRC_WRITER_SCHEMA_CONTENT_MODEL;
   $biography_schema->relationships->add(FEDORA_RELS_EXT_URI, 'isMemberOfCollection', ISLANDORA_CWRC_WRITER_SCHEMA_COLLECTION);
-  $biography_schema->relationships->registerNamespace('cwrc', CWRC_RELS_EXT_URI);
-  islandora_cwrc_writer_set_schema_mapping($biography_schema, ISLANDORA_CWRC_WRITER_SCHEMA_MAPPING_ORLANDO);
-  $biography_schema->relationships->add(
-    CWRC_RELS_EXT_URI, 
-    ISLANDORA_CWRC_WRITER_SCHEMA_NOTE_TEMPLATE,
-    ISLANDORA_CWRC_WRITER_SCHEMA_NOTE_ORLANDO_BIOGRAPHY,
-    RELS_TYPE_PLAIN_LITERAL
+  $tmp_mappings = array(
+      ISLANDORA_CWRC_WRITER_SCHEMA_MAPPING_RELATIONSHIP => ISLANDORA_CWRC_WRITER_SCHEMA_MAPPING_TEI,
+      ISLANDORA_CWRC_WRITER_SCHEMA_NOTE_TEMPLATE => ISLANDORA_CWRC_WRITER_SCHEMA_NOTE_ORLANDO_BIOGRAPHY,
+      ISLANDORA_CWRC_WRITER_SCHEMA_CITATION_TEMPLATE => '',
     );
-  $biography_schema->relationships->add(
-    CWRC_RELS_EXT_URI, 
-    ISLANDORA_CWRC_WRITER_SCHEMA_CITATION_TEMPLATE,
-    '',
-    RELS_TYPE_PLAIN_LITERAL
-  );
+  islandora_cwrc_writer_set_schema_mapping($biography_schema, ISLANDORA_CWRC_WRITER_SCHEMA_MAPPING_ORLANDO);
+  islandora_cwrc_writer_set_template_mapping($biography_schema, $tmp_mappings);
 
   // Add the schema datastream.
   $datastream = $biography_schema->constructDatastream('SCHEMA', 'R');
@@ -476,23 +448,16 @@ function islandora_cwrc_writer_islandora_required_objects(IslandoraTuque $connec
   // Writing Schema.
   $writing_schema = $connection->repository->constructObject('cwrc:writingSchema');
   $writing_schema->owner = 'fedoraAdmin';
-  $writing_schema->label = 'CWRC Writing Schema';
+  $writing_schema->label = 'Orlando Writing Schema';
   $writing_schema->models = ISLANDORA_CWRC_WRITER_SCHEMA_CONTENT_MODEL;
   $writing_schema->relationships->add(FEDORA_RELS_EXT_URI, 'isMemberOfCollection', ISLANDORA_CWRC_WRITER_SCHEMA_COLLECTION);
+  $tmp_mappings = array(
+      ISLANDORA_CWRC_WRITER_SCHEMA_MAPPING_RELATIONSHIP => ISLANDORA_CWRC_WRITER_SCHEMA_MAPPING_TEI,
+      ISLANDORA_CWRC_WRITER_SCHEMA_NOTE_TEMPLATE => ISLANDORA_CWRC_WRITER_SCHEMA_NOTE_ORLANDO_WRITING,
+      ISLANDORA_CWRC_WRITER_SCHEMA_CITATION_TEMPLATE => '',
+    );
   islandora_cwrc_writer_set_schema_mapping($writing_schema, ISLANDORA_CWRC_WRITER_SCHEMA_MAPPING_ORLANDO);
-  $writing_schema->relationships->registerNamespace('cwrc', CWRC_RELS_EXT_URI);
-  $writing_schema->relationships->add(
-    CWRC_RELS_EXT_URI, 
-    ISLANDORA_CWRC_WRITER_SCHEMA_NOTE_TEMPLATE,
-    ISLANDORA_CWRC_WRITER_SCHEMA_NOTE_ORLANDO_WRITING,
-    RELS_TYPE_PLAIN_LITERAL
-    );
-  $writing_schema->relationships->add(
-    CWRC_RELS_EXT_URI, 
-    ISLANDORA_CWRC_WRITER_SCHEMA_CITATION_TEMPLATE,
-    '',
-    RELS_TYPE_PLAIN_LITERAL
-    );
+  islandora_cwrc_writer_set_template_mapping($writing_schema, $tmp_mappings);
 
   // Add the schema datastream.
   $datastream = $writing_schema->constructDatastream('SCHEMA', 'R');
@@ -516,20 +481,13 @@ function islandora_cwrc_writer_islandora_required_objects(IslandoraTuque $connec
   $entry_schema->label = 'CWRC Entry Schema';
   $entry_schema->models = ISLANDORA_CWRC_WRITER_SCHEMA_CONTENT_MODEL;
   $entry_schema->relationships->add(FEDORA_RELS_EXT_URI, 'isMemberOfCollection', ISLANDORA_CWRC_WRITER_SCHEMA_COLLECTION);
-  islandora_cwrc_writer_set_schema_mapping($entry_schema, ISLANDORA_CWRC_WRITER_SCHEMA_MAPPING_ENTRY);
-  $entry_schema->relationships->registerNamespace('cwrc', CWRC_RELS_EXT_URI);
-  $entry_schema->relationships->add(
-    CWRC_RELS_EXT_URI, 
-    ISLANDORA_CWRC_WRITER_SCHEMA_NOTE_TEMPLATE,
-    ISLANDORA_CWRC_WRITER_SCHEMA_NOTE_ENTRY,
-    RELS_TYPE_PLAIN_LITERAL
+  $tmp_mappings = array(
+      ISLANDORA_CWRC_WRITER_SCHEMA_MAPPING_RELATIONSHIP => ISLANDORA_CWRC_WRITER_SCHEMA_MAPPING_TEI,
+      ISLANDORA_CWRC_WRITER_SCHEMA_NOTE_TEMPLATE => ISLANDORA_CWRC_WRITER_SCHEMA_NOTE_ENTRY,
+      ISLANDORA_CWRC_WRITER_SCHEMA_CITATION_TEMPLATE => '',
     );
-  $entry_schema->relationships->add(
-    CWRC_RELS_EXT_URI, 
-    ISLANDORA_CWRC_WRITER_SCHEMA_CITATION_TEMPLATE,
-    '',
-    RELS_TYPE_PLAIN_LITERAL
-  );
+  islandora_cwrc_writer_set_schema_mapping($entry_schema, ISLANDORA_CWRC_WRITER_SCHEMA_MAPPING_ENTRY);
+  islandora_cwrc_writer_set_template_mapping($entry_schema, $tmp_mappings);
 
   // Add the schema datastream.
   $datastream = $entry_schema->constructDatastream('SCHEMA', 'R');
