@@ -405,7 +405,7 @@ function islandora_cwrc_writer_islandora_required_objects(IslandoraTuque $connec
   $datastream = $event_schema->constructDatastream('SCHEMA', 'R');
   $datastream->label = 'SCHEMA';
   $datastream->mimetype = 'application/xml';
-  $datastream->url = 'http://cwrc.ca/schemas/orlando_event.rng';
+  $datastream->url = 'http://cwrc.ca/schemas/orlando_event_v2.rng';
   $event_schema->ingestDatastream($datastream);
   // Add the CSS datastream.
   $datastream = $event_schema->constructDatastream('CSS', 'R');
@@ -434,7 +434,7 @@ function islandora_cwrc_writer_islandora_required_objects(IslandoraTuque $connec
   $datastream = $biography_schema->constructDatastream('SCHEMA', 'R');
   $datastream->label = 'SCHEMA';
   $datastream->mimetype = 'application/xml';
-  $datastream->url = 'http://cwrc.ca/schemas/orlando_biography.rng';
+  $datastream->url = 'http://cwrc.ca/schemas/orlando_biography_v2.rng';
   $biography_schema->ingestDatastream($datastream);
   // Add the CSS datastream.
   $datastream = $biography_schema->constructDatastream('CSS', 'R');
@@ -463,7 +463,7 @@ function islandora_cwrc_writer_islandora_required_objects(IslandoraTuque $connec
   $datastream = $writing_schema->constructDatastream('SCHEMA', 'R');
   $datastream->label = 'SCHEMA';
   $datastream->mimetype = 'application/xml';
-  $datastream->url = 'http://cwrc.ca/schemas/orlando_writing.rng';
+  $datastream->url = 'http://cwrc.ca/schemas/orlando_writing_v2.rng';
   $writing_schema->ingestDatastream($datastream);
 
   // Add the CSS datastream.
