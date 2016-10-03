@@ -256,6 +256,17 @@ function cwrcWriterInit($, Writer, Delegator) {
   // Hold onto a reference for safe keeping.
   Drupal.CWRCWriter.writer = writer;
   writer.event('writerInitialized').subscribe(function (writer) {
+
+    /*
+     * code cause the RDF Overlap dialog to appear twice - following codeblock
+     * removed as per (with details on how to implement properly 
+     * https://github.com/cwrc/CWRC-Writer/issues/420 - 2016-10-01
+     * code seems to account for a situation where the user would change 
+     * the schema through the settings dialog, which would require clearing 
+     * of the current document.
+     *
+     */
+/*
     // When we change the schema we should update the document.
     writer.event('schemaLoaded').subscribe(function () {
       var defaultTEI =
@@ -308,6 +319,9 @@ function cwrcWriterInit($, Writer, Delegator) {
         break;
       }
     });
+
+    */ 
+
     // load modules then do the setup
     require(['jquery', 'modules/entitiesList', 'modules/relations', 'modules/selection',
       'modules/structureTree', 'modules/validation'],
