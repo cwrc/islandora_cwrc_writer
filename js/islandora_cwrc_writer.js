@@ -347,7 +347,9 @@ function cwrcWriterInit($, Writer, Delegator) {
         }
         // Replace the show loader with our own function which can handle how we
         // load documents, such that it will be drupal aware.
-        writer.dialogManager.filemanager.showLoader = Drupal.CWRCWriter.dialogManager.filemanager.showLoader($, writer);
+        // broken by https://github.com/cwrc/CWRC-Writer/commit/c6c660bdba21c071098e76e3992e8a50a6658d39
+        //writer.dialogManager.filemanager.showLoader = Drupal.CWRCWriter.dialogManager.filemanager.showLoader($, writer);
+
         // Log all loaded documents.
         writer.event('documentLoaded').subscribe(function () {
           // Update the select field with the new value if possible.
