@@ -74,7 +74,8 @@ function template_process_islandora_cwrc_writer(array &$variables) {
   //drupal_add_js("$module_path/js/dialogs/fileManager.js");
   drupal_add_js("$module_path/js/islandora_cwrc_writer.js");
   drupal_add_css("$module_path/css/islandora_cwrc_writer.base.css");
-  drupal_add_css("$module_path/css/islandora_cwrc_writer.writer.css");
+  // 2016-10-18 deprecated CSS
+  //drupal_add_css("$module_path/css/islandora_cwrc_writer.writer.css");
   // The Widgets should be preprocessed last.
   drupal_add_js(array('CWRCWriter' => $variables['settings']), array('type' => 'setting'));
   islandora_cwrc_writer_preprocess_source_widget($variables);
