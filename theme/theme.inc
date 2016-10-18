@@ -70,7 +70,8 @@ function template_preprocess_islandora_cwrc_writer(array &$variables) {
 function template_process_islandora_cwrc_writer(array &$variables) {
   $module_path = drupal_get_path('module', 'islandora_cwrc_writer');
   // Override the CWRC-Writer/src/js/dialogs/fileManager.js
-  drupal_add_js("$module_path/js/dialogs/fileManager.js");
+  // removed as the load document/template not longer used in the embedded
+  //drupal_add_js("$module_path/js/dialogs/fileManager.js");
   drupal_add_js("$module_path/js/islandora_cwrc_writer.js");
   drupal_add_css("$module_path/css/islandora_cwrc_writer.base.css");
   drupal_add_css("$module_path/css/islandora_cwrc_writer.writer.css");
