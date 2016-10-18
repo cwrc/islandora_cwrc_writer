@@ -24,6 +24,7 @@ function template_preprocess_islandora_cwrc_writer_iframe(array &$variables) {
   $module_path = drupal_get_path('module', 'islandora_cwrc_writer');
   islandora_cwrc_record_new_resources_to_flag();
   drupal_add_css("$module_path/css/islandora_cwrc_writer.iframe.css");
+  drupal_add_css("$module_path/css/islandora_cwrc_writer.writer.css");
   islandora_cwrc_flag_recorded_resources();
 }
 
@@ -72,6 +73,7 @@ function template_process_islandora_cwrc_writer(array &$variables) {
   drupal_add_js("$module_path/js/dialogs/fileManager.js");
   drupal_add_js("$module_path/js/islandora_cwrc_writer.js");
   drupal_add_css("$module_path/css/islandora_cwrc_writer.base.css");
+  drupal_add_css("$module_path/css/islandora_cwrc_writer.writer.css");
   // The Widgets should be preprocessed last.
   drupal_add_js(array('CWRCWriter' => $variables['settings']), array('type' => 'setting'));
   islandora_cwrc_writer_preprocess_source_widget($variables);

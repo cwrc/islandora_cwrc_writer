@@ -274,7 +274,7 @@ function islandora_cwrc_writer_libraries_info() {
         ),
         'css' => array(
           'css/style.css' => $default_css_properties + array('basename' => 'cwrc.style.css'),
-          'css/islandora_style.css' => $default_css_properties,
+          //'css/islandora_style.css' => $default_css_properties,
           'css/layout-default-latest.css' => $default_css_properties,
           'css/cwrcstyle/jquery-ui.css' => $default_css_properties,
           'js/lib/snippet/jquery.snippet.css' => $default_css_properties,
