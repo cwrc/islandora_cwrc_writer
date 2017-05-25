@@ -11,7 +11,7 @@ This module requires the following modules/libraries:
 * [Islandora](https://github.com/Islandora/islandora)
 * [Islandora CWRC Document](https://github.com/cwrc/islandora_cwrc_document)
 * [Islandora Rest](https://github.com/discoverygarden/islandora_rest)
-* [Islandora Ojbect Locking](https://github.com/discoverygarden/islandora_object_lock)
+* [Islandora Object Locking](https://github.com/discoverygarden/islandora_object_lock)
 * [Libraries](https://www.drupal.org/project/libraries)
 * [CWRC-Writer](https://github.com/cwrc/CWRC-Writer) [commit 811f7e0b8458f5899ce023551627a5376385a182 ](https://github.com/cwrc/CWRC-Writer/commit/811f7e0b8458f5899ce023551627a5376385a182)
 * [jQuery Update](https://www.drupal.org/project/jquery_update) Version 1.8
