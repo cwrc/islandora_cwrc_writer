@@ -1,4 +1,4 @@
-# Islandora CWRC-Writer [![Build Status](https://travis-ci.org/discoverygarden/islandora_cwrc_writer.png?branch=7.x)](https://travis-ci.org/discoverygarden/islandora_cwrc_writer)
+# Islandora CWRC-Writer 
 
 ## Introduction
 
@@ -9,9 +9,11 @@ Provides a very minimal wrapper around the CWRC-Writer, so that it can be used i
 This module requires the following modules/libraries:
 
 * [Islandora](https://github.com/Islandora/islandora)
+* [Islandora CWRC Document](https://github.com/cwrc/islandora_cwrc_document)
 * [Islandora Rest](https://github.com/discoverygarden/islandora_rest)
+* [Islandora Ojbect Locking](https://github.com/discoverygarden/islandora_object_lock)
 * [Libraries](https://www.drupal.org/project/libraries)
-* [CWRC-Writer](https://github.com/discoverygarden/CWRC-Writer)
+* [CWRC-Writer](https://github.com/cwrc/CWRC-Writer) [commit 811f7e0b8458f5899ce023551627a5376385a182 ](https://github.com/cwrc/CWRC-Writer/commit/811f7e0b8458f5899ce023551627a5376385a182)
 * [jQuery Update](https://www.drupal.org/project/jquery_update) Version 1.8
 
 jQuery Update is not a hard requirement but is necessary if you want to use the 
@@ -23,7 +25,7 @@ CWRC-Writer is expected to be installed here:
 
 * sites/all/libraries/CWRC-Writer (libraries directory may need to be created)
 
-So far we've only tested up to [commit 7f96f78e77](http://github.com/discoverygarden/CWRC-Writer/tree/7f96f78e774a2594ae8c2a3550549b01022dcc3f)
+So far we've only tested up to CWRC-Writer [commit 811f7e0b8458f5899ce023551627a5376385a182 ](https://github.com/cwrc/CWRC-Writer/commit/811f7e0b8458f5899ce023551627a5376385a182) with islandora_cwrc_writer [commit 810970bcb588a53e907ba306dd362e3bffd89c2a](https://github.com/cwrc/islandora_cwrc_writer/commit/810970bcb588a53e907ba306dd362e3bffd89c2a)
 
 ### Java Servlet Configuration
 
