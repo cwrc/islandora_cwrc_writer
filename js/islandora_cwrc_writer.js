@@ -23,11 +23,17 @@ Drupal.CWRCWriter = Drupal.CWRCWriter || {};
         if(!window.frameElement) {
           $('#cwrc_wrapper').height(1000);
         }
+        
         // Set the baseUrl, which will be used to load all the required javascript documents.
         require.config({
           baseUrl: settings.CWRCWriter.cwrcRootUrl + 'js',
         });
+        
+        var Writer = require('cwrc-writer-base')
 
+        cwrcWriterInit.call(window, $, Writer);
+
+        /*
         // Load required jQuery in noConflict mode.
         define('jquery-private', ['jquery'], function ($) {
           return $.noConflict(true);
@@ -47,6 +53,8 @@ Drupal.CWRCWriter = Drupal.CWRCWriter || {};
             });
           });
         });
+        */
+        
       });
    }
   };
@@ -111,10 +119,9 @@ Drupal.CWRCWriter = Drupal.CWRCWriter || {};
  *
  * @param {jQuery} $
  * @param Writer
- * @param Delegator
  */
 // @ignore style_camel_case:function
-function cwrcWriterInit($, Writer, Delegator) {
+function cwrcWriterInit($, Writer) {
   'use strict';
   var writer, config;
   config = Drupal.settings.CWRCWriter;
@@ -122,6 +129,12 @@ function cwrcWriterInit($, Writer, Delegator) {
   config.delegator = Delegator;
   writer = new Writer(config);
   writer.init(config.id);
+  
+//  var config = require('./config')
+  //  config.storageDialogs = storageDialogs
+//  config.layout = require('./layout-config')
+//  config.entityLookupDialogs = require('cwrc-dialogs')
+  
 
   /**
    * Re-write the Delegator save to have schema info.
