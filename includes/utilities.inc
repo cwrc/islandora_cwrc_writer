@@ -1070,11 +1070,11 @@ function islandora_cwrc_writer_get_schemas() {
   PREFIX fedora-view: <info:fedora/fedora-system:def/model#>
   SELECT ?pid ?label ?mapping ?entityTemplateNote ?entityTemplateCitation
   WHERE {
-    ?pid <fedora-model:hasModel> <info:fedora/$content_model> .
-    ?pid <fedora-model:label> ?label .
-    ?pid <cwrc:hasSchemaMapping> ?mapping .
-    ?pid <cwrc:hasEntityTemplateNote> ?entityTemplateNote .
-    ?pid <cwrc:hasEntityTemplateCitation> ?entityTemplateCitation .
+    ?pid fedora-model:hasModel <info:fedora/$content_model> .
+    ?pid fedora-model:label ?label .
+    ?pid cwrc:hasSchemaMapping ?mapping .
+    ?pid cwrc:hasEntityTemplateNote ?entityTemplateNote .
+    ?pid cwrc:hasEntityTemplateCitation ?entityTemplateCitation .
   }
 EOT;
   $connection = islandora_get_tuque_connection();
