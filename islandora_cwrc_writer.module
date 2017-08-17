@@ -376,14 +376,14 @@ function islandora_cwrc_writer_islandora_required_objects(IslandoraTuque $connec
   $datastream = $tei_lite_schema->constructDatastream('SCHEMA', 'R');
   $datastream->label = 'SCHEMA';
   $datastream->mimetype = 'application/xml';
-  $datastream->url = 'http://cwrc.ca/schemas/cwrc_tei_lite.rng';
+  $datastream->url = 'https://cwrc.ca/schemas/cwrc_tei_lite.rng';
 
   $tei_lite_schema->ingestDatastream($datastream);
   // Add the CSS datastream.
   $datastream = $tei_lite_schema->constructDatastream('CSS', 'R');
   $datastream->label = 'CSS';
   $datastream->mimetype = 'text/css';
-  $datastream->url = 'http://cwrc.ca/templates/css/tei.css';
+  $datastream->url = 'https://cwrc.ca/templates/css/tei.css';
   $tei_lite_schema->ingestDatastream($datastream);
 
   // -----------------------
@@ -405,13 +405,13 @@ function islandora_cwrc_writer_islandora_required_objects(IslandoraTuque $connec
   $datastream = $event_schema->constructDatastream('SCHEMA', 'R');
   $datastream->label = 'SCHEMA';
   $datastream->mimetype = 'application/xml';
-  $datastream->url = 'http://cwrc.ca/schemas/orlando_event_v2.rng';
+  $datastream->url = 'https://cwrc.ca/schemas/orlando_event_v2.rng';
   $event_schema->ingestDatastream($datastream);
   // Add the CSS datastream.
   $datastream = $event_schema->constructDatastream('CSS', 'R');
   $datastream->label = 'CSS';
   $datastream->mimetype = 'text/css';
-  $datastream->url = 'http://cwrc.ca/templates/css/orlando_v2_cwrc-writer.css';
+  $datastream->url = 'https://cwrc.ca/templates/css/orlando_v2_cwrc-writer.css';
   $event_schema->ingestDatastream($datastream);
 
 
@@ -434,13 +434,13 @@ function islandora_cwrc_writer_islandora_required_objects(IslandoraTuque $connec
   $datastream = $biography_schema->constructDatastream('SCHEMA', 'R');
   $datastream->label = 'SCHEMA';
   $datastream->mimetype = 'application/xml';
-  $datastream->url = 'http://cwrc.ca/schemas/orlando_biography_v2.rng';
+  $datastream->url = 'https://cwrc.ca/schemas/orlando_biography_v2.rng';
   $biography_schema->ingestDatastream($datastream);
   // Add the CSS datastream.
   $datastream = $biography_schema->constructDatastream('CSS', 'R');
   $datastream->label = 'CSS';
   $datastream->mimetype = 'text/css';
-  $datastream->url = 'http://cwrc.ca/templates/css/orlando_v2_cwrc-writer.css';
+  $datastream->url = 'https://cwrc.ca/templates/css/orlando_v2_cwrc-writer.css';
   $biography_schema->ingestDatastream($datastream);
 
 
@@ -463,14 +463,14 @@ function islandora_cwrc_writer_islandora_required_objects(IslandoraTuque $connec
   $datastream = $writing_schema->constructDatastream('SCHEMA', 'R');
   $datastream->label = 'SCHEMA';
   $datastream->mimetype = 'application/xml';
-  $datastream->url = 'http://cwrc.ca/schemas/orlando_writing_v2.rng';
+  $datastream->url = 'https://cwrc.ca/schemas/orlando_writing_v2.rng';
   $writing_schema->ingestDatastream($datastream);
 
   // Add the CSS datastream.
   $datastream = $writing_schema->constructDatastream('CSS', 'R');
   $datastream->label = 'CSS';
   $datastream->mimetype = 'text/css';
-  $datastream->url = 'http://cwrc.ca/templates/css/orlando_v2_cwrc-writer.css';
+  $datastream->url = 'https://cwrc.ca/templates/css/orlando_v2_cwrc-writer.css';
   $writing_schema->ingestDatastream($datastream);
 
 
@@ -493,14 +493,14 @@ function islandora_cwrc_writer_islandora_required_objects(IslandoraTuque $connec
   $datastream = $entry_schema->constructDatastream('SCHEMA', 'R');
   $datastream->label = 'SCHEMA';
   $datastream->mimetype = 'application/xml';
-  $datastream->url = 'http://cwrc.ca/schemas/cwrc_entry.rng';
+  $datastream->url = 'https://cwrc.ca/schemas/cwrc_entry.rng';
   $entry_schema->ingestDatastream($datastream);
 
   // Add the CSS datastream.
   $datastream = $entry_schema->constructDatastream('CSS', 'R');
   $datastream->label = 'CSS';
   $datastream->mimetype = 'text/css';
-  $datastream->url = 'http://cwrc.ca/templates/css/cwrc.css';
+  $datastream->url = 'https://cwrc.ca/templates/css/cwrc.css';
   $entry_schema->ingestDatastream($datastream);
 
   // -----------------------

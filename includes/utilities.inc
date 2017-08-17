@@ -178,9 +178,9 @@ function islandora_cwrc_writer_default_config() {
       'googleGeocodeUrl' => islandora_cwrc_writer_get_absolute_url(variable_get('islandora_cwrc_writer_google_geocode_url', 'http://maps.googleapis.com/maps/api/geocode/xml'), array('external' => TRUE)),
       'viafUrl' => islandora_cwrc_writer_get_absolute_url(variable_get('islandora_cwrc_writer_viaf_url', 'viaf')),
       'schemas' => array(
-        'person' => 'http://cwrc.ca/schemas/entities.rng',
-        'organization' => 'http://cwrc.ca/schemas/entities.rng',
-        'place' => 'http://cwrc.ca/schemas/entities.rng',
+        'person' => '//cwrc.ca/schemas/entities.rng',
+        'organization' => '//cwrc.ca/schemas/entities.rng',
+        'place' => '//cwrc.ca/schemas/entities.rng',
       ),
       'repositoryBaseObjectUrl' => islandora_cwrc_writer_get_absolute_url(variable_get('islandora_cwrc_writer_repository_base_object_url', '')),
     ),
@@ -197,8 +197,8 @@ function islandora_cwrc_writer_default_config() {
         'url' => islandora_cwrc_writer_get_absolute_url('islandora/object/cwrc:teiSchema/datastream/SCHEMA/view'),
         'cssUrl' => islandora_cwrc_writer_get_absolute_url('islandora/object/cwrc:teiSchema/datastream/CSS/view'),
         'aliases' => array(
-          'http://cwrc.ca/schema/CWRC-TEIBasic.rng',
-          'http://cwrc.ca/schemas/cwrc_tei_lite.rng',
+          '//cwrc.ca/schema/CWRC-TEIBasic.rng',
+          '//cwrc.ca/schemas/cwrc_tei_lite.rng',
           // XXX: Generate an alias to match the old concatenated structure
           // (without URL-encoding).
           "$base_url/islandora/object/cwrc:teiSchema/datastream/SCHEMA/view",
@@ -211,7 +211,7 @@ function islandora_cwrc_writer_default_config() {
         'url' => islandora_cwrc_writer_get_absolute_url('islandora/object/cwrc:eventsSchema/datastream/SCHEMA/view'),
         'cssUrl' => islandora_cwrc_writer_get_absolute_url('islandora/object/cwrc:eventsSchema/datastream/CSS/view'),
         'aliases' => array(
-          'http://cwrc.ca/schemas/orlando_event_v2.rng',
+          '//cwrc.ca/schemas/orlando_event_v2.rng',
           // XXX: Generate an alias to match the old concatenated structure
           // (without URL-encoding).
           "$base_url/islandora/object/cwrc:eventsSchema/datastream/SCHEMA/view",
@@ -224,7 +224,7 @@ function islandora_cwrc_writer_default_config() {
         'url' => islandora_cwrc_writer_get_absolute_url('islandora/object/cwrc:biographySchema/datastream/SCHEMA/view'),
         'cssUrl' => islandora_cwrc_writer_get_absolute_url('islandora/object/cwrc:biographySchema/datastream/CSS/view'),
         'aliases' => array(
-          'http://cwrc.ca/schemas/orlando_biography_v2.rng',
+          '//cwrc.ca/schemas/orlando_biography_v2.rng',
           // XXX: Generate an alias to match the old concatenated structure
           // (without URL-encoding).
           "$base_url/islandora/object/cwrc:biographySchema/datastream/SCHEMA/view",
@@ -237,7 +237,7 @@ function islandora_cwrc_writer_default_config() {
         'url' => islandora_cwrc_writer_get_absolute_url('islandora/object/cwrc:writingSchema/datastream/SCHEMA/view'),
         'cssUrl' => islandora_cwrc_writer_get_absolute_url('islandora/object/cwrc:writingSchema/datastream/CSS/view'),
         'aliases' => array(
-          'http://cwrc.ca/schemas/orlando_writing_v2.rng',
+          '//cwrc.ca/schemas/orlando_writing_v2.rng',
           // XXX: Generate an alias to match the old concatenated structure
           // (without URL-encoding).
           "$base_url/islandora/object/cwrc:writingSchema/datastream/SCHEMA/view",
@@ -250,7 +250,7 @@ function islandora_cwrc_writer_default_config() {
         'url' => islandora_cwrc_writer_get_absolute_url('islandora/object/cwrc:entrySchema/datastream/SCHEMA/view'),
         'cssUrl' => islandora_cwrc_writer_get_absolute_url('islandora/object/cwrc:entrySchema/datastream/CSS/view'),
         'aliases' => array(
-          'http://cwrc.ca/schemas/cwrc_entry.rng',
+          '//cwrc.ca/schemas/cwrc_entry.rng',
           // XXX: Generate an alias to match the old concatenated structure
           // (without URL-encoding).
           "$base_url/islandora/object/cwrc:entrySchema/datastream/SCHEMA/view",
