@@ -88,10 +88,13 @@ sudo service apache2 restart
 
 ## Touchpoints between CWRC-Writer (JavaScript) and Islandora (cwrc/islandora_cwrc_writer Drupal Module)
 
-Goals: 
+Section goals: 
 * communicate the assumptions built into the integration module about how to interact with CWRC-Writer
 * help determine whether or not a change to CWRC-Writer will be a breaking change to the integration module
 * be updated as CWRC-Writer changes
+
+The islandora_cwrc_writer modules uses code within the "theme", "utilities", and "js" directories to embed CWRC-Writer into a Drupal page by referencing items within the CWRC-Writer directory and overriding aspects (delegator to save/load docs).
+
 
 Touchpoints rev. 2017-08-22 - CWRC-Writer [commit 811f7e0b8458f5899ce023551627a5376385a182 ](https://github.com/cwrc/CWRC-Writer/commit/811f7e0b8458f5899ce023551627a5376385a182) with islandora_cwrc_writer [commit 810970bcb588a53e907ba306dd362e3bffd89c2a](https://github.com/cwrc/islandora_cwrc_writer/commit/810970bcb588a53e907ba306dd362e3bffd89c2a). *Note: These are untested with the NPM version of CWRC-Writer and will need to be updated*
 
