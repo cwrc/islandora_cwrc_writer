@@ -468,8 +468,8 @@ function islandora_cwrc_writer_get_objects_with_cwrc_datastream() {
 PREFIX fedora-view: <info:fedora/fedora-system:def/view#>
 SELECT ?pid
 WHERE {
-  ?disseminationType <fedora-view:disseminationType> <info:fedora/*/CWRC> .
-  ?pid <fedora-view:disseminates> ?disseminationType
+  ?disseminationType fedora-view:disseminationType <info:fedora/*/CWRC> .
+  ?pid fedora-view:disseminates ?disseminationType
 }
 EOT;
   $connection = islandora_get_tuque_connection();
