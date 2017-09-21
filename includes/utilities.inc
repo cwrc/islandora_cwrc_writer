@@ -1067,7 +1067,6 @@ function islandora_cwrc_writer_get_schemas() {
   $query = <<<EOT
   PREFIX cwrc: <$cwrc_namespace>
   PREFIX fedora-model: <info:fedora/fedora-system:def/model#>
-  PREFIX fedora-view: <info:fedora/fedora-system:def/model#>
   SELECT ?pid ?label ?mapping ?entityTemplateNote ?entityTemplateCitation
   WHERE {
     ?pid fedora-model:hasModel <info:fedora/$content_model> .
