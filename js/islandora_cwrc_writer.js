@@ -128,6 +128,8 @@ function cwrcWriterInit($, Writer) {
   
   writer = Writer.writer;
   writer.init(config.id);
+  
+  writer.delegator = {};
 
   /**
    * Re-write the Delegator save to have schema info.
