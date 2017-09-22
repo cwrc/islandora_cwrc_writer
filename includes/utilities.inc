@@ -468,8 +468,8 @@ function islandora_cwrc_writer_get_objects_with_cwrc_datastream() {
 PREFIX fedora-view: <info:fedora/fedora-system:def/view#>
 SELECT ?pid
 WHERE {
-  ?disseminationType <fedora-view:disseminationType> <info:fedora/*/CWRC> .
-  ?pid <fedora-view:disseminates> ?disseminationType
+  ?disseminationType fedora-view:disseminationType <info:fedora/*/CWRC> .
+  ?pid fedora-view:disseminates ?disseminationType
 }
 EOT;
   $connection = islandora_get_tuque_connection();
@@ -1067,14 +1067,13 @@ function islandora_cwrc_writer_get_schemas() {
   $query = <<<EOT
   PREFIX cwrc: <$cwrc_namespace>
   PREFIX fedora-model: <info:fedora/fedora-system:def/model#>
-  PREFIX fedora-view: <info:fedora/fedora-system:def/model#>
   SELECT ?pid ?label ?mapping ?entityTemplateNote ?entityTemplateCitation
   WHERE {
-    ?pid <fedora-model:hasModel> <info:fedora/$content_model> .
-    ?pid <fedora-model:label> ?label .
-    ?pid <cwrc:hasSchemaMapping> ?mapping .
-    ?pid <cwrc:hasEntityTemplateNote> ?entityTemplateNote .
-    ?pid <cwrc:hasEntityTemplateCitation> ?entityTemplateCitation .
+    ?pid fedora-model:hasModel <info:fedora/$content_model> .
+    ?pid fedora-model:label ?label .
+    ?pid cwrc:hasSchemaMapping ?mapping .
+    ?pid cwrc:hasEntityTemplateNote ?entityTemplateNote .
+    ?pid cwrc:hasEntityTemplateCitation ?entityTemplateCitation .
   }
 EOT;
   $connection = islandora_get_tuque_connection();

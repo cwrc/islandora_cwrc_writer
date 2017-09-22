@@ -155,8 +155,8 @@ function islandora_cwrc_writer_schema_upload_form_validate_label(array $element,
   $query = <<<EOT
 PREFIX fedora-model: <info:fedora/fedora-system:def/model#>
 SELECT ?object WHERE {
-  ?object <fedora-model:hasModel> <info:fedora/cwrc:schemaCModel> ;
-          <fedora-model:label> "$label"
+  ?object fedora-model:hasModel <info:fedora/cwrc:schemaCModel> ;
+          fedora-model:label "$label"
 }
 EOT;
   $count = $tuque->repository->ri->countQuery($query, 'sparql');
