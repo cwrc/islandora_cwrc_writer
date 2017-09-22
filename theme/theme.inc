@@ -73,7 +73,6 @@ function template_process_islandora_cwrc_writer(array &$variables) {
   // removed as the load document/template not longer used in the embedded
   //drupal_add_js("$module_path/js/dialogs/fileManager.js");
   drupal_add_js("$module_path/js/islandora_cwrc_writer.js");
-  drupal_add_js("$module_path/js/layout-config.js");
   drupal_add_css("$module_path/css/islandora_cwrc_writer.base.css");
   // 2016-10-18 deprecated CSS
   //drupal_add_css("$module_path/css/islandora_cwrc_writer.writer.css");
