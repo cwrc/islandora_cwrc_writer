@@ -23,61 +23,76 @@ Drupal.CWRCWriter = Drupal.CWRCWriter || {};
       config.layout = Layout;
       config.entityLookupDialogs = Dialogs;
       config.storageDialogs = {
-          save: function() {
-              
+          save: function(writer) {
+              var docId = writer.currentDocId;
+              var docText = writer.converter.getDocumentContent(true);
+              $.ajax({
+                  url : writer.baseUrl+'editor/documents/'+docId,
+                  type: 'PUT',
+                  dataType: 'json',
+                  data: {'doc':docText, 'schema':writer.schemaManager.schemas[writer.schemaManager.schemaId]['pid']},
+                  success: function(data, status, xhr) {
+                      writer.dialogManager.show('message', {
+                          title : 'Document Saved',
+                          msg : docId + ' was saved successfully.'
+                      });
+                      writer.event('documentSaved').publish();
+                      window.location.hash = '#'+docId;
+                      writer.editor.isNotDirty = true;
+                  },
+                  error: function(xhr, status, error) {
+                      displayError(xhr, docId);
+                  }
+              });
           },
-          load: function() {
-              
+          load: function(writer) {
+              var docId;
+              if (config.documents.length) {
+                  // Overlay can completely mangle the hash, so we can't rely on it.
+                  docId = writer.currentDocId ? writer.currentDocId : config.documents[0];
+              }
+              if (docId != null) {
+                  writer.currentDocId = docId;
+                  writer.event('loadingDocument').publish();
+                  
+                  $.ajax({
+                      url: writer.baseUrl+'editor/documents/'+docId,
+                      type: 'GET',
+                      success: function(doc, status, xhr) {
+                          window.location.hash = '#'+docId;
+                          writer.converter.processDocument(xml, config.schemaId);
+                      },
+                      error: function(xhr, status, error) {
+                          w.dialogManager.show('message', {
+                              title: 'Error',
+                              msg: 'An error ('+status+') occurred and '+docId+' was not loaded.',
+                              type: 'error'
+                          });
+                          writer.currentDocId = null;
+                          
+                          w.event('documentLoaded').publish(false, null);
+                      },
+                      dataType: 'xml'
+                  });
+              } else {
+                  writer.dialogManager.show('message', {
+                      title: 'Error',
+                      msg: 'No document to load',
+                      type: 'error'
+                  });
+              }
           }
       }
       
       writer = new Writer(config);
       writer.init(config.id);
       
-      writer.delegator = {};
-
-      /**
-       * Re-write the Delegator save to have schema info.
-       *
-       * @see Delegator.saveDocument
-       */
-      writer.delegator.saveDocument = function(docId, callback) {
-        var docText = writer.converter.getDocumentContent(true);
-        $.ajax({
-          url : writer.baseUrl+'editor/documents/'+docId,
-          type: 'PUT',
-          dataType: 'json',
-          data: {'doc':docText, 'schema':writer.schemaManager.schemas[writer.schemaManager.schemaId]['pid']},
-          success: function(data, status, xhr) {
-            writer.dialogManager.show('message', {
-              title: 'Document Saved',
-              msg: docId+' was saved successfully.'
-            });
-            window.location.hash = '#'+docId;
-            if (callback) {
-              callback.call(writer, true);
-            }
-            writer.event('documentSaved').publish();
-            // Force the state to be clean, which has to be after the
-            // window.location.hash is updated otherwise it may reset to the dirty
-            // state.
-            writer.editor.isNotDirty = true;
-          },
-          error: function(xhr, status, error) {
-            writer.delegator.displayError(xhr, docId);
-            if (callback) {
-              callback.call(writer, false);
-            }
-          }
-        });
-      };
-
         /**
          * Re-write the Delegator save and exit to do things.
          *
          * @see Delegator.saveAndExit
          */
-        writer.delegator.saveAndExit = function(callback) {
+        var saveAndExit = function(callback) {
             var docText = writer.converter.getDocumentContent(true);
             $.ajax({
               url : writer.baseUrl+'editor/documents/'+writer.currentDocId,
@@ -112,7 +127,7 @@ Drupal.CWRCWriter = Drupal.CWRCWriter || {};
         /**
          * Utility function to display errors that occur during REST requests.
          */
-        writer.delegator.displayError = function(xhr, docId) {
+        var displayError = function(xhr, docId) {
             var params = {
                 '@docid': docId
             }
@@ -132,38 +147,6 @@ Drupal.CWRCWriter = Drupal.CWRCWriter || {};
             });
         };
 
-        /**
-         * Override this so we can pass a schemaId to loadDocument.
-         */
-        writer.fileManager.loadInitialDocument = function(start, schemaId) {
-          start = start.substr(1);
-          if (start === 'load') {
-            writer.dialogManager.filemanager.showLoader();
-          } else if (start.match(/^templates\//) !== null) {
-            start += '.xml';
-            writer.fileManager.loadTemplate(start);
-          } else if (start !== '') {
-            writer.fileManager.loadDocument(start, schemaId);
-          } else if (writer.initialConfig.defaultDocument) {
-            writer.fileManager.loadInitialDocument('#'+writer.initialConfig.defaultDocument);
-          }
-        };
-
-        /**
-         * Override this so we can pass a schemaId to processDocument.
-         */
-        writer.fileManager.loadDocument = function(docName, schemaId) {
-          writer.currentDocId = docName;
-          writer.event('loadingDocument').publish();
-          writer.delegator.loadDocument(docName, function(xml) {
-            if (xml != null) {
-              writer.converter.processDocument(xml, schemaId);
-            } else {
-              writer.currentDocId = null;
-            }
-          });
-        };
-
       // Replace the baseUrl after object construction since it's hard-coded.
       writer.baseUrl = config.baseUrl;
       // Hold onto a reference for safe keeping.
@@ -173,14 +156,14 @@ Drupal.CWRCWriter = Drupal.CWRCWriter || {};
           if (typeof config.initial_mode !== 'undefined') {
               if (config.initial_mode == 'annotate') {
                 writer.isAnnotator = true;
-                writer.layout.open('west');
+                writer.layout.ui.open('west');
                 writer.showToolbar();
                 writer.editor.plugins.cwrc_contextmenu.disabled = false;
                 writer.editor.plugins.cwrc_contextmenu.entityTagsOnly = true;
               }
               else if (config.initial_mode == 'read') {
                 writer.isAnnotator = false;
-                writer.layout.open('west');
+                writer.layout.ui.open('west');
                 writer.hideToolbar();
                 writer.editor.plugins.cwrc_contextmenu.disabled = true;
               }
@@ -207,13 +190,8 @@ Drupal.CWRCWriter = Drupal.CWRCWriter || {};
               // as it expects.
               setTimeout(writer.layout.resizeAll, 500);
             });
-            if (config.documents.length) {
-              // Overlay can completely mangle the hash, so we can't rely on it.
-              window.location.hash = writer.currentDocId ? writer.currentDocId : config.documents[0];
-            }
-            if (window.location.hash) {
-              writer.fileManager.loadInitialDocument(window.location.hash, config.schemaId);
-            }
+            
+            writer.storageDialogs.load(writer);
       });
   } // end cwrcWriterInit
   
