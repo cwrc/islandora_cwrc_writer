@@ -9,7 +9,7 @@
 // option for those resources, when using drupal_add_js() or drupal_add_css().
 define('ISLANDORA_CWRC_WRITER_RESOURCE_FLAG', 'cwrc_writer');
 // Shorthand for referencing the CWRC-Writer library.
-define('ISLANDORA_CWRC_WRITER_LIB', 'CWRC-Writer');
+define('ISLANDORA_CWRC_WRITER_LIB', 'CWRC-GitWriter');
 // Content Models.
 define('ISLANDORA_CWRC_WRITER_SCHEMA_CONTENT_MODEL', 'cwrc:schemaCModel');
 define('ISLANDORA_CWRC_WRITER_SCHEMA_COLLECTION', 'cwrc:schemaCollection');
