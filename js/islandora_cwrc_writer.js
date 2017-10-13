@@ -60,7 +60,7 @@ Drupal.CWRCWriter = Drupal.CWRCWriter || {};
                       type: 'GET',
                       success: function(doc, status, xhr) {
                           window.location.hash = '#'+docId;
-                          writer.converter.processDocument(xml, config.schemaId);
+                          writer.converter.processDocument(doc, config.schemaId);
                       },
                       error: function(xhr, status, error) {
                           w.dialogManager.show('message', {
