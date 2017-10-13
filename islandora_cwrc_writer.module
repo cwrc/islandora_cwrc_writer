@@ -256,13 +256,13 @@ function islandora_cwrc_writer_libraries_info() {
     'group' => JS_THEME,  // Load after our theme scripts so require.js doesn't interfere
   );
   return array(
-    'CWRC-Writer' => array(
+    ISLANDORA_CWRC_WRITER_LIB => array(
       'name' => ISLANDORA_CWRC_WRITER_LIB,
       'vendor url' => 'http://www.cwrc.ca/projects/infrastructure-projects/technical-projects/cwrc-writer/',
       'download url' => 'http://github.com/discoverygarden/CWRC-Writer',
       'path' => 'build',
       'version arguments' => array(
-        'file' => 'src/editor_dev.htm',
+        'file' => 'src/html/version.html',
         'pattern' => '/CWRC-Writer v([0-9.]+)/',
         'lines' => 200,
       ),
