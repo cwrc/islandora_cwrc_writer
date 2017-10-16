@@ -256,16 +256,20 @@ function islandora_cwrc_writer_libraries_info() {
     'group' => JS_THEME,  // Load after our theme scripts so require.js doesn't interfere
   );
   return array(
-    'CWRC-Writer' => array(
+    ISLANDORA_CWRC_WRITER_LIB => array(
       'name' => ISLANDORA_CWRC_WRITER_LIB,
       'vendor url' => 'http://www.cwrc.ca/projects/infrastructure-projects/technical-projects/cwrc-writer/',
       'download url' => 'http://github.com/discoverygarden/CWRC-Writer',
       'path' => 'build',
-      'version arguments' => array(
-        'file' => 'src/editor_dev.htm',
-        'pattern' => '/CWRC-Writer v([0-9.]+)/',
-        'lines' => 200,
-      ),
+      // 2017-10-16: disable automatic version detection and replace with
+      // explicit `version` arugment. See `function hook_libraries_info`
+      // for details
+      'version' => '1.0',
+//      'version arguments' => array(
+//        'file' => 'src/html/version.html',
+//        'pattern' => '/CWRC-Writer v([0-9.]+)/',
+//        'lines' => 200,
+//      ),
       'files' => array(
         'js' => array(
           //'js/config.js' => $default_js_properties,
