@@ -136,7 +136,10 @@ Touchpoints rev. 2017-08-22 - CWRC-Writer [commit 811f7e0b8458f5899ce023551627a5
       * GitHub issue: https://github.com/cwrc/CWRC-Writer/issues/215
       * Also in the Notes embedded CWRC-Writer
         * https://github.com/cwrc/islandora_cwrc_writer/blob/58ed10b4e25906cff75e12778a0706026d25d815/js/islandora_cwrc_writer_note.js
-  
+
+6. Update libraries_info hook - version identification
+    * https://github.com/cwrc/islandora_cwrc_writer/blob/989e3e296da73ee853c44fdaf24a151ac0e77062/islandora_cwrc_writer.module#L263-L268
+
 ## To Do
 
 * Look into integrating the [Geonames Service](http://github.com/cwrc/CWRC-Mapping-Timelines-Project/tree/master/geonames)
