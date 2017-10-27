@@ -18,7 +18,7 @@ Drupal.CWRCWriter = Drupal.CWRCWriter || {};
       'use strict';
       var writer, config;
       config = Drupal.settings.CWRCWriter;
-      config.id = config.id || 'editor';
+      config.id = config.id || 'cwrc_parent';
       
       config.layout = Layout;
       config.entityLookupDialogs = Dialogs;
