@@ -209,11 +209,7 @@ Drupal.CWRCWriter = Drupal.CWRCWriter || {};
           $('#cwrc_wrapper').height(1000);
         }
         
-        var url = settings.CWRCWriter.cwrcRootUrl+'js/app.js';
-        $.getScript(url, function() {
-            cwrcWriterInit.call(window, $, Drupal.CWRCWriter, Drupal.CWRCWriterLayout, Drupal.CWRCWriterDialogs);
-        })
-        
+        cwrcWriterInit($, Drupal.CWRCWriter, Drupal.CWRCWriterLayout, Drupal.CWRCWriterDialogs);
       });
    }
   };
