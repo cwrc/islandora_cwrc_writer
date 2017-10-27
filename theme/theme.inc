@@ -52,6 +52,7 @@ function template_preprocess_islandora_cwrc_writer(array &$variables) {
   islandora_cwrc_record_new_resources_to_flag();
   // Load the CWRC-Writer.
   $cwrc_writer_lib = libraries_load(ISLANDORA_CWRC_WRITER_LIB);
+
   $variables['title'] = isset($variables['title']) ? $variables['title'] : "CWRC-Writer v{$cwrc_writer_lib['version']}";
   // Add navigation to the CWRC-Writer header if relevant.
   if (count($variables['documents']) > 1) {
