@@ -14,11 +14,13 @@ Drupal.CWRCWriter = Drupal.CWRCWriter || {};
 (function ($) {
   'use strict';
   
+  var layoutParentId = 'cwrc_parent'; // specified in islandora-cwrc-writer.tpl.php
+  
   function cwrcWriterInit($, Writer, Layout, Dialogs) {
       'use strict';
       var writer, config;
       config = Drupal.settings.CWRCWriter;
-      config.id = config.id || 'cwrc_parent';
+      config.id = config.id || layoutParentId;
       
       config.layout = Layout;
       config.entityLookupDialogs = Dialogs;
@@ -202,11 +204,11 @@ Drupal.CWRCWriter = Drupal.CWRCWriter || {};
   // Triggers the loading of CWRC-Writer.
   Drupal.behaviors.cwrcWriterLoad = {
     attach: function (context, settings) {
-      $("#cwrc_wrapper", context).once('cwrcWriterLoad', function () {
+      $("#"+layoutParentId, context).once('cwrcWriterLoad', function () {
         // We have to set the height explicitly since the CWRC-Writer assumes it
         // has the full body.
         if(!window.frameElement) {
-          $('#cwrc_wrapper').height(1000);
+          $('#'+layoutParentId).height(1000);
         }
         
         cwrcWriterInit($, Drupal.CWRCWriter, Drupal.CWRCWriterLayout, Drupal.CWRCWriterDialogs);
