@@ -65,14 +65,14 @@ Drupal.CWRCWriter = Drupal.CWRCWriter || {};
                           writer.converter.processDocument(doc, config.schemaId);
                       },
                       error: function(xhr, status, error) {
-                          w.dialogManager.show('message', {
+                          writer.dialogManager.show('message', {
                               title: 'Error',
                               msg: 'An error ('+status+') occurred and '+docId+' was not loaded.',
                               type: 'error'
                           });
                           writer.currentDocId = null;
                           
-                          w.event('documentLoaded').publish(false, null);
+                          writer.event('documentLoaded').publish(false, null);
                       },
                       dataType: 'xml'
                   });
