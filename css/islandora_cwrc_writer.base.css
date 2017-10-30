@@ -44,10 +44,4 @@
 .cwrc * #settingsDialog {
   height:auto !important;
 }
-/**
- * CWRC-Writer expects the font-size of body tag to be 10px, this compensates
- *  for that.
- */
-div.cwrc {
-  font-size: 10px;
-}
+
