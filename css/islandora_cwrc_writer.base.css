@@ -40,8 +40,4 @@
 #islandora-cwrc-document-nav li.next a {
   background-position: -42px -1px;
 }
-/* Full height of the settings dialog box from the header */
-.cwrc * #settingsDialog {
-  height:auto !important;
-}
 
