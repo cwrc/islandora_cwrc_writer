@@ -208,7 +208,8 @@ Drupal.CWRCWriter = Drupal.CWRCWriter || {};
         // We have to set the height explicitly since the CWRC-Writer assumes it
         // has the full body.
         if(!window.frameElement) {
-          $('#'+layoutParentId).height(1000);
+          var height = $(document.body).height()-40;
+          $('#'+layoutParentId).height(height);
         }
         
         cwrcWriterInit($, Drupal.CWRCWriter, Drupal.CWRCWriterLayout, Drupal.CWRCWriterDialogs);
