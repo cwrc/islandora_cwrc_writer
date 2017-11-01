@@ -9,7 +9,7 @@
 // option for those resources, when using drupal_add_js() or drupal_add_css().
 define('ISLANDORA_CWRC_WRITER_RESOURCE_FLAG', 'cwrc_writer');
 // Shorthand for referencing the CWRC-Writer library.
-define('ISLANDORA_CWRC_WRITER_LIB', 'CWRC-Writer');
+define('ISLANDORA_CWRC_WRITER_LIB', 'CWRC-GitWriter');
 // Content Models.
 define('ISLANDORA_CWRC_WRITER_SCHEMA_CONTENT_MODEL', 'cwrc:schemaCModel');
 define('ISLANDORA_CWRC_WRITER_SCHEMA_COLLECTION', 'cwrc:schemaCollection');
@@ -256,33 +256,37 @@ function islandora_cwrc_writer_libraries_info() {
     'group' => JS_THEME,  // Load after our theme scripts so require.js doesn't interfere
   );
   return array(
-    'CWRC-Writer' => array(
+    ISLANDORA_CWRC_WRITER_LIB => array(
       'name' => ISLANDORA_CWRC_WRITER_LIB,
       'vendor url' => 'http://www.cwrc.ca/projects/infrastructure-projects/technical-projects/cwrc-writer/',
       'download url' => 'http://github.com/discoverygarden/CWRC-Writer',
-      'path' => 'src',
-      'version arguments' => array(
-        'file' => 'src/editor_dev.htm',
-        'pattern' => '/CWRC-Writer v([0-9.]+)/',
-        'lines' => 200,
-      ),
+      'path' => 'build',
+      // 2017-10-16: disable automatic version detection and replace with
+      // explicit `version` arugment. See `function hook_libraries_info`
+      // for details
+      'version' => '1.0',
+//      'version arguments' => array(
+//        'file' => 'src/html/version.html',
+//        'pattern' => '/CWRC-Writer v([0-9.]+)/',
+//        'lines' => 200,
+//      ),
       'files' => array(
         'js' => array(
-          'js/config.js' => $default_js_properties,
-          'js/lib/require/require.js' => $default_js_properties,
-          'js/layout.js' => $default_js_properties,
+          //'js/config.js' => $default_js_properties,
+          //'js/lib/require/require.js' => $default_js_properties,
+          //'js/layout.js' => $default_js_properties,
+          'js/app.js' => $default_js_properties,
         ),
         'css' => array(
           'css/style.css' => $default_css_properties + array('basename' => 'cwrc.style.css'),
           //'css/islandora_style.css' => $default_css_properties,
           'css/layout-default-latest.css' => $default_css_properties,
-          'css/cwrcstyle/jquery-ui.css' => $default_css_properties,
-          'js/lib/snippet/jquery.snippet.css' => $default_css_properties,
-          'js/lib/cwrcDialogs/css/bootstrap.css' => $default_css_properties,
-          'js/lib/cwrcDialogs/css/datepicker.css' => $default_css_properties,
-          'js/lib/cwrcDialogs/fonts/font-awesome/css/font-awesome.min.css' => $default_css_properties,
-          'js/lib/cwrcDialogs/css/cD.css' => $default_css_properties,
-          'css/cwrcstyle/jquery-ui.css' => $default_css_properties,
+          'css/prism.css' => $default_css_properties,
+          'css/cwrc12/jquery-ui.css' => $default_css_properties,
+          'css/bootstrap/css/bootstrap.css' => $default_css_properties,
+          //'css/cD/css/datepicker.css' => $default_css_properties,
+          'css/cD/css/font-awesome.css' => $default_css_properties,
+          'css/cD/css/cD.css' => $default_css_properties,
         ),
       ),
     ),
