@@ -13,15 +13,10 @@
 #cwrc_main .ui-layout-pane-center {
   overflow: hidden;
 }
-#cwrc_wrapper > .ui-layout-pane-west {
-  border-left: 1px solid #bbb;
-}
-#cwrc_wrapper > .ui-layout-pane-center {
-  border-right: 1px solid #bbb;
-}
 #cwrc_header h2{
   margin: 0 !important;
 }
+
 #islandora-cwrc-document-select-wrapper {
   display: block;
   float: left;
