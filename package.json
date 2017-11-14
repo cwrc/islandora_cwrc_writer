@@ -21,10 +21,9 @@
     "build": "npm run clean && npm run copyfiles && npm run build:js",
     "clean": "rimraf build",
 
-    "copyfiles": "npm run copy:images && npm run copy:css && npm run copy:html && npm run copy:xml && npm run copy:jstree && npm run tinymce:copyskin ",
+    "copyfiles": "npm run copy:images && npm run copy:css && npm run copy:xml && npm run copy:jstree && npm run tinymce:copyskin ",
     "copy:images": "copyfiles -u 3 \"node_modules/cwrc-writer-base/src/img/**/*\" build/",
     "copy:css": "copyfiles -u 3 \"node_modules/cwrc-writer-base/src/css/**/*\" build/ && copyfiles -f node_modules/prismjs/themes/prism.css build/css/",
-    "copy:html": "copyfiles -u 3 \"node_modules/cwrc-writer-base/src/html/*\" build/ && copyfiles -f src/html/index.html build/",
     "copy:xml": "copyfiles -u 5 \"node_modules/cwrc-writer-base/src/js/schema/*/xml/*\" build/schema/",
     "copy:jstree": "copyfiles -f \"node_modules/jstree/dist/themes/default/*\" build/css/jstree/themes/default && copyfiles -f node_modules/cwrc-writer-base/src/css/jstree/themes/cwrc/cwrc.css build/css/jstree/themes/default",
     "tinymce:copyskin": "copyfiles -u 2 \"node_modules/tinymce/skins/lightgray/**/*\" build/js/",
@@ -33,8 +32,8 @@
     "cwrcDialogs:importcss": "copyfiles -f node_modules/cwrc-dialogs/css/cD.css build/css/cD/css/ && copyfiles -f node_modules/cwrc-dialogs/font-awesome/css/font-awesome.css build/css/cD/css/ && copyfiles -f \"node_modules/cwrc-dialogs/font-awesome/fonts/*\" build/css/cD/fonts/",
     "cwrcDialogs:bootstrap": "copyfiles -f node_modules/cwrc-dialogs/css/bootstrap.css build/css/bootstrap/css/ && copyfiles -f \"node_modules/bootstrap/dist/fonts/*\" build/css/bootstrap/fonts/",
     
-    "build:js": "mkdirp build/js && npm run cwrcDialogs && browserify src/js/app.js -o build/js/app.js --debug --verbose -g deamdify -t [ babelify --presets [ es2015 ] ]",
-    "watch": "watchify src/js/app.js --debug -o build/js/app.js --verbose -g deamdify -t [ babelify --presets [ es2015 ] ]"
+    "build:js": "mkdirp build/js && npm run cwrcDialogs && browserify js/app.js -o build/js/app.js --debug --verbose -g deamdify -t [ babelify --presets [ es2015 ] ]",
+    "watch": "watchify js/app.js --debug -o build/js/app.js --verbose -g deamdify -t [ babelify --presets [ es2015 ] ]"
   },
   "dependencies": {
     "bootstrap": "3.3.7",
