@@ -21,9 +21,6 @@
  * @see template_process_islandora_cwrc_writer()
  */
 ?>
-<div id="cwrc_parent"></div>
-<?php 
-/*
 <div id="cwrc_wrapper">
   <div id="cwrc_header" class="cwrc ui-layout-north">
     <h1><?php print $title; ?></h1>
@@ -57,5 +54,3 @@
     </div>
   <?php endif; ?>
 </div>
-*/
-?>
