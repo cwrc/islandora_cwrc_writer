@@ -746,6 +746,6 @@ function cwrc_libraries_get_path($name)
 {
   $modulepath = drupal_get_path('module', 'islandora_cwrc_writer');
   watchdog('bradmodule', 'variable: <pre>%variable</pre>', array( '%variable' => print_r($modulepath, TRUE) ), WATCHDOG_NOTICE);
-  return $modulepath.'/node_modules/cwrc-writer-base';
+  return $modulepath.'/build';
   //return libraries_get_path($name);
 }
