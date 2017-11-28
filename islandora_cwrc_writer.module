@@ -302,8 +302,8 @@ function islandora_cwrc_writer_islandora_required_objects(IslandoraTuque $connec
   $module_path = drupal_realpath($module_path);
   $datastream_path = "$module_path/data/datastreams";
   $cwrc_rng_path = "$module_path/data/CWRC";
-  $cwrc_writer_path = libraries_get_path(ISLANDORA_CWRC_WRITER_LIB);
-  $cwrc_writer_path = drupal_realpath($cwrc_writer_path);
+  $cwrc_writer_path = cwrc_libraries_get_path(ISLANDORA_CWRC_WRITER_LIB);
+  //$cwrc_writer_path = drupal_realpath($cwrc_writer_path);
 
   // -----------------------
   // RDF Schema Content Model.

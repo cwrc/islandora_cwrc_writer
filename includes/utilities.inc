@@ -158,7 +158,7 @@ function islandora_cwrc_writer_embedded_css() {
  */
 function islandora_cwrc_writer_default_config() {
   global $base_url;
-  $cwrc_writer_path = libraries_get_path(ISLANDORA_CWRC_WRITER_LIB);
+  $cwrc_writer_path = cwrc_libraries_get_path(ISLANDORA_CWRC_WRITER_LIB);
   return array(
     'project' => 'cwrc',
     // We need trailing slashes on the urls for CWRC to work.
@@ -706,7 +706,7 @@ function islandora_cwrc_writer_guess_schema_mapping_from_schema($file) {
       return array(
         ISLANDORA_CWRC_WRITER_SCHEMA_MAPPING_RELATIONSHIP => ISLANDORA_CWRC_WRITER_SCHEMA_MAPPING_TEI,
         ISLANDORA_CWRC_WRITER_SCHEMA_NOTE_TEMPLATE => ISLANDORA_CWRC_WRITER_SCHEMA_NOTE_TEI,
-        ISLANDORA_CWRC_WRITER_SCHEMA_CITATION_TEMPLATE => ISLANDORA_CWRC_WRITER_SCHEMA_CITATION_TEI 
+        ISLANDORA_CWRC_WRITER_SCHEMA_CITATION_TEMPLATE => ISLANDORA_CWRC_WRITER_SCHEMA_CITATION_TEI
       );
     }
   }
@@ -732,7 +732,7 @@ function islandora_cwrc_writer_guess_schema_mapping_from_schema($file) {
       ISLANDORA_CWRC_WRITER_SCHEMA_CITATION_TEMPLATE => ''
     );
   }
-  // Orlando Events  
+  // Orlando Events
   $results = $xpath->query('//rng:start/rng:element[@name="EVENTS" or @name="EVENT"]');
   if ($results->length !== 0) {
     return array(
@@ -1088,7 +1088,7 @@ EOT;
         continue;
       }
       // template info.
-      $cwrc_writer_path = libraries_get_path(ISLANDORA_CWRC_WRITER_LIB);
+      $cwrc_writer_path = cwrc_libraries_get_path(ISLANDORA_CWRC_WRITER_LIB);
       $entityTemplates = array(
         'note' => file_create_url($cwrc_writer_path."/src/".$result['entityTemplateNote']['value']),
         'citation' => file_create_url($cwrc_writer_path."/src/".$result['entityTemplateCitation']['value']),
