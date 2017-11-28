@@ -1,0 +1,2 @@
+interface_model_tree_datastructure_for_knockout_ui
+* contains a visual representation of the iterface model that represents the KnockoutJS form elements on the JavaScript generated form and their hierarchical (i.e. nested) properties inherent in the underlying XML serialization
