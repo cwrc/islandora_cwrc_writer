@@ -244,6 +244,7 @@ function islandora_cwrc_writer_theme($existing, $type, $theme, $path) {
 /**
  * Implements hook_libraries_info().
  */
+/*
 function islandora_cwrc_writer_libraries_info() {
   // Any JS / CSS we wish to include as part of the CWRC-Writer iframe display
   // needs to have ISLANDORA_CWRC_WRITER_RESOURCE_FLAG => TRUE, as an option.
@@ -292,6 +293,7 @@ function islandora_cwrc_writer_libraries_info() {
     ),
   );
 }
+*/
 
 /**
  * Implements hook_islandora_required_objects().
