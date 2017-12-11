@@ -52,7 +52,7 @@ function template_preprocess_islandora_cwrc_writer(array &$variables) {
   islandora_cwrc_record_new_resources_to_flag();
   // Load the CWRC-Writer.
   $module_path = drupal_get_path('module', 'islandora_cwrc_writer');
-  drupal_add_js($module_path.'build/js/app.js');
+  drupal_add_js($module_path.'/build/js/app.js');
   $cwrc_writer_lib = libraries_load(ISLANDORA_CWRC_WRITER_LIB);
 
   $variables['title'] = isset($variables['title']) ? $variables['title'] : "CWRC-Writer v{$cwrc_writer_lib['version']}";
