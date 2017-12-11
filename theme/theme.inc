@@ -242,8 +242,9 @@ function template_preprocess_islandora_cwrc_writer_note(array &$variables) {
   _template_preprocess_islandora_cwrc_writer_schema_settings($variables);
   // Override CWRC-Writer Settings / startup behaviour.
   drupal_add_js(array('CWRCWriter' => $variables['settings']), array('type' => 'setting'));
-  drupal_add_js("$module_path/js/islandora_cwrc_writer_note.js");
   drupal_add_js("$module_path/js/app.js");
+  drupal_add_js("$module_path/js/islandora_cwrc_writer_note.js");
+
   islandora_cwrc_flag_recorded_resources();
 }
 
