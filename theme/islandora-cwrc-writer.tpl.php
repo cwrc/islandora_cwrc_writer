@@ -30,14 +30,17 @@
     <div id="westTabs" class="tabs">
       <?php print $western_tabs; ?>
       <div id="westTabsContent" class="ui-layout-content">
-        <?php print $western_tabs_content; ?>
+        <div id="entities"></div>
+        <div id="structure"></div>
+        <div id="relations"></div>
+        <!-- ?php print $western_tabs_content; ? -->
       </div>
     </div>
   </div>
   <div id="cwrc_main" class="ui-layout-center">
     <div class="ui-layout-center">
       <form method="post" action="">
-        <textarea id="editor" name="editor" class="tinymce"></textarea>
+        <textarea id="editor_0" name="editor" class="tinymce"></textarea>
       </form>
     </div>
     <div class="cwrc ui-layout-south">
