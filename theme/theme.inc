@@ -50,9 +50,16 @@ function template_preprocess_islandora_cwrc_writer(array &$variables) {
   // Start recording which resources should be rendered as part of the
   // CWRCWriter.
   islandora_cwrc_record_new_resources_to_flag();
+  
   // Load the CWRC-Writer.
   $module_path = drupal_get_path('module', 'islandora_cwrc_writer');
   drupal_add_js($module_path.'/build/js/app.js');
+  drupal_add_css($module_path.'/build/css/style.css');
+  drupal_add_css($module_path.'/build/css/cwrc12/jquery-ui.css');
+  drupal_add_css($module_path.'/build/css/layout-default-latest.css');
+  drupal_add_css($module_path.'/build/css/prism.css');
+  drupal_add_css($module_path.'/build/css/editor.css');
+  
   $cwrc_writer_lib = libraries_load(ISLANDORA_CWRC_WRITER_LIB);
 
   $variables['title'] = isset($variables['title']) ? $variables['title'] : "CWRC-Writer v{$cwrc_writer_lib['version']}";
@@ -242,8 +249,13 @@ function template_preprocess_islandora_cwrc_writer_note(array &$variables) {
   _template_preprocess_islandora_cwrc_writer_schema_settings($variables);
   // Override CWRC-Writer Settings / startup behaviour.
   drupal_add_js(array('CWRCWriter' => $variables['settings']), array('type' => 'setting'));
-  drupal_add_js("$module_path/js/app.js");
-  drupal_add_js("$module_path/js/islandora_cwrc_writer_note.js");
+  drupal_add_js($module_path.'/build/js/app.js');
+  drupal_add_js($module_path.'/js/islandora_cwrc_writer_note.js');
+  drupal_add_css($module_path.'/build/css/style.css');
+  drupal_add_css($module_path.'/build/css/cwrc12/jquery-ui.css');
+  drupal_add_css($module_path.'/build/css/layout-default-latest.css');
+  drupal_add_css($module_path.'/build/css/prism.css');
+  drupal_add_css($module_path.'/build/css/editor.css');
 
   islandora_cwrc_flag_recorded_resources();
 }
