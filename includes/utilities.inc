@@ -165,6 +165,7 @@ function islandora_cwrc_writer_default_config() {
     'cwrcRootUrl' => file_create_url("$cwrc_writer_path/build/"),
     // The url in which we provide services for.
     'baseUrl' => islandora_cwrc_writer_get_absolute_url('cwrc/'),
+    'validationUrl' => 'https://validator.services.cwrc.ca/validator/validate.html',
     // XML + RDF.
     'mode' => 0,
     'allowOverlap' => TRUE,
