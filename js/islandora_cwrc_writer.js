@@ -89,6 +89,23 @@ Drupal.CWRCWriter = Drupal.CWRCWriter || {};
       writer = new Writer(config);
       writer.init(config.id);
       
+      if (writer.entityLookupDialogs !== undefined) {
+          var cD = writer.entityLookupDialogs;
+          cD.initialize();
+          
+          var conf = config.cwrcDialogs;
+          if (conf.cwrcApiUrl) cD.setCwrcApi(conf.cwrcApiUrl);
+          if (conf.repositoryBaseObjectUrl) cD.setRepositoryBaseObjectURL(conf.repositoryBaseObjectUrl);
+          if (conf.geonameUrl) cD.setGeonameUrl(conf.geonameUrl);
+          if (conf.viafUrl) cD.setViafUrl(conf.viafUrl);
+          if (conf.googleGeocodeUrl) cD.setGoogleGeocodeUrl(conf.googleGeocodeUrl);
+          if (conf.schemas) {
+              if (conf.schemas.person) cD.setPersonSchema(conf.schemas.person);
+              if (conf.schemas.place) cD.setPlaceSchema(conf.schemas.place);
+              if (conf.schemas.organization) cD.setOrganizationSchema(conf.schemas.organization);
+          }
+      }
+      
         /**
          * Re-write the Delegator save and exit to do things.
          *
