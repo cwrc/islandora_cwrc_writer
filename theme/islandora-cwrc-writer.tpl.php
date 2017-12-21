@@ -23,7 +23,7 @@
 ?>
 <div id="cwrc_wrapper">
   <div id="cwrc_header" class="cwrc ui-layout-north">
-    <h1><?php print $title; ?></h1>
+    <a id="titleLink"><?php print $title; ?></a>
     <?php print $header; ?>
   </div>
   <div class="cwrc ui-layout-west">
