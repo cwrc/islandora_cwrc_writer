@@ -16,7 +16,7 @@ Drupal.CWRCWriter = Drupal.CWRCWriter || {};
   
   var layoutParentId = 'cwrc_wrapper'; // specified in islandora-cwrc-writer.tpl.php
   
-  function cwrcWriterInit($, Writer, Layout, Dialogs) {
+  function cwrcWriterInit($, Writer, Dialogs) {
       'use strict';
       var writer, config;
       config = Drupal.settings.CWRCWriter;
