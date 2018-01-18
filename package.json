@@ -25,7 +25,7 @@
     "copy:css": "copyfiles -u 3 \"node_modules/cwrc-writer-base/src/css/**/*\" build/",
     "copy:xml": "copyfiles -u 5 \"node_modules/cwrc-writer-base/src/js/schema/*/xml/*\" build/schema/",
     "copy:jstree": "copyfiles -f \"node_modules/jstree/dist/themes/default/*\" build/css/jstree/themes/default && copyfiles -f node_modules/cwrc-writer-base/src/css/jstree/themes/cwrc/cwrc.css build/css/jstree/themes/default",
-    "tinymce:copyskin": "copyfiles -u 2 \"node_modules/tinymce/skins/lightgray/**/*\" build/js/",
+    "tinymce:copyskin": "copyfiles -u 4 \"node_modules/cwrc-writer-base/node_modules/tinymce/skins/lightgray/**/*\" build/js/",
     "build:js": "mkdirp build/js && browserify js/app.js --standalone GitWriter > build/js/app.js --debug --verbose -g deamdify -t [ babelify --presets [ es2015 ] ]",
     "watch": "watchify js/app.js --debug --standalone GitWriter -o build/js/app.js --verbose -g deamdify -t [ babelify --presets [ es2015 ] ]"
   },
