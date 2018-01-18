@@ -191,7 +191,7 @@ Drupal.CWRCWriter = Drupal.CWRCWriter || {};
               }
               // Force resize, as it's needed when the layout is done in an iframe
               // as it expects.
-              setTimeout(writer.layout.resizeAll, 500);
+              setTimeout(writer.layoutManager.resizeAll, 500);
             });
             
             writer.storageDialogs.load(writer);
