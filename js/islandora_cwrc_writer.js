@@ -22,7 +22,7 @@ Drupal.CWRCWriter = Drupal.CWRCWriter || {};
       config = Drupal.settings.CWRCWriter;
       config.container = config.id || layoutParentId;
       config.modules = {
-          west: ['structure','entities'],
+          west: ['structure','entities','relations'],
           south: ['selection', 'validation']
       };
       config.entityLookupDialogs = Dialogs;
@@ -191,7 +191,7 @@ Drupal.CWRCWriter = Drupal.CWRCWriter || {};
               }
               // Force resize, as it's needed when the layout is done in an iframe
               // as it expects.
-              setTimeout(writer.layoutManager.resizeAll, 500);
+              setTimeout(writer.layoutManager.resizeAll.bind(writer.layoutManager), 500);
             });
             
             writer.storageDialogs.load(writer);
