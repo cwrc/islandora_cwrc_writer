@@ -27,15 +27,15 @@ if (!defined('CWRC_RELS_EXT_URI')) {
 define('ISLANDORA_CWRC_WRITER_SCHEMA_RELATIONSHIP', 'hasSchema');
 // Defines the template used for 'notes' within a document
 define('ISLANDORA_CWRC_WRITER_SCHEMA_NOTE_TEMPLATE', 'hasEntityTemplateNote');
-define('ISLANDORA_CWRC_WRITER_SCHEMA_NOTE_ORLANDO_WRITING', 'js/schema/orlando/xml/note_writing.xml');
-define('ISLANDORA_CWRC_WRITER_SCHEMA_NOTE_ORLANDO_BIOGRAPHY', 'js/schema/orlando/xml/note_biography.xml');
-define('ISLANDORA_CWRC_WRITER_SCHEMA_NOTE_ORLANDO_EVENT', 'js/schema/orlando/xml/note_events.xml');
-define('ISLANDORA_CWRC_WRITER_SCHEMA_NOTE_TEI', 'js/schema/tei/xml/note.xml');
-define('ISLANDORA_CWRC_WRITER_SCHEMA_NOTE_ENTRY', 'js/schema/cwrcEntry/xml/note.xml');
+define('ISLANDORA_CWRC_WRITER_SCHEMA_NOTE_ORLANDO_WRITING', 'note_writing.xml');
+define('ISLANDORA_CWRC_WRITER_SCHEMA_NOTE_ORLANDO_BIOGRAPHY', 'note_biography.xml');
+define('ISLANDORA_CWRC_WRITER_SCHEMA_NOTE_ORLANDO_EVENT', 'note_events.xml');
+define('ISLANDORA_CWRC_WRITER_SCHEMA_NOTE_TEI', 'note.xml');
+define('ISLANDORA_CWRC_WRITER_SCHEMA_NOTE_ENTRY', 'note.xml');
 
 // Defines the template used for 'citations' within a document
 define('ISLANDORA_CWRC_WRITER_SCHEMA_CITATION_TEMPLATE', 'hasEntityTemplateCitation');
-define('ISLANDORA_CWRC_WRITER_SCHEMA_CITATION_TEI', 'js/schema/tei/xml/citation.xml');
+define('ISLANDORA_CWRC_WRITER_SCHEMA_CITATION_TEI', 'citation.xml');
 
 // Defines the schema's mapping, it is assumed to be a valid mapping defined
 // by CWRC-Writer.
@@ -353,14 +353,14 @@ function islandora_cwrc_writer_islandora_required_objects(IslandoraTuque $connec
   $datastream = $tei_schema->constructDatastream('SCHEMA', 'R');
   $datastream->label = 'SCHEMA';
   $datastream->mimetype = 'application/xml';
-  $datastream->url = 'http://cwrc.ca/schemas/cwrc_tei_lite.rng';
+  $datastream->url = 'https://cwrc.ca/schemas/cwrc_tei_lite.rng';
 
   $tei_schema->ingestDatastream($datastream);
   // Add the CSS datastream.
   $datastream = $tei_schema->constructDatastream('CSS', 'R');
   $datastream->label = 'CSS';
   $datastream->mimetype = 'text/css';
-  $datastream->url = 'http://cwrc.ca/templates/css/tei.css';
+  $datastream->url = 'https://cwrc.ca/templates/css/tei.css';
   $tei_schema->ingestDatastream($datastream);
 
   // -----------------------
