@@ -351,14 +351,14 @@ function islandora_cwrc_writer_islandora_required_objects(IslandoraTuque $connec
   $datastream = $tei_schema->constructDatastream('SCHEMA', 'R');
   $datastream->label = 'SCHEMA';
   $datastream->mimetype = 'application/xml';
-  $datastream->url = 'http://cwrc.ca/schemas/cwrc_tei_lite.rng';
+  $datastream->url = 'https://cwrc.ca/schemas/cwrc_tei_lite.rng';
 
   $tei_schema->ingestDatastream($datastream);
   // Add the CSS datastream.
   $datastream = $tei_schema->constructDatastream('CSS', 'R');
   $datastream->label = 'CSS';
   $datastream->mimetype = 'text/css';
-  $datastream->url = 'http://cwrc.ca/templates/css/tei.css';
+  $datastream->url = 'https://cwrc.ca/templates/css/tei.css';
   $tei_schema->ingestDatastream($datastream);
 
   // -----------------------
