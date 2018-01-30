@@ -20,6 +20,7 @@ Drupal.CWRCWriter = Drupal.CWRCWriter || {};
       'use strict';
       var writer, config;
       config = Drupal.settings.CWRCWriter;
+      var baseUrl = config.baseUrl;
       config.container = config.id || layoutParentId;
       config.modules = {
           west: ['structure','entities','relations'],
@@ -31,7 +32,7 @@ Drupal.CWRCWriter = Drupal.CWRCWriter || {};
               var docId = writer.currentDocId;
               var docText = writer.converter.getDocumentContent(true);
               $.ajax({
-                  url : writer.baseUrl+'editor/documents/'+docId,
+                  url : baseUrl+'editor/documents/'+docId,
                   type: 'PUT',
                   dataType: 'json',
                   data: {'doc':docText, 'schema':writer.schemaManager.schemas[writer.schemaManager.schemaId]['pid']},
@@ -60,7 +61,7 @@ Drupal.CWRCWriter = Drupal.CWRCWriter || {};
                   writer.event('loadingDocument').publish();
                   
                   $.ajax({
-                      url: writer.baseUrl+'editor/documents/'+docId,
+                      url: baseUrl+'editor/documents/'+docId,
                       type: 'GET',
                       success: function(doc, status, xhr) {
                           window.location.hash = '#'+docId;
@@ -98,7 +99,7 @@ Drupal.CWRCWriter = Drupal.CWRCWriter || {};
         var saveAndExit = function(callback) {
             var docText = writer.converter.getDocumentContent(true);
             $.ajax({
-              url : writer.baseUrl+'editor/documents/'+writer.currentDocId,
+              url : baseUrl+'editor/documents/'+writer.currentDocId,
               type: 'PUT',
               dataType: 'json',
               data: {'doc':docText, 'schema':writer.schemaManager.schemas[writer.schemaManager.schemaId]['pid']},
@@ -150,8 +151,6 @@ Drupal.CWRCWriter = Drupal.CWRCWriter || {};
             });
         };
 
-      // Replace the baseUrl after object construction since it's hard-coded.
-      writer.baseUrl = config.baseUrl;
       // Hold onto a reference for safe keeping.
       Drupal.CWRCWriter.writer = writer;
       writer.event('writerInitialized').subscribe(function (writer) {

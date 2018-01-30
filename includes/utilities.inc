@@ -162,7 +162,7 @@ function islandora_cwrc_writer_default_config() {
   return array(
     'project' => 'cwrc',
     // We need trailing slashes on the urls for CWRC to work.
-    'cwrcRootUrl' => file_create_url("$cwrc_writer_path/build/"),
+    'cwrcRootUrl' => file_create_url($base_url."/$cwrc_writer_path/"),
     // The url in which we provide services for.
     'baseUrl' => islandora_cwrc_writer_get_absolute_url('cwrc/'),
     'validationUrl' => 'https://validator.services.cwrc.ca/validator/validate.html',
