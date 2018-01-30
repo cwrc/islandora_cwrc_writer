@@ -24,7 +24,8 @@
     "copy:images": "copyfiles -u 3 \"node_modules/cwrc-writer-base/src/img/**/*\" build/",
     "copy:css": "copyfiles -u 3 \"node_modules/cwrc-writer-base/src/css/**/*\" build/",
     "copy:xml": "copyfiles -u 5 \"node_modules/cwrc-writer-base/src/js/schema/*/xml/*\" build/schema/",
-    "build:js": "mkdirp build/js && browserify js/app.js --standalone GitWriter > build/js/app.js --debug --verbose -g deamdify -t [ babelify --presets [ es2015 ] ]",
+    "build:js": "mkdirp build/js && browserify js/app.js --standalone GitWriter > build/js/app.js --verbose -g deamdify -t [ babelify --presets [ es2015 ] ]",
+    "debugbuild:js": "mkdirp build/js && browserify js/app.js --standalone GitWriter > build/js/app.js --debug --verbose -g deamdify -t [ babelify --presets [ es2015 ] ]",
     "watch": "watchify js/app.js --debug --standalone GitWriter -o build/js/app.js --verbose -g deamdify -t [ babelify --presets [ es2015 ] ]"
   },
   "dependencies": {
