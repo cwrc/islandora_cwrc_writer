@@ -1,5 +1,3 @@
-@import url(https://fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext);
-
 html, body {
     height: 100%;
     width: 100%;
@@ -8,10 +6,10 @@ html, body {
     color: #333;
 }
 
-#cwrc_wrapper {
+.cwrcWrapper {
     margin: 0;
     padding: 0;
-    font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
+    font-family: Lato,Arial,Helvetica,sans-serif;
     font-size: 14px;
     color: #333;
     overflow: hidden;
@@ -19,7 +17,7 @@ html, body {
     width: 100%;
 }
 
-#cwrcDialogWrapper {
+.cwrcDialogWrapper {
 	position: fixed;
 	top: 0px;
 	left: 0px;
@@ -27,7 +25,7 @@ html, body {
 }
 
 .cwrc {
-	font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
+	font-family: Lato,Arial,Helvetica,sans-serif;
     font-size: 14px;
 }
 
@@ -57,7 +55,7 @@ html, body {
     margin-right: 5px;
 }
 
-#cwrc_loadingMask {
+.cwrcLoadingMask {
 	width: 100%;
 	height: 100%;
 	background-color: #DDD;
@@ -65,7 +63,7 @@ html, body {
 	z-index: 1000;
 }
 
-#cwrc_loadingMask div {
+.cwrcLoadingMask div {
 	background-image: url(../img/loading_large.gif);
     background-repeat: no-repeat;
     background-position: left center;
@@ -79,53 +77,46 @@ html, body {
 	transform: translate(-50%, -50%);
 }
 
-#cwrc_header {
-	overflow: hidden;
-    color: #eee;
-    background-color: #455372;
-    border-bottom: 1px solid #455372;
+.cwrcHeader {
+	overflow: hidden !important;
+    color: #eee !important;
+    background-color: #455372 !important;
 }
 
-#headerParent {
+.headerParent {
     display: table;
     height: 35px;
     width: 100%;
     overflow: hidden;
 }
 
-#headerButtons {
+.headerButtons {
 	display: table-cell;
     vertical-align: middle;
     text-align: right;
 }
 
-#headerButtons > div {
+.headerButtons > div {
 	display: inline-block;
 	margin-right: 15px;
 	cursor: pointer;
 }
 
-#titleLink {
+.titleLink {
 	display: table-cell;
 	vertical-align: middle;
-	color: #eee;
+	color: #eee !important;
 	font-weight: bold;
-	text-decoration: none;
+	text-decoration: none !important;
 	padding: 0 0 0 40px;
     background-image: url(../img/cwrc_logo_small.png);
     background-repeat: no-repeat;
     background-position: 5px center;
 }
 
-#helpLink {
+.helpLink {
     background: url("../img/help.png") no-repeat scroll 0 0 transparent;
     padding-left: 20px;
-}
-
-#helpDialog iframe {
-    border: none;
-    width: 100%;
-    height: 100%;
 }
 
 .arrowLeft {
@@ -159,14 +150,12 @@ html, body {
 }
 
 
-.cwrc .tabs {
+.cwrc.tabs {
     overflow: hidden;
-    border: none !important;
-    border-right: 1px solid #ccc !important;
     padding: 0 !important;
 }
 
-.cwrc .tabs > ul {
+.cwrc.tabs > ul {
     padding: 3px 2px 0 !important;
     border-top: none !important;
     border-left: none !important;
@@ -176,31 +165,31 @@ html, body {
     background: #eee !important;
 }
 
-.cwrc .tabs > ul li a {
+.cwrc.tabs > ul li a {
     padding: 4px 1em !important;
 }
 
-.cwrc .tabs .ui-tabs-panel {
+.cwrc.tabs .ui-tabs-panel {
     padding: 0 !important;
     height: 100%;
     overflow: auto;
 }
 
-.cwrc .tabs > ul li.ui-state-default {
+.cwrc.tabs > ul li.ui-state-default {
 	border-color: #eee !important;
 	background: #eee !important;
 }
 
-.cwrc .tabs > ul li.ui-state-hover {
+.cwrc.tabs > ul li.ui-state-hover {
 	background: #b3bbbe !important;
 }
 
-.cwrc .tabs > ul li.ui-state-active {
+.cwrc.tabs > ul li.ui-state-active {
 	border-color: #b3bbbe !important;
     background: #ffffff !important;
 }
 
-.cwrc .tabs > ul li.ui-state-active a, .cwrc .tabs > ul li.ui-state-active a:link {
+.cwrc.tabs > ul li.ui-state-active a, .cwrc.tabs > ul li.ui-state-active a:link {
 	color: #333333 !important;
 }
 
@@ -431,95 +420,22 @@ html, body {
     color: #333333 !important;
 }
 
-#validation button {
-    margin: 2px 0 2px 5px;
-}
-
-#validation .message_more {
-    color: #999999;
-}
-
-#validation .message_more:hover {
-    text-decoration: underline;
-}
-
-#currentPath {
-    font-size: 1em;
-}
-
-#currentPath a:hover {
-    text-decoration: underline;
-    cursor: pointer;
-}
-
-#tree {
-    border: none !important;
-}
-
-#search_query {
-    width: 200px;
-}
-
-#files .column {
-    position: absolute;
-    width: 48%;
-    top: 5px;
-    bottom: 5px;
-}
-
-#files .searchResults {
-    position: absolute;
-    top: 20px;
-    width: 95%;
-    bottom: 10px;
-    overflow: auto;
-    border: 1px solid #fff;
-}
-
-#loadingIndicatorDialog .progressBar {
+.loadingIndicatorDialog .progressBar {
 	position: relative;
 }
 
-#loadingIndicatorDialog .progressLabel {
+.loadingIndicatorDialog .progressLabel {
     position: absolute;
     left: 30%;
     top: 4px;
 }
 
-#loadingIndicatorDialog .ui-progressbar-value {
-	background: #6395F2;
-}
-
-#entitiesConverter {
-    display: none;
-}
-
-#searchDialog input[type='text'] {
-    border: 1px solid #ccc;
+.loadingIndicatorDialog .ui-progressbar-value {
+	background: #6395F2 !important;
 }
 
 .ui-accordion-icons > div {
     margin-bottom: 0px !important;
-}
-
-#lookupServices .ui-accordion-content, #keyword_choice .ui-accordion-content {
-    padding: 5px 10px;
-}
-
-#lookup_alternate input[type='radio'] {
-    float: left;
-    margin-top: 10px;
-    margin-left: 0px;
-}
-
-#lookup_alternate input[type='text'] {
-    width: 225px;
-}
-
-#lookup_alternate ins, .attributeWidget ins {
-    display: inline-block !important;
-    vertical-align: bottom;
-    margin-left: -5px;
 }
 
 .searchResultsParent {
@@ -557,23 +473,6 @@ html, body {
     display: block;
 }
 
-#tree_popup {
-    display: none;
-    z-index: 3;
-    position: absolute;
-    width: 175px;
-    border-radius: 4px;
-    background-color: #fff;
-    border: 1px solid #ccc;
-    padding: 0;
-}
-
-#tree_popup ul {
-    padding: 5px;
-    margin: 0;
-    list-style: none;
-}
-
 .unselectable {
    -moz-user-select: none;
    -khtml-user-select: none;
@@ -582,46 +481,13 @@ html, body {
    user-select: none;
 }
 
-
-#correctionDialog p, #noteDialog p {
-    margin: 5px 0;
+.annotationDialog {
+	display: flex;
+	flex-direction: column;
 }
 
-#note_type {
-    margin-bottom: 10px;
-}
-
-#note_access {
-    margin-top: 10px;
-}
-
-#correctionDialog textarea, #citationDialog textarea {
-    width: 350px;
-    height: 100px;
-}
-
-#keyword_choice {
-    height: 300px;
-}
-
-.annotationDialog .leftPanel {
-    position: absolute;
-    top: 2%;
-    bottom: 2%;
-    left: 15px;
-    right: 50%;
-    border-right: 1px solid #aaa;
-    padding-right: 15px;
-    overflow: auto;
-}
-
-.annotationDialog .rightPanel {
-    position: absolute;
-    top: 15px;
-    bottom: 15px;
-    left: 50%;
-    right: 15px;
-    padding-left: 15px;
+.annotationDialog .writerParent {
+	flex: 1;
 }
 
 .annotationDialog p {
@@ -650,41 +516,12 @@ html, body {
     height: 200px;
 }
 
-#correctionDialog div {
-    margin-bottom: 10px;
-}
-
-#titleDialog #title_level label span {
-    font-size: 1em;
-    display: block;
-    margin-left: 21px;
-}
-
-#titleDialog #title_level input[type="radio"] {
-    top: 8px;
-    position: relative;
-    margin-top: 8px;
-}
-
-#titleDialog #title_level input[type="radio"]:first-of-type {
-    margin-top: -2px;
-}
-
-#schemaDialog {
+.schemaDialog {
     padding: 0.5em 0.5em 0;
 }
 
-#schemaDialog .content {
+.schemaDialog .content {
     margin-bottom: 0;
-}
-
-#keywordDialog .keywordRow input {
-    vertical-align: middle;
-    width: 150px;
-}
-
-#keywordDialog .keywordRow button {
-    margin-left: 5px;
 }
 
 .cwrc .popup.ui-dialog .ui-widget-header {
@@ -777,6 +614,17 @@ html, body {
     margin-right: 5px;
 }
 
+.attributeWidget .schemaHelp h3 {
+	font-weight: bold;
+	margin-bottom: 5px;
+}
+
+.attributeSelector h2, .triplesDialog h2 {
+    padding: 3px;
+    background-color: #ccc;
+    border-bottom: 1px solid #999;
+}
+
 .cwrc .required {
     color: red;
 }
@@ -786,128 +634,79 @@ html, body {
     background-color: #fff;
 }
 
-#personName input {
-    width: 90px;
-    margin-right: 5px;
+.triplesDialog .columns {
+	width: 100%;
+	height: 80%;
 }
 
-#datePicker {
-    border: 1px solid #ccc;
+.triplesDialog .column {
+	border: 1px solid #999;
+	height: 100%;
+    display: flex;
+    flex-direction: column;
+    float: left;
+    width: 31%;
+    margin-right: 1%;
 }
 
-#tripleDialog {
-    overflow: hidden;
-}
-
-#tripleColumnsParent {
-    position: absolute;
-    top: 0;
-    bottom: 60px;
-    left: 0;
-    right: 0;
-    margin-bottom: 0;
-}
-
-#currentRelation {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    margin-bottom: 0;
+.triplesDialog .currentRelation {
+    height: 15%;
     text-align: center;
 }
 
-#currentRelation p {
+.triplesDialog .currentRelation p {
     margin: 5px;
     font-size: 1em;
     height: 20px;
 }
 
-#tripleColumnsParent .column {
-    border: 1px solid #999;
-    width: 32%;
-    position: absolute;
-    top: 5px;
-    bottom: 0;
-    margin-bottom: 0;
+.triplesDialog .column > ul {
+    flex: 1;
+    overflow: auto;
 }
 
-#subjectColumn {
-    left: 0.75%;
-}
-
-#predicateColumn {
-    left: 34%;
-}
-
-#objectColumn {
-    left: 67%;
-}
-
-#tripleDialog h2, .attributeSelector h2 {
-    padding: 3px;
-    background-color: #ccc;
-    height: 16px;
-    border-bottom: 1px solid #999;
-}
-
-#tripleColumnsParent .column > ul {
-    overflow-y: auto;
-    overflow-x: hidden;
-    position: absolute;
-    top: 23px;
-    bottom: 27px;
-    left: 0;
-    right: 0;
-}
-
-#tripleColumnsParent .column > ul li {
+.triplesDialog .column > ul li {
     white-space: nowrap;
 }
 
-#tripleColumnsParent .entitiesList li.selected {
+.triplesDialog .entitiesList li.selected {
     height: 22px;
 }
 
-#predicateColumn ul {
+.triplesDialog .column.predicate ul {
     list-style: none;
     margin: 0;
     padding: 0;
 }
 
-#predicateColumn li {
+.triplesDialog .column.predicate li {
     padding: 3px;
     background-color: #fff;
 }
 
-#predicateColumn li:hover {
+.triplesDialog .column.predicate li:hover {
     background-color: #ddd;
     cursor: pointer;
 }
 
-#predicateColumn li.selected {
+.triplesDialog .column.predicate li.selected {
     background-color: #ccc;
 }
 
-#tripleColumnsParent .customEntry {
-    height: 22px;
+.triplesDialog .customEntry {
     border-top: 1px solid #999;
     background-color: #ccc;
     padding: 2px;
     margin: 0;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
     text-align: center;
 }
 
-#tripleColumnsParent .customEntry input {
+.triplesDialog .customEntry input {
     width: 95%;
     text-align: left;
 }
 
-#headerDialog div {
+.headerDialog div {
     position: absolute;
     top: 5px;
     right: 5px;
@@ -915,16 +714,11 @@ html, body {
     left: 5px;
 }
 
-#headerDialog textarea {
+.headerDialog textarea {
     width: 100%;
     height: 100%;
     margin: 0;
     padding: 0;
-}
-
-#editSourceDialog textarea {
-    width: 98%;
-    height: 98%;
 }
 
 /* used by schematags plugin */
@@ -1023,50 +817,6 @@ html, body {
     font-size: 1em;
 }
 
-.mceToolbar .person {
-    border-bottom: 2px solid #FF0000 !important;
-}
-
-.mceToolbar .place {
-    border-bottom: 2px solid #009999 !important;
-}
-
-.mceToolbar .date {
-    border-bottom: 2px solid #FF7400 !important;
-}
-
-.mceToolbar .event {
-    border-bottom: 2px solid #00CC00 !important;
-}
-
-.mceToolbar .org {
-    border-bottom: 2px solid #3914AF !important;
-}
-
-.mceToolbar .citation {
-    border-bottom: 2px solid #CD0074 !important;
-}
-
-.mceToolbar .note {
-    border-bottom: 2px solid #0D56A6 !important;
-}
-
-.mceToolbar .textTitle {
-    border-bottom: 2px solid #debb00 !important;
-}
-
-.mceToolbar .correction {
-    border-bottom: 2px solid #FF3300 !important;
-}
-
-.mceToolbar .keyword {
-    border-bottom: 2px solid #008040 !important;
-}
-
-.mceToolbar .link {
-    border-bottom: 2px solid #3366ff !important;
-}
-
 /* tinymce context menu overrides */
 .mce-cwrc .mce-menu-item {
 	padding: 4px 2px;
@@ -1097,6 +847,11 @@ div.mce-cwrc div.mce-menu-item-sep, div.mce-cwrc div.mce-menu-item-sep:hover {
 
 
 /* tinymce overrides */
+.mce-tinymce.mce-container {
+	overflow: hidden; /* needed to prevent scrollbars from jquery dialogs */
+	border-width: 0px !important;
+}
+
 div.mceDropDown {
     box-shadow: 1px 1px 2px #ccc;
 }
