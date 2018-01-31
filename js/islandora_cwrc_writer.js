@@ -157,17 +157,13 @@ Drupal.CWRCWriter = Drupal.CWRCWriter || {};
 
           if (typeof config.initial_mode !== 'undefined') {
               if (config.initial_mode == 'annotate') {
-                writer.isAnnotator = true;
-                writer.layout.ui.open('west');
-                writer.showToolbar();
-                writer.editor.plugins.cwrc_contextmenu.disabled = false;
-                writer.editor.plugins.cwrc_contextmenu.entityTagsOnly = true;
+                writer.layoutManager.activateAnnotator();
+                writer.layoutManager.showModule('entities');
+                
               }
               else if (config.initial_mode == 'read') {
-                writer.isAnnotator = false;
-                writer.layout.ui.open('west');
-                writer.hideToolbar();
-                writer.editor.plugins.cwrc_contextmenu.disabled = true;
+                writer.layoutManager.activateReader();
+                writer.layoutManager.showModule('structure');
               }
             }
             // Replace the show loader with our own function which can handle how we
