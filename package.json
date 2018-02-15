@@ -30,7 +30,7 @@
   },
   "dependencies": {
     "cwrc-public-entity-dialogs": "^1.2.3",
-    "cwrc-writer-base": "2.11.2",
+    "cwrc-writer-base": "2.12.0",
     "dbpedia-entity-lookup": "^0.2.0",
     "getty-entity-lookup": "^1.4.0",
     "viaf-entity-lookup": "^1.2.0",
