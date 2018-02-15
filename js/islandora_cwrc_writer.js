@@ -24,7 +24,8 @@ Drupal.CWRCWriter = Drupal.CWRCWriter || {};
       config.container = config.id || layoutParentId;
       config.modules = {
           west: ['structure','entities','relations'],
-          south: ['selection', 'validation']
+          south: ['selection', 'validation'],
+          east: ['imageViewer']
       };
       config.entityLookupDialogs = Dialogs;
       config.storageDialogs = {
