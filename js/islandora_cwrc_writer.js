@@ -158,12 +158,12 @@ Drupal.CWRCWriter = Drupal.CWRCWriter || {};
 
           if (typeof config.initial_mode !== 'undefined') {
               if (config.initial_mode == 'annotate') {
-                writer.layoutManager.activateAnnotator();
+//                writer.layoutManager.activateAnnotator();
                 writer.layoutManager.showModule('entities');
                 
               }
               else if (config.initial_mode == 'read') {
-                writer.layoutManager.activateReader();
+//                writer.layoutManager.activateReader();
                 writer.layoutManager.showModule('structure');
               }
             }
