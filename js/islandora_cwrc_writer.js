@@ -21,6 +21,7 @@ Drupal.CWRCWriter = Drupal.CWRCWriter || {};
       var writer, config;
       config = Drupal.settings.CWRCWriter;
       var baseUrl = config.baseUrl;
+      config.buttons1 += ',|,fullscreen';
       config.container = config.id || layoutParentId;
       config.modules = {
           west: ['structure','entities','relations'],
