@@ -14,7 +14,7 @@ function islandora_cwrc_writer_requirements($phase) {
     'cwrc' => array('title' => $t('CWRC-Writer Library')),
   );
   $library = array(
-    'library path' => libraries_get_path('CWRC-Writer'),
+    'library path' => cwrc_libraries_get_path('CWRC-Writer'),
   );
   $options = array(
     'file' => 'src/editor_dev.htm',

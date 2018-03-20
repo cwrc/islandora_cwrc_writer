@@ -2,7 +2,7 @@
 
 ## Introduction
 
-Provides a very minimal wrapper around the CWRC-Writer, so that it can be used in an islandora context.
+Provides a very minimal wrapper around the CWRC-Writer, so that it can be used in an Islandora context.
 
 ## Requirements
 
@@ -13,19 +13,13 @@ This module requires the following modules/libraries:
 * [Islandora Rest](https://github.com/discoverygarden/islandora_rest)
 * [Islandora Object Locking](https://github.com/discoverygarden/islandora_object_lock)
 * [Libraries](https://www.drupal.org/project/libraries)
-* [CWRC-Writer](https://github.com/cwrc/CWRC-Writer) [commit 811f7e0b8458f5899ce023551627a5376385a182 ](https://github.com/cwrc/CWRC-Writer/commit/811f7e0b8458f5899ce023551627a5376385a182)
-* [jQuery Update](https://www.drupal.org/project/jquery_update) Version 1.8
 
-jQuery Update is not a hard requirement but is necessary if you want to use the 
-templates in the documents dialog box. octokit.js which is used to fetch the 
-templates uses the global jQuery rather than using require.js to fetch the 
-CWRC-Writer specific template.
+The [build](https://github.com/cwrc/Islandora-CWRC-Writer/tree/npmbuild/build) directory contains the compiled version of the Islandora CWRC-Writer. It can also be [built from the source](https://github.com/cwrc/Islandora-CWRC-Writer/blob/npmbuild/package.json#L21), if npm is installed.
 
-CWRC-Writer is expected to be installed here:
+Islandora CWRC-Writer is expected to be installed here:
 
-* sites/all/libraries/CWRC-Writer (libraries directory may need to be created)
+* ~~sites/all/libraries/CWRC-Writer~~ TODO update with current location
 
-So far we've only tested up to CWRC-Writer [commit 811f7e0b8458f5899ce023551627a5376385a182 ](https://github.com/cwrc/CWRC-Writer/commit/811f7e0b8458f5899ce023551627a5376385a182) with islandora_cwrc_writer [commit 810970bcb588a53e907ba306dd362e3bffd89c2a](https://github.com/cwrc/islandora_cwrc_writer/commit/810970bcb588a53e907ba306dd362e3bffd89c2a)
 
 ### Java Servlet Configuration
 
@@ -94,9 +88,6 @@ Section goals:
 * be updated as CWRC-Writer changes
 
 The islandora_cwrc_writer modules uses code within the "theme", "utilities", and "js" directories to embed CWRC-Writer into a Drupal page by referencing items within the CWRC-Writer directory and overriding aspects (delegator to save/load docs).
-
-
-Touchpoints rev. 2017-08-22 - CWRC-Writer [commit 811f7e0b8458f5899ce023551627a5376385a182 ](https://github.com/cwrc/CWRC-Writer/commit/811f7e0b8458f5899ce023551627a5376385a182) with islandora_cwrc_writer [commit 810970bcb588a53e907ba306dd362e3bffd89c2a](https://github.com/cwrc/islandora_cwrc_writer/commit/810970bcb588a53e907ba306dd362e3bffd89c2a). *Note: These are untested with the NPM version of CWRC-Writer and will need to be updated*
 
 1. islandora_cwrc_writer module loads files from within the CWRC-Writer library
     * CWRC-Writer treated as a self-contained library with the Drupal module loading specific files from specified internal CWRC-Writer directory locations (e.g., JS, CSS, etc)

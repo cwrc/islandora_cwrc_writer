@@ -158,13 +158,14 @@ function islandora_cwrc_writer_embedded_css() {
  */
 function islandora_cwrc_writer_default_config() {
   global $base_url;
-  $cwrc_writer_path = libraries_get_path(ISLANDORA_CWRC_WRITER_LIB);
+  $cwrc_writer_path = cwrc_libraries_get_path(ISLANDORA_CWRC_WRITER_LIB);
   return array(
     'project' => 'cwrc',
     // We need trailing slashes on the urls for CWRC to work.
-    'cwrcRootUrl' => file_create_url("$cwrc_writer_path/build/"),
+    'cwrcRootUrl' => file_create_url($base_url."/$cwrc_writer_path/"),
     // The url in which we provide services for.
     'baseUrl' => islandora_cwrc_writer_get_absolute_url('cwrc/'),
+    'validationUrl' => 'https://validator.services.cwrc.ca/validator/validate.html',
     // XML + RDF.
     'mode' => 0,
     'allowOverlap' => TRUE,
@@ -706,7 +707,7 @@ function islandora_cwrc_writer_guess_schema_mapping_from_schema($file) {
       return array(
         ISLANDORA_CWRC_WRITER_SCHEMA_MAPPING_RELATIONSHIP => ISLANDORA_CWRC_WRITER_SCHEMA_MAPPING_TEI,
         ISLANDORA_CWRC_WRITER_SCHEMA_NOTE_TEMPLATE => ISLANDORA_CWRC_WRITER_SCHEMA_NOTE_TEI,
-        ISLANDORA_CWRC_WRITER_SCHEMA_CITATION_TEMPLATE => ISLANDORA_CWRC_WRITER_SCHEMA_CITATION_TEI 
+        ISLANDORA_CWRC_WRITER_SCHEMA_CITATION_TEMPLATE => ISLANDORA_CWRC_WRITER_SCHEMA_CITATION_TEI
       );
     }
   }
@@ -732,7 +733,7 @@ function islandora_cwrc_writer_guess_schema_mapping_from_schema($file) {
       ISLANDORA_CWRC_WRITER_SCHEMA_CITATION_TEMPLATE => ''
     );
   }
-  // Orlando Events  
+  // Orlando Events
   $results = $xpath->query('//rng:start/rng:element[@name="EVENTS" or @name="EVENT"]');
   if ($results->length !== 0) {
     return array(
@@ -1049,7 +1050,7 @@ function islandora_cwrc_writer_create_domdocument() {
 }
 
 /**
- * Gets the list of all the schema's in fedora.
+ * Gets the list of all the schema's in fedora to pass to CWRC-Writer.
  *
  * @return array
  *   An array of associative arrays where each represents a single schema.
@@ -1058,6 +1059,7 @@ function islandora_cwrc_writer_create_domdocument() {
  *   - url: An absolute URL to the RNG schema file.
  *   - cssUrl: An absolute URL to the CSS file.
  *   - schemaMappingsId: Indicates what mapping to use in the CWRC-Writer.
+ *   - entityTemplates: Indicates what entity templates to use in the CWRC-Writer.
  *   - aliases: An array containing the non-URL-encoded URL to the RNG.
  */
 function islandora_cwrc_writer_get_schemas() {
@@ -1088,11 +1090,10 @@ EOT;
         continue;
       }
       // template info.
-      $cwrc_writer_path = libraries_get_path(ISLANDORA_CWRC_WRITER_LIB);
+      $cwrc_writer_path = cwrc_libraries_get_path(ISLANDORA_CWRC_WRITER_LIB);
       $entityTemplates = array(
-        'note' => file_create_url($cwrc_writer_path."/src/".$result['entityTemplateNote']['value']),
-        'citation' => file_create_url($cwrc_writer_path."/src/".$result['entityTemplateCitation']['value']),
-
+        'note' => file_create_url($cwrc_writer_path."/schema/".$result['mapping']['value']."/xml/".$result['entityTemplateNote']['value']),
+        'citation' => file_create_url($cwrc_writer_path."/schema/".$result['mapping']['value']."/xml/".$result['entityTemplateCitation']['value']),
       );
       // Base info.
       $schema = array(

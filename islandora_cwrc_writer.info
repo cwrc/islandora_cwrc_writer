@@ -8,3 +8,4 @@ core = 7.x
 version = 7.x-dev
 configure = admin/islandora/tools/cwrc-writer
 package = Islandora Tools
+;scripts[] = build/js/app.js

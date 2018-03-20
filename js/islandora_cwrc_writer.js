@@ -14,22 +14,27 @@ Drupal.CWRCWriter = Drupal.CWRCWriter || {};
 (function ($) {
   'use strict';
   
-  var layoutParentId = 'cwrc_parent'; // specified in islandora-cwrc-writer.tpl.php
+  var layoutParentId = 'cwrc_wrapper'; // specified in islandora-cwrc-writer.tpl.php
   
-  function cwrcWriterInit($, Writer, Layout, Dialogs) {
+  function cwrcWriterInit($, Writer, Dialogs) {
       'use strict';
       var writer, config;
       config = Drupal.settings.CWRCWriter;
-      config.id = config.id || layoutParentId;
-      
-      config.layout = Layout;
+      var baseUrl = config.baseUrl;
+      config.buttons1 += ',|,fullscreen';
+      config.container = config.id || layoutParentId;
+      config.modules = {
+          west: ['structure','entities','relations'],
+          south: ['selection', 'validation'],
+          east: ['imageViewer']
+      };
       config.entityLookupDialogs = Dialogs;
       config.storageDialogs = {
           save: function(writer) {
               var docId = writer.currentDocId;
               var docText = writer.converter.getDocumentContent(true);
               $.ajax({
-                  url : writer.baseUrl+'editor/documents/'+docId,
+                  url : baseUrl+'editor/documents/'+docId,
                   type: 'PUT',
                   dataType: 'json',
                   data: {'doc':docText, 'schema':writer.schemaManager.schemas[writer.schemaManager.schemaId]['pid']},
@@ -58,7 +63,7 @@ Drupal.CWRCWriter = Drupal.CWRCWriter || {};
                   writer.event('loadingDocument').publish();
                   
                   $.ajax({
-                      url: writer.baseUrl+'editor/documents/'+docId,
+                      url: baseUrl+'editor/documents/'+docId,
                       type: 'GET',
                       success: function(doc, status, xhr) {
                           window.location.hash = '#'+docId;
@@ -87,7 +92,6 @@ Drupal.CWRCWriter = Drupal.CWRCWriter || {};
       }
       
       writer = new Writer(config);
-      writer.init(config.id);
       
         /**
          * Re-write the Delegator save and exit to do things.
@@ -97,7 +101,7 @@ Drupal.CWRCWriter = Drupal.CWRCWriter || {};
         var saveAndExit = function(callback) {
             var docText = writer.converter.getDocumentContent(true);
             $.ajax({
-              url : writer.baseUrl+'editor/documents/'+writer.currentDocId,
+              url : baseUrl+'editor/documents/'+writer.currentDocId,
               type: 'PUT',
               dataType: 'json',
               data: {'doc':docText, 'schema':writer.schemaManager.schemas[writer.schemaManager.schemaId]['pid']},
@@ -149,25 +153,19 @@ Drupal.CWRCWriter = Drupal.CWRCWriter || {};
             });
         };
 
-      // Replace the baseUrl after object construction since it's hard-coded.
-      writer.baseUrl = config.baseUrl;
       // Hold onto a reference for safe keeping.
       Drupal.CWRCWriter.writer = writer;
       writer.event('writerInitialized').subscribe(function (writer) {
 
           if (typeof config.initial_mode !== 'undefined') {
               if (config.initial_mode == 'annotate') {
-                writer.isAnnotator = true;
-                writer.layout.ui.open('west');
-                writer.showToolbar();
-                writer.editor.plugins.cwrc_contextmenu.disabled = false;
-                writer.editor.plugins.cwrc_contextmenu.entityTagsOnly = true;
+//                writer.layoutManager.activateAnnotator();
+                writer.layoutManager.showModule('entities');
+                
               }
               else if (config.initial_mode == 'read') {
-                writer.isAnnotator = false;
-                writer.layout.ui.open('west');
-                writer.hideToolbar();
-                writer.editor.plugins.cwrc_contextmenu.disabled = true;
+//                writer.layoutManager.activateReader();
+                writer.layoutManager.showModule('structure');
               }
             }
             // Replace the show loader with our own function which can handle how we
@@ -190,7 +188,7 @@ Drupal.CWRCWriter = Drupal.CWRCWriter || {};
               }
               // Force resize, as it's needed when the layout is done in an iframe
               // as it expects.
-              setTimeout(writer.layout.resizeAll, 500);
+              setTimeout(writer.layoutManager.resizeAll.bind(writer.layoutManager), 500);
             });
             
             writer.storageDialogs.load(writer);
@@ -212,7 +210,7 @@ Drupal.CWRCWriter = Drupal.CWRCWriter || {};
           $('#'+layoutParentId).height(height);
         }
         
-        cwrcWriterInit($, Drupal.CWRCWriter, Drupal.CWRCWriterLayout, Drupal.CWRCWriterDialogs);
+        cwrcWriterInit($, Drupal.CWRCWriter, Drupal.CWRCWriterDialogs);
       });
    }
   };
