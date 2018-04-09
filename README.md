@@ -2,7 +2,7 @@
 
 ## Introduction
 
-Provides a very minimal wrapper around the CWRC-Writer, so that it can be used in an Islandora context.
+Provides a very minimal wrapper around the [CWRC-Writer](https://github.com/cwrc/CWRC-WriterBase), so that it can be used in an Islandora context.
 
 ## Requirements
 
@@ -14,12 +14,46 @@ This module requires the following modules/libraries:
 * [Islandora Object Locking](https://github.com/discoverygarden/islandora_object_lock)
 * [Libraries](https://www.drupal.org/project/libraries)
 
-The [build](https://github.com/cwrc/Islandora-CWRC-Writer/tree/npmbuild/build) directory contains the compiled version of the Islandora CWRC-Writer. It can also be [built from the source](https://github.com/cwrc/Islandora-CWRC-Writer/blob/npmbuild/package.json#L21), if npm is installed.
+The [build](https://github.com/cwrc/Islandora-CWRC-Writer/tree/master/build) directory contains the compiled version of the Islandora CWRC-Writer. It can also be [built from the source](https://github.com/cwrc/Islandora-CWRC-Writer/blob/master/package.json#L21), if npm is installed.
 
 Islandora CWRC-Writer is expected to be installed here:
 
-* ~~sites/all/libraries/CWRC-Writer~~ TODO update with current location
+* sites/default/modules/islandora_cwrc_writer/
 
+## Touchpoints between CWRC-Writer (JavaScript) and Islandora (cwrc/islandora_cwrc_writer Drupal Module)
+
+Section goals: 
+* communicate the assumptions built into the integration module about how to interact with CWRC-Writer
+* help determine whether or not a change to CWRC-Writer will be a breaking change to the integration module
+* be updated as CWRC-Writer changes
+
+The islandora_cwrc_writer modules uses code within the "theme", "utilities", and "js" directories to embed CWRC-Writer into a Drupal page by referencing items within the CWRC-Writer directory and overriding aspects (delegator to save/load docs).
+
+1. islandora_cwrc_writer module loads files from within the CWRC-Writer library
+    * CWRC-Writer treated as a self-contained library with the Drupal module loading specific files from specified internal CWRC-Writer directory locations (e.g., JS, CSS, etc)
+    * If directories or filenames are changed then the Islandora integrated CWRC-Writer will break. Examples include
+      * https://github.com/cwrc/islandora_cwrc_writer/blob/master/js/README.md
+      * https://github.com/cwrc/islandora_cwrc_writer/blob/master/islandora_cwrc_writer.module#L12
+      * https://github.com/cwrc/islandora_cwrc_writer/blob/master/includes/utilities.inc#L164-L165
+      * https://github.com/cwrc/islandora_cwrc_writer/blob/master/includes/utilities.inc#L1091-L1097
+      * https://github.com/cwrc/islandora_cwrc_writer/blob/master/islandora_cwrc_writer.install#L17
+      * https://github.com/cwrc/islandora_cwrc_writer/blob/master/islandora_cwrc_writer.module#L274
+      * list may not be exhustive - untested
+    
+2. Config parameters passed to CWRC-Writer
+    * CWRC-GitWriter example: https://github.com/cwrc/CWRC-GitWriter/blob/master/src/js/config.js
+      * set in islandora_cwrc_writer module by
+        * https://github.com/cwrc/islandora_cwrc_writer/blob/master/includes/utilities.inc#L1052-L1127
+      * and passed to CWRC-Writer by
+        * https://github.com/cwrc/Islandora-CWRC-Writer/blob/master/js/islandora_cwrc_writer.js#L22
+
+3. Instantiate CWRC-Writer within the Drupal page
+    * https://github.com/cwrc/Islandora-CWRC-Writer/blob/master/js/islandora_cwrc_writer.js#L213
+    * https://github.com/cwrc/Islandora-CWRC-Writer/blob/master/js/islandora_cwrc_writer.js#L94
+    
+4. Load the document
+    * https://github.com/cwrc/Islandora-CWRC-Writer/blob/master/js/islandora_cwrc_writer.js#L194
+    * https://github.com/cwrc/Islandora-CWRC-Writer/blob/master/js/islandora_cwrc_writer.js#L55-L92
 
 ### Java Servlet Configuration
 
@@ -80,60 +114,11 @@ sudo a2enmod headers
 sudo service apache2 restart
 ```
 
-## Touchpoints between CWRC-Writer (JavaScript) and Islandora (cwrc/islandora_cwrc_writer Drupal Module)
-
-Section goals: 
-* communicate the assumptions built into the integration module about how to interact with CWRC-Writer
-* help determine whether or not a change to CWRC-Writer will be a breaking change to the integration module
-* be updated as CWRC-Writer changes
-
-The islandora_cwrc_writer modules uses code within the "theme", "utilities", and "js" directories to embed CWRC-Writer into a Drupal page by referencing items within the CWRC-Writer directory and overriding aspects (delegator to save/load docs).
-
-1. islandora_cwrc_writer module loads files from within the CWRC-Writer library
-    * CWRC-Writer treated as a self-contained library with the Drupal module loading specific files from specified internal CWRC-Writer directory locations (e.g., JS, CSS, etc)
-    * If directories or filenames are changed then the Islandora integrated CWRC-Writer will break. Examples include
-      * https://github.com/cwrc/islandora_cwrc_writer/blob/7.x/js/README.md
-      * https://github.com/cwrc/islandora_cwrc_writer/blob/7.x/islandora_cwrc_writer.module#L12
-      * https://github.com/cwrc/islandora_cwrc_writer/blob/7.x/js/islandora_cwrc_writer.js#L26-L29
-      * https://github.com/cwrc/islandora_cwrc_writer/blob/7.x/includes/utilities.inc#L164-L165
-      * https://github.com/cwrc/islandora_cwrc_writer/blob/7.x/includes/utilities.inc#L1091-L1097
-      * https://github.com/ajmacdonald/islandora_cwrc_writer/blob/7.x/islandora_cwrc_writer.install#L17
-      * https://github.com/cwrc/islandora_cwrc_writer/blob/7.x/islandora_cwrc_writer.module#L262
-      * https://github.com/cwrc/islandora_cwrc_writer/blob/7.x/islandora_cwrc_writer.module#L275-L286
-      * list may not be exhustive - untested 
-    * ToDo: consider creating a cleaner means such that the number of locations to change is reduced
-    
-2. Config parameters passed to CWRC-Writer
-    * including: https://github.com/cwrc/CWRC-Writer/blob/811f7e0b8458f5899ce023551627a5376385a182/src/js/writerConfig.js
-      * set by
-        * https://github.com/cwrc/CWRC-Writer/blob/811f7e0b8458f5899ce023551627a5376385a182/src/js/writerConfig.js
-        * https://github.com/cwrc/islandora_cwrc_writer/blob/7.x/includes/utilities.inc#L1051-L1127
-      * passed by
-        * https://github.com/cwrc/islandora_cwrc_writer/blob/7.x/js/islandora_cwrc_writer.js
-
-3. Instantiate CWRC-Writer within the Drupal page
-    * https://github.com/cwrc/islandora_cwrc_writer/blob/7.x/js/islandora_cwrc_writer.js
-    * https://github.com/cwrc/islandora_cwrc_writer/blob/58ed10b4e25906cff75e12778a0706026d25d815/js/islandora_cwrc_writer.js#L325-L378
-  
-4. Create delegator for load/save operations
-    * https://github.com/cwrc/islandora_cwrc_writer/blob/58ed10b4e25906cff75e12778a0706026d25d815/js/islandora_cwrc_writer.js#L17-L18
-    * https://github.com/cwrc/islandora_cwrc_writer/blob/58ed10b4e25906cff75e12778a0706026d25d815/js/islandora_cwrc_writer.js#L126-L160
-    * https://github.com/cwrc/islandora_cwrc_writer/blob/58ed10b4e25906cff75e12778a0706026d25d815/js/islandora_cwrc_writer.js#L163-L197
-    * https://github.com/cwrc/islandora_cwrc_writer/blob/58ed10b4e25906cff75e12778a0706026d25d815/js/islandora_cwrc_writer.js#L163-L197
-  
-5. Override CWRC-Writer Code to add new features
-    * schemaId needs to be passed into specific functions as CWRC-Writer assume each schema can have only one CSS while the Islandora overrides this limitation
-      * https://github.com/cwrc/islandora_cwrc_writer/blob/58ed10b4e25906cff75e12778a0706026d25d815/js/islandora_cwrc_writer.js#L325-L378
-      * GitHub issue: https://github.com/cwrc/CWRC-Writer/issues/215
-      * Also in the Notes embedded CWRC-Writer
-        * https://github.com/cwrc/islandora_cwrc_writer/blob/58ed10b4e25906cff75e12778a0706026d25d815/js/islandora_cwrc_writer_note.js
-
-6. Update libraries_info hook - version identification
-    * https://github.com/cwrc/islandora_cwrc_writer/blob/989e3e296da73ee853c44fdaf24a151ac0e77062/islandora_cwrc_writer.module#L263-L268
 
 ## To Do
 
-* Look into integrating the [Geonames Service](http://github.com/cwrc/CWRC-Mapping-Timelines-Project/tree/master/geonames)
+* ~~Look into integrating the [Geonames Service](http://github.com/cwrc/CWRC-Mapping-Timelines-Project/tree/master/geonames)~~
+  * implemented [here](https://github.com/cwrc/Islandora-CWRC-Writer/blob/master/package.json#L35)?
 
 ## Troubleshooting/Issues
 
