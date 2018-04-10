@@ -98,6 +98,7 @@ Drupal.CWRCWriter = Drupal.CWRCWriter || {};
          *
          * @see Delegator.saveAndExit
          */
+      // TODO unused?
         var saveAndExit = function(callback) {
             var docText = writer.converter.getDocumentContent(true);
             $.ajax({
