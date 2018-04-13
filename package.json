@@ -29,13 +29,13 @@
     "watch": "watchify js/app.js --debug --standalone GitWriter -o build/js/app.js --verbose -g deamdify -t [ babelify --presets [ es2015 ] ]"
   },
   "dependencies": {
-    "cwrc-public-entity-dialogs": "^1.2.5",
-    "cwrc-writer-base": "2.15.1",
+    "cwrc-writer-base": "cwrc/CWRC-WriterBase#reader-fullscreen",
+    "cwrc-public-entity-dialogs": "^1.2.8",
     "dbpedia-entity-lookup": "^0.3.0",
-    "geonames-entity-lookup": "^1.1.1",
+    "geonames-entity-lookup": "^1.1.2",
     "getty-entity-lookup": "^1.4.1",
-    "viaf-entity-lookup": "^1.2.0",
-    "wikidata-entity-lookup": "^1.2.1",
+    "viaf-entity-lookup": "^1.2.2",
+    "wikidata-entity-lookup": "^1.2.2",
     "jquery": "3.2.1"
   },
   "devDependencies": {
