@@ -22,38 +22,4 @@
  */
 ?>
 <div id="cwrc_wrapper">
-  <div id="cwrc_header" class="cwrc ui-layout-north">
-    <a id="titleLink"><?php print $title; ?></a>
-    <?php print $header; ?>
-  </div>
-  <div class="cwrc ui-layout-west">
-    <div id="westTabs" class="tabs">
-      <?php print $western_tabs; ?>
-      <div id="westTabsContent" class="ui-layout-content">
-        <div id="entities"></div>
-        <div id="structure"></div>
-        <div id="relations"></div>
-        <!-- ?php print $western_tabs_content; ? -->
-      </div>
-    </div>
-  </div>
-  <div id="cwrc_main" class="ui-layout-center">
-    <div class="ui-layout-center">
-      <form method="post" action="">
-        <textarea id="editor_0" name="editor" class="tinymce"></textarea>
-      </form>
-    </div>
-    <div class="cwrc ui-layout-south">
-      <div id="southTabs" class="tabs">
-        <?php print $southern_tabs; ?>
-        <div id="southTabsContent" class="ui-layout-content"></div>
-      </div>
-    </div>
-  </div>
-  <!-- The eastern panel is optional and may not be provided -->
-  <?php if (isset($eastern_panel)): ?>
-    <div class="ui-layout-east">
-      <?php print $eastern_panel; ?>
-    </div>
-  <?php endif; ?>
 </div>
