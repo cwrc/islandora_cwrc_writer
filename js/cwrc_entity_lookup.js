@@ -1,6 +1,10 @@
 'use strict';
 
-const urlRoot = 'http://beta.cwrc.ca'
+let urlRoot = 'http://beta.cwrc.ca';
+    
+function setRootURL(url) {
+    urlRoot = url;
+}
 
 /*
      config is passed through to fetch, so could include things like:
@@ -88,6 +92,7 @@ function findTitle(queryString) {
 }
 
 module.exports = {
+    setRootURL: setRootURL,
     findPerson: findPerson,
     findPlace: findPlace,
     findOrganization: findOrganization,
