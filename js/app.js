@@ -16,6 +16,5 @@ window.Drupal.CWRCWriterDialogs.registerEntitySources({
     titles: (new Map()).set('cwrc', cwrc).set('viaf', viaf).set('wikidata', wikidata).set('dbpedia', dbpedia)
 })
 
-window.Drupal.CWRCWriterConfig = require('./config.js');
 window.Drupal.CWRCWriter = require('cwrc-writer-base');
 

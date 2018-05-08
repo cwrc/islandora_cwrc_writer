@@ -20,7 +20,9 @@ Drupal.CWRCWriter = Drupal.CWRCWriter || {};
       'use strict';
       var writer, config;
       config = Drupal.settings.CWRCWriter;
-      var baseUrl = config.baseUrl;
+      if (config.initial_mode == 'edit') {
+          config.buttons1 += ',saveexitbutton';
+      }
       config.buttons1 += ',|,fullscreen';
       config.container = config.id || layoutParentId;
       config.modules = {
@@ -29,6 +31,7 @@ Drupal.CWRCWriter = Drupal.CWRCWriter || {};
           east: ['imageViewer']
       };
       config.entityLookupDialogs = Dialogs;
+      var baseUrl = config.baseUrl;
       config.storageDialogs = {
           save: function(writer) {
               var docId = writer.currentDocId;
