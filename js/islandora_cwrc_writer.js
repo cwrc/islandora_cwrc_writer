@@ -44,8 +44,6 @@ Drupal.CWRCWriter = Drupal.CWRCWriter || {};
                           msg : docId + ' was saved successfully.'
                       });
                       writer.event('documentSaved').publish();
-                      window.location.hash = '#'+docId;
-                      writer.editor.isNotDirty = true;
                   },
                   error: function(xhr, status, error) {
                       displayError(xhr, docId);
@@ -66,7 +64,6 @@ Drupal.CWRCWriter = Drupal.CWRCWriter || {};
                       url: baseUrl+'editor/documents/'+docId,
                       type: 'GET',
                       success: function(doc, status, xhr) {
-                          window.location.hash = '#'+docId;
                           writer.converter.processDocument(doc, config.schemaId);
                       },
                       error: function(xhr, status, error) {
@@ -93,22 +90,17 @@ Drupal.CWRCWriter = Drupal.CWRCWriter || {};
       
       writer = new Writer(config);
       
-        /**
-         * Re-write the Delegator save and exit to do things.
-         *
-         * @see Delegator.saveAndExit
-         */
-      // TODO unused?
-        var saveAndExit = function(callback) {
-            var docText = writer.converter.getDocumentContent(true);
-            $.ajax({
+      /**
+       * Overwrite the writer.saveAndExit
+       */
+      writer.saveAndExit = function() {
+          var docText = writer.converter.getDocumentContent(true);
+          $.ajax({
               url : baseUrl+'editor/documents/'+writer.currentDocId,
               type: 'PUT',
               dataType: 'json',
               data: {'doc':docText, 'schema':writer.schemaManager.schemas[writer.schemaManager.schemaId]['pid']},
               success: function(data, status, xhr) {
-                  // XXX: Force the state to be clean directly after the "save"
-                  // occurs.
                   writer.editor.isNotDirty = true;
 
                   $.ajax({
@@ -118,41 +110,38 @@ Drupal.CWRCWriter = Drupal.CWRCWriter || {};
                           window.location = Drupal.settings.basePath+'islandora/object/'+writer.currentDocId
                       },
                       error: function() {
-                          writer.delegator.displayError(xhr, writer.currentDocId);
+                          displayError(xhr, writer.currentDocId);
                       }
                   })
               },
               error: function(xhr, status, error) {
-                  writer.delegator.displayError(xhr, writer.currentDocId);
-                  if (callback) {
-                      callback.call(writer, false);
-                  }
-                }
+                  displayError(xhr, writer.currentDocId);
+              }
            });
-        };
+      };
 
-        /**
-         * Utility function to display errors that occur during REST requests.
-         */
-        var displayError = function(xhr, docId) {
-            var params = {
-                '@docid': docId
-            }
+      /**
+       * Utility function to display errors that occur during REST requests.
+       */
+      var displayError = function(xhr, docId) {
+          var params = {
+              '@docid': docId
+          }
 
-            var msg = Drupal.t('An error occurred and @docid was not saved.', params);
-            if (typeof xhr.responseText != 'undefined') {
-                var responseText = jQuery.parseJSON(xhr.responseText);
-                var responseparams = {
-                    '!responseText': responseText.message
-                }
-                var msg = msg.concat(' ' + Drupal.t('Additional info: !responseText', responseparams))
-            }
-            writer.dialogManager.show('message', {
-                title: 'Error',
-                msg: msg,
-                type: 'error'
-            });
-        };
+          var msg = Drupal.t('An error occurred and @docid was not saved.', params);
+          if (typeof xhr.responseText != 'undefined') {
+              var responseText = jQuery.parseJSON(xhr.responseText);
+              var responseparams = {
+                  '!responseText': responseText.message
+              }
+              var msg = msg.concat(' ' + Drupal.t('Additional info: !responseText', responseparams))
+          }
+          writer.dialogManager.show('message', {
+              title: 'Error',
+              msg: msg,
+              type: 'error'
+          });
+      };
 
       // Hold onto a reference for safe keeping.
       Drupal.CWRCWriter.writer = writer;
