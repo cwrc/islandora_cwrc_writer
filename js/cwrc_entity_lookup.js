@@ -1,6 +1,6 @@
 'use strict';
 
-let urlRoot = 'http://beta.cwrc.ca';
+let urlRoot = '';
     
 function setRootURL(url) {
     urlRoot = url;
@@ -45,7 +45,7 @@ function fetchWithTimeout(url, config = {}, timeout = 8000) {
 // note that this method is exposed on the npm module to simplify testing,
 // i.e., to allow intercepting the HTTP call during testing, using sinon or similar.
 function getEntitySourceURI(queryString, methodName) {
-    return `${urlRoot}/islandora/cwrc_entities/v1/search/${methodName}?query=${encodeURIComponent(queryString)}&limit=100&page=0`;
+    return `${urlRoot}/search/${methodName}?query=${encodeURIComponent(queryString)}&limit=100&page=0`;
 }
 
 function getPersonLookupURI(queryString) {
