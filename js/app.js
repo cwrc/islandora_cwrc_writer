@@ -1,7 +1,7 @@
 window.Drupal = window.Drupal || {};
 
 let cwrc = require('cwrc-entity-lookup');
-cwrc.setRootURL(Drupal.settings.CWRCWriter.cwrcDialogs.cwrcApiUrl);
+cwrc.setSearchRoot(Drupal.settings.CWRCWriter.cwrcDialogs.cwrcApiUrl);
 let viaf = require('viaf-entity-lookup');
 let dbpedia = require('dbpedia-entity-lookup');
 let wikidata = require('wikidata-entity-lookup');

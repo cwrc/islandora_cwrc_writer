@@ -1,9 +1,13 @@
 'use strict';
 
-let urlRoot = '';
-    
-function setRootURL(url) {
-    urlRoot = url;
+let entityRoot = 'http://commons.cwrc.ca';
+function setEntityRoot(url) {
+    entityRoot = url;
+}
+
+let searchRoot = '';
+function setSearchRoot(url) {
+    searchRoot = url;
 }
 
 /*
@@ -45,7 +49,7 @@ function fetchWithTimeout(url, config = {}, timeout = 8000) {
 // note that this method is exposed on the npm module to simplify testing,
 // i.e., to allow intercepting the HTTP call during testing, using sinon or similar.
 function getEntitySourceURI(queryString, methodName) {
-    return `${urlRoot}/search/${methodName}?query=${encodeURIComponent(queryString)}&limit=100&page=0`;
+    return `${searchRoot}/search/${methodName}?query=${encodeURIComponent(queryString)}&limit=100&page=0`;
 }
 
 function getPersonLookupURI(queryString) {
@@ -70,8 +74,8 @@ function callCWRC(url, queryString) {
             (record) => {
                 let id = record.solr_doc.PID
                 let name = record.solr_doc.fgs_label_s
-                let uri = urlRoot + '/'+ record.object_url
-                let uriForDisplay = uri //uri.replace('http', 'https')
+                let uri = entityRoot + '/'+ id
+                let uriForDisplay = uri
                 return {id: uri, uri, uriForDisplay, name, repository: 'CWRC', originalQueryString: queryString}
             }) : []
     })
