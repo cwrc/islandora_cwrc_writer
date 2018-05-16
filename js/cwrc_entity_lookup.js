@@ -98,7 +98,8 @@ function findTitle(queryString) {
 }
 
 module.exports = {
-    setRootURL: setRootURL,
+    setEntityRoot: setEntityRoot,
+    setSearchRoot: setSearchRoot,
     findPerson: findPerson,
     findPlace: findPlace,
     findOrganization: findOrganization,
