@@ -1,6 +1,7 @@
 window.Drupal = window.Drupal || {};
 
 let cwrc = require('cwrc-entity-lookup');
+cwrc.setEntityRoot('https://commons.cwrc.ca');
 cwrc.setSearchRoot(Drupal.settings.CWRCWriter.cwrcDialogs.cwrcApiUrl);
 let viaf = require('viaf-entity-lookup');
 let dbpedia = require('dbpedia-entity-lookup');

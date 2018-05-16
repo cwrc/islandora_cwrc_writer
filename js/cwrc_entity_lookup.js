@@ -1,6 +1,6 @@
 'use strict';
 
-let entityRoot = 'http://commons.cwrc.ca';
+let entityRoot = '';
 function setEntityRoot(url) {
     entityRoot = url;
 }
