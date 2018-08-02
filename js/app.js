@@ -12,7 +12,7 @@ let geonames = require('geonames-entity-lookup');
 window.Drupal.CWRCWriterDialogs = require('cwrc-public-entity-dialogs');
 window.Drupal.CWRCWriterDialogs.showNoLinkButton(true);
 window.Drupal.CWRCWriterDialogs.showCreateNewButton(true);
-window.Drupal.CWRCWriterDialogs.setShowEditButton(true);
+window.Drupal.CWRCWriterDialogs.showEditButton(true);
 window.Drupal.CWRCWriterDialogs.setEntityFormsRoot(Drupal.settings.CWRCWriter.cwrcDialogs.entityFormsRootUrl);
 window.Drupal.CWRCWriterDialogs.registerEntitySources({
     people: (new Map()).set('cwrc', cwrc).set('viaf', viaf).set('wikidata', wikidata).set('getty', getty).set('dbpedia', dbpedia),
