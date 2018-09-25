@@ -174,7 +174,7 @@ Drupal.CWRCWriter = Drupal.CWRCWriter || {};
       
       window.addEventListener('beforeunload', function() {
         // remove cookie specifying which collection to save new entities to (which was added by cwrc-entity-management-forms)
-        $.removeCookie('cwrc-entity-collection')
+        $.removeCookie('cwrc-entity-collection', { path: '/' })
       });
       /**
        * Overwrite the writer.saveAndExit
@@ -188,9 +188,6 @@ Drupal.CWRCWriter = Drupal.CWRCWriter || {};
               data: {'doc':docText, 'schema':writer.schemaManager.schemas[writer.schemaManager.schemaId]['pid']},
               success: function(data, status, xhr) {
                   writer.editor.isNotDirty = true;
-
-                  // remove cookie specifying which collection to save new entities to (which was added by cwrc-entity-management-forms)
-                  $.removeCookie('cwrc-entity-collection')
 
                   $.ajax({
                       url: Drupal.settings.basePath+'islandora/rest/v1/object/'+writer.currentDocId+'/lock',
