@@ -14,6 +14,7 @@ window.Drupal.CWRCWriterDialogs.showNoLinkButton(true);
 window.Drupal.CWRCWriterDialogs.showCreateNewButton(true);
 window.Drupal.CWRCWriterDialogs.showEditButton(true);
 window.Drupal.CWRCWriterDialogs.setEntityFormsRoot(Drupal.settings.CWRCWriter.cwrcDialogs.entityFormsRootUrl);
+window.Drupal.CWRCWriterDialogs.setCollectionsRoot(Drupal.settings.CWRCWriter.cwrcDialogs.entityFormsCollectionUrl);
 window.Drupal.CWRCWriterDialogs.registerEntitySources({
     person: (new Map()).set('cwrc', cwrc).set('viaf', viaf).set('wikidata', wikidata).set('getty', getty).set('dbpedia', dbpedia),
     place: (new Map()).set('cwrc', cwrc).set('geonames', geonames).set('viaf', viaf).set('dbpedia', dbpedia).set('wikidata', wikidata),
