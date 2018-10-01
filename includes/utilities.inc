@@ -185,7 +185,9 @@ function islandora_cwrc_writer_default_config() {
       ),
       'repositoryBaseObjectUrl' => islandora_cwrc_writer_get_absolute_url(variable_get('islandora_cwrc_writer_repository_base_object_url', '')),
       'entityFormsRootUrl' => file_create_url($base_url.'/sites/default/libraries/cwrc-entity-management-forms-static/build/'),
-      'entityFormsCollectionUrl' => file_create_url($base_url.'/islandora/object/islandora%3Aroot')
+      'entityFormsCollectionUrl' => file_create_url($base_url.'/islandora/object/islandora%3Aroot'),
+      'projectLogoRoot' => file_create_url($base_url.'/sites/default/files'),
+      'projectLookupUrl' => file_create_url($base_url.'/projects/json-lookup')
     ),
     // This associative array of schema documents requires the PID of the schema
     // object to be used as each entries key.
