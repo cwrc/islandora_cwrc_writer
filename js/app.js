@@ -3,8 +3,11 @@ window.Drupal = window.Drupal || {};
 let cwrc = require('cwrc-tei-entities-lookup');
 cwrc.setEntityRoot('https://commons.cwrc.ca');
 cwrc.setSearchRoot(Drupal.settings.CWRCWriter.cwrcDialogs.cwrcApiUrl);
-cwrc.setProjectLogoRoot(Drupal.settings.CWRCWriter.cwrcDialogs.projectLogoRoot);
-cwrc.setProjectLookupURI(Drupal.settings.CWRCWriter.cwrcDialogs.projectLookupUrl);
+cwrc.setProjectLookupConfig({
+    projectLookupUrl: Drupal.settings.CWRCWriter.cwrcDialogs.projectLookupUrl,
+    projectLogoRoot: Drupal.settings.CWRCWriter.cwrcDialogs.projectLogoRoot,
+    cwrcProjectId: Drupal.settings.CWRCWriter.cwrcDialogs.cwrcProjectId
+});
 
 let viaf = require('viaf-entity-lookup');
 let dbpedia = require('dbpedia-entity-lookup');
