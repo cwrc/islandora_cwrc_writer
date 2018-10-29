@@ -77,6 +77,7 @@
 	text-indent: -99999px;
 	overflow: hidden;
 	background-repeat: no-repeat;
+
 }
 
 .cwrc .ui-widget-icon-block {
@@ -397,6 +398,7 @@ button.cwrc .ui-button::-moz-focus-inner {
 	height: 8px;
 	border-width: 4px;
 	border-style: solid;
+  box-sizing: content-box;
 }
 .cwrc .ui-checkboxradio-disabled {
 	pointer-events: none;
@@ -957,7 +959,7 @@ a:visited.cwrc .ui-button,
 .cwrc .ui-button:hover,
 .cwrc .ui-button:focus {
 	border: 1px solid #cccccc;
-	background: #ededed;
+	background-color: #ededed;
 	font-weight: normal;
 	color: #2b2b2b;
 }
@@ -987,7 +989,7 @@ a.cwrc .ui-button:active,
 	border: 1px solid #455373;
 	background: #586B93;
 	font-weight: normal;
-	color: #ffffff;
+	color: #455373;
 }
 .cwrc .ui-icon-background,
 .cwrc .ui-state-active .ui-icon-background {
