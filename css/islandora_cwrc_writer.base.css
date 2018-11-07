@@ -48,3 +48,29 @@
   background-position: -42px -1px;
 }
 
+/* cwrc-writer additions & overrides for use with islandora */
+/* https://github.com/cwrc/Islandora-CWRC-Writer/commit/086ce8f642e7b1ff4f10d29076572963246ed635 */
+.cwrc .ui-checkboxradio-radio-label.ui-checkboxradio-checked .ui-icon,
+.cwrc .ui-checkboxradio-radio-label.ui-checkboxradio-checked:hover .ui-icon {
+  box-sizing: content-box;
+}
+
+.cwrc .ui-state-hover,
+.cwrc .ui-widget-content .ui-state-hover,
+.cwrc .ui-widget-header .ui-state-hover,
+.cwrc .ui-state-focus,
+.cwrc .ui-widget-content .ui-state-focus,
+.cwrc .ui-widget-header .ui-state-focus,
+.cwrc .ui-button:hover,
+.cwrc .ui-button:focus {
+	background-color: #ededed;
+}
+
+.cwrc .ui-state-active,
+.cwrc .ui-widget-content .ui-state-active,
+.cwrc .ui-widget-header .ui-state-active,
+a.cwrc .ui-button:active,
+.cwrc .ui-button:active,
+.cwrc .ui-button.ui-state-active:hover {
+  color: #455373 !important;
+}
