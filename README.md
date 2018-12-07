@@ -43,17 +43,15 @@ The islandora_cwrc_writer modules uses code within the "theme", "utilities", and
 2. Config parameters passed to CWRC-Writer
     * CWRC-GitWriter example: https://github.com/cwrc/CWRC-GitWriter/blob/master/src/js/config.js
       * set in islandora_cwrc_writer module by
-        * https://github.com/cwrc/islandora_cwrc_writer/blob/master/includes/utilities.inc#L1052-L1127
+        * https://github.com/cwrc/Islandora-CWRC-Writer/blob/33c1209987709779fe41671ea2f3ae2d6d24697a/includes/utilities.inc#L1088-L1131
       * and passed to CWRC-Writer by
-        * https://github.com/cwrc/Islandora-CWRC-Writer/blob/master/js/islandora_cwrc_writer.js#L22
+        * https://github.com/cwrc/Islandora-CWRC-Writer/blob/33c1209987709779fe41671ea2f3ae2d6d24697a/js/islandora_cwrc_writer.js#L101
 
 3. Instantiate CWRC-Writer within the Drupal page
-    * https://github.com/cwrc/Islandora-CWRC-Writer/blob/master/js/islandora_cwrc_writer.js#L213
-    * https://github.com/cwrc/Islandora-CWRC-Writer/blob/master/js/islandora_cwrc_writer.js#L94
+    * https://github.com/cwrc/Islandora-CWRC-Writer/blob/33c1209987709779fe41671ea2f3ae2d6d24697a/js/islandora_cwrc_writer.js#L233-L271
     
-4. Load the document
-    * https://github.com/cwrc/Islandora-CWRC-Writer/blob/master/js/islandora_cwrc_writer.js#L194
-    * https://github.com/cwrc/Islandora-CWRC-Writer/blob/master/js/islandora_cwrc_writer.js#L55-L92
+4. Load and save the document
+    * https://github.com/cwrc/Islandora-CWRC-Writer/blob/33c1209987709779fe41671ea2f3ae2d6d24697a/js/islandora_cwrc_writer.js#L114-L171
 
 ### Java Servlet Configuration
 
@@ -113,12 +111,6 @@ Ubuntu this can be done like so:
 sudo a2enmod headers
 sudo service apache2 restart
 ```
-
-
-## To Do
-
-* ~~Look into integrating the [Geonames Service](http://github.com/cwrc/CWRC-Mapping-Timelines-Project/tree/master/geonames)~~
-  * implemented [here](https://github.com/cwrc/Islandora-CWRC-Writer/blob/master/package.json#L35)?
 
 ## Troubleshooting/Issues
 
