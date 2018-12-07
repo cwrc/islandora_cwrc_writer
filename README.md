@@ -14,11 +14,23 @@ This module requires the following modules/libraries:
 * [Islandora Object Locking](https://github.com/discoverygarden/islandora_object_lock)
 * [Libraries](https://www.drupal.org/project/libraries)
 
-The [build](https://github.com/cwrc/Islandora-CWRC-Writer/tree/master/build) directory contains the compiled version of the Islandora CWRC-Writer. It can also be [built from the source](https://github.com/cwrc/Islandora-CWRC-Writer/blob/master/package.json#L21), if npm is installed.
+The [build](https://github.com/cwrc/Islandora-CWRC-Writer/tree/master/build) directory contains the compiled version of the Islandora CWRC-Writer. It can also be [built from the source](https://github.com/cwrc/Islandora-CWRC-Writer/blob/master/package.json#L21), if [NPM](https://github.com/npm/cli) is installed.
 
 Islandora CWRC-Writer is expected to be installed here:
 
 * sites/default/modules/islandora_cwrc_writer/
+
+## Installation through NPM
+
+1. Navigate to `sites/default/modules/islandora_cwrc_writer/`
+2. Clone this repo: `git clone https://github.com/cwrc/islandora_cwrc_writer.git`
+3. Install the dependencies: `npm install`
+4. Run the build: `npm run build`
+
+## Updating
+
+1. Navigate to `sites/default/modules/islandora_cwrc_writer/`
+2. Get the latest changes: `git pull`
 
 ## Touchpoints between CWRC-Writer (JavaScript) and Islandora (cwrc/islandora_cwrc_writer Drupal Module)
 
