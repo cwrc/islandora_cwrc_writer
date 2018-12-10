@@ -31,6 +31,7 @@ Islandora CWRC-Writer is expected to be installed here:
 
 1. Navigate to `sites/default/modules/islandora_cwrc_writer/`
 2. Get the latest changes: `git pull`
+3. Clear the Drupal cache: `drush cc all`
 
 ## Touchpoints between CWRC-Writer (JavaScript) and Islandora (cwrc/islandora_cwrc_writer Drupal Module)
 
