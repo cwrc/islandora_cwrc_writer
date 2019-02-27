@@ -1,51 +1,11 @@
 /* This CSS gets applied to the tinymce editor */
 
-@import url(https://fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext);
-
-body {
-    font-family: 'Book Antiqua', serif;
-    font-size: 11pt;
-    color: #333;
-}
-
-.showEntityBrackets .entity {
-    /*display: inline-block;
-    height: 11px;
-    line-height: 11px;
-    width: 2px;*/
+.showEntities .entity, .ui-dialog-content .entity {
     border-width: 1px;
     border-bottom-style: dotted;
 }
 
-/*
-.showEntityBrackets .start {
-    border-left: 2px solid;
-    border-bottom-left-radius: 4px;
-    border-top-left-radius: 4px;
-}
-
-.showEntityBrackets .end {
-    border-right: 2px solid;
-    border-bottom-right-radius: 4px;
-    border-top-right-radius: 4px;
-}
-*/
-
-/*
-.entityHighlight {
-    color: #fff;
-    border-radius: 5px;
-}
-*/
-
-/* TODO: need to get this out of here!! */
-.entityHighlight.txtimglnk {
-    background-color: #7F00FF;
-}
-.showEntityBrackets .txtimglnk {
-    border-color: #7F00FF;
-}
-.showEntityBrackets .entityHighlight .entity {
+.showEntities .entityHighlight > .entity {
     border-width: 2px;
 }
 
@@ -82,70 +42,75 @@ body {
 }
 
 
-.showEntityBrackets .person {
+.showEntities .person, .ui-dialog-content .person {
     border-color: #FF0000;
 }
 
-.showEntityBrackets .date {
+.showEntities .date, .ui-dialog-content .date {
     border-color: #FF7400;
 }
 
-.showEntityBrackets .place {
+.showEntities .place, .ui-dialog-content .place {
     border-color: #009999;
 }
 
-.showEntityBrackets .event {
+.showEntities .event, .ui-dialog-content .event {
     border-color: #00CC00;
 }
 
-.showEntityBrackets .org {
+.showEntities .org, .ui-dialog-content .org {
     border-color: #3914AF; 
 }
 
-.showEntityBrackets .title {
+.showEntities .title, .ui-dialog-content .title {
     border-color: #debb00;
 }
 
-.showEntityBrackets .correction {
+.showEntities .correction, .ui-dialog-content .correction {
     border-color: #FF3300;
 }
 
-.showEntityBrackets .link {
+.showEntities .link, .ui-dialog-content .link {
     border-color: #3366ff;
 }
 
-/* special handling for note type entities */
-.citation, .note, .keyword {
-    /*height: 16px !important;
-    width: 16px !important;*/
+.noteWrapper::before {
     cursor: pointer;
 }
 
-span:not(.entityHighlight) > .start.note::after, div > .start.note::after {
+.noteWrapper.note::before {
     content: url(../img/note_inline_large.png);
 }
 
-span:not(.entityHighlight) > .start.citation::after, div > .start.citation::after {
+.noteWrapper.citation::before {
     content: url(../img/citation_inline_large.png);
 }
 
-span:not(.entityHighlight) > .start.keyword::after, div > .start.keyword::after {
+.noteWrapper.keyword::before {
     content: url(../img/keyword_inline_large.png);
 }
 
-.entityHighlight > .note::after {
+.noteWrapper.note.entityHighlight::before {
     content: url(../img/note_inline_large_highlight.png);
 }
 
-.entityHighlight > .citation::after {
+.noteWrapper.citation.entityHighlight::before {
     content: url(../img/citation_inline_large_highlight.png);
 }
 
-.entityHighlight > .keyword::after {
+.noteWrapper.keyword.entityHighlight::before {
     content: url(../img/keyword_inline_large_highlight.png);
 }
 
-.showEntityBrackets .citation.start, .showEntityBrackets .note.start, .showEntityBrackets .keyword.start {
+.noteWrapper > * {
+    display: inherit;
+}
+
+.noteWrapper.hide > * {
+    display: none !important;
+}
+
+.showEntities .citation.start, .showEntities .note.start, .showEntities .keyword.start {
     border: none !important;
 }
 
