@@ -1,6 +1,5 @@
 /* used to wrap and concat css files */
 /* need to specify parentId through build command */
-/*@parentId: ~'#cwrcWriterContainer';*/
 html,
 body {
   height: 100%;
@@ -8,7 +7,7 @@ body {
   margin: 0;
   padding: 0;
 }
-#cwrc_wrapper {
+html body div form div #cwrc_wrapper {
   /*! jQuery UI - v1.12.1 - 2017-01-04
 * http://jqueryui.com
 * Includes: draggable.css, core.css, resizable.css, selectable.css, sortable.css, accordion.css, autocomplete.css, menu.css, button.css, controlgroup.css, checkboxradio.css, datepicker.css, dialog.css, progressbar.css, selectmenu.css, slider.css, spinner.css, tabs.css, tooltip.css, theme.css
@@ -108,14 +107,14 @@ body {
   font-weight: 400;
   src: local('Lato Regular'), local('Lato-Regular'), url(https://fonts.gstatic.com/s/lato/v14/S6uyw4BMUTPHjxAwWw.ttf) format('truetype');
 }
-#cwrc_wrapper .cwrc .ui-draggable-handle {
+html body div form div #cwrc_wrapper .cwrc .ui-draggable-handle {
   -ms-touch-action: none;
   touch-action: none;
 }
-#cwrc_wrapper .cwrc .ui-helper-hidden {
+html body div form div #cwrc_wrapper .cwrc .ui-helper-hidden {
   display: none;
 }
-#cwrc_wrapper .cwrc .ui-helper-hidden-accessible {
+html body div form div #cwrc_wrapper .cwrc .ui-helper-hidden-accessible {
   border: 0;
   clip: rect(0 0 0 0);
   height: 1px;
@@ -125,7 +124,7 @@ body {
   position: absolute;
   width: 1px;
 }
-#cwrc_wrapper .cwrc .ui-helper-reset {
+html body div form div #cwrc_wrapper .cwrc .ui-helper-reset {
   margin: 0;
   padding: 0;
   border: 0;
@@ -135,16 +134,16 @@ body {
   font-size: 100%;
   list-style: none;
 }
-#cwrc_wrapper .cwrc .ui-helper-clearfix:before,
-#cwrc_wrapper .cwrc .ui-helper-clearfix:after {
+html body div form div #cwrc_wrapper .cwrc .ui-helper-clearfix:before,
+html body div form div #cwrc_wrapper .cwrc .ui-helper-clearfix:after {
   content: "";
   display: table;
   border-collapse: collapse;
 }
-#cwrc_wrapper .cwrc .ui-helper-clearfix:after {
+html body div form div #cwrc_wrapper .cwrc .ui-helper-clearfix:after {
   clear: both;
 }
-#cwrc_wrapper .cwrc .ui-helper-zfix {
+html body div form div #cwrc_wrapper .cwrc .ui-helper-zfix {
   width: 100%;
   height: 100%;
   top: 0;
@@ -154,14 +153,14 @@ body {
   filter: alpha(opacity=0);
   /* support: IE8 */
 }
-#cwrc_wrapper .cwrc .ui-front {
+html body div form div #cwrc_wrapper .cwrc .ui-front {
   z-index: 100;
 }
-#cwrc_wrapper .cwrc .ui-state-disabled {
+html body div form div #cwrc_wrapper .cwrc .ui-state-disabled {
   cursor: default !important;
   pointer-events: none;
 }
-#cwrc_wrapper .cwrc .ui-icon {
+html body div form div #cwrc_wrapper .cwrc .ui-icon {
   display: inline-block;
   vertical-align: middle;
   margin-top: -0.25em;
@@ -170,102 +169,102 @@ body {
   overflow: hidden;
   background-repeat: no-repeat;
 }
-#cwrc_wrapper .cwrc .ui-widget-icon-block {
+html body div form div #cwrc_wrapper .cwrc .ui-widget-icon-block {
   left: 50%;
   margin-left: -8px;
   display: block;
 }
-#cwrc_wrapper .cwrc .ui-widget-overlay {
+html body div form div #cwrc_wrapper .cwrc .ui-widget-overlay {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
 }
-#cwrc_wrapper .cwrc .ui-resizable {
+html body div form div #cwrc_wrapper .cwrc .ui-resizable {
   position: relative;
 }
-#cwrc_wrapper .cwrc .ui-resizable-handle {
+html body div form div #cwrc_wrapper .cwrc .ui-resizable-handle {
   position: absolute;
   font-size: 0.1px;
   display: block;
   -ms-touch-action: none;
   touch-action: none;
 }
-#cwrc_wrapper .cwrc .ui-resizable-disabled .ui-resizable-handle,
-#cwrc_wrapper .cwrc .ui-resizable-autohide .ui-resizable-handle {
+html body div form div #cwrc_wrapper .cwrc .ui-resizable-disabled .ui-resizable-handle,
+html body div form div #cwrc_wrapper .cwrc .ui-resizable-autohide .ui-resizable-handle {
   display: none;
 }
-#cwrc_wrapper .cwrc .ui-resizable-n {
+html body div form div #cwrc_wrapper .cwrc .ui-resizable-n {
   cursor: n-resize;
   height: 7px;
   width: 100%;
   top: -5px;
   left: 0;
 }
-#cwrc_wrapper .cwrc .ui-resizable-s {
+html body div form div #cwrc_wrapper .cwrc .ui-resizable-s {
   cursor: s-resize;
   height: 7px;
   width: 100%;
   bottom: -5px;
   left: 0;
 }
-#cwrc_wrapper .cwrc .ui-resizable-e {
+html body div form div #cwrc_wrapper .cwrc .ui-resizable-e {
   cursor: e-resize;
   width: 7px;
   right: -5px;
   top: 0;
   height: 100%;
 }
-#cwrc_wrapper .cwrc .ui-resizable-w {
+html body div form div #cwrc_wrapper .cwrc .ui-resizable-w {
   cursor: w-resize;
   width: 7px;
   left: -5px;
   top: 0;
   height: 100%;
 }
-#cwrc_wrapper .cwrc .ui-resizable-se {
+html body div form div #cwrc_wrapper .cwrc .ui-resizable-se {
   cursor: se-resize;
   width: 12px;
   height: 12px;
   right: 1px;
   bottom: 1px;
 }
-#cwrc_wrapper .cwrc .ui-resizable-sw {
+html body div form div #cwrc_wrapper .cwrc .ui-resizable-sw {
   cursor: sw-resize;
   width: 9px;
   height: 9px;
   left: -5px;
   bottom: -5px;
 }
-#cwrc_wrapper .cwrc .ui-resizable-nw {
+html body div form div #cwrc_wrapper .cwrc .ui-resizable-nw {
   cursor: nw-resize;
   width: 9px;
   height: 9px;
   left: -5px;
   top: -5px;
 }
-#cwrc_wrapper .cwrc .ui-resizable-ne {
+html body div form div #cwrc_wrapper .cwrc .ui-resizable-ne {
   cursor: ne-resize;
   width: 9px;
   height: 9px;
   right: -5px;
   top: -5px;
 }
-#cwrc_wrapper .cwrc .ui-selectable {
+html body div form div #cwrc_wrapper .cwrc .ui-selectable {
   -ms-touch-action: none;
   touch-action: none;
 }
-#cwrc_wrapper .cwrc .ui-selectable-helper {
+html body div form div #cwrc_wrapper .cwrc .ui-selectable-helper {
   position: absolute;
   z-index: 100;
   border: 1px dotted black;
 }
-#cwrc_wrapper .cwrc .ui-sortable-handle {
+html body div form div #cwrc_wrapper .cwrc .ui-sortable-handle {
   -ms-touch-action: none;
   touch-action: none;
 }
-#cwrc_wrapper .cwrc .ui-accordion .ui-accordion-header {
+html body div form div #cwrc_wrapper .cwrc .ui-accordion .ui-accordion-header {
   display: block;
   cursor: pointer;
   position: relative;
@@ -273,66 +272,66 @@ body {
   padding: 0.5em 0.5em 0.5em 0.7em;
   font-size: 100%;
 }
-#cwrc_wrapper .cwrc .ui-accordion .ui-accordion-content {
+html body div form div #cwrc_wrapper .cwrc .ui-accordion .ui-accordion-content {
   padding: 1em 2.2em;
   border-top: 0;
   overflow: auto;
 }
-#cwrc_wrapper .cwrc .ui-autocomplete {
+html body div form div #cwrc_wrapper .cwrc .ui-autocomplete {
   position: absolute;
   top: 0;
   left: 0;
   cursor: default;
 }
-#cwrc_wrapper .cwrc .ui-menu {
+html body div form div #cwrc_wrapper .cwrc .ui-menu {
   list-style: none;
   padding: 0;
   margin: 0;
   display: block;
   outline: 0;
 }
-#cwrc_wrapper .cwrc .ui-menu .ui-menu {
+html body div form div #cwrc_wrapper .cwrc .ui-menu .ui-menu {
   position: absolute;
 }
-#cwrc_wrapper .cwrc .ui-menu .ui-menu-item {
+html body div form div #cwrc_wrapper .cwrc .ui-menu .ui-menu-item {
   margin: 0;
   cursor: pointer;
   /* support: IE10, see #8844 */
   list-style-image: url("data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7");
 }
-#cwrc_wrapper .cwrc .ui-menu .ui-menu-item-wrapper {
+html body div form div #cwrc_wrapper .cwrc .ui-menu .ui-menu-item-wrapper {
   position: relative;
   padding: 3px 1em 3px 0.4em;
 }
-#cwrc_wrapper .cwrc .ui-menu .ui-menu-divider {
+html body div form div #cwrc_wrapper .cwrc .ui-menu .ui-menu-divider {
   margin: 5px 0;
   height: 0;
   font-size: 0;
   line-height: 0;
   border-width: 1px 0 0 0;
 }
-#cwrc_wrapper .cwrc .ui-menu .ui-state-focus,
-#cwrc_wrapper .cwrc .ui-menu .ui-state-active {
+html body div form div #cwrc_wrapper .cwrc .ui-menu .ui-state-focus,
+html body div form div #cwrc_wrapper .cwrc .ui-menu .ui-state-active {
   margin: -1px;
 }
-#cwrc_wrapper .cwrc .ui-menu-icons {
+html body div form div #cwrc_wrapper .cwrc .ui-menu-icons {
   position: relative;
 }
-#cwrc_wrapper .cwrc .ui-menu-icons .ui-menu-item-wrapper {
+html body div form div #cwrc_wrapper .cwrc .ui-menu-icons .ui-menu-item-wrapper {
   padding-left: 2em;
 }
-#cwrc_wrapper .cwrc .ui-menu .ui-icon {
+html body div form div #cwrc_wrapper .cwrc .ui-menu .ui-icon {
   position: absolute;
   top: 0;
   bottom: 0;
   left: 0.2em;
   margin: auto 0;
 }
-#cwrc_wrapper .cwrc .ui-menu .ui-menu-icon {
+html body div form div #cwrc_wrapper .cwrc .ui-menu .ui-menu-icon {
   left: auto;
   right: 0;
 }
-#cwrc_wrapper .cwrc .ui-button {
+html body div form div #cwrc_wrapper .cwrc .ui-button {
   padding: 0.4em 1em;
   display: inline-block;
   position: relative;
@@ -348,62 +347,62 @@ body {
   /* Support: IE <= 11 */
   overflow: visible;
 }
-#cwrc_wrapper .cwrc .ui-button,
-#cwrc_wrapper .cwrc .ui-button:link,
-#cwrc_wrapper .cwrc .ui-button:visited,
-#cwrc_wrapper .cwrc .ui-button:hover,
-#cwrc_wrapper .cwrc .ui-button:active {
+html body div form div #cwrc_wrapper .cwrc .ui-button,
+html body div form div #cwrc_wrapper .cwrc .ui-button:link,
+html body div form div #cwrc_wrapper .cwrc .ui-button:visited,
+html body div form div #cwrc_wrapper .cwrc .ui-button:hover,
+html body div form div #cwrc_wrapper .cwrc .ui-button:active {
   text-decoration: none;
 }
-#cwrc_wrapper .cwrc .ui-button-icon-only {
+html body div form div #cwrc_wrapper .cwrc .ui-button-icon-only {
   width: 2em;
   box-sizing: border-box;
   text-indent: -9999px;
   white-space: nowrap;
 }
-#cwrc_wrapper input.cwrc .ui-button.ui-button-icon-only {
+html body div form div #cwrc_wrapper input.cwrc .ui-button.ui-button-icon-only {
   text-indent: 0;
 }
-#cwrc_wrapper .cwrc .ui-button-icon-only .ui-icon {
+html body div form div #cwrc_wrapper .cwrc .ui-button-icon-only .ui-icon {
   position: absolute;
   top: 50%;
   left: 50%;
   margin-top: -8px;
   margin-left: -8px;
 }
-#cwrc_wrapper .cwrc .ui-button.ui-icon-notext .ui-icon {
+html body div form div #cwrc_wrapper .cwrc .ui-button.ui-icon-notext .ui-icon {
   padding: 0;
   width: 2.1em;
   height: 2.1em;
   text-indent: -9999px;
   white-space: nowrap;
 }
-#cwrc_wrapper input.cwrc .ui-button.ui-icon-notext .ui-icon {
+html body div form div #cwrc_wrapper input.cwrc .ui-button.ui-icon-notext .ui-icon {
   width: auto;
   height: auto;
   text-indent: 0;
   white-space: normal;
   padding: 0.4em 1em;
 }
-#cwrc_wrapper input.cwrc .ui-button::-moz-focus-inner,
-#cwrc_wrapper button.cwrc .ui-button::-moz-focus-inner {
+html body div form div #cwrc_wrapper input.cwrc .ui-button::-moz-focus-inner,
+html body div form div #cwrc_wrapper button.cwrc .ui-button::-moz-focus-inner {
   border: 0;
   padding: 0;
 }
-#cwrc_wrapper .cwrc .ui-controlgroup {
+html body div form div #cwrc_wrapper .cwrc .ui-controlgroup {
   vertical-align: middle;
   display: inline-block;
 }
-#cwrc_wrapper .cwrc .ui-controlgroup > .ui-controlgroup-item {
+html body div form div #cwrc_wrapper .cwrc .ui-controlgroup > .ui-controlgroup-item {
   float: left;
   margin-left: 0;
   margin-right: 0;
 }
-#cwrc_wrapper .cwrc .ui-controlgroup > .ui-controlgroup-item:focus,
-#cwrc_wrapper .cwrc .ui-controlgroup > .ui-controlgroup-item.ui-visual-focus {
+html body div form div #cwrc_wrapper .cwrc .ui-controlgroup > .ui-controlgroup-item:focus,
+html body div form div #cwrc_wrapper .cwrc .ui-controlgroup > .ui-controlgroup-item.ui-visual-focus {
   z-index: 9999;
 }
-#cwrc_wrapper .cwrc .ui-controlgroup-vertical > .ui-controlgroup-item {
+html body div form div #cwrc_wrapper .cwrc .ui-controlgroup-vertical > .ui-controlgroup-item {
   display: block;
   float: none;
   width: 100%;
@@ -411,92 +410,92 @@ body {
   margin-bottom: 0;
   text-align: left;
 }
-#cwrc_wrapper .cwrc .ui-controlgroup-vertical .ui-controlgroup-item {
+html body div form div #cwrc_wrapper .cwrc .ui-controlgroup-vertical .ui-controlgroup-item {
   box-sizing: border-box;
 }
-#cwrc_wrapper .cwrc .ui-controlgroup .ui-controlgroup-label {
+html body div form div #cwrc_wrapper .cwrc .ui-controlgroup .ui-controlgroup-label {
   padding: 0.4em 1em;
 }
-#cwrc_wrapper .cwrc .ui-controlgroup .ui-controlgroup-label span {
+html body div form div #cwrc_wrapper .cwrc .ui-controlgroup .ui-controlgroup-label span {
   font-size: 80%;
 }
-#cwrc_wrapper .cwrc .ui-controlgroup-horizontal .ui-controlgroup-label + .ui-controlgroup-item {
+html body div form div #cwrc_wrapper .cwrc .ui-controlgroup-horizontal .ui-controlgroup-label + .ui-controlgroup-item {
   border-left: none;
 }
-#cwrc_wrapper .cwrc .ui-controlgroup-vertical .ui-controlgroup-label + .ui-controlgroup-item {
+html body div form div #cwrc_wrapper .cwrc .ui-controlgroup-vertical .ui-controlgroup-label + .ui-controlgroup-item {
   border-top: none;
 }
-#cwrc_wrapper .cwrc .ui-controlgroup-horizontal .ui-controlgroup-label.ui-widget-content {
+html body div form div #cwrc_wrapper .cwrc .ui-controlgroup-horizontal .ui-controlgroup-label.ui-widget-content {
   border-right: none;
 }
-#cwrc_wrapper .cwrc .ui-controlgroup-vertical .ui-controlgroup-label.ui-widget-content {
+html body div form div #cwrc_wrapper .cwrc .ui-controlgroup-vertical .ui-controlgroup-label.ui-widget-content {
   border-bottom: none;
 }
-#cwrc_wrapper .cwrc .ui-controlgroup-vertical .ui-spinner-input {
+html body div form div #cwrc_wrapper .cwrc .ui-controlgroup-vertical .ui-spinner-input {
   /* Support: IE8 only, Android < 4.4 only */
   width: 75%;
   width: calc(100% - 2.4em);
 }
-#cwrc_wrapper .cwrc .ui-controlgroup-vertical .ui-spinner .ui-spinner-up {
+html body div form div #cwrc_wrapper .cwrc .ui-controlgroup-vertical .ui-spinner .ui-spinner-up {
   border-top-style: solid;
 }
-#cwrc_wrapper .cwrc .ui-checkboxradio-label .ui-icon-background {
+html body div form div #cwrc_wrapper .cwrc .ui-checkboxradio-label .ui-icon-background {
   box-shadow: inset 1px 1px 1px #ccc;
   border-radius: 0.12em;
   border: none;
 }
-#cwrc_wrapper .cwrc .ui-checkboxradio-radio-label .ui-icon-background {
+html body div form div #cwrc_wrapper .cwrc .ui-checkboxradio-radio-label .ui-icon-background {
   width: 16px;
   height: 16px;
   border-radius: 1em;
   overflow: visible;
   border: none;
 }
-#cwrc_wrapper .cwrc .ui-checkboxradio-radio-label.ui-checkboxradio-checked .ui-icon,
-#cwrc_wrapper .cwrc .ui-checkboxradio-radio-label.ui-checkboxradio-checked:hover .ui-icon {
+html body div form div #cwrc_wrapper .cwrc .ui-checkboxradio-radio-label.ui-checkboxradio-checked .ui-icon,
+html body div form div #cwrc_wrapper .cwrc .ui-checkboxradio-radio-label.ui-checkboxradio-checked:hover .ui-icon {
   background-image: none;
   width: 8px;
   height: 8px;
   border-width: 4px;
   border-style: solid;
 }
-#cwrc_wrapper .cwrc .ui-checkboxradio-disabled {
+html body div form div #cwrc_wrapper .cwrc .ui-checkboxradio-disabled {
   pointer-events: none;
 }
-#cwrc_wrapper .cwrc .ui-datepicker {
+html body div form div #cwrc_wrapper .cwrc .ui-datepicker {
   width: 17em;
   padding: 0.2em 0.2em 0;
   display: none;
 }
-#cwrc_wrapper .cwrc .ui-datepicker .ui-datepicker-header {
+html body div form div #cwrc_wrapper .cwrc .ui-datepicker .ui-datepicker-header {
   position: relative;
   padding: 0.2em 0;
 }
-#cwrc_wrapper .cwrc .ui-datepicker .ui-datepicker-prev,
-#cwrc_wrapper .cwrc .ui-datepicker .ui-datepicker-next {
+html body div form div #cwrc_wrapper .cwrc .ui-datepicker .ui-datepicker-prev,
+html body div form div #cwrc_wrapper .cwrc .ui-datepicker .ui-datepicker-next {
   position: absolute;
   top: 2px;
   width: 1.8em;
   height: 1.8em;
 }
-#cwrc_wrapper .cwrc .ui-datepicker .ui-datepicker-prev-hover,
-#cwrc_wrapper .cwrc .ui-datepicker .ui-datepicker-next-hover {
+html body div form div #cwrc_wrapper .cwrc .ui-datepicker .ui-datepicker-prev-hover,
+html body div form div #cwrc_wrapper .cwrc .ui-datepicker .ui-datepicker-next-hover {
   top: 1px;
 }
-#cwrc_wrapper .cwrc .ui-datepicker .ui-datepicker-prev {
+html body div form div #cwrc_wrapper .cwrc .ui-datepicker .ui-datepicker-prev {
   left: 2px;
 }
-#cwrc_wrapper .cwrc .ui-datepicker .ui-datepicker-next {
+html body div form div #cwrc_wrapper .cwrc .ui-datepicker .ui-datepicker-next {
   right: 2px;
 }
-#cwrc_wrapper .cwrc .ui-datepicker .ui-datepicker-prev-hover {
+html body div form div #cwrc_wrapper .cwrc .ui-datepicker .ui-datepicker-prev-hover {
   left: 1px;
 }
-#cwrc_wrapper .cwrc .ui-datepicker .ui-datepicker-next-hover {
+html body div form div #cwrc_wrapper .cwrc .ui-datepicker .ui-datepicker-next-hover {
   right: 1px;
 }
-#cwrc_wrapper .cwrc .ui-datepicker .ui-datepicker-prev span,
-#cwrc_wrapper .cwrc .ui-datepicker .ui-datepicker-next span {
+html body div form div #cwrc_wrapper .cwrc .ui-datepicker .ui-datepicker-prev span,
+html body div form div #cwrc_wrapper .cwrc .ui-datepicker .ui-datepicker-next span {
   display: block;
   position: absolute;
   left: 50%;
@@ -504,43 +503,43 @@ body {
   top: 50%;
   margin-top: -8px;
 }
-#cwrc_wrapper .cwrc .ui-datepicker .ui-datepicker-title {
+html body div form div #cwrc_wrapper .cwrc .ui-datepicker .ui-datepicker-title {
   margin: 0 2.3em;
   line-height: 1.8em;
   text-align: center;
 }
-#cwrc_wrapper .cwrc .ui-datepicker .ui-datepicker-title select {
+html body div form div #cwrc_wrapper .cwrc .ui-datepicker .ui-datepicker-title select {
   font-size: 1em;
   margin: 1px 0;
 }
-#cwrc_wrapper .cwrc .ui-datepicker select.ui-datepicker-month,
-#cwrc_wrapper .cwrc .ui-datepicker select.ui-datepicker-year {
+html body div form div #cwrc_wrapper .cwrc .ui-datepicker select.ui-datepicker-month,
+html body div form div #cwrc_wrapper .cwrc .ui-datepicker select.ui-datepicker-year {
   width: 45%;
 }
-#cwrc_wrapper .cwrc .ui-datepicker table {
+html body div form div #cwrc_wrapper .cwrc .ui-datepicker table {
   width: 100%;
   font-size: 0.9em;
   border-collapse: collapse;
   margin: 0 0 0.4em;
 }
-#cwrc_wrapper .cwrc .ui-datepicker th {
+html body div form div #cwrc_wrapper .cwrc .ui-datepicker th {
   padding: 0.7em 0.3em;
   text-align: center;
   font-weight: bold;
   border: 0;
 }
-#cwrc_wrapper .cwrc .ui-datepicker td {
+html body div form div #cwrc_wrapper .cwrc .ui-datepicker td {
   border: 0;
   padding: 1px;
 }
-#cwrc_wrapper .cwrc .ui-datepicker td span,
-#cwrc_wrapper .cwrc .ui-datepicker td a {
+html body div form div #cwrc_wrapper .cwrc .ui-datepicker td span,
+html body div form div #cwrc_wrapper .cwrc .ui-datepicker td a {
   display: block;
   padding: 0.2em;
   text-align: right;
   text-decoration: none;
 }
-#cwrc_wrapper .cwrc .ui-datepicker .ui-datepicker-buttonpane {
+html body div form div #cwrc_wrapper .cwrc .ui-datepicker .ui-datepicker-buttonpane {
   background-image: none;
   margin: 0.7em 0 0 0;
   padding: 0 0.2em;
@@ -548,7 +547,7 @@ body {
   border-right: 0;
   border-bottom: 0;
 }
-#cwrc_wrapper .cwrc .ui-datepicker .ui-datepicker-buttonpane button {
+html body div form div #cwrc_wrapper .cwrc .ui-datepicker .ui-datepicker-buttonpane button {
   float: right;
   margin: 0.5em 0.2em 0.4em;
   cursor: pointer;
@@ -556,75 +555,75 @@ body {
   width: auto;
   overflow: visible;
 }
-#cwrc_wrapper .cwrc .ui-datepicker .ui-datepicker-buttonpane button.ui-datepicker-current {
+html body div form div #cwrc_wrapper .cwrc .ui-datepicker .ui-datepicker-buttonpane button.ui-datepicker-current {
   float: left;
 }
-#cwrc_wrapper .cwrc .ui-datepicker.ui-datepicker-multi {
+html body div form div #cwrc_wrapper .cwrc .ui-datepicker.ui-datepicker-multi {
   width: auto;
 }
-#cwrc_wrapper .cwrc .ui-datepicker-multi .ui-datepicker-group {
+html body div form div #cwrc_wrapper .cwrc .ui-datepicker-multi .ui-datepicker-group {
   float: left;
 }
-#cwrc_wrapper .cwrc .ui-datepicker-multi .ui-datepicker-group table {
+html body div form div #cwrc_wrapper .cwrc .ui-datepicker-multi .ui-datepicker-group table {
   width: 95%;
   margin: 0 auto 0.4em;
 }
-#cwrc_wrapper .cwrc .ui-datepicker-multi-2 .ui-datepicker-group {
+html body div form div #cwrc_wrapper .cwrc .ui-datepicker-multi-2 .ui-datepicker-group {
   width: 50%;
 }
-#cwrc_wrapper .cwrc .ui-datepicker-multi-3 .ui-datepicker-group {
+html body div form div #cwrc_wrapper .cwrc .ui-datepicker-multi-3 .ui-datepicker-group {
   width: 33.3%;
 }
-#cwrc_wrapper .cwrc .ui-datepicker-multi-4 .ui-datepicker-group {
+html body div form div #cwrc_wrapper .cwrc .ui-datepicker-multi-4 .ui-datepicker-group {
   width: 25%;
 }
-#cwrc_wrapper .cwrc .ui-datepicker-multi .ui-datepicker-group-last .ui-datepicker-header,
-#cwrc_wrapper .cwrc .ui-datepicker-multi .ui-datepicker-group-middle .ui-datepicker-header {
+html body div form div #cwrc_wrapper .cwrc .ui-datepicker-multi .ui-datepicker-group-last .ui-datepicker-header,
+html body div form div #cwrc_wrapper .cwrc .ui-datepicker-multi .ui-datepicker-group-middle .ui-datepicker-header {
   border-left-width: 0;
 }
-#cwrc_wrapper .cwrc .ui-datepicker-multi .ui-datepicker-buttonpane {
+html body div form div #cwrc_wrapper .cwrc .ui-datepicker-multi .ui-datepicker-buttonpane {
   clear: left;
 }
-#cwrc_wrapper .cwrc .ui-datepicker-row-break {
+html body div form div #cwrc_wrapper .cwrc .ui-datepicker-row-break {
   clear: both;
   width: 100%;
   font-size: 0;
 }
-#cwrc_wrapper .cwrc .ui-datepicker-rtl {
+html body div form div #cwrc_wrapper .cwrc .ui-datepicker-rtl {
   direction: rtl;
 }
-#cwrc_wrapper .cwrc .ui-datepicker-rtl .ui-datepicker-prev {
+html body div form div #cwrc_wrapper .cwrc .ui-datepicker-rtl .ui-datepicker-prev {
   right: 2px;
   left: auto;
 }
-#cwrc_wrapper .cwrc .ui-datepicker-rtl .ui-datepicker-next {
+html body div form div #cwrc_wrapper .cwrc .ui-datepicker-rtl .ui-datepicker-next {
   left: 2px;
   right: auto;
 }
-#cwrc_wrapper .cwrc .ui-datepicker-rtl .ui-datepicker-prev:hover {
+html body div form div #cwrc_wrapper .cwrc .ui-datepicker-rtl .ui-datepicker-prev:hover {
   right: 1px;
   left: auto;
 }
-#cwrc_wrapper .cwrc .ui-datepicker-rtl .ui-datepicker-next:hover {
+html body div form div #cwrc_wrapper .cwrc .ui-datepicker-rtl .ui-datepicker-next:hover {
   left: 1px;
   right: auto;
 }
-#cwrc_wrapper .cwrc .ui-datepicker-rtl .ui-datepicker-buttonpane {
+html body div form div #cwrc_wrapper .cwrc .ui-datepicker-rtl .ui-datepicker-buttonpane {
   clear: right;
 }
-#cwrc_wrapper .cwrc .ui-datepicker-rtl .ui-datepicker-buttonpane button {
+html body div form div #cwrc_wrapper .cwrc .ui-datepicker-rtl .ui-datepicker-buttonpane button {
   float: left;
 }
-#cwrc_wrapper .cwrc .ui-datepicker-rtl .ui-datepicker-buttonpane button.ui-datepicker-current,
-#cwrc_wrapper .cwrc .ui-datepicker-rtl .ui-datepicker-group {
+html body div form div #cwrc_wrapper .cwrc .ui-datepicker-rtl .ui-datepicker-buttonpane button.ui-datepicker-current,
+html body div form div #cwrc_wrapper .cwrc .ui-datepicker-rtl .ui-datepicker-group {
   float: right;
 }
-#cwrc_wrapper .cwrc .ui-datepicker-rtl .ui-datepicker-group-last .ui-datepicker-header,
-#cwrc_wrapper .cwrc .ui-datepicker-rtl .ui-datepicker-group-middle .ui-datepicker-header {
+html body div form div #cwrc_wrapper .cwrc .ui-datepicker-rtl .ui-datepicker-group-last .ui-datepicker-header,
+html body div form div #cwrc_wrapper .cwrc .ui-datepicker-rtl .ui-datepicker-group-middle .ui-datepicker-header {
   border-right-width: 0;
   border-left-width: 1px;
 }
-#cwrc_wrapper .cwrc .ui-datepicker .ui-icon {
+html body div form div #cwrc_wrapper .cwrc .ui-datepicker .ui-icon {
   display: block;
   text-indent: -99999px;
   overflow: hidden;
@@ -632,18 +631,18 @@ body {
   left: 0.5em;
   top: 0.3em;
 }
-#cwrc_wrapper .cwrc .ui-dialog {
+html body div form div #cwrc_wrapper .cwrc .ui-dialog {
   position: absolute;
   top: 0;
   left: 0;
   padding: 0.2em;
   outline: 0;
 }
-#cwrc_wrapper .cwrc .ui-dialog .ui-dialog-titlebar {
+html body div form div #cwrc_wrapper .cwrc .ui-dialog .ui-dialog-titlebar {
   padding: 0.4em 1em;
   position: relative;
 }
-#cwrc_wrapper .cwrc .ui-dialog .ui-dialog-title {
+html body div form div #cwrc_wrapper .cwrc .ui-dialog .ui-dialog-title {
   float: left;
   margin: 0.1em 0;
   white-space: nowrap;
@@ -651,7 +650,7 @@ body {
   overflow: hidden;
   text-overflow: ellipsis;
 }
-#cwrc_wrapper .cwrc .ui-dialog .ui-dialog-titlebar-close {
+html body div form div #cwrc_wrapper .cwrc .ui-dialog .ui-dialog-titlebar-close {
   position: absolute;
   right: 0.3em;
   top: 50%;
@@ -660,89 +659,89 @@ body {
   padding: 1px;
   height: 20px;
 }
-#cwrc_wrapper .cwrc .ui-dialog .ui-dialog-content {
+html body div form div #cwrc_wrapper .cwrc .ui-dialog .ui-dialog-content {
   position: relative;
   border: 0;
   padding: 0.5em 1em;
   background: none;
   overflow: auto;
 }
-#cwrc_wrapper .cwrc .ui-dialog .ui-dialog-buttonpane {
+html body div form div #cwrc_wrapper .cwrc .ui-dialog .ui-dialog-buttonpane {
   text-align: left;
   border-width: 1px 0 0 0;
   background-image: none;
   margin-top: 0.5em;
   padding: 0.3em 1em 0.5em 0.4em;
 }
-#cwrc_wrapper .cwrc .ui-dialog .ui-dialog-buttonpane .ui-dialog-buttonset {
+html body div form div #cwrc_wrapper .cwrc .ui-dialog .ui-dialog-buttonpane .ui-dialog-buttonset {
   float: right;
 }
-#cwrc_wrapper .cwrc .ui-dialog .ui-dialog-buttonpane button {
+html body div form div #cwrc_wrapper .cwrc .ui-dialog .ui-dialog-buttonpane button {
   margin: 0.5em 0.4em 0.5em 0;
   cursor: pointer;
 }
-#cwrc_wrapper .cwrc .ui-dialog .ui-resizable-n {
+html body div form div #cwrc_wrapper .cwrc .ui-dialog .ui-resizable-n {
   height: 2px;
   top: 0;
 }
-#cwrc_wrapper .cwrc .ui-dialog .ui-resizable-e {
+html body div form div #cwrc_wrapper .cwrc .ui-dialog .ui-resizable-e {
   width: 2px;
   right: 0;
 }
-#cwrc_wrapper .cwrc .ui-dialog .ui-resizable-s {
+html body div form div #cwrc_wrapper .cwrc .ui-dialog .ui-resizable-s {
   height: 2px;
   bottom: 0;
 }
-#cwrc_wrapper .cwrc .ui-dialog .ui-resizable-w {
+html body div form div #cwrc_wrapper .cwrc .ui-dialog .ui-resizable-w {
   width: 2px;
   left: 0;
 }
-#cwrc_wrapper .cwrc .ui-dialog .ui-resizable-se,
-#cwrc_wrapper .cwrc .ui-dialog .ui-resizable-sw,
-#cwrc_wrapper .cwrc .ui-dialog .ui-resizable-ne,
-#cwrc_wrapper .cwrc .ui-dialog .ui-resizable-nw {
+html body div form div #cwrc_wrapper .cwrc .ui-dialog .ui-resizable-se,
+html body div form div #cwrc_wrapper .cwrc .ui-dialog .ui-resizable-sw,
+html body div form div #cwrc_wrapper .cwrc .ui-dialog .ui-resizable-ne,
+html body div form div #cwrc_wrapper .cwrc .ui-dialog .ui-resizable-nw {
   width: 7px;
   height: 7px;
 }
-#cwrc_wrapper .cwrc .ui-dialog .ui-resizable-se {
+html body div form div #cwrc_wrapper .cwrc .ui-dialog .ui-resizable-se {
   right: 0;
   bottom: 0;
 }
-#cwrc_wrapper .cwrc .ui-dialog .ui-resizable-sw {
+html body div form div #cwrc_wrapper .cwrc .ui-dialog .ui-resizable-sw {
   left: 0;
   bottom: 0;
 }
-#cwrc_wrapper .cwrc .ui-dialog .ui-resizable-ne {
+html body div form div #cwrc_wrapper .cwrc .ui-dialog .ui-resizable-ne {
   right: 0;
   top: 0;
 }
-#cwrc_wrapper .cwrc .ui-dialog .ui-resizable-nw {
+html body div form div #cwrc_wrapper .cwrc .ui-dialog .ui-resizable-nw {
   left: 0;
   top: 0;
 }
-#cwrc_wrapper .cwrc .ui-draggable .ui-dialog-titlebar {
+html body div form div #cwrc_wrapper .cwrc .ui-draggable .ui-dialog-titlebar {
   cursor: move;
 }
-#cwrc_wrapper .cwrc .ui-progressbar {
+html body div form div #cwrc_wrapper .cwrc .ui-progressbar {
   height: 2em;
   text-align: left;
   overflow: hidden;
 }
-#cwrc_wrapper .cwrc .ui-progressbar .ui-progressbar-value {
+html body div form div #cwrc_wrapper .cwrc .ui-progressbar .ui-progressbar-value {
   margin: -1px;
   height: 100%;
 }
-#cwrc_wrapper .cwrc .ui-progressbar .ui-progressbar-overlay {
+html body div form div #cwrc_wrapper .cwrc .ui-progressbar .ui-progressbar-overlay {
   background: url("data:image/gif;base64,R0lGODlhKAAoAIABAAAAAP///yH/C05FVFNDQVBFMi4wAwEAAAAh+QQJAQABACwAAAAAKAAoAAACkYwNqXrdC52DS06a7MFZI+4FHBCKoDeWKXqymPqGqxvJrXZbMx7Ttc+w9XgU2FB3lOyQRWET2IFGiU9m1frDVpxZZc6bfHwv4c1YXP6k1Vdy292Fb6UkuvFtXpvWSzA+HycXJHUXiGYIiMg2R6W459gnWGfHNdjIqDWVqemH2ekpObkpOlppWUqZiqr6edqqWQAAIfkECQEAAQAsAAAAACgAKAAAApSMgZnGfaqcg1E2uuzDmmHUBR8Qil95hiPKqWn3aqtLsS18y7G1SzNeowWBENtQd+T1JktP05nzPTdJZlR6vUxNWWjV+vUWhWNkWFwxl9VpZRedYcflIOLafaa28XdsH/ynlcc1uPVDZxQIR0K25+cICCmoqCe5mGhZOfeYSUh5yJcJyrkZWWpaR8doJ2o4NYq62lAAACH5BAkBAAEALAAAAAAoACgAAAKVDI4Yy22ZnINRNqosw0Bv7i1gyHUkFj7oSaWlu3ovC8GxNso5fluz3qLVhBVeT/Lz7ZTHyxL5dDalQWPVOsQWtRnuwXaFTj9jVVh8pma9JjZ4zYSj5ZOyma7uuolffh+IR5aW97cHuBUXKGKXlKjn+DiHWMcYJah4N0lYCMlJOXipGRr5qdgoSTrqWSq6WFl2ypoaUAAAIfkECQEAAQAsAAAAACgAKAAAApaEb6HLgd/iO7FNWtcFWe+ufODGjRfoiJ2akShbueb0wtI50zm02pbvwfWEMWBQ1zKGlLIhskiEPm9R6vRXxV4ZzWT2yHOGpWMyorblKlNp8HmHEb/lCXjcW7bmtXP8Xt229OVWR1fod2eWqNfHuMjXCPkIGNileOiImVmCOEmoSfn3yXlJWmoHGhqp6ilYuWYpmTqKUgAAIfkECQEAAQAsAAAAACgAKAAAApiEH6kb58biQ3FNWtMFWW3eNVcojuFGfqnZqSebuS06w5V80/X02pKe8zFwP6EFWOT1lDFk8rGERh1TTNOocQ61Hm4Xm2VexUHpzjymViHrFbiELsefVrn6XKfnt2Q9G/+Xdie499XHd2g4h7ioOGhXGJboGAnXSBnoBwKYyfioubZJ2Hn0RuRZaflZOil56Zp6iioKSXpUAAAh+QQJAQABACwAAAAAKAAoAAACkoQRqRvnxuI7kU1a1UU5bd5tnSeOZXhmn5lWK3qNTWvRdQxP8qvaC+/yaYQzXO7BMvaUEmJRd3TsiMAgswmNYrSgZdYrTX6tSHGZO73ezuAw2uxuQ+BbeZfMxsexY35+/Qe4J1inV0g4x3WHuMhIl2jXOKT2Q+VU5fgoSUI52VfZyfkJGkha6jmY+aaYdirq+lQAACH5BAkBAAEALAAAAAAoACgAAAKWBIKpYe0L3YNKToqswUlvznigd4wiR4KhZrKt9Upqip61i9E3vMvxRdHlbEFiEXfk9YARYxOZZD6VQ2pUunBmtRXo1Lf8hMVVcNl8JafV38aM2/Fu5V16Bn63r6xt97j09+MXSFi4BniGFae3hzbH9+hYBzkpuUh5aZmHuanZOZgIuvbGiNeomCnaxxap2upaCZsq+1kAACH5BAkBAAEALAAAAAAoACgAAAKXjI8By5zf4kOxTVrXNVlv1X0d8IGZGKLnNpYtm8Lr9cqVeuOSvfOW79D9aDHizNhDJidFZhNydEahOaDH6nomtJjp1tutKoNWkvA6JqfRVLHU/QUfau9l2x7G54d1fl995xcIGAdXqMfBNadoYrhH+Mg2KBlpVpbluCiXmMnZ2Sh4GBqJ+ckIOqqJ6LmKSllZmsoq6wpQAAAh+QQJAQABACwAAAAAKAAoAAAClYx/oLvoxuJDkU1a1YUZbJ59nSd2ZXhWqbRa2/gF8Gu2DY3iqs7yrq+xBYEkYvFSM8aSSObE+ZgRl1BHFZNr7pRCavZ5BW2142hY3AN/zWtsmf12p9XxxFl2lpLn1rseztfXZjdIWIf2s5dItwjYKBgo9yg5pHgzJXTEeGlZuenpyPmpGQoKOWkYmSpaSnqKileI2FAAACH5BAkBAAEALAAAAAAoACgAAAKVjB+gu+jG4kORTVrVhRlsnn2dJ3ZleFaptFrb+CXmO9OozeL5VfP99HvAWhpiUdcwkpBH3825AwYdU8xTqlLGhtCosArKMpvfa1mMRae9VvWZfeB2XfPkeLmm18lUcBj+p5dnN8jXZ3YIGEhYuOUn45aoCDkp16hl5IjYJvjWKcnoGQpqyPlpOhr3aElaqrq56Bq7VAAAOw==");
   height: 100%;
   filter: alpha(opacity=25);
   /* support: IE8 */
   opacity: 0.25;
 }
-#cwrc_wrapper .cwrc .ui-progressbar-indeterminate .ui-progressbar-value {
+html body div form div #cwrc_wrapper .cwrc .ui-progressbar-indeterminate .ui-progressbar-value {
   background-image: none;
 }
-#cwrc_wrapper .cwrc .ui-selectmenu-menu {
+html body div form div #cwrc_wrapper .cwrc .ui-selectmenu-menu {
   padding: 0;
   margin: 0;
   position: absolute;
@@ -750,12 +749,12 @@ body {
   left: 0;
   display: none;
 }
-#cwrc_wrapper .cwrc .ui-selectmenu-menu .ui-menu {
+html body div form div #cwrc_wrapper .cwrc .ui-selectmenu-menu .ui-menu {
   overflow: auto;
   overflow-x: hidden;
   padding-bottom: 1px;
 }
-#cwrc_wrapper .cwrc .ui-selectmenu-menu .ui-menu .ui-selectmenu-optgroup {
+html body div form div #cwrc_wrapper .cwrc .ui-selectmenu-menu .ui-menu .ui-selectmenu-optgroup {
   font-size: 1em;
   font-weight: bold;
   line-height: 1.5;
@@ -764,29 +763,29 @@ body {
   height: auto;
   border: 0;
 }
-#cwrc_wrapper .cwrc .ui-selectmenu-open {
+html body div form div #cwrc_wrapper .cwrc .ui-selectmenu-open {
   display: block;
 }
-#cwrc_wrapper .cwrc .ui-selectmenu-text {
+html body div form div #cwrc_wrapper .cwrc .ui-selectmenu-text {
   display: block;
   margin-right: 20px;
   overflow: hidden;
   text-overflow: ellipsis;
 }
-#cwrc_wrapper .cwrc .ui-selectmenu-button.ui-button {
+html body div form div #cwrc_wrapper .cwrc .ui-selectmenu-button.ui-button {
   text-align: left;
   white-space: nowrap;
   width: 14em;
 }
-#cwrc_wrapper .cwrc .ui-selectmenu-icon.ui-icon {
+html body div form div #cwrc_wrapper .cwrc .ui-selectmenu-icon.ui-icon {
   float: right;
   margin-top: 0;
 }
-#cwrc_wrapper .cwrc .ui-slider {
+html body div form div #cwrc_wrapper .cwrc .ui-slider {
   position: relative;
   text-align: left;
 }
-#cwrc_wrapper .cwrc .ui-slider .ui-slider-handle {
+html body div form div #cwrc_wrapper .cwrc .ui-slider .ui-slider-handle {
   position: absolute;
   z-index: 2;
   width: 1.2em;
@@ -795,7 +794,7 @@ body {
   -ms-touch-action: none;
   touch-action: none;
 }
-#cwrc_wrapper .cwrc .ui-slider .ui-slider-range {
+html body div form div #cwrc_wrapper .cwrc .ui-slider .ui-slider-range {
   position: absolute;
   z-index: 1;
   font-size: 0.7em;
@@ -803,54 +802,54 @@ body {
   border: 0;
   background-position: 0 0;
 }
-#cwrc_wrapper .cwrc .ui-slider.ui-state-disabled .ui-slider-handle,
-#cwrc_wrapper .cwrc .ui-slider.ui-state-disabled .ui-slider-range {
+html body div form div #cwrc_wrapper .cwrc .ui-slider.ui-state-disabled .ui-slider-handle,
+html body div form div #cwrc_wrapper .cwrc .ui-slider.ui-state-disabled .ui-slider-range {
   filter: inherit;
 }
-#cwrc_wrapper .cwrc .ui-slider-horizontal {
+html body div form div #cwrc_wrapper .cwrc .ui-slider-horizontal {
   height: 0.8em;
 }
-#cwrc_wrapper .cwrc .ui-slider-horizontal .ui-slider-handle {
+html body div form div #cwrc_wrapper .cwrc .ui-slider-horizontal .ui-slider-handle {
   top: -0.3em;
   margin-left: -0.6em;
 }
-#cwrc_wrapper .cwrc .ui-slider-horizontal .ui-slider-range {
+html body div form div #cwrc_wrapper .cwrc .ui-slider-horizontal .ui-slider-range {
   top: 0;
   height: 100%;
 }
-#cwrc_wrapper .cwrc .ui-slider-horizontal .ui-slider-range-min {
+html body div form div #cwrc_wrapper .cwrc .ui-slider-horizontal .ui-slider-range-min {
   left: 0;
 }
-#cwrc_wrapper .cwrc .ui-slider-horizontal .ui-slider-range-max {
+html body div form div #cwrc_wrapper .cwrc .ui-slider-horizontal .ui-slider-range-max {
   right: 0;
 }
-#cwrc_wrapper .cwrc .ui-slider-vertical {
+html body div form div #cwrc_wrapper .cwrc .ui-slider-vertical {
   width: 0.8em;
   height: 100px;
 }
-#cwrc_wrapper .cwrc .ui-slider-vertical .ui-slider-handle {
+html body div form div #cwrc_wrapper .cwrc .ui-slider-vertical .ui-slider-handle {
   left: -0.3em;
   margin-left: 0;
   margin-bottom: -0.6em;
 }
-#cwrc_wrapper .cwrc .ui-slider-vertical .ui-slider-range {
+html body div form div #cwrc_wrapper .cwrc .ui-slider-vertical .ui-slider-range {
   left: 0;
   width: 100%;
 }
-#cwrc_wrapper .cwrc .ui-slider-vertical .ui-slider-range-min {
+html body div form div #cwrc_wrapper .cwrc .ui-slider-vertical .ui-slider-range-min {
   bottom: 0;
 }
-#cwrc_wrapper .cwrc .ui-slider-vertical .ui-slider-range-max {
+html body div form div #cwrc_wrapper .cwrc .ui-slider-vertical .ui-slider-range-max {
   top: 0;
 }
-#cwrc_wrapper .cwrc .ui-spinner {
+html body div form div #cwrc_wrapper .cwrc .ui-spinner {
   position: relative;
   display: inline-block;
   overflow: hidden;
   padding: 0;
   vertical-align: middle;
 }
-#cwrc_wrapper .cwrc .ui-spinner-input {
+html body div form div #cwrc_wrapper .cwrc .ui-spinner-input {
   border: none;
   background: none;
   color: inherit;
@@ -860,7 +859,7 @@ body {
   margin-left: 0.4em;
   margin-right: 2em;
 }
-#cwrc_wrapper .cwrc .ui-spinner-button {
+html body div form div #cwrc_wrapper .cwrc .ui-spinner-button {
   width: 1.6em;
   height: 50%;
   font-size: 0.5em;
@@ -873,27 +872,27 @@ body {
   overflow: hidden;
   right: 0;
 }
-#cwrc_wrapper .cwrc .ui-spinner a.ui-spinner-button {
+html body div form div #cwrc_wrapper .cwrc .ui-spinner a.ui-spinner-button {
   border-top-style: none;
   border-bottom-style: none;
   border-right-style: none;
 }
-#cwrc_wrapper .cwrc .ui-spinner-up {
+html body div form div #cwrc_wrapper .cwrc .ui-spinner-up {
   top: 0;
 }
-#cwrc_wrapper .cwrc .ui-spinner-down {
+html body div form div #cwrc_wrapper .cwrc .ui-spinner-down {
   bottom: 0;
 }
-#cwrc_wrapper .cwrc .ui-tabs {
+html body div form div #cwrc_wrapper .cwrc .ui-tabs {
   position: relative;
   /* position: relative prevents IE scroll bug (element with position: relative inside container with overflow: auto appear as "fixed") */
   padding: 0.2em;
 }
-#cwrc_wrapper .cwrc .ui-tabs .ui-tabs-nav {
+html body div form div #cwrc_wrapper .cwrc .ui-tabs .ui-tabs-nav {
   margin: 0;
   padding: 0.2em 0.2em 0;
 }
-#cwrc_wrapper .cwrc .ui-tabs .ui-tabs-nav li {
+html body div form div #cwrc_wrapper .cwrc .ui-tabs .ui-tabs-nav li {
   list-style: none;
   float: left;
   position: relative;
@@ -903,796 +902,796 @@ body {
   padding: 0;
   white-space: nowrap;
 }
-#cwrc_wrapper .cwrc .ui-tabs .ui-tabs-nav .ui-tabs-anchor {
+html body div form div #cwrc_wrapper .cwrc .ui-tabs .ui-tabs-nav .ui-tabs-anchor {
   float: left;
   padding: 0.5em 1em !important;
   text-decoration: none;
   font-weight: normal;
 }
-#cwrc_wrapper .cwrc .ui-tabs .ui-tabs-nav li.ui-tabs-active {
+html body div form div #cwrc_wrapper .cwrc .ui-tabs .ui-tabs-nav li.ui-tabs-active {
   margin-bottom: -1px;
   padding-bottom: 1px;
 }
-#cwrc_wrapper .cwrc .ui-tabs .ui-tabs-nav li.ui-tabs-active .ui-tabs-anchor,
-#cwrc_wrapper .cwrc .ui-tabs .ui-tabs-nav li.ui-state-disabled .ui-tabs-anchor,
-#cwrc_wrapper .cwrc .ui-tabs .ui-tabs-nav li.ui-tabs-loading .ui-tabs-anchor {
+html body div form div #cwrc_wrapper .cwrc .ui-tabs .ui-tabs-nav li.ui-tabs-active .ui-tabs-anchor,
+html body div form div #cwrc_wrapper .cwrc .ui-tabs .ui-tabs-nav li.ui-state-disabled .ui-tabs-anchor,
+html body div form div #cwrc_wrapper .cwrc .ui-tabs .ui-tabs-nav li.ui-tabs-loading .ui-tabs-anchor {
   cursor: text;
 }
-#cwrc_wrapper .cwrc .ui-tabs-collapsible .ui-tabs-nav li.ui-tabs-active .ui-tabs-anchor {
+html body div form div #cwrc_wrapper .cwrc .ui-tabs-collapsible .ui-tabs-nav li.ui-tabs-active .ui-tabs-anchor {
   cursor: pointer;
 }
-#cwrc_wrapper .cwrc .ui-tabs .ui-tabs-panel {
+html body div form div #cwrc_wrapper .cwrc .ui-tabs .ui-tabs-panel {
   display: block;
   border-width: 0 !important;
   padding: 1em 1.4em;
   background: none;
 }
-#cwrc_wrapper .cwrc .ui-tooltip {
+html body div form div #cwrc_wrapper .cwrc .ui-tooltip {
   padding: 8px;
   position: absolute;
   z-index: 9999;
   max-width: 300px;
 }
-#cwrc_wrapper body .cwrc .ui-tooltip {
+html body div form div #cwrc_wrapper body .cwrc .ui-tooltip {
   border-width: 2px;
 }
-#cwrc_wrapper .cwrc .ui-widget {
+html body div form div #cwrc_wrapper .cwrc .ui-widget {
   font-family: Lato, Arial, Helvetica, sans-serif;
   font-size: 1em;
 }
-#cwrc_wrapper .cwrc .ui-widget .ui-widget {
+html body div form div #cwrc_wrapper .cwrc .ui-widget .ui-widget {
   font-size: 1em;
 }
-#cwrc_wrapper .cwrc .ui-widget input,
-#cwrc_wrapper .cwrc .ui-widget select,
-#cwrc_wrapper .cwrc .ui-widget textarea,
-#cwrc_wrapper .cwrc .ui-widget button {
+html body div form div #cwrc_wrapper .cwrc .ui-widget input,
+html body div form div #cwrc_wrapper .cwrc .ui-widget select,
+html body div form div #cwrc_wrapper .cwrc .ui-widget textarea,
+html body div form div #cwrc_wrapper .cwrc .ui-widget button {
   font-family: Lato, Arial, Helvetica, sans-serif;
   font-size: 1em;
 }
-#cwrc_wrapper .cwrc .ui-widget.ui-widget-content {
+html body div form div #cwrc_wrapper .cwrc .ui-widget.ui-widget-content {
   border: 1px solid #c5c5c5;
   border-color: #c5c5c5 !important;
 }
-#cwrc_wrapper .cwrc .ui-widget-content {
+html body div form div #cwrc_wrapper .cwrc .ui-widget-content {
   border: 1px solid #dddddd;
   background: #ffffff;
   color: #333333;
 }
-#cwrc_wrapper .cwrc .ui-widget-content a {
+html body div form div #cwrc_wrapper .cwrc .ui-widget-content a {
   color: #333333;
 }
-#cwrc_wrapper .cwrc .ui-widget-header {
+html body div form div #cwrc_wrapper .cwrc .ui-widget-header {
   border: 1px solid #dddddd;
   background: #e9e9e9;
   color: #333333;
   font-weight: bold;
 }
-#cwrc_wrapper .cwrc .ui-widget-header a {
+html body div form div #cwrc_wrapper .cwrc .ui-widget-header a {
   color: #333333;
 }
-#cwrc_wrapper .cwrc .ui-state-default,
-#cwrc_wrapper .cwrc .ui-widget-content .ui-state-default,
-#cwrc_wrapper .cwrc .ui-widget-header .ui-state-default,
-#cwrc_wrapper .cwrc .ui-button,
-#cwrc_wrapper html .cwrc .ui-button.ui-state-disabled:hover,
-#cwrc_wrapper html .cwrc .ui-button.ui-state-disabled:active {
+html body div form div #cwrc_wrapper .cwrc .ui-state-default,
+html body div form div #cwrc_wrapper .cwrc .ui-widget-content .ui-state-default,
+html body div form div #cwrc_wrapper .cwrc .ui-widget-header .ui-state-default,
+html body div form div #cwrc_wrapper .cwrc .ui-button,
+html body div form div #cwrc_wrapper html .cwrc .ui-button.ui-state-disabled:hover,
+html body div form div #cwrc_wrapper html .cwrc .ui-button.ui-state-disabled:active {
   border: 1px solid #c5c5c5;
   background: #f6f6f6;
   font-weight: normal;
   color: #454545;
 }
-#cwrc_wrapper .cwrc .ui-state-default a,
-#cwrc_wrapper .cwrc .ui-state-default a:link,
-#cwrc_wrapper .cwrc .ui-state-default a:visited,
-#cwrc_wrapper a.cwrc .ui-button,
-#cwrc_wrapper a:link.cwrc .ui-button,
-#cwrc_wrapper a:visited.cwrc .ui-button,
-#cwrc_wrapper .cwrc .ui-button {
+html body div form div #cwrc_wrapper .cwrc .ui-state-default a,
+html body div form div #cwrc_wrapper .cwrc .ui-state-default a:link,
+html body div form div #cwrc_wrapper .cwrc .ui-state-default a:visited,
+html body div form div #cwrc_wrapper a.cwrc .ui-button,
+html body div form div #cwrc_wrapper a:link.cwrc .ui-button,
+html body div form div #cwrc_wrapper a:visited.cwrc .ui-button,
+html body div form div #cwrc_wrapper .cwrc .ui-button {
   color: #454545;
   text-decoration: none;
 }
-#cwrc_wrapper .cwrc .ui-state-hover,
-#cwrc_wrapper .cwrc .ui-widget-content .ui-state-hover,
-#cwrc_wrapper .cwrc .ui-widget-header .ui-state-hover,
-#cwrc_wrapper .cwrc .ui-state-focus,
-#cwrc_wrapper .cwrc .ui-widget-content .ui-state-focus,
-#cwrc_wrapper .cwrc .ui-widget-header .ui-state-focus,
-#cwrc_wrapper .cwrc .ui-button:hover,
-#cwrc_wrapper .cwrc .ui-button:focus {
+html body div form div #cwrc_wrapper .cwrc .ui-state-hover,
+html body div form div #cwrc_wrapper .cwrc .ui-widget-content .ui-state-hover,
+html body div form div #cwrc_wrapper .cwrc .ui-widget-header .ui-state-hover,
+html body div form div #cwrc_wrapper .cwrc .ui-state-focus,
+html body div form div #cwrc_wrapper .cwrc .ui-widget-content .ui-state-focus,
+html body div form div #cwrc_wrapper .cwrc .ui-widget-header .ui-state-focus,
+html body div form div #cwrc_wrapper .cwrc .ui-button:hover,
+html body div form div #cwrc_wrapper .cwrc .ui-button:focus {
   border: 1px solid #cccccc;
   background: #ededed;
   font-weight: normal;
   color: #2b2b2b;
 }
-#cwrc_wrapper .cwrc .ui-state-hover a,
-#cwrc_wrapper .cwrc .ui-state-hover a:hover,
-#cwrc_wrapper .cwrc .ui-state-hover a:link,
-#cwrc_wrapper .cwrc .ui-state-hover a:visited,
-#cwrc_wrapper .cwrc .ui-state-focus a,
-#cwrc_wrapper .cwrc .ui-state-focus a:hover,
-#cwrc_wrapper .cwrc .ui-state-focus a:link,
-#cwrc_wrapper .cwrc .ui-state-focus a:visited,
-#cwrc_wrapper a.cwrc .ui-button:hover,
-#cwrc_wrapper a.cwrc .ui-button:focus {
+html body div form div #cwrc_wrapper .cwrc .ui-state-hover a,
+html body div form div #cwrc_wrapper .cwrc .ui-state-hover a:hover,
+html body div form div #cwrc_wrapper .cwrc .ui-state-hover a:link,
+html body div form div #cwrc_wrapper .cwrc .ui-state-hover a:visited,
+html body div form div #cwrc_wrapper .cwrc .ui-state-focus a,
+html body div form div #cwrc_wrapper .cwrc .ui-state-focus a:hover,
+html body div form div #cwrc_wrapper .cwrc .ui-state-focus a:link,
+html body div form div #cwrc_wrapper .cwrc .ui-state-focus a:visited,
+html body div form div #cwrc_wrapper a.cwrc .ui-button:hover,
+html body div form div #cwrc_wrapper a.cwrc .ui-button:focus {
   color: #2b2b2b;
   text-decoration: none;
 }
-#cwrc_wrapper .cwrc .ui-visual-focus {
+html body div form div #cwrc_wrapper .cwrc .ui-visual-focus {
   box-shadow: 0 0 3px 1px #5e9ed6;
 }
-#cwrc_wrapper .cwrc .ui-state-active,
-#cwrc_wrapper .cwrc .ui-widget-content .ui-state-active,
-#cwrc_wrapper .cwrc .ui-widget-header .ui-state-active,
-#cwrc_wrapper a.cwrc .ui-button:active,
-#cwrc_wrapper .cwrc .ui-button:active,
-#cwrc_wrapper .cwrc .ui-button.ui-state-active:hover {
+html body div form div #cwrc_wrapper .cwrc .ui-state-active,
+html body div form div #cwrc_wrapper .cwrc .ui-widget-content .ui-state-active,
+html body div form div #cwrc_wrapper .cwrc .ui-widget-header .ui-state-active,
+html body div form div #cwrc_wrapper a.cwrc .ui-button:active,
+html body div form div #cwrc_wrapper .cwrc .ui-button:active,
+html body div form div #cwrc_wrapper .cwrc .ui-button.ui-state-active:hover {
   border: 1px solid #455373;
   background: #586B93;
   font-weight: normal;
   color: #ffffff;
 }
-#cwrc_wrapper .cwrc .ui-icon-background,
-#cwrc_wrapper .cwrc .ui-state-active .ui-icon-background {
+html body div form div #cwrc_wrapper .cwrc .ui-icon-background,
+html body div form div #cwrc_wrapper .cwrc .ui-state-active .ui-icon-background {
   border: #455373;
   background-color: #ffffff;
 }
-#cwrc_wrapper .cwrc .ui-state-active a,
-#cwrc_wrapper .cwrc .ui-state-active a:link,
-#cwrc_wrapper .cwrc .ui-state-active a:visited {
+html body div form div #cwrc_wrapper .cwrc .ui-state-active a,
+html body div form div #cwrc_wrapper .cwrc .ui-state-active a:link,
+html body div form div #cwrc_wrapper .cwrc .ui-state-active a:visited {
   color: #ffffff;
   text-decoration: none;
 }
-#cwrc_wrapper .cwrc .ui-state-highlight,
-#cwrc_wrapper .cwrc .ui-widget-content .ui-state-highlight,
-#cwrc_wrapper .cwrc .ui-widget-header .ui-state-highlight {
+html body div form div #cwrc_wrapper .cwrc .ui-state-highlight,
+html body div form div #cwrc_wrapper .cwrc .ui-widget-content .ui-state-highlight,
+html body div form div #cwrc_wrapper .cwrc .ui-widget-header .ui-state-highlight {
   border: 1px solid #FFB300;
   background: #FFE5A8;
   color: #996B00;
 }
-#cwrc_wrapper .cwrc .ui-state-checked {
+html body div form div #cwrc_wrapper .cwrc .ui-state-checked {
   border: 1px solid #FFB300;
   background: #FFE5A8;
 }
-#cwrc_wrapper .cwrc .ui-state-highlight a,
-#cwrc_wrapper .cwrc .ui-widget-content .ui-state-highlight a,
-#cwrc_wrapper .cwrc .ui-widget-header .ui-state-highlight a {
+html body div form div #cwrc_wrapper .cwrc .ui-state-highlight a,
+html body div form div #cwrc_wrapper .cwrc .ui-widget-content .ui-state-highlight a,
+html body div form div #cwrc_wrapper .cwrc .ui-widget-header .ui-state-highlight a {
   color: #996B00;
 }
-#cwrc_wrapper .cwrc .ui-state-error,
-#cwrc_wrapper .cwrc .ui-widget-content .ui-state-error,
-#cwrc_wrapper .cwrc .ui-widget-header .ui-state-error {
+html body div form div #cwrc_wrapper .cwrc .ui-state-error,
+html body div form div #cwrc_wrapper .cwrc .ui-widget-content .ui-state-error,
+html body div form div #cwrc_wrapper .cwrc .ui-widget-header .ui-state-error {
   border: 1px solid #f1a899;
   background: #fddfdf;
   color: #5f3f3f;
 }
-#cwrc_wrapper .cwrc .ui-state-error a,
-#cwrc_wrapper .cwrc .ui-widget-content .ui-state-error a,
-#cwrc_wrapper .cwrc .ui-widget-header .ui-state-error a {
+html body div form div #cwrc_wrapper .cwrc .ui-state-error a,
+html body div form div #cwrc_wrapper .cwrc .ui-widget-content .ui-state-error a,
+html body div form div #cwrc_wrapper .cwrc .ui-widget-header .ui-state-error a {
   color: #5f3f3f;
 }
-#cwrc_wrapper .cwrc .ui-state-error-text,
-#cwrc_wrapper .cwrc .ui-widget-content .ui-state-error-text,
-#cwrc_wrapper .cwrc .ui-widget-header .ui-state-error-text {
+html body div form div #cwrc_wrapper .cwrc .ui-state-error-text,
+html body div form div #cwrc_wrapper .cwrc .ui-widget-content .ui-state-error-text,
+html body div form div #cwrc_wrapper .cwrc .ui-widget-header .ui-state-error-text {
   color: #5f3f3f;
 }
-#cwrc_wrapper .cwrc .ui-priority-primary,
-#cwrc_wrapper .cwrc .ui-widget-content .ui-priority-primary,
-#cwrc_wrapper .cwrc .ui-widget-header .ui-priority-primary {
+html body div form div #cwrc_wrapper .cwrc .ui-priority-primary,
+html body div form div #cwrc_wrapper .cwrc .ui-widget-content .ui-priority-primary,
+html body div form div #cwrc_wrapper .cwrc .ui-widget-header .ui-priority-primary {
   font-weight: bold;
 }
-#cwrc_wrapper .cwrc .ui-priority-secondary,
-#cwrc_wrapper .cwrc .ui-widget-content .ui-priority-secondary,
-#cwrc_wrapper .cwrc .ui-widget-header .ui-priority-secondary {
+html body div form div #cwrc_wrapper .cwrc .ui-priority-secondary,
+html body div form div #cwrc_wrapper .cwrc .ui-widget-content .ui-priority-secondary,
+html body div form div #cwrc_wrapper .cwrc .ui-widget-header .ui-priority-secondary {
   opacity: 0.7;
   filter: alpha(opacity=70);
   /* support: IE8 */
   font-weight: normal;
 }
-#cwrc_wrapper .cwrc .ui-state-disabled,
-#cwrc_wrapper .cwrc .ui-widget-content .ui-state-disabled,
-#cwrc_wrapper .cwrc .ui-widget-header .ui-state-disabled {
+html body div form div #cwrc_wrapper .cwrc .ui-state-disabled,
+html body div form div #cwrc_wrapper .cwrc .ui-widget-content .ui-state-disabled,
+html body div form div #cwrc_wrapper .cwrc .ui-widget-header .ui-state-disabled {
   opacity: 0.35;
   filter: alpha(opacity=35);
   /* support: IE8 */
   background-image: none;
 }
-#cwrc_wrapper .cwrc .ui-state-disabled .ui-icon {
+html body div form div #cwrc_wrapper .cwrc .ui-state-disabled .ui-icon {
   filter: alpha(opacity=35);
   /* support: IE8 - See #6059 */
 }
-#cwrc_wrapper .cwrc .ui-icon {
+html body div form div #cwrc_wrapper .cwrc .ui-icon {
   width: 16px;
   height: 16px;
 }
-#cwrc_wrapper .cwrc .ui-icon,
-#cwrc_wrapper .cwrc .ui-widget-content .ui-icon {
+html body div form div #cwrc_wrapper .cwrc .ui-icon,
+html body div form div #cwrc_wrapper .cwrc .ui-widget-content .ui-icon {
   background-image: url("jquery-ui-images/ui-icons_444444_256x240.png");
 }
-#cwrc_wrapper .cwrc .ui-widget-header .ui-icon {
+html body div form div #cwrc_wrapper .cwrc .ui-widget-header .ui-icon {
   background-image: url("jquery-ui-images/ui-icons_444444_256x240.png");
 }
-#cwrc_wrapper .cwrc .ui-state-hover .ui-icon,
-#cwrc_wrapper .cwrc .ui-state-focus .ui-icon,
-#cwrc_wrapper .cwrc .ui-button:hover .ui-icon,
-#cwrc_wrapper .cwrc .ui-button:focus .ui-icon {
+html body div form div #cwrc_wrapper .cwrc .ui-state-hover .ui-icon,
+html body div form div #cwrc_wrapper .cwrc .ui-state-focus .ui-icon,
+html body div form div #cwrc_wrapper .cwrc .ui-button:hover .ui-icon,
+html body div form div #cwrc_wrapper .cwrc .ui-button:focus .ui-icon {
   background-image: url("jquery-ui-images/ui-icons_555555_256x240.png");
 }
-#cwrc_wrapper .cwrc .ui-state-active .ui-icon,
-#cwrc_wrapper .cwrc .ui-button:active .ui-icon {
+html body div form div #cwrc_wrapper .cwrc .ui-state-active .ui-icon,
+html body div form div #cwrc_wrapper .cwrc .ui-button:active .ui-icon {
   background-image: url("jquery-ui-images/ui-icons_ffffff_256x240.png");
 }
-#cwrc_wrapper .cwrc .ui-state-highlight .ui-icon,
-#cwrc_wrapper .cwrc .ui-button .ui-state-highlight.ui-icon {
+html body div form div #cwrc_wrapper .cwrc .ui-state-highlight .ui-icon,
+html body div form div #cwrc_wrapper .cwrc .ui-button .ui-state-highlight.ui-icon {
   background-image: url("jquery-ui-images/ui-icons_FFB300_256x240.png");
 }
-#cwrc_wrapper .cwrc .ui-state-error .ui-icon,
-#cwrc_wrapper .cwrc .ui-state-error-text .ui-icon {
+html body div form div #cwrc_wrapper .cwrc .ui-state-error .ui-icon,
+html body div form div #cwrc_wrapper .cwrc .ui-state-error-text .ui-icon {
   background-image: url("jquery-ui-images/ui-icons_cc0000_256x240.png");
 }
-#cwrc_wrapper .cwrc .ui-button .ui-icon {
+html body div form div #cwrc_wrapper .cwrc .ui-button .ui-icon {
   background-image: url("jquery-ui-images/ui-icons_777777_256x240.png");
 }
-#cwrc_wrapper .cwrc .ui-icon-blank {
+html body div form div #cwrc_wrapper .cwrc .ui-icon-blank {
   background-position: 16px 16px;
 }
-#cwrc_wrapper .cwrc .ui-icon-caret-1-n {
+html body div form div #cwrc_wrapper .cwrc .ui-icon-caret-1-n {
   background-position: 0 0;
 }
-#cwrc_wrapper .cwrc .ui-icon-caret-1-ne {
+html body div form div #cwrc_wrapper .cwrc .ui-icon-caret-1-ne {
   background-position: -16px 0;
 }
-#cwrc_wrapper .cwrc .ui-icon-caret-1-e {
+html body div form div #cwrc_wrapper .cwrc .ui-icon-caret-1-e {
   background-position: -32px 0;
 }
-#cwrc_wrapper .cwrc .ui-icon-caret-1-se {
+html body div form div #cwrc_wrapper .cwrc .ui-icon-caret-1-se {
   background-position: -48px 0;
 }
-#cwrc_wrapper .cwrc .ui-icon-caret-1-s {
+html body div form div #cwrc_wrapper .cwrc .ui-icon-caret-1-s {
   background-position: -65px 0;
 }
-#cwrc_wrapper .cwrc .ui-icon-caret-1-sw {
+html body div form div #cwrc_wrapper .cwrc .ui-icon-caret-1-sw {
   background-position: -80px 0;
 }
-#cwrc_wrapper .cwrc .ui-icon-caret-1-w {
+html body div form div #cwrc_wrapper .cwrc .ui-icon-caret-1-w {
   background-position: -96px 0;
 }
-#cwrc_wrapper .cwrc .ui-icon-caret-1-nw {
+html body div form div #cwrc_wrapper .cwrc .ui-icon-caret-1-nw {
   background-position: -112px 0;
 }
-#cwrc_wrapper .cwrc .ui-icon-caret-2-n-s {
+html body div form div #cwrc_wrapper .cwrc .ui-icon-caret-2-n-s {
   background-position: -128px 0;
 }
-#cwrc_wrapper .cwrc .ui-icon-caret-2-e-w {
+html body div form div #cwrc_wrapper .cwrc .ui-icon-caret-2-e-w {
   background-position: -144px 0;
 }
-#cwrc_wrapper .cwrc .ui-icon-triangle-1-n {
+html body div form div #cwrc_wrapper .cwrc .ui-icon-triangle-1-n {
   background-position: 0 -16px;
 }
-#cwrc_wrapper .cwrc .ui-icon-triangle-1-ne {
+html body div form div #cwrc_wrapper .cwrc .ui-icon-triangle-1-ne {
   background-position: -16px -16px;
 }
-#cwrc_wrapper .cwrc .ui-icon-triangle-1-e {
+html body div form div #cwrc_wrapper .cwrc .ui-icon-triangle-1-e {
   background-position: -32px -16px;
 }
-#cwrc_wrapper .cwrc .ui-icon-triangle-1-se {
+html body div form div #cwrc_wrapper .cwrc .ui-icon-triangle-1-se {
   background-position: -48px -16px;
 }
-#cwrc_wrapper .cwrc .ui-icon-triangle-1-s {
+html body div form div #cwrc_wrapper .cwrc .ui-icon-triangle-1-s {
   background-position: -65px -16px;
 }
-#cwrc_wrapper .cwrc .ui-icon-triangle-1-sw {
+html body div form div #cwrc_wrapper .cwrc .ui-icon-triangle-1-sw {
   background-position: -80px -16px;
 }
-#cwrc_wrapper .cwrc .ui-icon-triangle-1-w {
+html body div form div #cwrc_wrapper .cwrc .ui-icon-triangle-1-w {
   background-position: -96px -16px;
 }
-#cwrc_wrapper .cwrc .ui-icon-triangle-1-nw {
+html body div form div #cwrc_wrapper .cwrc .ui-icon-triangle-1-nw {
   background-position: -112px -16px;
 }
-#cwrc_wrapper .cwrc .ui-icon-triangle-2-n-s {
+html body div form div #cwrc_wrapper .cwrc .ui-icon-triangle-2-n-s {
   background-position: -128px -16px;
 }
-#cwrc_wrapper .cwrc .ui-icon-triangle-2-e-w {
+html body div form div #cwrc_wrapper .cwrc .ui-icon-triangle-2-e-w {
   background-position: -144px -16px;
 }
-#cwrc_wrapper .cwrc .ui-icon-arrow-1-n {
+html body div form div #cwrc_wrapper .cwrc .ui-icon-arrow-1-n {
   background-position: 0 -32px;
 }
-#cwrc_wrapper .cwrc .ui-icon-arrow-1-ne {
+html body div form div #cwrc_wrapper .cwrc .ui-icon-arrow-1-ne {
   background-position: -16px -32px;
 }
-#cwrc_wrapper .cwrc .ui-icon-arrow-1-e {
+html body div form div #cwrc_wrapper .cwrc .ui-icon-arrow-1-e {
   background-position: -32px -32px;
 }
-#cwrc_wrapper .cwrc .ui-icon-arrow-1-se {
+html body div form div #cwrc_wrapper .cwrc .ui-icon-arrow-1-se {
   background-position: -48px -32px;
 }
-#cwrc_wrapper .cwrc .ui-icon-arrow-1-s {
+html body div form div #cwrc_wrapper .cwrc .ui-icon-arrow-1-s {
   background-position: -65px -32px;
 }
-#cwrc_wrapper .cwrc .ui-icon-arrow-1-sw {
+html body div form div #cwrc_wrapper .cwrc .ui-icon-arrow-1-sw {
   background-position: -80px -32px;
 }
-#cwrc_wrapper .cwrc .ui-icon-arrow-1-w {
+html body div form div #cwrc_wrapper .cwrc .ui-icon-arrow-1-w {
   background-position: -96px -32px;
 }
-#cwrc_wrapper .cwrc .ui-icon-arrow-1-nw {
+html body div form div #cwrc_wrapper .cwrc .ui-icon-arrow-1-nw {
   background-position: -112px -32px;
 }
-#cwrc_wrapper .cwrc .ui-icon-arrow-2-n-s {
+html body div form div #cwrc_wrapper .cwrc .ui-icon-arrow-2-n-s {
   background-position: -128px -32px;
 }
-#cwrc_wrapper .cwrc .ui-icon-arrow-2-ne-sw {
+html body div form div #cwrc_wrapper .cwrc .ui-icon-arrow-2-ne-sw {
   background-position: -144px -32px;
 }
-#cwrc_wrapper .cwrc .ui-icon-arrow-2-e-w {
+html body div form div #cwrc_wrapper .cwrc .ui-icon-arrow-2-e-w {
   background-position: -160px -32px;
 }
-#cwrc_wrapper .cwrc .ui-icon-arrow-2-se-nw {
+html body div form div #cwrc_wrapper .cwrc .ui-icon-arrow-2-se-nw {
   background-position: -176px -32px;
 }
-#cwrc_wrapper .cwrc .ui-icon-arrowstop-1-n {
+html body div form div #cwrc_wrapper .cwrc .ui-icon-arrowstop-1-n {
   background-position: -192px -32px;
 }
-#cwrc_wrapper .cwrc .ui-icon-arrowstop-1-e {
+html body div form div #cwrc_wrapper .cwrc .ui-icon-arrowstop-1-e {
   background-position: -208px -32px;
 }
-#cwrc_wrapper .cwrc .ui-icon-arrowstop-1-s {
+html body div form div #cwrc_wrapper .cwrc .ui-icon-arrowstop-1-s {
   background-position: -224px -32px;
 }
-#cwrc_wrapper .cwrc .ui-icon-arrowstop-1-w {
+html body div form div #cwrc_wrapper .cwrc .ui-icon-arrowstop-1-w {
   background-position: -240px -32px;
 }
-#cwrc_wrapper .cwrc .ui-icon-arrowthick-1-n {
+html body div form div #cwrc_wrapper .cwrc .ui-icon-arrowthick-1-n {
   background-position: 1px -48px;
 }
-#cwrc_wrapper .cwrc .ui-icon-arrowthick-1-ne {
+html body div form div #cwrc_wrapper .cwrc .ui-icon-arrowthick-1-ne {
   background-position: -16px -48px;
 }
-#cwrc_wrapper .cwrc .ui-icon-arrowthick-1-e {
+html body div form div #cwrc_wrapper .cwrc .ui-icon-arrowthick-1-e {
   background-position: -32px -48px;
 }
-#cwrc_wrapper .cwrc .ui-icon-arrowthick-1-se {
+html body div form div #cwrc_wrapper .cwrc .ui-icon-arrowthick-1-se {
   background-position: -48px -48px;
 }
-#cwrc_wrapper .cwrc .ui-icon-arrowthick-1-s {
+html body div form div #cwrc_wrapper .cwrc .ui-icon-arrowthick-1-s {
   background-position: -64px -48px;
 }
-#cwrc_wrapper .cwrc .ui-icon-arrowthick-1-sw {
+html body div form div #cwrc_wrapper .cwrc .ui-icon-arrowthick-1-sw {
   background-position: -80px -48px;
 }
-#cwrc_wrapper .cwrc .ui-icon-arrowthick-1-w {
+html body div form div #cwrc_wrapper .cwrc .ui-icon-arrowthick-1-w {
   background-position: -96px -48px;
 }
-#cwrc_wrapper .cwrc .ui-icon-arrowthick-1-nw {
+html body div form div #cwrc_wrapper .cwrc .ui-icon-arrowthick-1-nw {
   background-position: -112px -48px;
 }
-#cwrc_wrapper .cwrc .ui-icon-arrowthick-2-n-s {
+html body div form div #cwrc_wrapper .cwrc .ui-icon-arrowthick-2-n-s {
   background-position: -128px -48px;
 }
-#cwrc_wrapper .cwrc .ui-icon-arrowthick-2-ne-sw {
+html body div form div #cwrc_wrapper .cwrc .ui-icon-arrowthick-2-ne-sw {
   background-position: -144px -48px;
 }
-#cwrc_wrapper .cwrc .ui-icon-arrowthick-2-e-w {
+html body div form div #cwrc_wrapper .cwrc .ui-icon-arrowthick-2-e-w {
   background-position: -160px -48px;
 }
-#cwrc_wrapper .cwrc .ui-icon-arrowthick-2-se-nw {
+html body div form div #cwrc_wrapper .cwrc .ui-icon-arrowthick-2-se-nw {
   background-position: -176px -48px;
 }
-#cwrc_wrapper .cwrc .ui-icon-arrowthickstop-1-n {
+html body div form div #cwrc_wrapper .cwrc .ui-icon-arrowthickstop-1-n {
   background-position: -192px -48px;
 }
-#cwrc_wrapper .cwrc .ui-icon-arrowthickstop-1-e {
+html body div form div #cwrc_wrapper .cwrc .ui-icon-arrowthickstop-1-e {
   background-position: -208px -48px;
 }
-#cwrc_wrapper .cwrc .ui-icon-arrowthickstop-1-s {
+html body div form div #cwrc_wrapper .cwrc .ui-icon-arrowthickstop-1-s {
   background-position: -224px -48px;
 }
-#cwrc_wrapper .cwrc .ui-icon-arrowthickstop-1-w {
+html body div form div #cwrc_wrapper .cwrc .ui-icon-arrowthickstop-1-w {
   background-position: -240px -48px;
 }
-#cwrc_wrapper .cwrc .ui-icon-arrowreturnthick-1-w {
+html body div form div #cwrc_wrapper .cwrc .ui-icon-arrowreturnthick-1-w {
   background-position: 0 -64px;
 }
-#cwrc_wrapper .cwrc .ui-icon-arrowreturnthick-1-n {
+html body div form div #cwrc_wrapper .cwrc .ui-icon-arrowreturnthick-1-n {
   background-position: -16px -64px;
 }
-#cwrc_wrapper .cwrc .ui-icon-arrowreturnthick-1-e {
+html body div form div #cwrc_wrapper .cwrc .ui-icon-arrowreturnthick-1-e {
   background-position: -32px -64px;
 }
-#cwrc_wrapper .cwrc .ui-icon-arrowreturnthick-1-s {
+html body div form div #cwrc_wrapper .cwrc .ui-icon-arrowreturnthick-1-s {
   background-position: -48px -64px;
 }
-#cwrc_wrapper .cwrc .ui-icon-arrowreturn-1-w {
+html body div form div #cwrc_wrapper .cwrc .ui-icon-arrowreturn-1-w {
   background-position: -64px -64px;
 }
-#cwrc_wrapper .cwrc .ui-icon-arrowreturn-1-n {
+html body div form div #cwrc_wrapper .cwrc .ui-icon-arrowreturn-1-n {
   background-position: -80px -64px;
 }
-#cwrc_wrapper .cwrc .ui-icon-arrowreturn-1-e {
+html body div form div #cwrc_wrapper .cwrc .ui-icon-arrowreturn-1-e {
   background-position: -96px -64px;
 }
-#cwrc_wrapper .cwrc .ui-icon-arrowreturn-1-s {
+html body div form div #cwrc_wrapper .cwrc .ui-icon-arrowreturn-1-s {
   background-position: -112px -64px;
 }
-#cwrc_wrapper .cwrc .ui-icon-arrowrefresh-1-w {
+html body div form div #cwrc_wrapper .cwrc .ui-icon-arrowrefresh-1-w {
   background-position: -128px -64px;
 }
-#cwrc_wrapper .cwrc .ui-icon-arrowrefresh-1-n {
+html body div form div #cwrc_wrapper .cwrc .ui-icon-arrowrefresh-1-n {
   background-position: -144px -64px;
 }
-#cwrc_wrapper .cwrc .ui-icon-arrowrefresh-1-e {
+html body div form div #cwrc_wrapper .cwrc .ui-icon-arrowrefresh-1-e {
   background-position: -160px -64px;
 }
-#cwrc_wrapper .cwrc .ui-icon-arrowrefresh-1-s {
+html body div form div #cwrc_wrapper .cwrc .ui-icon-arrowrefresh-1-s {
   background-position: -176px -64px;
 }
-#cwrc_wrapper .cwrc .ui-icon-arrow-4 {
+html body div form div #cwrc_wrapper .cwrc .ui-icon-arrow-4 {
   background-position: 0 -80px;
 }
-#cwrc_wrapper .cwrc .ui-icon-arrow-4-diag {
+html body div form div #cwrc_wrapper .cwrc .ui-icon-arrow-4-diag {
   background-position: -16px -80px;
 }
-#cwrc_wrapper .cwrc .ui-icon-extlink {
+html body div form div #cwrc_wrapper .cwrc .ui-icon-extlink {
   background-position: -32px -80px;
 }
-#cwrc_wrapper .cwrc .ui-icon-newwin {
+html body div form div #cwrc_wrapper .cwrc .ui-icon-newwin {
   background-position: -48px -80px;
 }
-#cwrc_wrapper .cwrc .ui-icon-refresh {
+html body div form div #cwrc_wrapper .cwrc .ui-icon-refresh {
   background-position: -64px -80px;
 }
-#cwrc_wrapper .cwrc .ui-icon-shuffle {
+html body div form div #cwrc_wrapper .cwrc .ui-icon-shuffle {
   background-position: -80px -80px;
 }
-#cwrc_wrapper .cwrc .ui-icon-transfer-e-w {
+html body div form div #cwrc_wrapper .cwrc .ui-icon-transfer-e-w {
   background-position: -96px -80px;
 }
-#cwrc_wrapper .cwrc .ui-icon-transferthick-e-w {
+html body div form div #cwrc_wrapper .cwrc .ui-icon-transferthick-e-w {
   background-position: -112px -80px;
 }
-#cwrc_wrapper .cwrc .ui-icon-folder-collapsed {
+html body div form div #cwrc_wrapper .cwrc .ui-icon-folder-collapsed {
   background-position: 0 -96px;
 }
-#cwrc_wrapper .cwrc .ui-icon-folder-open {
+html body div form div #cwrc_wrapper .cwrc .ui-icon-folder-open {
   background-position: -16px -96px;
 }
-#cwrc_wrapper .cwrc .ui-icon-document {
+html body div form div #cwrc_wrapper .cwrc .ui-icon-document {
   background-position: -32px -96px;
 }
-#cwrc_wrapper .cwrc .ui-icon-document-b {
+html body div form div #cwrc_wrapper .cwrc .ui-icon-document-b {
   background-position: -48px -96px;
 }
-#cwrc_wrapper .cwrc .ui-icon-note {
+html body div form div #cwrc_wrapper .cwrc .ui-icon-note {
   background-position: -64px -96px;
 }
-#cwrc_wrapper .cwrc .ui-icon-mail-closed {
+html body div form div #cwrc_wrapper .cwrc .ui-icon-mail-closed {
   background-position: -80px -96px;
 }
-#cwrc_wrapper .cwrc .ui-icon-mail-open {
+html body div form div #cwrc_wrapper .cwrc .ui-icon-mail-open {
   background-position: -96px -96px;
 }
-#cwrc_wrapper .cwrc .ui-icon-suitcase {
+html body div form div #cwrc_wrapper .cwrc .ui-icon-suitcase {
   background-position: -112px -96px;
 }
-#cwrc_wrapper .cwrc .ui-icon-comment {
+html body div form div #cwrc_wrapper .cwrc .ui-icon-comment {
   background-position: -128px -96px;
 }
-#cwrc_wrapper .cwrc .ui-icon-person {
+html body div form div #cwrc_wrapper .cwrc .ui-icon-person {
   background-position: -144px -96px;
 }
-#cwrc_wrapper .cwrc .ui-icon-print {
+html body div form div #cwrc_wrapper .cwrc .ui-icon-print {
   background-position: -160px -96px;
 }
-#cwrc_wrapper .cwrc .ui-icon-trash {
+html body div form div #cwrc_wrapper .cwrc .ui-icon-trash {
   background-position: -176px -96px;
 }
-#cwrc_wrapper .cwrc .ui-icon-locked {
+html body div form div #cwrc_wrapper .cwrc .ui-icon-locked {
   background-position: -192px -96px;
 }
-#cwrc_wrapper .cwrc .ui-icon-unlocked {
+html body div form div #cwrc_wrapper .cwrc .ui-icon-unlocked {
   background-position: -208px -96px;
 }
-#cwrc_wrapper .cwrc .ui-icon-bookmark {
+html body div form div #cwrc_wrapper .cwrc .ui-icon-bookmark {
   background-position: -224px -96px;
 }
-#cwrc_wrapper .cwrc .ui-icon-tag {
+html body div form div #cwrc_wrapper .cwrc .ui-icon-tag {
   background-position: -240px -96px;
 }
-#cwrc_wrapper .cwrc .ui-icon-home {
+html body div form div #cwrc_wrapper .cwrc .ui-icon-home {
   background-position: 0 -112px;
 }
-#cwrc_wrapper .cwrc .ui-icon-flag {
+html body div form div #cwrc_wrapper .cwrc .ui-icon-flag {
   background-position: -16px -112px;
 }
-#cwrc_wrapper .cwrc .ui-icon-calendar {
+html body div form div #cwrc_wrapper .cwrc .ui-icon-calendar {
   background-position: -32px -112px;
 }
-#cwrc_wrapper .cwrc .ui-icon-cart {
+html body div form div #cwrc_wrapper .cwrc .ui-icon-cart {
   background-position: -48px -112px;
 }
-#cwrc_wrapper .cwrc .ui-icon-pencil {
+html body div form div #cwrc_wrapper .cwrc .ui-icon-pencil {
   background-position: -64px -112px;
 }
-#cwrc_wrapper .cwrc .ui-icon-clock {
+html body div form div #cwrc_wrapper .cwrc .ui-icon-clock {
   background-position: -80px -112px;
 }
-#cwrc_wrapper .cwrc .ui-icon-disk {
+html body div form div #cwrc_wrapper .cwrc .ui-icon-disk {
   background-position: -96px -112px;
 }
-#cwrc_wrapper .cwrc .ui-icon-calculator {
+html body div form div #cwrc_wrapper .cwrc .ui-icon-calculator {
   background-position: -112px -112px;
 }
-#cwrc_wrapper .cwrc .ui-icon-zoomin {
+html body div form div #cwrc_wrapper .cwrc .ui-icon-zoomin {
   background-position: -128px -112px;
 }
-#cwrc_wrapper .cwrc .ui-icon-zoomout {
+html body div form div #cwrc_wrapper .cwrc .ui-icon-zoomout {
   background-position: -144px -112px;
 }
-#cwrc_wrapper .cwrc .ui-icon-search {
+html body div form div #cwrc_wrapper .cwrc .ui-icon-search {
   background-position: -160px -112px;
 }
-#cwrc_wrapper .cwrc .ui-icon-wrench {
+html body div form div #cwrc_wrapper .cwrc .ui-icon-wrench {
   background-position: -176px -112px;
 }
-#cwrc_wrapper .cwrc .ui-icon-gear {
+html body div form div #cwrc_wrapper .cwrc .ui-icon-gear {
   background-position: -192px -112px;
 }
-#cwrc_wrapper .cwrc .ui-icon-heart {
+html body div form div #cwrc_wrapper .cwrc .ui-icon-heart {
   background-position: -208px -112px;
 }
-#cwrc_wrapper .cwrc .ui-icon-star {
+html body div form div #cwrc_wrapper .cwrc .ui-icon-star {
   background-position: -224px -112px;
 }
-#cwrc_wrapper .cwrc .ui-icon-link {
+html body div form div #cwrc_wrapper .cwrc .ui-icon-link {
   background-position: -240px -112px;
 }
-#cwrc_wrapper .cwrc .ui-icon-cancel {
+html body div form div #cwrc_wrapper .cwrc .ui-icon-cancel {
   background-position: 0 -128px;
 }
-#cwrc_wrapper .cwrc .ui-icon-plus {
+html body div form div #cwrc_wrapper .cwrc .ui-icon-plus {
   background-position: -16px -128px;
 }
-#cwrc_wrapper .cwrc .ui-icon-plusthick {
+html body div form div #cwrc_wrapper .cwrc .ui-icon-plusthick {
   background-position: -32px -128px;
 }
-#cwrc_wrapper .cwrc .ui-icon-minus {
+html body div form div #cwrc_wrapper .cwrc .ui-icon-minus {
   background-position: -48px -128px;
 }
-#cwrc_wrapper .cwrc .ui-icon-minusthick {
+html body div form div #cwrc_wrapper .cwrc .ui-icon-minusthick {
   background-position: -64px -128px;
 }
-#cwrc_wrapper .cwrc .ui-icon-close {
+html body div form div #cwrc_wrapper .cwrc .ui-icon-close {
   background-position: -80px -128px;
 }
-#cwrc_wrapper .cwrc .ui-icon-closethick {
+html body div form div #cwrc_wrapper .cwrc .ui-icon-closethick {
   background-position: -96px -128px;
 }
-#cwrc_wrapper .cwrc .ui-icon-key {
+html body div form div #cwrc_wrapper .cwrc .ui-icon-key {
   background-position: -112px -128px;
 }
-#cwrc_wrapper .cwrc .ui-icon-lightbulb {
+html body div form div #cwrc_wrapper .cwrc .ui-icon-lightbulb {
   background-position: -128px -128px;
 }
-#cwrc_wrapper .cwrc .ui-icon-scissors {
+html body div form div #cwrc_wrapper .cwrc .ui-icon-scissors {
   background-position: -144px -128px;
 }
-#cwrc_wrapper .cwrc .ui-icon-clipboard {
+html body div form div #cwrc_wrapper .cwrc .ui-icon-clipboard {
   background-position: -160px -128px;
 }
-#cwrc_wrapper .cwrc .ui-icon-copy {
+html body div form div #cwrc_wrapper .cwrc .ui-icon-copy {
   background-position: -176px -128px;
 }
-#cwrc_wrapper .cwrc .ui-icon-contact {
+html body div form div #cwrc_wrapper .cwrc .ui-icon-contact {
   background-position: -192px -128px;
 }
-#cwrc_wrapper .cwrc .ui-icon-image {
+html body div form div #cwrc_wrapper .cwrc .ui-icon-image {
   background-position: -208px -128px;
 }
-#cwrc_wrapper .cwrc .ui-icon-video {
+html body div form div #cwrc_wrapper .cwrc .ui-icon-video {
   background-position: -224px -128px;
 }
-#cwrc_wrapper .cwrc .ui-icon-script {
+html body div form div #cwrc_wrapper .cwrc .ui-icon-script {
   background-position: -240px -128px;
 }
-#cwrc_wrapper .cwrc .ui-icon-alert {
+html body div form div #cwrc_wrapper .cwrc .ui-icon-alert {
   background-position: 0 -144px;
 }
-#cwrc_wrapper .cwrc .ui-icon-info {
+html body div form div #cwrc_wrapper .cwrc .ui-icon-info {
   background-position: -16px -144px;
 }
-#cwrc_wrapper .cwrc .ui-icon-notice {
+html body div form div #cwrc_wrapper .cwrc .ui-icon-notice {
   background-position: -32px -144px;
 }
-#cwrc_wrapper .cwrc .ui-icon-help {
+html body div form div #cwrc_wrapper .cwrc .ui-icon-help {
   background-position: -48px -144px;
 }
-#cwrc_wrapper .cwrc .ui-icon-check {
+html body div form div #cwrc_wrapper .cwrc .ui-icon-check {
   background-position: -64px -144px;
 }
-#cwrc_wrapper .cwrc .ui-icon-bullet {
+html body div form div #cwrc_wrapper .cwrc .ui-icon-bullet {
   background-position: -80px -144px;
 }
-#cwrc_wrapper .cwrc .ui-icon-radio-on {
+html body div form div #cwrc_wrapper .cwrc .ui-icon-radio-on {
   background-position: -96px -144px;
 }
-#cwrc_wrapper .cwrc .ui-icon-radio-off {
+html body div form div #cwrc_wrapper .cwrc .ui-icon-radio-off {
   background-position: -112px -144px;
 }
-#cwrc_wrapper .cwrc .ui-icon-pin-w {
+html body div form div #cwrc_wrapper .cwrc .ui-icon-pin-w {
   background-position: -128px -144px;
 }
-#cwrc_wrapper .cwrc .ui-icon-pin-s {
+html body div form div #cwrc_wrapper .cwrc .ui-icon-pin-s {
   background-position: -144px -144px;
 }
-#cwrc_wrapper .cwrc .ui-icon-play {
+html body div form div #cwrc_wrapper .cwrc .ui-icon-play {
   background-position: 0 -160px;
 }
-#cwrc_wrapper .cwrc .ui-icon-pause {
+html body div form div #cwrc_wrapper .cwrc .ui-icon-pause {
   background-position: -16px -160px;
 }
-#cwrc_wrapper .cwrc .ui-icon-seek-next {
+html body div form div #cwrc_wrapper .cwrc .ui-icon-seek-next {
   background-position: -32px -160px;
 }
-#cwrc_wrapper .cwrc .ui-icon-seek-prev {
+html body div form div #cwrc_wrapper .cwrc .ui-icon-seek-prev {
   background-position: -48px -160px;
 }
-#cwrc_wrapper .cwrc .ui-icon-seek-end {
+html body div form div #cwrc_wrapper .cwrc .ui-icon-seek-end {
   background-position: -64px -160px;
 }
-#cwrc_wrapper .cwrc .ui-icon-seek-start {
+html body div form div #cwrc_wrapper .cwrc .ui-icon-seek-start {
   background-position: -80px -160px;
 }
-#cwrc_wrapper .cwrc .ui-icon-seek-first {
+html body div form div #cwrc_wrapper .cwrc .ui-icon-seek-first {
   background-position: -80px -160px;
 }
-#cwrc_wrapper .cwrc .ui-icon-stop {
+html body div form div #cwrc_wrapper .cwrc .ui-icon-stop {
   background-position: -96px -160px;
 }
-#cwrc_wrapper .cwrc .ui-icon-eject {
+html body div form div #cwrc_wrapper .cwrc .ui-icon-eject {
   background-position: -112px -160px;
 }
-#cwrc_wrapper .cwrc .ui-icon-volume-off {
+html body div form div #cwrc_wrapper .cwrc .ui-icon-volume-off {
   background-position: -128px -160px;
 }
-#cwrc_wrapper .cwrc .ui-icon-volume-on {
+html body div form div #cwrc_wrapper .cwrc .ui-icon-volume-on {
   background-position: -144px -160px;
 }
-#cwrc_wrapper .cwrc .ui-icon-power {
+html body div form div #cwrc_wrapper .cwrc .ui-icon-power {
   background-position: 0 -176px;
 }
-#cwrc_wrapper .cwrc .ui-icon-signal-diag {
+html body div form div #cwrc_wrapper .cwrc .ui-icon-signal-diag {
   background-position: -16px -176px;
 }
-#cwrc_wrapper .cwrc .ui-icon-signal {
+html body div form div #cwrc_wrapper .cwrc .ui-icon-signal {
   background-position: -32px -176px;
 }
-#cwrc_wrapper .cwrc .ui-icon-battery-0 {
+html body div form div #cwrc_wrapper .cwrc .ui-icon-battery-0 {
   background-position: -48px -176px;
 }
-#cwrc_wrapper .cwrc .ui-icon-battery-1 {
+html body div form div #cwrc_wrapper .cwrc .ui-icon-battery-1 {
   background-position: -64px -176px;
 }
-#cwrc_wrapper .cwrc .ui-icon-battery-2 {
+html body div form div #cwrc_wrapper .cwrc .ui-icon-battery-2 {
   background-position: -80px -176px;
 }
-#cwrc_wrapper .cwrc .ui-icon-battery-3 {
+html body div form div #cwrc_wrapper .cwrc .ui-icon-battery-3 {
   background-position: -96px -176px;
 }
-#cwrc_wrapper .cwrc .ui-icon-circle-plus {
+html body div form div #cwrc_wrapper .cwrc .ui-icon-circle-plus {
   background-position: 0 -192px;
 }
-#cwrc_wrapper .cwrc .ui-icon-circle-minus {
+html body div form div #cwrc_wrapper .cwrc .ui-icon-circle-minus {
   background-position: -16px -192px;
 }
-#cwrc_wrapper .cwrc .ui-icon-circle-close {
+html body div form div #cwrc_wrapper .cwrc .ui-icon-circle-close {
   background-position: -32px -192px;
 }
-#cwrc_wrapper .cwrc .ui-icon-circle-triangle-e {
+html body div form div #cwrc_wrapper .cwrc .ui-icon-circle-triangle-e {
   background-position: -48px -192px;
 }
-#cwrc_wrapper .cwrc .ui-icon-circle-triangle-s {
+html body div form div #cwrc_wrapper .cwrc .ui-icon-circle-triangle-s {
   background-position: -64px -192px;
 }
-#cwrc_wrapper .cwrc .ui-icon-circle-triangle-w {
+html body div form div #cwrc_wrapper .cwrc .ui-icon-circle-triangle-w {
   background-position: -80px -192px;
 }
-#cwrc_wrapper .cwrc .ui-icon-circle-triangle-n {
+html body div form div #cwrc_wrapper .cwrc .ui-icon-circle-triangle-n {
   background-position: -96px -192px;
 }
-#cwrc_wrapper .cwrc .ui-icon-circle-arrow-e {
+html body div form div #cwrc_wrapper .cwrc .ui-icon-circle-arrow-e {
   background-position: -112px -192px;
 }
-#cwrc_wrapper .cwrc .ui-icon-circle-arrow-s {
+html body div form div #cwrc_wrapper .cwrc .ui-icon-circle-arrow-s {
   background-position: -128px -192px;
 }
-#cwrc_wrapper .cwrc .ui-icon-circle-arrow-w {
+html body div form div #cwrc_wrapper .cwrc .ui-icon-circle-arrow-w {
   background-position: -144px -192px;
 }
-#cwrc_wrapper .cwrc .ui-icon-circle-arrow-n {
+html body div form div #cwrc_wrapper .cwrc .ui-icon-circle-arrow-n {
   background-position: -160px -192px;
 }
-#cwrc_wrapper .cwrc .ui-icon-circle-zoomin {
+html body div form div #cwrc_wrapper .cwrc .ui-icon-circle-zoomin {
   background-position: -176px -192px;
 }
-#cwrc_wrapper .cwrc .ui-icon-circle-zoomout {
+html body div form div #cwrc_wrapper .cwrc .ui-icon-circle-zoomout {
   background-position: -192px -192px;
 }
-#cwrc_wrapper .cwrc .ui-icon-circle-check {
+html body div form div #cwrc_wrapper .cwrc .ui-icon-circle-check {
   background-position: -208px -192px;
 }
-#cwrc_wrapper .cwrc .ui-icon-circlesmall-plus {
+html body div form div #cwrc_wrapper .cwrc .ui-icon-circlesmall-plus {
   background-position: 0 -208px;
 }
-#cwrc_wrapper .cwrc .ui-icon-circlesmall-minus {
+html body div form div #cwrc_wrapper .cwrc .ui-icon-circlesmall-minus {
   background-position: -16px -208px;
 }
-#cwrc_wrapper .cwrc .ui-icon-circlesmall-close {
+html body div form div #cwrc_wrapper .cwrc .ui-icon-circlesmall-close {
   background-position: -32px -208px;
 }
-#cwrc_wrapper .cwrc .ui-icon-squaresmall-plus {
+html body div form div #cwrc_wrapper .cwrc .ui-icon-squaresmall-plus {
   background-position: -48px -208px;
 }
-#cwrc_wrapper .cwrc .ui-icon-squaresmall-minus {
+html body div form div #cwrc_wrapper .cwrc .ui-icon-squaresmall-minus {
   background-position: -64px -208px;
 }
-#cwrc_wrapper .cwrc .ui-icon-squaresmall-close {
+html body div form div #cwrc_wrapper .cwrc .ui-icon-squaresmall-close {
   background-position: -80px -208px;
 }
-#cwrc_wrapper .cwrc .ui-icon-grip-dotted-vertical {
+html body div form div #cwrc_wrapper .cwrc .ui-icon-grip-dotted-vertical {
   background-position: 0 -224px;
 }
-#cwrc_wrapper .cwrc .ui-icon-grip-dotted-horizontal {
+html body div form div #cwrc_wrapper .cwrc .ui-icon-grip-dotted-horizontal {
   background-position: -16px -224px;
 }
-#cwrc_wrapper .cwrc .ui-icon-grip-solid-vertical {
+html body div form div #cwrc_wrapper .cwrc .ui-icon-grip-solid-vertical {
   background-position: -32px -224px;
 }
-#cwrc_wrapper .cwrc .ui-icon-grip-solid-horizontal {
+html body div form div #cwrc_wrapper .cwrc .ui-icon-grip-solid-horizontal {
   background-position: -48px -224px;
 }
-#cwrc_wrapper .cwrc .ui-icon-gripsmall-diagonal-se {
+html body div form div #cwrc_wrapper .cwrc .ui-icon-gripsmall-diagonal-se {
   background-position: -64px -224px;
 }
-#cwrc_wrapper .cwrc .ui-icon-grip-diagonal-se {
+html body div form div #cwrc_wrapper .cwrc .ui-icon-grip-diagonal-se {
   background-position: -80px -224px;
 }
-#cwrc_wrapper .cwrc .ui-corner-all,
-#cwrc_wrapper .cwrc .ui-corner-top,
-#cwrc_wrapper .cwrc .ui-corner-left,
-#cwrc_wrapper .cwrc .ui-corner-tl {
+html body div form div #cwrc_wrapper .cwrc .ui-corner-all,
+html body div form div #cwrc_wrapper .cwrc .ui-corner-top,
+html body div form div #cwrc_wrapper .cwrc .ui-corner-left,
+html body div form div #cwrc_wrapper .cwrc .ui-corner-tl {
   border-top-left-radius: 3px;
 }
-#cwrc_wrapper .cwrc .ui-corner-all,
-#cwrc_wrapper .cwrc .ui-corner-top,
-#cwrc_wrapper .cwrc .ui-corner-right,
-#cwrc_wrapper .cwrc .ui-corner-tr {
+html body div form div #cwrc_wrapper .cwrc .ui-corner-all,
+html body div form div #cwrc_wrapper .cwrc .ui-corner-top,
+html body div form div #cwrc_wrapper .cwrc .ui-corner-right,
+html body div form div #cwrc_wrapper .cwrc .ui-corner-tr {
   border-top-right-radius: 3px;
 }
-#cwrc_wrapper .cwrc .ui-corner-all,
-#cwrc_wrapper .cwrc .ui-corner-bottom,
-#cwrc_wrapper .cwrc .ui-corner-left,
-#cwrc_wrapper .cwrc .ui-corner-bl {
+html body div form div #cwrc_wrapper .cwrc .ui-corner-all,
+html body div form div #cwrc_wrapper .cwrc .ui-corner-bottom,
+html body div form div #cwrc_wrapper .cwrc .ui-corner-left,
+html body div form div #cwrc_wrapper .cwrc .ui-corner-bl {
   border-bottom-left-radius: 3px;
 }
-#cwrc_wrapper .cwrc .ui-corner-all,
-#cwrc_wrapper .cwrc .ui-corner-bottom,
-#cwrc_wrapper .cwrc .ui-corner-right,
-#cwrc_wrapper .cwrc .ui-corner-br {
+html body div form div #cwrc_wrapper .cwrc .ui-corner-all,
+html body div form div #cwrc_wrapper .cwrc .ui-corner-bottom,
+html body div form div #cwrc_wrapper .cwrc .ui-corner-right,
+html body div form div #cwrc_wrapper .cwrc .ui-corner-br {
   border-bottom-right-radius: 3px;
 }
-#cwrc_wrapper .cwrc .ui-widget-overlay {
+html body div form div #cwrc_wrapper .cwrc .ui-widget-overlay {
   background: #aaaaaa;
   opacity: 0.3;
   filter: alpha(opacity=30);
   /* support: IE8 */
 }
-#cwrc_wrapper .cwrc .ui-widget-shadow {
+html body div form div #cwrc_wrapper .cwrc .ui-widget-shadow {
   -webkit-box-shadow: 0px 0px 5px #666666;
   box-shadow: 0px 0px 5px #666666;
 }
-#cwrc_wrapper .ui-layout-pane {
+html body div form div #cwrc_wrapper .ui-layout-pane {
   /* all 'panes' */
   background: #FFF;
   border: none;
@@ -1704,119 +1703,119 @@ body {
        - use ui-layout-container if pane has an inner-layout
     */
 }
-#cwrc_wrapper .ui-layout-content {
+html body div form div #cwrc_wrapper .ui-layout-content {
   position: relative;
   /* contain floated or positioned elements */
   overflow: auto;
   /* add scrolling to content-div */
 }
-#cwrc_wrapper .layout-child-container,
-#cwrc_wrapper .layout-content-container {
+html body div form div #cwrc_wrapper .layout-child-container,
+html body div form div #cwrc_wrapper .layout-content-container {
   padding: 0;
   overflow: hidden;
 }
-#cwrc_wrapper .layout-child-container {
+html body div form div #cwrc_wrapper .layout-child-container {
   border: 0;
   /* remove border because inner-layout-panes probably have borders */
 }
-#cwrc_wrapper .layout-scroll {
+html body div form div #cwrc_wrapper .layout-scroll {
   overflow: auto;
 }
-#cwrc_wrapper .layout-hide {
+html body div form div #cwrc_wrapper .layout-hide {
   display: none;
 }
-#cwrc_wrapper .ui-layout-resizer {
+html body div form div #cwrc_wrapper .ui-layout-resizer {
   /* all 'resizer-bars' */
   background: #DDD;
   border: 1px solid #BBB;
   border-width: 0;
 }
-#cwrc_wrapper .ui-layout-resizer-drag {
+html body div form div #cwrc_wrapper .ui-layout-resizer-drag {
   /* REAL resizer while resize in progress */
 }
-#cwrc_wrapper .ui-layout-resizer-hover {
+html body div form div #cwrc_wrapper .ui-layout-resizer-hover {
   /* affects both open and closed states */
 }
-#cwrc_wrapper .ui-layout-resizer-open-hover,
-#cwrc_wrapper .ui-layout-resizer-dragging {
+html body div form div #cwrc_wrapper .ui-layout-resizer-open-hover,
+html body div form div #cwrc_wrapper .ui-layout-resizer-dragging {
   /* resizer beging 'dragging' */
   background: #C4E1A4;
 }
-#cwrc_wrapper .ui-layout-resizer-dragging {
+html body div form div #cwrc_wrapper .ui-layout-resizer-dragging {
   /* CLONED resizer being dragged */
   border: 1px solid #BBB;
 }
-#cwrc_wrapper .ui-layout-resizer-north-dragging,
-#cwrc_wrapper .ui-layout-resizer-south-dragging {
+html body div form div #cwrc_wrapper .ui-layout-resizer-north-dragging,
+html body div form div #cwrc_wrapper .ui-layout-resizer-south-dragging {
   border-width: 1px 0;
 }
-#cwrc_wrapper .ui-layout-resizer-west-dragging,
-#cwrc_wrapper .ui-layout-resizer-east-dragging {
+html body div form div #cwrc_wrapper .ui-layout-resizer-west-dragging,
+html body div form div #cwrc_wrapper .ui-layout-resizer-east-dragging {
   border-width: 0 1px;
 }
-#cwrc_wrapper .ui-layout-resizer-dragging-limit {
+html body div form div #cwrc_wrapper .ui-layout-resizer-dragging-limit {
   /* CLONED resizer at min or max size-limit */
   background: #E1A4A4;
   /* red */
 }
-#cwrc_wrapper .ui-layout-resizer-closed-hover {
+html body div form div #cwrc_wrapper .ui-layout-resizer-closed-hover {
   /* hover-color to 'slide open' */
   background: #EBD5AA;
 }
-#cwrc_wrapper .ui-layout-resizer-sliding {
+html body div form div #cwrc_wrapper .ui-layout-resizer-sliding {
   /* resizer when pane is 'slid open' */
   opacity: 0.1;
   /* show only a slight shadow */
   filter: alpha(opacity=10);
 }
-#cwrc_wrapper .ui-layout-resizer-sliding-hover {
+html body div form div #cwrc_wrapper .ui-layout-resizer-sliding-hover {
   /* sliding resizer - hover */
   opacity: 1;
   /* on-hover, show the resizer-bar normally */
   filter: alpha(opacity=100);
 }
-#cwrc_wrapper .ui-layout-resizer-north-sliding-hover {
+html body div form div #cwrc_wrapper .ui-layout-resizer-north-sliding-hover {
   border-bottom-width: 1px;
 }
-#cwrc_wrapper .ui-layout-resizer-south-sliding-hover {
+html body div form div #cwrc_wrapper .ui-layout-resizer-south-sliding-hover {
   border-top-width: 1px;
 }
-#cwrc_wrapper .ui-layout-resizer-west-sliding-hover {
+html body div form div #cwrc_wrapper .ui-layout-resizer-west-sliding-hover {
   border-right-width: 1px;
 }
-#cwrc_wrapper .ui-layout-resizer-east-sliding-hover {
+html body div form div #cwrc_wrapper .ui-layout-resizer-east-sliding-hover {
   border-left-width: 1px;
 }
-#cwrc_wrapper .ui-layout-toggler {
+html body div form div #cwrc_wrapper .ui-layout-toggler {
   border: 1px solid #BBB;
   /* match pane-border */
   background-color: #BBB;
 }
-#cwrc_wrapper .ui-layout-resizer-hover .ui-layout-toggler {
+html body div form div #cwrc_wrapper .ui-layout-resizer-hover .ui-layout-toggler {
   opacity: 0.6;
   filter: alpha(opacity=60);
 }
-#cwrc_wrapper .ui-layout-toggler-hover,
-#cwrc_wrapper .ui-layout-resizer-hover .ui-layout-toggler-hover {
+html body div form div #cwrc_wrapper .ui-layout-toggler-hover,
+html body div form div #cwrc_wrapper .ui-layout-resizer-hover .ui-layout-toggler-hover {
   /* need specificity when IS resizable */
   background-color: #FC6;
   opacity: 1;
   filter: alpha(opacity=100);
 }
-#cwrc_wrapper .ui-layout-toggler-north,
-#cwrc_wrapper .ui-layout-toggler-south {
+html body div form div #cwrc_wrapper .ui-layout-toggler-north,
+html body div form div #cwrc_wrapper .ui-layout-toggler-south {
   border-width: 0 1px;
   /* left/right borders */
 }
-#cwrc_wrapper .ui-layout-toggler-west,
-#cwrc_wrapper .ui-layout-toggler-east {
+html body div form div #cwrc_wrapper .ui-layout-toggler-west,
+html body div form div #cwrc_wrapper .ui-layout-toggler-east {
   border-width: 1px 0;
   /* top/bottom borders */
 }
-#cwrc_wrapper .ui-layout-resizer-sliding .ui-layout-toggler {
+html body div form div #cwrc_wrapper .ui-layout-resizer-sliding .ui-layout-toggler {
   display: none;
 }
-#cwrc_wrapper .ui-layout-toggler .content {
+html body div form div #cwrc_wrapper .ui-layout-toggler .content {
   color: #666;
   font-size: 12px;
   font-weight: bold;
@@ -1824,23 +1823,23 @@ body {
   padding-bottom: 0.35ex;
   /* to 'vertically center' text inside text-span */
 }
-#cwrc_wrapper .ui-layout-toggler-north-open,
-#cwrc_wrapper .ui-layout-toggler-south-closed {
+html body div form div #cwrc_wrapper .ui-layout-toggler-north-open,
+html body div form div #cwrc_wrapper .ui-layout-toggler-south-closed {
   background: url("../img/arrow_up.gif") no-repeat scroll center bottom transparent;
 }
-#cwrc_wrapper .ui-layout-toggler-north-closed,
-#cwrc_wrapper .ui-layout-toggler-south-open {
+html body div form div #cwrc_wrapper .ui-layout-toggler-north-closed,
+html body div form div #cwrc_wrapper .ui-layout-toggler-south-open {
   background: url("../img/arrow_down.gif") no-repeat scroll center top transparent;
 }
-#cwrc_wrapper .ui-layout-toggler-east-closed,
-#cwrc_wrapper .ui-layout-toggler-west-open {
+html body div form div #cwrc_wrapper .ui-layout-toggler-east-closed,
+html body div form div #cwrc_wrapper .ui-layout-toggler-west-open {
   background: url("../img/arrow_left.gif") no-repeat scroll right center transparent;
 }
-#cwrc_wrapper .ui-layout-toggler-east-open,
-#cwrc_wrapper .ui-layout-toggler-west-closed {
+html body div form div #cwrc_wrapper .ui-layout-toggler-east-open,
+html body div form div #cwrc_wrapper .ui-layout-toggler-west-closed {
   background: url("../img/arrow_right.gif") no-repeat scroll left center transparent;
 }
-#cwrc_wrapper .ui-layout-mask {
+html body div form div #cwrc_wrapper .ui-layout-mask {
   border: none !important;
   padding: 0 !important;
   margin: 0 !important;
@@ -1849,14 +1848,14 @@ body {
   opacity: 0 !important;
   filter: alpha(opacity=0) !important;
 }
-#cwrc_wrapper .ui-layout-mask-inside-pane {
+html body div form div #cwrc_wrapper .ui-layout-mask-inside-pane {
   /* masks always inside pane EXCEPT when pane is an iframe */
   top: 0 !important;
   left: 0 !important;
   width: 100% !important;
   height: 100% !important;
 }
-#cwrc_wrapper .cwrcWrapper {
+html body div form div #cwrc_wrapper .cwrcWrapper {
   margin: 0;
   padding: 0;
   font-family: Lato, Arial, Helvetica, sans-serif;
@@ -1866,20 +1865,20 @@ body {
   height: 100%;
   width: 100%;
 }
-#cwrc_wrapper .cwrcDialogWrapper {
+html body div form div #cwrc_wrapper .cwrcDialogWrapper {
   position: fixed;
   top: 0px;
   left: 0px;
   z-index: 100;
 }
-#cwrc_wrapper .cwrcLoadingMask {
+html body div form div #cwrc_wrapper .cwrcLoadingMask {
   width: 100%;
   height: 100%;
   background-color: #DDD;
   position: absolute;
   z-index: 1000;
 }
-#cwrc_wrapper .cwrcLoadingMask div {
+html body div form div #cwrc_wrapper .cwrcLoadingMask div {
   background-image: url(../img/loading_large.gif);
   background-repeat: no-repeat;
   background-position: left center;
@@ -1892,32 +1891,32 @@ body {
   left: 50%;
   transform: translate(-50%, -50%);
 }
-#cwrc_wrapper .cwrcHeader {
+html body div form div #cwrc_wrapper .cwrcHeader {
   overflow: hidden !important;
   color: #eee !important;
   background-color: #455372 !important;
 }
-#cwrc_wrapper .headerParent {
+html body div form div #cwrc_wrapper .headerParent {
   display: table;
   height: 35px;
   width: 100%;
   overflow: hidden;
 }
-#cwrc_wrapper .headerButtons {
+html body div form div #cwrc_wrapper .headerButtons {
   display: table-cell;
   vertical-align: middle;
   text-align: right;
 }
-#cwrc_wrapper .headerButtons > div {
+html body div form div #cwrc_wrapper .headerButtons > div {
   display: inline-block;
   margin-right: 15px;
   cursor: pointer;
   text-decoration: none;
 }
-#cwrc_wrapper .headerButtons > div:hover {
+html body div form div #cwrc_wrapper .headerButtons > div:hover {
   text-decoration: underline;
 }
-#cwrc_wrapper .titleLink {
+html body div form div #cwrc_wrapper .titleLink {
   display: table-cell;
   vertical-align: middle;
   color: #eee !important;
@@ -1928,51 +1927,51 @@ body {
   background-repeat: no-repeat;
   background-position: 5px center;
 }
-#cwrc_wrapper .helpLink {
+html body div form div #cwrc_wrapper .helpLink {
   background: url("../img/help.png") no-repeat scroll 0 0 transparent;
   padding-left: 20px;
 }
-#cwrc_wrapper .fullscreenLink.out {
+html body div form div #cwrc_wrapper .fullscreenLink.out {
   background: url("../img/arrow_out.png") no-repeat scroll 0 0 transparent;
   padding-left: 20px;
 }
-#cwrc_wrapper .fullscreenLink.in {
+html body div form div #cwrc_wrapper .fullscreenLink.in {
   background: url("../img/arrow_in.png") no-repeat scroll 0 0 transparent;
   padding-left: 20px;
 }
-#cwrc_wrapper .arrowLeft {
+html body div form div #cwrc_wrapper .arrowLeft {
   background-image: url('../img/arrow_left.gif');
 }
-#cwrc_wrapper .arrowRight {
+html body div form div #cwrc_wrapper .arrowRight {
   background-image: url('../img/arrow_right.gif');
 }
-#cwrc_wrapper .cwrc .moduleParent {
+html body div form div #cwrc_wrapper .cwrc .moduleParent {
   height: 100%;
   display: flex;
   flex-direction: column;
 }
-#cwrc_wrapper .cwrc .moduleContent {
+html body div form div #cwrc_wrapper .cwrc .moduleContent {
   padding-top: 5px;
   overflow: auto;
   flex: 1;
 }
-#cwrc_wrapper .cwrc .moduleHeader {
+html body div form div #cwrc_wrapper .cwrc .moduleHeader {
   border-bottom: 1px solid #BBBBBB;
   padding: 5px;
 }
-#cwrc_wrapper .cwrc .moduleFooter {
+html body div form div #cwrc_wrapper .cwrc .moduleFooter {
   border-top: 1px solid #BBBBBB;
   padding: 5px;
 }
-#cwrc_wrapper .cwrc .sortBy > span {
+html body div form div #cwrc_wrapper .cwrc .sortBy > span {
   float: left;
   margin: 0.4em;
 }
-#cwrc_wrapper .cwrc.tabs {
+html body div form div #cwrc_wrapper .cwrc.tabs {
   overflow: hidden;
   padding: 0 !important;
 }
-#cwrc_wrapper .cwrc.tabs > ul {
+html body div form div #cwrc_wrapper .cwrc.tabs > ul {
   padding: 3px 2px 0 !important;
   border-top: none !important;
   border-left: none !important;
@@ -1981,224 +1980,224 @@ body {
   border-bottom: 1px solid #b3bbbe !important;
   background: #eee !important;
 }
-#cwrc_wrapper .cwrc.tabs > ul li a {
+html body div form div #cwrc_wrapper .cwrc.tabs > ul li a {
   padding: 4px 1em !important;
 }
-#cwrc_wrapper .cwrc.tabs .ui-tabs-panel {
+html body div form div #cwrc_wrapper .cwrc.tabs .ui-tabs-panel {
   padding: 0 !important;
   height: 100%;
   overflow: auto;
 }
-#cwrc_wrapper .cwrc.tabs > ul li.ui-state-default {
+html body div form div #cwrc_wrapper .cwrc.tabs > ul li.ui-state-default {
   border-color: #eee !important;
   background: #eee !important;
 }
-#cwrc_wrapper .cwrc.tabs > ul li.ui-state-hover {
+html body div form div #cwrc_wrapper .cwrc.tabs > ul li.ui-state-hover {
   background: #b3bbbe !important;
 }
-#cwrc_wrapper .cwrc.tabs > ul li.ui-state-active {
+html body div form div #cwrc_wrapper .cwrc.tabs > ul li.ui-state-active {
   border-color: #b3bbbe !important;
   background: #ffffff !important;
 }
-#cwrc_wrapper .cwrc.tabs > ul li.ui-state-active a,
-#cwrc_wrapper .cwrc.tabs > ul li.ui-state-active a:link {
+html body div form div #cwrc_wrapper .cwrc.tabs > ul li.ui-state-active a,
+html body div form div #cwrc_wrapper .cwrc.tabs > ul li.ui-state-active a:link {
   color: #333333 !important;
 }
-#cwrc_wrapper .loading {
+html body div form div #cwrc_wrapper .loading {
   background-image: url('../img/loading.gif');
   width: 16px;
   height: 16px;
   display: inline-block;
 }
-#cwrc_wrapper .cwrc {
+html body div form div #cwrc_wrapper .cwrc {
   font-family: Lato, Arial, Helvetica, sans-serif;
   font-size: 14px;
 }
-#cwrc_wrapper .cwrc h1 {
+html body div form div #cwrc_wrapper .cwrc h1 {
   font-size: 1.1em;
 }
-#cwrc_wrapper .cwrc h2 {
+html body div form div #cwrc_wrapper .cwrc h2 {
   font-size: 1em;
   line-height: 1.2em;
 }
-#cwrc_wrapper .cwrc h3 {
+html body div form div #cwrc_wrapper .cwrc h3 {
   font-size: 1em;
 }
-#cwrc_wrapper .cwrc h1,
-#cwrc_wrapper h2,
-#cwrc_wrapper h3 {
+html body div form div #cwrc_wrapper .cwrc h1,
+html body div form div #cwrc_wrapper h2,
+html body div form div #cwrc_wrapper h3 {
   margin: 0;
 }
-#cwrc_wrapper .cwrc textarea {
+html body div form div #cwrc_wrapper .cwrc textarea {
   overflow: auto;
   resize: none;
 }
-#cwrc_wrapper .cwrc label {
+html body div form div #cwrc_wrapper .cwrc label {
   margin-right: 5px;
   display: inline;
 }
-#cwrc_wrapper .ui-accordion-icons > div {
+html body div form div #cwrc_wrapper .ui-accordion-icons > div {
   margin-bottom: 0px !important;
 }
-#cwrc_wrapper .unselectable {
+html body div form div #cwrc_wrapper .unselectable {
   -moz-user-select: none;
   -khtml-user-select: none;
   -webkit-user-select: none;
   -o-user-select: none;
   user-select: none;
 }
-#cwrc_wrapper .cwrc .popup.ui-dialog .ui-widget-header {
+html body div form div #cwrc_wrapper .cwrc .popup.ui-dialog .ui-widget-header {
   display: none;
 }
-#cwrc_wrapper .cwrc .popup.ui-dialog .ui-widget-content {
+html body div form div #cwrc_wrapper .cwrc .popup.ui-dialog .ui-widget-content {
   padding: 0.4em 1em;
 }
-#cwrc_wrapper .cwrc .popup.link.ui-dialog .ui-widget-content {
+html body div form div #cwrc_wrapper .cwrc .popup.link.ui-dialog .ui-widget-content {
   text-decoration: underline;
   cursor: pointer;
 }
-#cwrc_wrapper .cwrc .required {
+html body div form div #cwrc_wrapper .cwrc .required {
   color: red;
 }
-#cwrc_wrapper .cwrc-tooltip {
+html body div form div #cwrc_wrapper .cwrc-tooltip {
   max-width: 250px;
   background-color: #fff;
 }
-#cwrc_wrapper .headerDialog div {
+html body div form div #cwrc_wrapper .headerDialog div {
   position: absolute;
   top: 5px;
   right: 5px;
   bottom: 5px;
   left: 5px;
 }
-#cwrc_wrapper .headerDialog textarea {
+html body div form div #cwrc_wrapper .headerDialog textarea {
   width: 100%;
   height: 100%;
   margin: 0;
   padding: 0;
 }
-#cwrc_wrapper .mce-cwrc.mce-btn {
+html body div form div #cwrc_wrapper .mce-cwrc.mce-btn {
   border: none;
   background: rgba(0, 0, 0, 0);
   margin-bottom: 1px;
 }
-#cwrc_wrapper .mce-cwrc.mce-btn button i {
+html body div form div #cwrc_wrapper .mce-cwrc.mce-btn button i {
   margin-right: 4px;
   padding: 0px;
 }
-#cwrc_wrapper .mce-cwrc.mce-btn.mce-active,
-#cwrc_wrapper .mce-cwrc.mce-btn:hover {
+html body div form div #cwrc_wrapper .mce-cwrc.mce-btn.mce-active,
+html body div form div #cwrc_wrapper .mce-cwrc.mce-btn:hover {
   background-color: #2d8ac7 !important;
 }
-#cwrc_wrapper .mce-cwrc.mce-btn.mce-active button,
-#cwrc_wrapper .mce-cwrc.mce-btn:hover button {
+html body div form div #cwrc_wrapper .mce-cwrc.mce-btn.mce-active button,
+html body div form div #cwrc_wrapper .mce-cwrc.mce-btn:hover button {
   text-decoration: none;
   color: #fff !important;
 }
-#cwrc_wrapper .mce-cwrc label {
+html body div form div #cwrc_wrapper .mce-cwrc label {
   padding: 6px 15px 6px 12px;
   background-color: #fff;
   border: 1px solid rgba(0, 0, 0, 0.2);
 }
-#cwrc_wrapper .cwrc.context-menu-root {
+html body div form div #cwrc_wrapper .cwrc.context-menu-root {
   font-family: Lato, Arial, Helvetica, sans-serif;
   font-size: 14px;
 }
-#cwrc_wrapper .context-menu-item.context-menu-icon {
+html body div form div #cwrc_wrapper .context-menu-item.context-menu-icon {
   background-repeat: no-repeat;
   background-position: 6px center;
 }
-#cwrc_wrapper .context-menu-item.context-menu-icon-tag_edit {
+html body div form div #cwrc_wrapper .context-menu-item.context-menu-icon-tag_edit {
   background-image: url(../img/tag_blue_edit.png);
 }
-#cwrc_wrapper .context-menu-item.context-menu-icon-tag_remove {
+html body div form div #cwrc_wrapper .context-menu-item.context-menu-icon-tag_remove {
   background-image: url(../img/tag_blue_delete.png);
 }
-#cwrc_wrapper .context-menu-item.context-menu-icon-tag_copy {
+html body div form div #cwrc_wrapper .context-menu-item.context-menu-icon-tag_copy {
   background-image: url(../img/tag_blue_copy.png);
 }
-#cwrc_wrapper .attributeWidget {
+html body div form div #cwrc_wrapper .attributeWidget {
   display: flex;
   flex-direction: row;
 }
-#cwrc_wrapper .attributeWidget label {
+html body div form div #cwrc_wrapper .attributeWidget label {
   display: inline;
 }
-#cwrc_wrapper .attributeWidget input,
-#cwrc_wrapper .attributeWidget select {
+html body div form div #cwrc_wrapper .attributeWidget input,
+html body div form div #cwrc_wrapper .attributeWidget select {
   width: 80%;
   border: 1px solid #ccc;
 }
-#cwrc_wrapper .attributeWidget .attributeSelector {
+html body div form div #cwrc_wrapper .attributeWidget .attributeSelector {
   flex: 1;
   display: flex;
   flex-direction: column;
   border: 1px solid #999;
 }
-#cwrc_wrapper .attributeWidget .attributeSelector ul {
+html body div form div #cwrc_wrapper .attributeWidget .attributeSelector ul {
   flex: 1;
   list-style: none;
   margin: 0;
   padding: 0;
   overflow: auto;
 }
-#cwrc_wrapper .attributeWidget .attributeSelector li {
+html body div form div #cwrc_wrapper .attributeWidget .attributeSelector li {
   list-style-type: none;
   margin: 0;
   padding: 3px;
   background-color: #fff;
 }
-#cwrc_wrapper .attributeWidget .attributeSelector li:hover {
+html body div form div #cwrc_wrapper .attributeWidget .attributeSelector li:hover {
   background-color: #ddd;
   cursor: pointer;
 }
-#cwrc_wrapper .attributeWidget .attributeSelector li.selected {
+html body div form div #cwrc_wrapper .attributeWidget .attributeSelector li.selected {
   background-color: #ccc;
 }
-#cwrc_wrapper .attributeWidget .attsContainer {
+html body div form div #cwrc_wrapper .attributeWidget .attsContainer {
   flex: 2;
   margin-left: 5px;
   overflow: auto;
 }
-#cwrc_wrapper .attributeWidget .atts {
+html body div form div #cwrc_wrapper .attributeWidget .atts {
   float: left;
   clear: left;
 }
-#cwrc_wrapper .attributeWidget .attsContainer label {
+html body div form div #cwrc_wrapper .attributeWidget .attsContainer label {
   width: 135px;
 }
-#cwrc_wrapper .attributeWidget .schemaHelp {
+html body div form div #cwrc_wrapper .attributeWidget .schemaHelp {
   flex: 1;
   margin-left: 5px;
   height: 100%;
   overflow: auto;
 }
-#cwrc_wrapper .attributeWidget .schemaHelp h3 {
+html body div form div #cwrc_wrapper .attributeWidget .schemaHelp h3 {
   font-weight: bold;
   margin-bottom: 5px;
 }
-#cwrc_wrapper .attributeSelector h2 {
+html body div form div #cwrc_wrapper .attributeSelector h2 {
   padding: 3px;
   background-color: #ccc;
   border-bottom: 1px solid #999;
 }
-#cwrc_wrapper .annotationDialog {
+html body div form div #cwrc_wrapper .annotationDialog {
   display: flex;
   flex-direction: column;
 }
-#cwrc_wrapper .annotationDialog .writerParent {
+html body div form div #cwrc_wrapper .annotationDialog .writerParent {
   flex: 1;
 }
-#cwrc_wrapper .annotationDialog p {
+html body div form div #cwrc_wrapper .annotationDialog p {
   margin: 5px 0px;
 }
-#cwrc_wrapper .annotationDialog > div {
+html body div form div #cwrc_wrapper .annotationDialog > div {
   margin-bottom: 15px !important;
 }
-#cwrc_wrapper .annotationDialog .ui-accordion-content {
+html body div form div #cwrc_wrapper .annotationDialog .ui-accordion-content {
   padding: 5px 10px !important;
 }
-#cwrc_wrapper .annotationDialog .tagAs {
+html body div form div #cwrc_wrapper .annotationDialog .tagAs {
   font-size: 1.2em;
   display: inline-block;
   width: 98%;
@@ -2206,48 +2205,48 @@ body {
   overflow: hidden;
   text-overflow: ellipsis;
 }
-#cwrc_wrapper .annotationDialog .attributes {
+html body div form div #cwrc_wrapper .annotationDialog .attributes {
   position: relative;
   height: 200px;
 }
-#cwrc_wrapper .splitButtons .ui-dialog-buttonpane {
+html body div form div #cwrc_wrapper .splitButtons .ui-dialog-buttonpane {
   padding: 0.3em 1em 0.5em 1em !important;
 }
-#cwrc_wrapper .splitButtons .ui-dialog-buttonset {
+html body div form div #cwrc_wrapper .splitButtons .ui-dialog-buttonset {
   float: none !important;
 }
-#cwrc_wrapper .splitButtons .ui-dialog-buttonset button {
+html body div form div #cwrc_wrapper .splitButtons .ui-dialog-buttonset button {
   float: right;
 }
-#cwrc_wrapper .splitButtons .ui-dialog-buttonset button.left {
+html body div form div #cwrc_wrapper .splitButtons .ui-dialog-buttonset button.left {
   float: left;
 }
-#cwrc_wrapper .ui-icon-help {
+html body div form div #cwrc_wrapper .ui-icon-help {
   cursor: pointer;
 }
-#cwrc_wrapper .loadingIndicatorDialog .progressBar {
+html body div form div #cwrc_wrapper .loadingIndicatorDialog .progressBar {
   position: relative;
 }
-#cwrc_wrapper .loadingIndicatorDialog .progressLabel {
+html body div form div #cwrc_wrapper .loadingIndicatorDialog .progressLabel {
   position: absolute;
   left: 30%;
   top: 4px;
 }
-#cwrc_wrapper .loadingIndicatorDialog .ui-progressbar-value {
+html body div form div #cwrc_wrapper .loadingIndicatorDialog .ui-progressbar-value {
   background: #6395F2 !important;
 }
-#cwrc_wrapper .schemaDialog {
+html body div form div #cwrc_wrapper .schemaDialog {
   padding: 0.5em 0.5em 0;
 }
-#cwrc_wrapper .schemaDialog .content {
+html body div form div #cwrc_wrapper .schemaDialog .content {
   margin-bottom: 0;
 }
-#cwrc_wrapper .entitiesList {
+html body div form div #cwrc_wrapper .entitiesList {
   list-style: none;
   margin: 0;
   padding: 0;
 }
-#cwrc_wrapper .entitiesList li .box {
+html body div form div #cwrc_wrapper .entitiesList li .box {
   width: 22px;
   height: 22px;
   margin-right: 2px;
@@ -2255,132 +2254,132 @@ body {
   background-position: 3px 3px;
   background-repeat: no-repeat;
 }
-#cwrc_wrapper .entitiesList .person .box {
+html body div form div #cwrc_wrapper .entitiesList .person .box {
   background-image: url('../img/user.png');
 }
-#cwrc_wrapper .entitiesList .person {
+html body div form div #cwrc_wrapper .entitiesList .person {
   background-color: #ec9393;
 }
-#cwrc_wrapper .entitiesList .person.selected,
-#cwrc_wrapper .entitiesList .person.over {
+html body div form div #cwrc_wrapper .entitiesList .person.selected,
+html body div form div #cwrc_wrapper .entitiesList .person.over {
   background-color: #ff0000;
 }
-#cwrc_wrapper .entitiesList .place .box {
+html body div form div #cwrc_wrapper .entitiesList .place .box {
   background-image: url('../img/world.png');
 }
-#cwrc_wrapper .entitiesList .place {
+html body div form div #cwrc_wrapper .entitiesList .place {
   background-color: #8bc1c1;
 }
-#cwrc_wrapper .entitiesList .place.selected,
-#cwrc_wrapper .entitiesList .place.over {
+html body div form div #cwrc_wrapper .entitiesList .place.selected,
+html body div form div #cwrc_wrapper .entitiesList .place.over {
   background-color: #009999;
 }
-#cwrc_wrapper .entitiesList .date .box {
+html body div form div #cwrc_wrapper .entitiesList .date .box {
   background-image: url('../img/calendar.png');
 }
-#cwrc_wrapper .entitiesList .date {
+html body div form div #cwrc_wrapper .entitiesList .date {
   background-color: #ecbb93;
 }
-#cwrc_wrapper .entitiesList .date.selected,
-#cwrc_wrapper .entitiesList .date.over {
+html body div form div #cwrc_wrapper .entitiesList .date.selected,
+html body div form div #cwrc_wrapper .entitiesList .date.over {
   background-color: #ff7200;
 }
-#cwrc_wrapper .entitiesList .event .box {
+html body div form div #cwrc_wrapper .entitiesList .event .box {
   background-image: url('../img/cake.png');
 }
-#cwrc_wrapper .entitiesList .event {
+html body div form div #cwrc_wrapper .entitiesList .event {
   background-color: #8fd68f;
 }
-#cwrc_wrapper .entitiesList .event.selected,
-#cwrc_wrapper .entitiesList .event.over {
+html body div form div #cwrc_wrapper .entitiesList .event.selected,
+html body div form div #cwrc_wrapper .entitiesList .event.over {
   background-color: #00cc00;
 }
-#cwrc_wrapper .entitiesList .org .box {
+html body div form div #cwrc_wrapper .entitiesList .org .box {
   background-image: url('../img/group.png');
 }
-#cwrc_wrapper .entitiesList .org {
+html body div form div #cwrc_wrapper .entitiesList .org {
   background-color: #bcaed9;
 }
-#cwrc_wrapper .entitiesList .org.selected,
-#cwrc_wrapper .entitiesList .org.over {
+html body div form div #cwrc_wrapper .entitiesList .org.selected,
+html body div form div #cwrc_wrapper .entitiesList .org.over {
   background-color: #6d38d6;
 }
-#cwrc_wrapper .entitiesList .citation .box {
+html body div form div #cwrc_wrapper .entitiesList .citation .box {
   background-image: url('../img/vcard.png');
 }
-#cwrc_wrapper .entitiesList .citation {
+html body div form div #cwrc_wrapper .entitiesList .citation {
   background-color: #d78fb7;
 }
-#cwrc_wrapper .entitiesList .citation.selected,
-#cwrc_wrapper .entitiesList .citation.over {
+html body div form div #cwrc_wrapper .entitiesList .citation.selected,
+html body div form div #cwrc_wrapper .entitiesList .citation.over {
   background-color: #cd0074;
 }
-#cwrc_wrapper .entitiesList .note .box {
+html body div form div #cwrc_wrapper .entitiesList .note .box {
   background-image: url('../img/note.png');
 }
-#cwrc_wrapper .entitiesList .note {
+html body div form div #cwrc_wrapper .entitiesList .note {
   background-color: #93abc5;
 }
-#cwrc_wrapper .entitiesList .note.selected,
-#cwrc_wrapper .entitiesList .note.over {
+html body div form div #cwrc_wrapper .entitiesList .note.selected,
+html body div form div #cwrc_wrapper .entitiesList .note.over {
   background-color: #0d56a6;
 }
-#cwrc_wrapper .entitiesList .title .box {
+html body div form div #cwrc_wrapper .entitiesList .title .box {
   background-image: url('../img/book.png');
 }
-#cwrc_wrapper .entitiesList .title {
+html body div form div #cwrc_wrapper .entitiesList .title {
   background-color: #dfd390;
 }
-#cwrc_wrapper .entitiesList .title.selected,
-#cwrc_wrapper .entitiesList .title.over {
+html body div form div #cwrc_wrapper .entitiesList .title.selected,
+html body div form div #cwrc_wrapper .entitiesList .title.over {
   background-color: #e0be00;
 }
-#cwrc_wrapper .entitiesList .correction .box {
+html body div form div #cwrc_wrapper .entitiesList .correction .box {
   background-image: url('../img/error.png');
 }
-#cwrc_wrapper .entitiesList .correction {
+html body div form div #cwrc_wrapper .entitiesList .correction {
   background-color: #eca493;
 }
-#cwrc_wrapper .entitiesList .correction.selected,
-#cwrc_wrapper .entitiesList .correction.over {
+html body div form div #cwrc_wrapper .entitiesList .correction.selected,
+html body div form div #cwrc_wrapper .entitiesList .correction.over {
   background-color: #ff3300;
 }
-#cwrc_wrapper .entitiesList .keyword .box {
+html body div form div #cwrc_wrapper .entitiesList .keyword .box {
   background-image: url('../img/page_key.png');
 }
-#cwrc_wrapper .entitiesList .keyword {
+html body div form div #cwrc_wrapper .entitiesList .keyword {
   background-color: #89b6a0;
 }
-#cwrc_wrapper .entitiesList .keyword.selected,
-#cwrc_wrapper .entitiesList .keyword.over {
+html body div form div #cwrc_wrapper .entitiesList .keyword.selected,
+html body div form div #cwrc_wrapper .entitiesList .keyword.over {
   background-color: #008040;
 }
-#cwrc_wrapper .entitiesList .link .box {
+html body div form div #cwrc_wrapper .entitiesList .link .box {
   background-image: url('../img/link.png');
 }
-#cwrc_wrapper .entitiesList .link {
+html body div form div #cwrc_wrapper .entitiesList .link {
   background-color: #a8baf0;
 }
-#cwrc_wrapper .entitiesList .link.selected,
-#cwrc_wrapper .entitiesList .link.over {
+html body div form div #cwrc_wrapper .entitiesList .link.selected,
+html body div form div #cwrc_wrapper .entitiesList .link.over {
   background-color: #3265ff;
 }
-#cwrc_wrapper .entitiesList .entityTitle {
+html body div form div #cwrc_wrapper .entitiesList .entityTitle {
   font-size: 1em;
   vertical-align: 6px;
   display: inline-block;
 }
-#cwrc_wrapper .entitiesList .selected .entityTitle {
+html body div form div #cwrc_wrapper .entitiesList .selected .entityTitle {
   color: #fff;
 }
-#cwrc_wrapper .entitiesList .info {
+html body div form div #cwrc_wrapper .entitiesList .info {
   display: none;
 }
-#cwrc_wrapper .entitiesList li.expanded .info {
+html body div form div #cwrc_wrapper .entitiesList li.expanded .info {
   display: block;
   padding: 0px 3px 3px 3px;
 }
-#cwrc_wrapper .entitiesList .info ul {
+html body div form div #cwrc_wrapper .entitiesList .info ul {
   list-style: none;
   background-color: #fff;
   padding: 2px;
@@ -2389,44 +2388,44 @@ body {
   overflow: auto;
   border-radius: 2px;
 }
-#cwrc_wrapper .entitiesList .info ul li {
+html body div form div #cwrc_wrapper .entitiesList .info ul li {
   list-style: none;
   height: auto;
   font-size: 1em;
   margin: 5px;
 }
-#cwrc_wrapper .entitiesList > li {
+html body div form div #cwrc_wrapper .entitiesList > li {
   list-style: none;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
   border: 1px solid #666;
   margin: 5px 5px 10px 5px;
 }
-#cwrc_wrapper .entitiesList > li:hover {
+html body div form div #cwrc_wrapper .entitiesList > li:hover {
   cursor: pointer;
 }
-#cwrc_wrapper .entitiesList > li.selected:hover {
+html body div form div #cwrc_wrapper .entitiesList > li.selected:hover {
   cursor: default;
 }
-#cwrc_wrapper .imageViewer {
+html body div form div #cwrc_wrapper .imageViewer {
   display: table;
   height: 100%;
   width: 100%;
 }
-#cwrc_wrapper .imageViewer .toolbar {
+html body div form div #cwrc_wrapper .imageViewer .toolbar {
   display: table-row;
   height: 32px;
 }
-#cwrc_wrapper .imageViewer .image {
+html body div form div #cwrc_wrapper .imageViewer .image {
   display: table-row;
   height: 100%;
 }
-#cwrc_wrapper .imageViewer .toolbar .navigation {
+html body div form div #cwrc_wrapper .imageViewer .toolbar .navigation {
   float: left;
 }
-#cwrc_wrapper .imageViewer .toolbar .zoom {
+html body div form div #cwrc_wrapper .imageViewer .toolbar .zoom {
   float: right;
 }
-#cwrc_wrapper .imageViewer .button {
+html body div form div #cwrc_wrapper .imageViewer .button {
   display: inline-block;
   width: 16px;
   height: 16px;
@@ -2438,71 +2437,71 @@ body {
   background-repeat: no-repeat;
   background-position: center;
 }
-#cwrc_wrapper .imageViewer .button:hover {
+html body div form div #cwrc_wrapper .imageViewer .button:hover {
   cursor: pointer;
   background-color: #ccc;
   border: 1px solid #aaa;
 }
-#cwrc_wrapper .imageViewer .pageInfo {
+html body div form div #cwrc_wrapper .imageViewer .pageInfo {
   display: block;
   position: relative;
   float: right;
   margin: 5px 3px;
 }
-#cwrc_wrapper .imageViewer input.currPage {
+html body div form div #cwrc_wrapper .imageViewer input.currPage {
   height: 16px;
   width: 20px;
   text-align: right;
 }
-#cwrc_wrapper .imageViewer .prev {
+html body div form div #cwrc_wrapper .imageViewer .prev {
   background-image: url(../img/arrow_left.png);
 }
-#cwrc_wrapper .imageViewer .next {
+html body div form div #cwrc_wrapper .imageViewer .next {
   background-image: url(../img/arrow_right.png);
 }
-#cwrc_wrapper .imageViewer .zoomIn {
+html body div form div #cwrc_wrapper .imageViewer .zoomIn {
   background-image: url(../img/magnifier_zoom_in.png);
 }
-#cwrc_wrapper .imageViewer .zoomOut {
+html body div form div #cwrc_wrapper .imageViewer .zoomOut {
   background-image: url(../img/magnifier_zoom_out.png);
 }
-#cwrc_wrapper .imageViewer .home {
+html body div form div #cwrc_wrapper .imageViewer .home {
   background-image: url(../img/house.png);
 }
-#cwrc_wrapper .imageViewer .openseadragon-message {
+html body div form div #cwrc_wrapper .imageViewer .openseadragon-message {
   white-space: pre;
 }
-#cwrc_wrapper .relationsList {
+html body div form div #cwrc_wrapper .relationsList {
   list-style: none;
   margin: 0;
   padding: 0;
 }
-#cwrc_wrapper .relationsList li,
-#cwrc_wrapper .validationList li {
+html body div form div #cwrc_wrapper .relationsList li,
+html body div form div #cwrc_wrapper .validationList li {
   padding: 3px 5px;
 }
-#cwrc_wrapper .relationsList li:hover,
-#cwrc_wrapper .validationList li:hover {
+html body div form div #cwrc_wrapper .relationsList li:hover,
+html body div form div #cwrc_wrapper .validationList li:hover {
   background-color: #eee !important;
   cursor: pointer;
 }
-#cwrc_wrapper .relationsList li {
+html body div form div #cwrc_wrapper .relationsList li {
   background-color: #fff;
 }
-#cwrc_wrapper .relationsList li.selected,
-#cwrc_wrapper .validationList li.selected {
+html body div form div #cwrc_wrapper .relationsList li.selected,
+html body div form div #cwrc_wrapper .validationList li.selected {
   background-color: #d3d3d3 !important;
 }
-#cwrc_wrapper .triplesDialog h2 {
+html body div form div #cwrc_wrapper .triplesDialog h2 {
   padding: 3px;
   background-color: #ccc;
   border-bottom: 1px solid #999;
 }
-#cwrc_wrapper .triplesDialog .columns {
+html body div form div #cwrc_wrapper .triplesDialog .columns {
   width: 100%;
   height: 80%;
 }
-#cwrc_wrapper .triplesDialog .column {
+html body div form div #cwrc_wrapper .triplesDialog .column {
   border: 1px solid #999;
   height: 100%;
   display: flex;
@@ -2511,60 +2510,60 @@ body {
   width: 31%;
   margin-right: 1%;
 }
-#cwrc_wrapper .triplesDialog .currentRelation {
+html body div form div #cwrc_wrapper .triplesDialog .currentRelation {
   height: 15%;
   text-align: center;
 }
-#cwrc_wrapper .triplesDialog .currentRelation p {
+html body div form div #cwrc_wrapper .triplesDialog .currentRelation p {
   margin: 5px;
   font-size: 1em;
 }
-#cwrc_wrapper .triplesDialog .column > ul {
+html body div form div #cwrc_wrapper .triplesDialog .column > ul {
   flex: 1;
   overflow: auto;
 }
-#cwrc_wrapper .triplesDialog .column > ul li {
+html body div form div #cwrc_wrapper .triplesDialog .column > ul li {
   list-style: none;
   margin: 0;
 }
-#cwrc_wrapper .triplesDialog .column.predicate ul {
+html body div form div #cwrc_wrapper .triplesDialog .column.predicate ul {
   list-style: none;
   margin: 0;
   padding: 0;
 }
-#cwrc_wrapper .triplesDialog .column.predicate li {
+html body div form div #cwrc_wrapper .triplesDialog .column.predicate li {
   padding: 3px;
   background-color: #fff;
 }
-#cwrc_wrapper .triplesDialog .column.predicate li:hover {
+html body div form div #cwrc_wrapper .triplesDialog .column.predicate li:hover {
   background-color: #ddd;
   cursor: pointer;
 }
-#cwrc_wrapper .triplesDialog .column.predicate li.selected {
+html body div form div #cwrc_wrapper .triplesDialog .column.predicate li.selected {
   background-color: #ccc;
 }
-#cwrc_wrapper .triplesDialog .customEntry {
+html body div form div #cwrc_wrapper .triplesDialog .customEntry {
   border-top: 1px solid #999;
   background-color: #ccc;
   padding: 2px;
   margin: 0;
   text-align: center;
 }
-#cwrc_wrapper .triplesDialog .customEntry input {
+html body div form div #cwrc_wrapper .triplesDialog .customEntry input {
   width: 95%;
   text-align: left;
 }
-#cwrc_wrapper .validationList {
+html body div form div #cwrc_wrapper .validationList {
   list-style: none;
   margin: 0;
   padding: 0;
 }
-#cwrc_wrapper .validationList li {
+html body div form div #cwrc_wrapper .validationList li {
   border: none !important;
   background: none !important;
   color: #333333 !important;
 }
-#cwrc_wrapper {
+html body div form div #cwrc_wrapper {
   @charset "UTF-8";
   /*!
  * jQuery contextMenu - Plugin for simple contextMenu handling
@@ -2592,6 +2591,19 @@ body {
  */
   /* Code blocks */
   /* Inline code */
+  /* jsTree default theme */
+  /* jstree overrides */
+  /*
+.vakata-context .submenu > a span {
+    background-image: url("../img/menu_arrow.gif");
+    color: #fff;
+    display: block;
+    float: right;
+    width: 20px;
+    height: 20px;
+}
+*/
+  /* end overrides */
 }
 @-webkit-keyframes cm-spin {
   0% {
@@ -2634,31 +2646,31 @@ body {
   src: url("font/context-menu-icons.eot?2lkho");
   src: url("font/context-menu-icons.eot?2lkho#iefix") format("embedded-opentype"), url("font/context-menu-icons.woff2?2lkho") format("woff2"), url("font/context-menu-icons.woff?2lkho") format("woff"), url("font/context-menu-icons.ttf?2lkho") format("truetype");
 }
-#cwrc_wrapper .context-menu-icon-add:before {
+html body div form div #cwrc_wrapper .context-menu-icon-add:before {
   content: "\EA01";
 }
-#cwrc_wrapper .context-menu-icon-copy:before {
+html body div form div #cwrc_wrapper .context-menu-icon-copy:before {
   content: "\EA02";
 }
-#cwrc_wrapper .context-menu-icon-cut:before {
+html body div form div #cwrc_wrapper .context-menu-icon-cut:before {
   content: "\EA03";
 }
-#cwrc_wrapper .context-menu-icon-delete:before {
+html body div form div #cwrc_wrapper .context-menu-icon-delete:before {
   content: "\EA04";
 }
-#cwrc_wrapper .context-menu-icon-edit:before {
+html body div form div #cwrc_wrapper .context-menu-icon-edit:before {
   content: "\EA05";
 }
-#cwrc_wrapper .context-menu-icon-loading:before {
+html body div form div #cwrc_wrapper .context-menu-icon-loading:before {
   content: "\EA06";
 }
-#cwrc_wrapper .context-menu-icon-paste:before {
+html body div form div #cwrc_wrapper .context-menu-icon-paste:before {
   content: "\EA07";
 }
-#cwrc_wrapper .context-menu-icon-quit:before {
+html body div form div #cwrc_wrapper .context-menu-icon-quit:before {
   content: "\EA08";
 }
-#cwrc_wrapper .context-menu-icon::before {
+html body div form div #cwrc_wrapper .context-menu-icon::before {
   position: absolute;
   top: 50%;
   left: 0;
@@ -2677,23 +2689,23 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-#cwrc_wrapper .context-menu-icon.context-menu-hover:before {
+html body div form div #cwrc_wrapper .context-menu-icon.context-menu-hover:before {
   color: #fff;
 }
-#cwrc_wrapper .context-menu-icon.context-menu-disabled::before {
+html body div form div #cwrc_wrapper .context-menu-icon.context-menu-disabled::before {
   color: #bbb;
 }
-#cwrc_wrapper .context-menu-icon.context-menu-icon-loading:before {
+html body div form div #cwrc_wrapper .context-menu-icon.context-menu-icon-loading:before {
   -webkit-animation: cm-spin 2s infinite;
   -o-animation: cm-spin 2s infinite;
   animation: cm-spin 2s infinite;
 }
-#cwrc_wrapper .context-menu-icon.context-menu-icon--fa {
+html body div form div #cwrc_wrapper .context-menu-icon.context-menu-icon--fa {
   display: list-item;
   font-family: inherit;
   line-height: inherit;
 }
-#cwrc_wrapper .context-menu-icon.context-menu-icon--fa::before {
+html body div form div #cwrc_wrapper .context-menu-icon.context-menu-icon--fa::before {
   position: absolute;
   top: 50%;
   left: 0;
@@ -2712,33 +2724,33 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-#cwrc_wrapper .context-menu-icon.context-menu-icon--fa.context-menu-hover:before {
+html body div form div #cwrc_wrapper .context-menu-icon.context-menu-icon--fa.context-menu-hover:before {
   color: #fff;
 }
-#cwrc_wrapper .context-menu-icon.context-menu-icon--fa.context-menu-disabled::before {
+html body div form div #cwrc_wrapper .context-menu-icon.context-menu-icon--fa.context-menu-disabled::before {
   color: #bbb;
 }
-#cwrc_wrapper .context-menu-icon.context-menu-icon--fa5 {
+html body div form div #cwrc_wrapper .context-menu-icon.context-menu-icon--fa5 {
   display: list-item;
   font-family: inherit;
   line-height: inherit;
 }
-#cwrc_wrapper .context-menu-icon.context-menu-icon--fa5 i,
-#cwrc_wrapper .context-menu-icon.context-menu-icon--fa5 svg {
+html body div form div #cwrc_wrapper .context-menu-icon.context-menu-icon--fa5 i,
+html body div form div #cwrc_wrapper .context-menu-icon.context-menu-icon--fa5 svg {
   position: absolute;
   top: 0.3em;
   left: 0.5em;
   color: #2980b9;
 }
-#cwrc_wrapper .context-menu-icon.context-menu-icon--fa5.context-menu-hover > i,
-#cwrc_wrapper .context-menu-icon.context-menu-icon--fa5.context-menu-hover > svg {
+html body div form div #cwrc_wrapper .context-menu-icon.context-menu-icon--fa5.context-menu-hover > i,
+html body div form div #cwrc_wrapper .context-menu-icon.context-menu-icon--fa5.context-menu-hover > svg {
   color: #fff;
 }
-#cwrc_wrapper .context-menu-icon.context-menu-icon--fa5.context-menu-disabled i,
-#cwrc_wrapper .context-menu-icon.context-menu-icon--fa5.context-menu-disabled svg {
+html body div form div #cwrc_wrapper .context-menu-icon.context-menu-icon--fa5.context-menu-disabled i,
+html body div form div #cwrc_wrapper .context-menu-icon.context-menu-icon--fa5.context-menu-disabled svg {
   color: #bbb;
 }
-#cwrc_wrapper .context-menu-list {
+html body div form div #cwrc_wrapper .context-menu-list {
   position: absolute;
   display: inline-block;
   min-width: 13em;
@@ -2754,7 +2766,7 @@ body {
   -webkit-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
 }
-#cwrc_wrapper .context-menu-item {
+html body div form div #cwrc_wrapper .context-menu-item {
   position: relative;
   -webkit-box-sizing: content-box;
   -moz-box-sizing: content-box;
@@ -2767,33 +2779,33 @@ body {
   user-select: none;
   background-color: #fff;
 }
-#cwrc_wrapper .context-menu-separator {
+html body div form div #cwrc_wrapper .context-menu-separator {
   padding: 0;
   margin: 0.35em 0;
   border-bottom: 1px solid #e6e6e6;
 }
-#cwrc_wrapper .context-menu-item > label > input,
-#cwrc_wrapper .context-menu-item > label > textarea {
+html body div form div #cwrc_wrapper .context-menu-item > label > input,
+html body div form div #cwrc_wrapper .context-menu-item > label > textarea {
   -webkit-user-select: text;
   -moz-user-select: text;
   -ms-user-select: text;
   user-select: text;
 }
-#cwrc_wrapper .context-menu-item.context-menu-hover {
+html body div form div #cwrc_wrapper .context-menu-item.context-menu-hover {
   color: #fff;
   cursor: pointer;
   background-color: #2980b9;
 }
-#cwrc_wrapper .context-menu-item.context-menu-disabled {
+html body div form div #cwrc_wrapper .context-menu-item.context-menu-disabled {
   color: #bbb;
   cursor: default;
   background-color: #fff;
 }
-#cwrc_wrapper .context-menu-input.context-menu-hover {
+html body div form div #cwrc_wrapper .context-menu-input.context-menu-hover {
   color: #2f2f2f;
   cursor: default;
 }
-#cwrc_wrapper .context-menu-submenu:after {
+html body div form div #cwrc_wrapper .context-menu-submenu:after {
   position: absolute;
   top: 50%;
   right: 0.5em;
@@ -2809,48 +2821,48 @@ body {
   -o-transform: translateY(-50%);
   transform: translateY(-50%);
 }
-#cwrc_wrapper .context-menu-item.context-menu-input {
+html body div form div #cwrc_wrapper .context-menu-item.context-menu-input {
   padding: 0.3em 0.6em;
 }
-#cwrc_wrapper .context-menu-input > label > * {
+html body div form div #cwrc_wrapper .context-menu-input > label > * {
   vertical-align: top;
 }
-#cwrc_wrapper .context-menu-input > label > input[type="checkbox"],
-#cwrc_wrapper .context-menu-input > label > input[type="radio"] {
+html body div form div #cwrc_wrapper .context-menu-input > label > input[type="checkbox"],
+html body div form div #cwrc_wrapper .context-menu-input > label > input[type="radio"] {
   position: relative;
   top: 0.12em;
   margin-right: 0.4em;
 }
-#cwrc_wrapper .context-menu-input > label {
+html body div form div #cwrc_wrapper .context-menu-input > label {
   margin: 0;
 }
-#cwrc_wrapper .context-menu-input > label,
-#cwrc_wrapper .context-menu-input > label > input[type="text"],
-#cwrc_wrapper .context-menu-input > label > textarea,
-#cwrc_wrapper .context-menu-input > label > select {
+html body div form div #cwrc_wrapper .context-menu-input > label,
+html body div form div #cwrc_wrapper .context-menu-input > label > input[type="text"],
+html body div form div #cwrc_wrapper .context-menu-input > label > textarea,
+html body div form div #cwrc_wrapper .context-menu-input > label > select {
   display: block;
   width: 100%;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
-#cwrc_wrapper .context-menu-input > label > textarea {
+html body div form div #cwrc_wrapper .context-menu-input > label > textarea {
   height: 7em;
 }
-#cwrc_wrapper .context-menu-item > .context-menu-list {
+html body div form div #cwrc_wrapper .context-menu-item > .context-menu-list {
   top: 0.3em;
   /* re-positioned by js */
   right: -0.3em;
   display: none;
 }
-#cwrc_wrapper .context-menu-item.context-menu-visible > .context-menu-list {
+html body div form div #cwrc_wrapper .context-menu-item.context-menu-visible > .context-menu-list {
   display: block;
 }
-#cwrc_wrapper .context-menu-accesskey {
+html body div form div #cwrc_wrapper .context-menu-accesskey {
   text-decoration: underline;
 }
-#cwrc_wrapper code[class*="language-"],
-#cwrc_wrapper pre[class*="language-"] {
+html body div form div #cwrc_wrapper code[class*="language-"],
+html body div form div #cwrc_wrapper pre[class*="language-"] {
   color: #393A34;
   font-family: "Consolas", "Bitstream Vera Sans Mono", "Courier New", Courier, monospace;
   direction: ltr;
@@ -2868,102 +2880,100 @@ body {
   -ms-hyphens: none;
   hyphens: none;
 }
-#cwrc_wrapper pre[class*="language-"]::-moz-selection,
-#cwrc_wrapper pre[class*="language-"] ::-moz-selection,
-#cwrc_wrapper code[class*="language-"]::-moz-selection,
-#cwrc_wrapper code[class*="language-"] ::-moz-selection {
+html body div form div #cwrc_wrapper pre[class*="language-"]::-moz-selection,
+html body div form div #cwrc_wrapper pre[class*="language-"] ::-moz-selection,
+html body div form div #cwrc_wrapper code[class*="language-"]::-moz-selection,
+html body div form div #cwrc_wrapper code[class*="language-"] ::-moz-selection {
   background: #b3d4fc;
 }
-#cwrc_wrapper pre[class*="language-"]::selection,
-#cwrc_wrapper pre[class*="language-"] ::selection,
-#cwrc_wrapper code[class*="language-"]::selection,
-#cwrc_wrapper code[class*="language-"] ::selection {
+html body div form div #cwrc_wrapper pre[class*="language-"]::selection,
+html body div form div #cwrc_wrapper pre[class*="language-"] ::selection,
+html body div form div #cwrc_wrapper code[class*="language-"]::selection,
+html body div form div #cwrc_wrapper code[class*="language-"] ::selection {
   background: #b3d4fc;
 }
-#cwrc_wrapper pre[class*="language-"] {
+html body div form div #cwrc_wrapper pre[class*="language-"] {
   padding: 1em;
   margin: 0.5em 0;
   overflow: auto;
   border: 1px solid #dddddd;
   background-color: white;
 }
-#cwrc_wrapper :not(pre) > code[class*="language-"] {
+html body div form div #cwrc_wrapper :not(pre) > code[class*="language-"] {
   padding: 0.2em;
   padding-top: 1px;
   padding-bottom: 1px;
   background: #f8f8f8;
   border: 1px solid #dddddd;
 }
-#cwrc_wrapper .token.comment,
-#cwrc_wrapper .token.prolog,
-#cwrc_wrapper .token.doctype,
-#cwrc_wrapper .token.cdata {
+html body div form div #cwrc_wrapper .token.comment,
+html body div form div #cwrc_wrapper .token.prolog,
+html body div form div #cwrc_wrapper .token.doctype,
+html body div form div #cwrc_wrapper .token.cdata {
   color: #999988;
   font-style: italic;
 }
-#cwrc_wrapper .token.namespace {
+html body div form div #cwrc_wrapper .token.namespace {
   opacity: 0.7;
 }
-#cwrc_wrapper .token.string,
-#cwrc_wrapper .token.attr-value {
+html body div form div #cwrc_wrapper .token.string,
+html body div form div #cwrc_wrapper .token.attr-value {
   color: #e3116c;
 }
-#cwrc_wrapper .token.punctuation,
-#cwrc_wrapper .token.operator {
+html body div form div #cwrc_wrapper .token.punctuation,
+html body div form div #cwrc_wrapper .token.operator {
   color: #393A34;
   /* no highlight */
 }
-#cwrc_wrapper .token.entity,
-#cwrc_wrapper .token.url,
-#cwrc_wrapper .token.symbol,
-#cwrc_wrapper .token.number,
-#cwrc_wrapper .token.boolean,
-#cwrc_wrapper .token.variable,
-#cwrc_wrapper .token.constant,
-#cwrc_wrapper .token.property,
-#cwrc_wrapper .token.regex,
-#cwrc_wrapper .token.inserted {
+html body div form div #cwrc_wrapper .token.entity,
+html body div form div #cwrc_wrapper .token.url,
+html body div form div #cwrc_wrapper .token.symbol,
+html body div form div #cwrc_wrapper .token.number,
+html body div form div #cwrc_wrapper .token.boolean,
+html body div form div #cwrc_wrapper .token.variable,
+html body div form div #cwrc_wrapper .token.constant,
+html body div form div #cwrc_wrapper .token.property,
+html body div form div #cwrc_wrapper .token.regex,
+html body div form div #cwrc_wrapper .token.inserted {
   color: #36acaa;
 }
-#cwrc_wrapper .token.atrule,
-#cwrc_wrapper .token.keyword,
-#cwrc_wrapper .token.attr-name,
-#cwrc_wrapper .language-autohotkey .token.selector {
+html body div form div #cwrc_wrapper .token.atrule,
+html body div form div #cwrc_wrapper .token.keyword,
+html body div form div #cwrc_wrapper .token.attr-name,
+html body div form div #cwrc_wrapper .language-autohotkey .token.selector {
   color: #00a4db;
 }
-#cwrc_wrapper .token.function,
-#cwrc_wrapper .token.deleted,
-#cwrc_wrapper .language-autohotkey .token.tag {
+html body div form div #cwrc_wrapper .token.function,
+html body div form div #cwrc_wrapper .token.deleted,
+html body div form div #cwrc_wrapper .language-autohotkey .token.tag {
   color: #9a050f;
 }
-#cwrc_wrapper .token.tag,
-#cwrc_wrapper .token.selector,
-#cwrc_wrapper .language-autohotkey .token.keyword {
+html body div form div #cwrc_wrapper .token.tag,
+html body div form div #cwrc_wrapper .token.selector,
+html body div form div #cwrc_wrapper .language-autohotkey .token.keyword {
   color: #00009f;
 }
-#cwrc_wrapper .token.important,
-#cwrc_wrapper .token.function,
-#cwrc_wrapper .token.bold {
+html body div form div #cwrc_wrapper .token.important,
+html body div form div #cwrc_wrapper .token.function,
+html body div form div #cwrc_wrapper .token.bold {
   font-weight: bold;
 }
-#cwrc_wrapper .token.italic {
+html body div form div #cwrc_wrapper .token.italic {
   font-style: italic;
 }
-/* can't wrap jstree in ID because it has it's own ID'd divs that get added to body */
-/* jsTree default theme */
-.jstree-node,
-.jstree-children,
-.jstree-container-ul {
+html body div form div #cwrc_wrapper .jstree-node,
+html body div form div #cwrc_wrapper .jstree-children,
+html body div form div #cwrc_wrapper .jstree-container-ul {
   display: block;
   margin: 0;
   padding: 0;
   list-style-type: none;
   list-style-image: none;
 }
-.jstree-node {
+html body div form div #cwrc_wrapper .jstree-node {
   white-space: nowrap;
 }
-.jstree-anchor {
+html body div form div #cwrc_wrapper .jstree-anchor {
   display: inline-block;
   color: black;
   white-space: nowrap;
@@ -2971,18 +2981,18 @@ body {
   margin: 0;
   vertical-align: top;
 }
-.jstree-anchor:focus {
+html body div form div #cwrc_wrapper .jstree-anchor:focus {
   outline: 0;
 }
-.jstree-anchor,
-.jstree-anchor:link,
-.jstree-anchor:visited,
-.jstree-anchor:hover,
-.jstree-anchor:active {
+html body div form div #cwrc_wrapper .jstree-anchor,
+html body div form div #cwrc_wrapper .jstree-anchor:link,
+html body div form div #cwrc_wrapper .jstree-anchor:visited,
+html body div form div #cwrc_wrapper .jstree-anchor:hover,
+html body div form div #cwrc_wrapper .jstree-anchor:active {
   text-decoration: none;
   color: inherit;
 }
-.jstree-icon {
+html body div form div #cwrc_wrapper .jstree-icon {
   display: inline-block;
   text-decoration: none;
   margin: 0;
@@ -2990,7 +3000,7 @@ body {
   vertical-align: top;
   text-align: center;
 }
-.jstree-icon:empty {
+html body div form div #cwrc_wrapper .jstree-icon:empty {
   display: inline-block;
   text-decoration: none;
   margin: 0;
@@ -2998,56 +3008,56 @@ body {
   vertical-align: top;
   text-align: center;
 }
-.jstree-ocl {
+html body div form div #cwrc_wrapper .jstree-ocl {
   cursor: pointer;
 }
-.jstree-leaf > .jstree-ocl {
+html body div form div #cwrc_wrapper .jstree-leaf > .jstree-ocl {
   cursor: default;
 }
-.jstree .jstree-open > .jstree-children {
+html body div form div #cwrc_wrapper .jstree .jstree-open > .jstree-children {
   display: block;
 }
-.jstree .jstree-closed > .jstree-children,
-.jstree .jstree-leaf > .jstree-children {
+html body div form div #cwrc_wrapper .jstree .jstree-closed > .jstree-children,
+html body div form div #cwrc_wrapper .jstree .jstree-leaf > .jstree-children {
   display: none;
 }
-.jstree-anchor > .jstree-themeicon {
+html body div form div #cwrc_wrapper .jstree-anchor > .jstree-themeicon {
   margin-right: 2px;
 }
-.jstree-no-icons .jstree-themeicon,
-.jstree-anchor > .jstree-themeicon-hidden {
+html body div form div #cwrc_wrapper .jstree-no-icons .jstree-themeicon,
+html body div form div #cwrc_wrapper .jstree-anchor > .jstree-themeicon-hidden {
   display: none;
 }
-.jstree-hidden,
-.jstree-node.jstree-hidden {
+html body div form div #cwrc_wrapper .jstree-hidden,
+html body div form div #cwrc_wrapper .jstree-node.jstree-hidden {
   display: none;
 }
-.jstree-rtl .jstree-anchor {
+html body div form div #cwrc_wrapper .jstree-rtl .jstree-anchor {
   padding: 0 1px 0 4px;
 }
-.jstree-rtl .jstree-anchor > .jstree-themeicon {
+html body div form div #cwrc_wrapper .jstree-rtl .jstree-anchor > .jstree-themeicon {
   margin-left: 2px;
   margin-right: 0;
 }
-.jstree-rtl .jstree-node {
+html body div form div #cwrc_wrapper .jstree-rtl .jstree-node {
   margin-left: 0;
 }
-.jstree-rtl .jstree-container-ul > .jstree-node {
+html body div form div #cwrc_wrapper .jstree-rtl .jstree-container-ul > .jstree-node {
   margin-right: 0;
 }
-.jstree-wholerow-ul {
+html body div form div #cwrc_wrapper .jstree-wholerow-ul {
   position: relative;
   display: inline-block;
   min-width: 100%;
 }
-.jstree-wholerow-ul .jstree-leaf > .jstree-ocl {
+html body div form div #cwrc_wrapper .jstree-wholerow-ul .jstree-leaf > .jstree-ocl {
   cursor: pointer;
 }
-.jstree-wholerow-ul .jstree-anchor,
-.jstree-wholerow-ul .jstree-icon {
+html body div form div #cwrc_wrapper .jstree-wholerow-ul .jstree-anchor,
+html body div form div #cwrc_wrapper .jstree-wholerow-ul .jstree-icon {
   position: relative;
 }
-.jstree-wholerow-ul .jstree-wholerow {
+html body div form div #cwrc_wrapper .jstree-wholerow-ul .jstree-wholerow {
   width: 100%;
   cursor: pointer;
   position: absolute;
@@ -3057,11 +3067,11 @@ body {
   -ms-user-select: none;
   user-select: none;
 }
-.vakata-context {
+html body div form div #cwrc_wrapper .vakata-context {
   display: none;
 }
-.vakata-context,
-.vakata-context ul {
+html body div form div #cwrc_wrapper .vakata-context,
+html body div form div #cwrc_wrapper .vakata-context ul {
   margin: 0;
   padding: 2px;
   position: absolute;
@@ -3069,22 +3079,22 @@ body {
   border: 1px solid #979797;
   box-shadow: 2px 2px 2px #999999;
 }
-.vakata-context ul {
+html body div form div #cwrc_wrapper .vakata-context ul {
   list-style: none;
   left: 100%;
   margin-top: -2.7em;
   margin-left: -4px;
 }
-.vakata-context .vakata-context-right ul {
+html body div form div #cwrc_wrapper .vakata-context .vakata-context-right ul {
   left: auto;
   right: 100%;
   margin-left: auto;
   margin-right: -4px;
 }
-.vakata-context li {
+html body div form div #cwrc_wrapper .vakata-context li {
   list-style: none;
 }
-.vakata-context li > a {
+html body div form div #cwrc_wrapper .vakata-context li > a {
   display: block;
   padding: 0 2em 0 2em;
   text-decoration: none;
@@ -3095,26 +3105,26 @@ body {
   text-shadow: 1px 1px 0 white;
   border-radius: 1px;
 }
-.vakata-context li > a:hover {
+html body div form div #cwrc_wrapper .vakata-context li > a:hover {
   position: relative;
   background-color: #e8eff7;
   box-shadow: 0 0 2px #0a6aa1;
 }
-.vakata-context li > a.vakata-context-parent {
+html body div form div #cwrc_wrapper .vakata-context li > a.vakata-context-parent {
   background-image: url("data:image/gif;base64,R0lGODlhCwAHAIAAACgoKP///yH5BAEAAAEALAAAAAALAAcAAAIORI4JlrqN1oMSnmmZDQUAOw==");
   background-position: right center;
   background-repeat: no-repeat;
 }
-.vakata-context li > a:focus {
+html body div form div #cwrc_wrapper .vakata-context li > a:focus {
   outline: 0;
 }
-.vakata-context .vakata-context-hover > a {
+html body div form div #cwrc_wrapper .vakata-context .vakata-context-hover > a {
   position: relative;
   background-color: #e8eff7;
   box-shadow: 0 0 2px #0a6aa1;
 }
-.vakata-context .vakata-context-separator > a,
-.vakata-context .vakata-context-separator > a:hover {
+html body div form div #cwrc_wrapper .vakata-context .vakata-context-separator > a,
+html body div form div #cwrc_wrapper .vakata-context .vakata-context-separator > a:hover {
   background: white;
   border: 0;
   border-top: 1px solid #e2e3e3;
@@ -3128,14 +3138,14 @@ body {
   box-shadow: 0 0 0 transparent;
   border-radius: 0;
 }
-.vakata-context .vakata-contextmenu-disabled a,
-.vakata-context .vakata-contextmenu-disabled a:hover {
+html body div form div #cwrc_wrapper .vakata-context .vakata-contextmenu-disabled a,
+html body div form div #cwrc_wrapper .vakata-context .vakata-contextmenu-disabled a:hover {
   color: silver;
   background-color: transparent;
   border: 0;
   box-shadow: 0 0 0;
 }
-.vakata-context li > a > i {
+html body div form div #cwrc_wrapper .vakata-context li > a > i {
   text-decoration: none;
   display: inline-block;
   width: 2.4em;
@@ -3146,11 +3156,11 @@ body {
   text-align: center;
   line-height: 2.4em;
 }
-.vakata-context li > a > i:empty {
+html body div form div #cwrc_wrapper .vakata-context li > a > i:empty {
   width: 2.4em;
   line-height: 2.4em;
 }
-.vakata-context li > a .vakata-contextmenu-sep {
+html body div form div #cwrc_wrapper .vakata-context li > a .vakata-contextmenu-sep {
   display: inline-block;
   width: 1px;
   height: 2.4em;
@@ -3158,43 +3168,43 @@ body {
   margin: 0 0.5em 0 0;
   border-left: 1px solid #e2e3e3;
 }
-.vakata-context .vakata-contextmenu-shortcut {
+html body div form div #cwrc_wrapper .vakata-context .vakata-contextmenu-shortcut {
   font-size: 0.8em;
   color: silver;
   opacity: 0.5;
   display: none;
 }
-.vakata-context-rtl ul {
+html body div form div #cwrc_wrapper .vakata-context-rtl ul {
   left: auto;
   right: 100%;
   margin-left: auto;
   margin-right: -4px;
 }
-.vakata-context-rtl li > a.vakata-context-parent {
+html body div form div #cwrc_wrapper .vakata-context-rtl li > a.vakata-context-parent {
   background-image: url("data:image/gif;base64,R0lGODlhCwAHAIAAACgoKP///yH5BAEAAAEALAAAAAALAAcAAAINjI+AC7rWHIsPtmoxLAA7");
   background-position: left center;
   background-repeat: no-repeat;
 }
-.vakata-context-rtl .vakata-context-separator > a {
+html body div form div #cwrc_wrapper .vakata-context-rtl .vakata-context-separator > a {
   margin: 0 2.4em 0 0;
   border-left: 0;
   border-right: 1px solid #e2e3e3;
 }
-.vakata-context-rtl .vakata-context-left ul {
+html body div form div #cwrc_wrapper .vakata-context-rtl .vakata-context-left ul {
   right: auto;
   left: 100%;
   margin-left: -4px;
   margin-right: auto;
 }
-.vakata-context-rtl li > a > i {
+html body div form div #cwrc_wrapper .vakata-context-rtl li > a > i {
   margin: 0 -2em 0 0;
 }
-.vakata-context-rtl li > a .vakata-contextmenu-sep {
+html body div form div #cwrc_wrapper .vakata-context-rtl li > a .vakata-contextmenu-sep {
   margin: 0 0 0 0.5em;
   border-left-color: white;
   background: #e2e3e3;
 }
-#jstree-marker {
+html body div form div #cwrc_wrapper #jstree-marker {
   position: absolute;
   top: 0;
   left: 0;
@@ -3209,13 +3219,13 @@ body {
   font-size: 0;
   line-height: 0;
 }
-#jstree-dnd {
+html body div form div #cwrc_wrapper #jstree-dnd {
   line-height: 16px;
   margin: 0;
   padding: 4px;
 }
-#jstree-dnd .jstree-icon,
-#jstree-dnd .jstree-copy {
+html body div form div #cwrc_wrapper #jstree-dnd .jstree-icon,
+html body div form div #cwrc_wrapper #jstree-dnd .jstree-copy {
   display: inline-block;
   text-decoration: none;
   margin: 0 2px 0 0;
@@ -3223,55 +3233,55 @@ body {
   width: 16px;
   height: 16px;
 }
-#jstree-dnd .jstree-ok {
+html body div form div #cwrc_wrapper #jstree-dnd .jstree-ok {
   background: green;
 }
-#jstree-dnd .jstree-er {
+html body div form div #cwrc_wrapper #jstree-dnd .jstree-er {
   background: red;
 }
-#jstree-dnd .jstree-copy {
+html body div form div #cwrc_wrapper #jstree-dnd .jstree-copy {
   margin: 0 2px 0 2px;
 }
-.jstree-default .jstree-node,
-.jstree-default .jstree-icon {
+html body div form div #cwrc_wrapper .jstree-default .jstree-node,
+html body div form div #cwrc_wrapper .jstree-default .jstree-icon {
   background-repeat: no-repeat;
   background-color: transparent;
 }
-.jstree-default .jstree-anchor,
-.jstree-default .jstree-animated,
-.jstree-default .jstree-wholerow {
+html body div form div #cwrc_wrapper .jstree-default .jstree-anchor,
+html body div form div #cwrc_wrapper .jstree-default .jstree-animated,
+html body div form div #cwrc_wrapper .jstree-default .jstree-wholerow {
   transition: background-color 0.15s, box-shadow 0.15s;
 }
-.jstree-default .jstree-hovered {
+html body div form div #cwrc_wrapper .jstree-default .jstree-hovered {
   background: #e7f4f9;
   border-radius: 2px;
   box-shadow: inset 0 0 1px #cccccc;
 }
-.jstree-default .jstree-context {
+html body div form div #cwrc_wrapper .jstree-default .jstree-context {
   background: #e7f4f9;
   border-radius: 2px;
   box-shadow: inset 0 0 1px #cccccc;
 }
-.jstree-default .jstree-clicked {
+html body div form div #cwrc_wrapper .jstree-default .jstree-clicked {
   background: #beebff;
   border-radius: 2px;
   box-shadow: inset 0 0 1px #999999;
 }
-.jstree-default .jstree-no-icons .jstree-anchor > .jstree-themeicon {
+html body div form div #cwrc_wrapper .jstree-default .jstree-no-icons .jstree-anchor > .jstree-themeicon {
   display: none;
 }
-.jstree-default .jstree-disabled {
+html body div form div #cwrc_wrapper .jstree-default .jstree-disabled {
   background: transparent;
   color: #666666;
 }
-.jstree-default .jstree-disabled.jstree-hovered {
+html body div form div #cwrc_wrapper .jstree-default .jstree-disabled.jstree-hovered {
   background: transparent;
   box-shadow: none;
 }
-.jstree-default .jstree-disabled.jstree-clicked {
+html body div form div #cwrc_wrapper .jstree-default .jstree-disabled.jstree-clicked {
   background: #efefef;
 }
-.jstree-default .jstree-disabled > .jstree-icon {
+html body div form div #cwrc_wrapper .jstree-default .jstree-disabled > .jstree-icon {
   opacity: 0.8;
   filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'jstree-grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#jstree-grayscale");
   /* Firefox 10+ */
@@ -3280,140 +3290,140 @@ body {
   -webkit-filter: grayscale(100%);
   /* Chrome 19+ & Safari 6+ */
 }
-.jstree-default .jstree-search {
+html body div form div #cwrc_wrapper .jstree-default .jstree-search {
   font-style: italic;
   color: #8b0000;
   font-weight: bold;
 }
-.jstree-default .jstree-no-checkboxes .jstree-checkbox {
+html body div form div #cwrc_wrapper .jstree-default .jstree-no-checkboxes .jstree-checkbox {
   display: none !important;
 }
-.jstree-default.jstree-checkbox-no-clicked .jstree-clicked {
+html body div form div #cwrc_wrapper .jstree-default.jstree-checkbox-no-clicked .jstree-clicked {
   background: transparent;
   box-shadow: none;
 }
-.jstree-default.jstree-checkbox-no-clicked .jstree-clicked.jstree-hovered {
+html body div form div #cwrc_wrapper .jstree-default.jstree-checkbox-no-clicked .jstree-clicked.jstree-hovered {
   background: #e7f4f9;
 }
-.jstree-default.jstree-checkbox-no-clicked > .jstree-wholerow-ul .jstree-wholerow-clicked {
+html body div form div #cwrc_wrapper .jstree-default.jstree-checkbox-no-clicked > .jstree-wholerow-ul .jstree-wholerow-clicked {
   background: transparent;
 }
-.jstree-default.jstree-checkbox-no-clicked > .jstree-wholerow-ul .jstree-wholerow-clicked.jstree-wholerow-hovered {
+html body div form div #cwrc_wrapper .jstree-default.jstree-checkbox-no-clicked > .jstree-wholerow-ul .jstree-wholerow-clicked.jstree-wholerow-hovered {
   background: #e7f4f9;
 }
-.jstree-default > .jstree-striped {
+html body div form div #cwrc_wrapper .jstree-default > .jstree-striped {
   min-width: 100%;
   display: inline-block;
   background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAkCAMAAAB/qqA+AAAABlBMVEUAAAAAAAClZ7nPAAAAAnRSTlMNAMM9s3UAAAAXSURBVHjajcEBAQAAAIKg/H/aCQZ70AUBjAATb6YPDgAAAABJRU5ErkJggg==") left top repeat;
 }
-.jstree-default > .jstree-wholerow-ul .jstree-hovered,
-.jstree-default > .jstree-wholerow-ul .jstree-clicked {
+html body div form div #cwrc_wrapper .jstree-default > .jstree-wholerow-ul .jstree-hovered,
+html body div form div #cwrc_wrapper .jstree-default > .jstree-wholerow-ul .jstree-clicked {
   background: transparent;
   box-shadow: none;
   border-radius: 0;
 }
-.jstree-default .jstree-wholerow {
+html body div form div #cwrc_wrapper .jstree-default .jstree-wholerow {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
-.jstree-default .jstree-wholerow-hovered {
+html body div form div #cwrc_wrapper .jstree-default .jstree-wholerow-hovered {
   background: #e7f4f9;
 }
-.jstree-default .jstree-wholerow-clicked {
+html body div form div #cwrc_wrapper .jstree-default .jstree-wholerow-clicked {
   background: #beebff;
   background: -webkit-linear-gradient(top, #beebff 0%, #a8e4ff 100%);
   background: linear-gradient(to bottom, #beebff 0%, #a8e4ff 100%);
 }
-.jstree-default .jstree-node {
+html body div form div #cwrc_wrapper .jstree-default .jstree-node {
   min-height: 24px;
   line-height: 24px;
   margin-left: 24px;
   min-width: 24px;
 }
-.jstree-default .jstree-anchor {
+html body div form div #cwrc_wrapper .jstree-default .jstree-anchor {
   line-height: 24px;
   height: 24px;
 }
-.jstree-default .jstree-icon {
+html body div form div #cwrc_wrapper .jstree-default .jstree-icon {
   width: 24px;
   height: 24px;
   line-height: 24px;
 }
-.jstree-default .jstree-icon:empty {
+html body div form div #cwrc_wrapper .jstree-default .jstree-icon:empty {
   width: 24px;
   height: 24px;
   line-height: 24px;
 }
-.jstree-default.jstree-rtl .jstree-node {
+html body div form div #cwrc_wrapper .jstree-default.jstree-rtl .jstree-node {
   margin-right: 24px;
 }
-.jstree-default .jstree-wholerow {
+html body div form div #cwrc_wrapper .jstree-default .jstree-wholerow {
   height: 24px;
 }
-.jstree-default .jstree-node,
-.jstree-default .jstree-icon {
+html body div form div #cwrc_wrapper .jstree-default .jstree-node,
+html body div form div #cwrc_wrapper .jstree-default .jstree-icon {
   background-image: url("32px.png");
 }
-.jstree-default .jstree-node {
+html body div form div #cwrc_wrapper .jstree-default .jstree-node {
   background-position: -292px -4px;
   background-repeat: repeat-y;
 }
-.jstree-default .jstree-last {
+html body div form div #cwrc_wrapper .jstree-default .jstree-last {
   background: transparent;
 }
-.jstree-default .jstree-open > .jstree-ocl {
+html body div form div #cwrc_wrapper .jstree-default .jstree-open > .jstree-ocl {
   background-position: -132px -4px;
 }
-.jstree-default .jstree-closed > .jstree-ocl {
+html body div form div #cwrc_wrapper .jstree-default .jstree-closed > .jstree-ocl {
   background-position: -100px -4px;
 }
-.jstree-default .jstree-leaf > .jstree-ocl {
+html body div form div #cwrc_wrapper .jstree-default .jstree-leaf > .jstree-ocl {
   background-position: -68px -4px;
 }
-.jstree-default .jstree-themeicon {
+html body div form div #cwrc_wrapper .jstree-default .jstree-themeicon {
   background-position: -260px -4px;
 }
-.jstree-default > .jstree-no-dots .jstree-node,
-.jstree-default > .jstree-no-dots .jstree-leaf > .jstree-ocl {
+html body div form div #cwrc_wrapper .jstree-default > .jstree-no-dots .jstree-node,
+html body div form div #cwrc_wrapper .jstree-default > .jstree-no-dots .jstree-leaf > .jstree-ocl {
   background: transparent;
 }
-.jstree-default > .jstree-no-dots .jstree-open > .jstree-ocl {
+html body div form div #cwrc_wrapper .jstree-default > .jstree-no-dots .jstree-open > .jstree-ocl {
   background-position: -36px -4px;
 }
-.jstree-default > .jstree-no-dots .jstree-closed > .jstree-ocl {
+html body div form div #cwrc_wrapper .jstree-default > .jstree-no-dots .jstree-closed > .jstree-ocl {
   background-position: -4px -4px;
 }
-.jstree-default .jstree-disabled {
+html body div form div #cwrc_wrapper .jstree-default .jstree-disabled {
   background: transparent;
 }
-.jstree-default .jstree-disabled.jstree-hovered {
+html body div form div #cwrc_wrapper .jstree-default .jstree-disabled.jstree-hovered {
   background: transparent;
 }
-.jstree-default .jstree-disabled.jstree-clicked {
+html body div form div #cwrc_wrapper .jstree-default .jstree-disabled.jstree-clicked {
   background: #efefef;
 }
-.jstree-default .jstree-checkbox {
+html body div form div #cwrc_wrapper .jstree-default .jstree-checkbox {
   background-position: -164px -4px;
 }
-.jstree-default .jstree-checkbox:hover {
+html body div form div #cwrc_wrapper .jstree-default .jstree-checkbox:hover {
   background-position: -164px -36px;
 }
-.jstree-default.jstree-checkbox-selection .jstree-clicked > .jstree-checkbox,
-.jstree-default .jstree-checked > .jstree-checkbox {
+html body div form div #cwrc_wrapper .jstree-default.jstree-checkbox-selection .jstree-clicked > .jstree-checkbox,
+html body div form div #cwrc_wrapper .jstree-default .jstree-checked > .jstree-checkbox {
   background-position: -228px -4px;
 }
-.jstree-default.jstree-checkbox-selection .jstree-clicked > .jstree-checkbox:hover,
-.jstree-default .jstree-checked > .jstree-checkbox:hover {
+html body div form div #cwrc_wrapper .jstree-default.jstree-checkbox-selection .jstree-clicked > .jstree-checkbox:hover,
+html body div form div #cwrc_wrapper .jstree-default .jstree-checked > .jstree-checkbox:hover {
   background-position: -228px -36px;
 }
-.jstree-default .jstree-anchor > .jstree-undetermined {
+html body div form div #cwrc_wrapper .jstree-default .jstree-anchor > .jstree-undetermined {
   background-position: -196px -4px;
 }
-.jstree-default .jstree-anchor > .jstree-undetermined:hover {
+html body div form div #cwrc_wrapper .jstree-default .jstree-anchor > .jstree-undetermined:hover {
   background-position: -196px -36px;
 }
-.jstree-default .jstree-checkbox-disabled {
+html body div form div #cwrc_wrapper .jstree-default .jstree-checkbox-disabled {
   opacity: 0.8;
   filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'jstree-grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#jstree-grayscale");
   /* Firefox 10+ */
@@ -3422,182 +3432,182 @@ body {
   -webkit-filter: grayscale(100%);
   /* Chrome 19+ & Safari 6+ */
 }
-.jstree-default > .jstree-striped {
+html body div form div #cwrc_wrapper .jstree-default > .jstree-striped {
   background-size: auto 48px;
 }
-.jstree-default.jstree-rtl .jstree-node {
+html body div form div #cwrc_wrapper .jstree-default.jstree-rtl .jstree-node {
   background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAACAQMAAAB49I5GAAAABlBMVEUAAAAdHRvEkCwcAAAAAXRSTlMAQObYZgAAAAxJREFUCNdjAAMOBgAAGAAJMwQHdQAAAABJRU5ErkJggg==");
   background-position: 100% 1px;
   background-repeat: repeat-y;
 }
-.jstree-default.jstree-rtl .jstree-last {
+html body div form div #cwrc_wrapper .jstree-default.jstree-rtl .jstree-last {
   background: transparent;
 }
-.jstree-default.jstree-rtl .jstree-open > .jstree-ocl {
+html body div form div #cwrc_wrapper .jstree-default.jstree-rtl .jstree-open > .jstree-ocl {
   background-position: -132px -36px;
 }
-.jstree-default.jstree-rtl .jstree-closed > .jstree-ocl {
+html body div form div #cwrc_wrapper .jstree-default.jstree-rtl .jstree-closed > .jstree-ocl {
   background-position: -100px -36px;
 }
-.jstree-default.jstree-rtl .jstree-leaf > .jstree-ocl {
+html body div form div #cwrc_wrapper .jstree-default.jstree-rtl .jstree-leaf > .jstree-ocl {
   background-position: -68px -36px;
 }
-.jstree-default.jstree-rtl > .jstree-no-dots .jstree-node,
-.jstree-default.jstree-rtl > .jstree-no-dots .jstree-leaf > .jstree-ocl {
+html body div form div #cwrc_wrapper .jstree-default.jstree-rtl > .jstree-no-dots .jstree-node,
+html body div form div #cwrc_wrapper .jstree-default.jstree-rtl > .jstree-no-dots .jstree-leaf > .jstree-ocl {
   background: transparent;
 }
-.jstree-default.jstree-rtl > .jstree-no-dots .jstree-open > .jstree-ocl {
+html body div form div #cwrc_wrapper .jstree-default.jstree-rtl > .jstree-no-dots .jstree-open > .jstree-ocl {
   background-position: -36px -36px;
 }
-.jstree-default.jstree-rtl > .jstree-no-dots .jstree-closed > .jstree-ocl {
+html body div form div #cwrc_wrapper .jstree-default.jstree-rtl > .jstree-no-dots .jstree-closed > .jstree-ocl {
   background-position: -4px -36px;
 }
-.jstree-default .jstree-themeicon-custom {
+html body div form div #cwrc_wrapper .jstree-default .jstree-themeicon-custom {
   background-color: transparent;
   background-image: none;
   background-position: 0 0;
 }
-.jstree-default > .jstree-container-ul .jstree-loading > .jstree-ocl {
+html body div form div #cwrc_wrapper .jstree-default > .jstree-container-ul .jstree-loading > .jstree-ocl {
   background: url("throbber.gif") center center no-repeat;
 }
-.jstree-default .jstree-file {
+html body div form div #cwrc_wrapper .jstree-default .jstree-file {
   background: url("32px.png") -100px -68px no-repeat;
 }
-.jstree-default .jstree-folder {
+html body div form div #cwrc_wrapper .jstree-default .jstree-folder {
   background: url("32px.png") -260px -4px no-repeat;
 }
-.jstree-default > .jstree-container-ul > .jstree-node {
+html body div form div #cwrc_wrapper .jstree-default > .jstree-container-ul > .jstree-node {
   margin-left: 0;
   margin-right: 0;
 }
-#jstree-dnd.jstree-default {
+html body div form div #cwrc_wrapper #jstree-dnd.jstree-default {
   line-height: 24px;
   padding: 0 4px;
 }
-#jstree-dnd.jstree-default .jstree-ok,
-#jstree-dnd.jstree-default .jstree-er {
+html body div form div #cwrc_wrapper #jstree-dnd.jstree-default .jstree-ok,
+html body div form div #cwrc_wrapper #jstree-dnd.jstree-default .jstree-er {
   background-image: url("32px.png");
   background-repeat: no-repeat;
   background-color: transparent;
 }
-#jstree-dnd.jstree-default i {
+html body div form div #cwrc_wrapper #jstree-dnd.jstree-default i {
   background: transparent;
   width: 24px;
   height: 24px;
   line-height: 24px;
 }
-#jstree-dnd.jstree-default .jstree-ok {
+html body div form div #cwrc_wrapper #jstree-dnd.jstree-default .jstree-ok {
   background-position: -4px -68px;
 }
-#jstree-dnd.jstree-default .jstree-er {
+html body div form div #cwrc_wrapper #jstree-dnd.jstree-default .jstree-er {
   background-position: -36px -68px;
 }
-.jstree-default .jstree-ellipsis {
+html body div form div #cwrc_wrapper .jstree-default .jstree-ellipsis {
   overflow: hidden;
 }
-.jstree-default .jstree-ellipsis .jstree-anchor {
+html body div form div #cwrc_wrapper .jstree-default .jstree-ellipsis .jstree-anchor {
   width: calc(100% - 29px);
   text-overflow: ellipsis;
   overflow: hidden;
 }
-.jstree-default .jstree-ellipsis.jstree-no-icons .jstree-anchor {
+html body div form div #cwrc_wrapper .jstree-default .jstree-ellipsis.jstree-no-icons .jstree-anchor {
   width: calc(100% - 5px);
 }
-.jstree-default.jstree-rtl .jstree-node {
+html body div form div #cwrc_wrapper .jstree-default.jstree-rtl .jstree-node {
   background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAACAQMAAAB49I5GAAAABlBMVEUAAAAdHRvEkCwcAAAAAXRSTlMAQObYZgAAAAxJREFUCNdjAAMOBgAAGAAJMwQHdQAAAABJRU5ErkJggg==");
 }
-.jstree-default.jstree-rtl .jstree-last {
+html body div form div #cwrc_wrapper .jstree-default.jstree-rtl .jstree-last {
   background: transparent;
 }
-.jstree-default-small .jstree-node {
+html body div form div #cwrc_wrapper .jstree-default-small .jstree-node {
   min-height: 18px;
   line-height: 18px;
   margin-left: 18px;
   min-width: 18px;
 }
-.jstree-default-small .jstree-anchor {
+html body div form div #cwrc_wrapper .jstree-default-small .jstree-anchor {
   line-height: 18px;
   height: 18px;
 }
-.jstree-default-small .jstree-icon {
+html body div form div #cwrc_wrapper .jstree-default-small .jstree-icon {
   width: 18px;
   height: 18px;
   line-height: 18px;
 }
-.jstree-default-small .jstree-icon:empty {
+html body div form div #cwrc_wrapper .jstree-default-small .jstree-icon:empty {
   width: 18px;
   height: 18px;
   line-height: 18px;
 }
-.jstree-default-small.jstree-rtl .jstree-node {
+html body div form div #cwrc_wrapper .jstree-default-small.jstree-rtl .jstree-node {
   margin-right: 18px;
 }
-.jstree-default-small .jstree-wholerow {
+html body div form div #cwrc_wrapper .jstree-default-small .jstree-wholerow {
   height: 18px;
 }
-.jstree-default-small .jstree-node,
-.jstree-default-small .jstree-icon {
+html body div form div #cwrc_wrapper .jstree-default-small .jstree-node,
+html body div form div #cwrc_wrapper .jstree-default-small .jstree-icon {
   background-image: url("32px.png");
 }
-.jstree-default-small .jstree-node {
+html body div form div #cwrc_wrapper .jstree-default-small .jstree-node {
   background-position: -295px -7px;
   background-repeat: repeat-y;
 }
-.jstree-default-small .jstree-last {
+html body div form div #cwrc_wrapper .jstree-default-small .jstree-last {
   background: transparent;
 }
-.jstree-default-small .jstree-open > .jstree-ocl {
+html body div form div #cwrc_wrapper .jstree-default-small .jstree-open > .jstree-ocl {
   background-position: -135px -7px;
 }
-.jstree-default-small .jstree-closed > .jstree-ocl {
+html body div form div #cwrc_wrapper .jstree-default-small .jstree-closed > .jstree-ocl {
   background-position: -103px -7px;
 }
-.jstree-default-small .jstree-leaf > .jstree-ocl {
+html body div form div #cwrc_wrapper .jstree-default-small .jstree-leaf > .jstree-ocl {
   background-position: -71px -7px;
 }
-.jstree-default-small .jstree-themeicon {
+html body div form div #cwrc_wrapper .jstree-default-small .jstree-themeicon {
   background-position: -263px -7px;
 }
-.jstree-default-small > .jstree-no-dots .jstree-node,
-.jstree-default-small > .jstree-no-dots .jstree-leaf > .jstree-ocl {
+html body div form div #cwrc_wrapper .jstree-default-small > .jstree-no-dots .jstree-node,
+html body div form div #cwrc_wrapper .jstree-default-small > .jstree-no-dots .jstree-leaf > .jstree-ocl {
   background: transparent;
 }
-.jstree-default-small > .jstree-no-dots .jstree-open > .jstree-ocl {
+html body div form div #cwrc_wrapper .jstree-default-small > .jstree-no-dots .jstree-open > .jstree-ocl {
   background-position: -39px -7px;
 }
-.jstree-default-small > .jstree-no-dots .jstree-closed > .jstree-ocl {
+html body div form div #cwrc_wrapper .jstree-default-small > .jstree-no-dots .jstree-closed > .jstree-ocl {
   background-position: -7px -7px;
 }
-.jstree-default-small .jstree-disabled {
+html body div form div #cwrc_wrapper .jstree-default-small .jstree-disabled {
   background: transparent;
 }
-.jstree-default-small .jstree-disabled.jstree-hovered {
+html body div form div #cwrc_wrapper .jstree-default-small .jstree-disabled.jstree-hovered {
   background: transparent;
 }
-.jstree-default-small .jstree-disabled.jstree-clicked {
+html body div form div #cwrc_wrapper .jstree-default-small .jstree-disabled.jstree-clicked {
   background: #efefef;
 }
-.jstree-default-small .jstree-checkbox {
+html body div form div #cwrc_wrapper .jstree-default-small .jstree-checkbox {
   background-position: -167px -7px;
 }
-.jstree-default-small .jstree-checkbox:hover {
+html body div form div #cwrc_wrapper .jstree-default-small .jstree-checkbox:hover {
   background-position: -167px -39px;
 }
-.jstree-default-small.jstree-checkbox-selection .jstree-clicked > .jstree-checkbox,
-.jstree-default-small .jstree-checked > .jstree-checkbox {
+html body div form div #cwrc_wrapper .jstree-default-small.jstree-checkbox-selection .jstree-clicked > .jstree-checkbox,
+html body div form div #cwrc_wrapper .jstree-default-small .jstree-checked > .jstree-checkbox {
   background-position: -231px -7px;
 }
-.jstree-default-small.jstree-checkbox-selection .jstree-clicked > .jstree-checkbox:hover,
-.jstree-default-small .jstree-checked > .jstree-checkbox:hover {
+html body div form div #cwrc_wrapper .jstree-default-small.jstree-checkbox-selection .jstree-clicked > .jstree-checkbox:hover,
+html body div form div #cwrc_wrapper .jstree-default-small .jstree-checked > .jstree-checkbox:hover {
   background-position: -231px -39px;
 }
-.jstree-default-small .jstree-anchor > .jstree-undetermined {
+html body div form div #cwrc_wrapper .jstree-default-small .jstree-anchor > .jstree-undetermined {
   background-position: -199px -7px;
 }
-.jstree-default-small .jstree-anchor > .jstree-undetermined:hover {
+html body div form div #cwrc_wrapper .jstree-default-small .jstree-anchor > .jstree-undetermined:hover {
   background-position: -199px -39px;
 }
-.jstree-default-small .jstree-checkbox-disabled {
+html body div form div #cwrc_wrapper .jstree-default-small .jstree-checkbox-disabled {
   opacity: 0.8;
   filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'jstree-grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#jstree-grayscale");
   /* Firefox 10+ */
@@ -3606,182 +3616,182 @@ body {
   -webkit-filter: grayscale(100%);
   /* Chrome 19+ & Safari 6+ */
 }
-.jstree-default-small > .jstree-striped {
+html body div form div #cwrc_wrapper .jstree-default-small > .jstree-striped {
   background-size: auto 36px;
 }
-.jstree-default-small.jstree-rtl .jstree-node {
+html body div form div #cwrc_wrapper .jstree-default-small.jstree-rtl .jstree-node {
   background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAACAQMAAAB49I5GAAAABlBMVEUAAAAdHRvEkCwcAAAAAXRSTlMAQObYZgAAAAxJREFUCNdjAAMOBgAAGAAJMwQHdQAAAABJRU5ErkJggg==");
   background-position: 100% 1px;
   background-repeat: repeat-y;
 }
-.jstree-default-small.jstree-rtl .jstree-last {
+html body div form div #cwrc_wrapper .jstree-default-small.jstree-rtl .jstree-last {
   background: transparent;
 }
-.jstree-default-small.jstree-rtl .jstree-open > .jstree-ocl {
+html body div form div #cwrc_wrapper .jstree-default-small.jstree-rtl .jstree-open > .jstree-ocl {
   background-position: -135px -39px;
 }
-.jstree-default-small.jstree-rtl .jstree-closed > .jstree-ocl {
+html body div form div #cwrc_wrapper .jstree-default-small.jstree-rtl .jstree-closed > .jstree-ocl {
   background-position: -103px -39px;
 }
-.jstree-default-small.jstree-rtl .jstree-leaf > .jstree-ocl {
+html body div form div #cwrc_wrapper .jstree-default-small.jstree-rtl .jstree-leaf > .jstree-ocl {
   background-position: -71px -39px;
 }
-.jstree-default-small.jstree-rtl > .jstree-no-dots .jstree-node,
-.jstree-default-small.jstree-rtl > .jstree-no-dots .jstree-leaf > .jstree-ocl {
+html body div form div #cwrc_wrapper .jstree-default-small.jstree-rtl > .jstree-no-dots .jstree-node,
+html body div form div #cwrc_wrapper .jstree-default-small.jstree-rtl > .jstree-no-dots .jstree-leaf > .jstree-ocl {
   background: transparent;
 }
-.jstree-default-small.jstree-rtl > .jstree-no-dots .jstree-open > .jstree-ocl {
+html body div form div #cwrc_wrapper .jstree-default-small.jstree-rtl > .jstree-no-dots .jstree-open > .jstree-ocl {
   background-position: -39px -39px;
 }
-.jstree-default-small.jstree-rtl > .jstree-no-dots .jstree-closed > .jstree-ocl {
+html body div form div #cwrc_wrapper .jstree-default-small.jstree-rtl > .jstree-no-dots .jstree-closed > .jstree-ocl {
   background-position: -7px -39px;
 }
-.jstree-default-small .jstree-themeicon-custom {
+html body div form div #cwrc_wrapper .jstree-default-small .jstree-themeicon-custom {
   background-color: transparent;
   background-image: none;
   background-position: 0 0;
 }
-.jstree-default-small > .jstree-container-ul .jstree-loading > .jstree-ocl {
+html body div form div #cwrc_wrapper .jstree-default-small > .jstree-container-ul .jstree-loading > .jstree-ocl {
   background: url("throbber.gif") center center no-repeat;
 }
-.jstree-default-small .jstree-file {
+html body div form div #cwrc_wrapper .jstree-default-small .jstree-file {
   background: url("32px.png") -103px -71px no-repeat;
 }
-.jstree-default-small .jstree-folder {
+html body div form div #cwrc_wrapper .jstree-default-small .jstree-folder {
   background: url("32px.png") -263px -7px no-repeat;
 }
-.jstree-default-small > .jstree-container-ul > .jstree-node {
+html body div form div #cwrc_wrapper .jstree-default-small > .jstree-container-ul > .jstree-node {
   margin-left: 0;
   margin-right: 0;
 }
-#jstree-dnd.jstree-default-small {
+html body div form div #cwrc_wrapper #jstree-dnd.jstree-default-small {
   line-height: 18px;
   padding: 0 4px;
 }
-#jstree-dnd.jstree-default-small .jstree-ok,
-#jstree-dnd.jstree-default-small .jstree-er {
+html body div form div #cwrc_wrapper #jstree-dnd.jstree-default-small .jstree-ok,
+html body div form div #cwrc_wrapper #jstree-dnd.jstree-default-small .jstree-er {
   background-image: url("32px.png");
   background-repeat: no-repeat;
   background-color: transparent;
 }
-#jstree-dnd.jstree-default-small i {
+html body div form div #cwrc_wrapper #jstree-dnd.jstree-default-small i {
   background: transparent;
   width: 18px;
   height: 18px;
   line-height: 18px;
 }
-#jstree-dnd.jstree-default-small .jstree-ok {
+html body div form div #cwrc_wrapper #jstree-dnd.jstree-default-small .jstree-ok {
   background-position: -7px -71px;
 }
-#jstree-dnd.jstree-default-small .jstree-er {
+html body div form div #cwrc_wrapper #jstree-dnd.jstree-default-small .jstree-er {
   background-position: -39px -71px;
 }
-.jstree-default-small .jstree-ellipsis {
+html body div form div #cwrc_wrapper .jstree-default-small .jstree-ellipsis {
   overflow: hidden;
 }
-.jstree-default-small .jstree-ellipsis .jstree-anchor {
+html body div form div #cwrc_wrapper .jstree-default-small .jstree-ellipsis .jstree-anchor {
   width: calc(100% - 23px);
   text-overflow: ellipsis;
   overflow: hidden;
 }
-.jstree-default-small .jstree-ellipsis.jstree-no-icons .jstree-anchor {
+html body div form div #cwrc_wrapper .jstree-default-small .jstree-ellipsis.jstree-no-icons .jstree-anchor {
   width: calc(100% - 5px);
 }
-.jstree-default-small.jstree-rtl .jstree-node {
+html body div form div #cwrc_wrapper .jstree-default-small.jstree-rtl .jstree-node {
   background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAACAQMAAABv1h6PAAAABlBMVEUAAAAdHRvEkCwcAAAAAXRSTlMAQObYZgAAAAxJREFUCNdjAAMHBgAAiABBI4gz9AAAAABJRU5ErkJggg==");
 }
-.jstree-default-small.jstree-rtl .jstree-last {
+html body div form div #cwrc_wrapper .jstree-default-small.jstree-rtl .jstree-last {
   background: transparent;
 }
-.jstree-default-large .jstree-node {
+html body div form div #cwrc_wrapper .jstree-default-large .jstree-node {
   min-height: 32px;
   line-height: 32px;
   margin-left: 32px;
   min-width: 32px;
 }
-.jstree-default-large .jstree-anchor {
+html body div form div #cwrc_wrapper .jstree-default-large .jstree-anchor {
   line-height: 32px;
   height: 32px;
 }
-.jstree-default-large .jstree-icon {
+html body div form div #cwrc_wrapper .jstree-default-large .jstree-icon {
   width: 32px;
   height: 32px;
   line-height: 32px;
 }
-.jstree-default-large .jstree-icon:empty {
+html body div form div #cwrc_wrapper .jstree-default-large .jstree-icon:empty {
   width: 32px;
   height: 32px;
   line-height: 32px;
 }
-.jstree-default-large.jstree-rtl .jstree-node {
+html body div form div #cwrc_wrapper .jstree-default-large.jstree-rtl .jstree-node {
   margin-right: 32px;
 }
-.jstree-default-large .jstree-wholerow {
+html body div form div #cwrc_wrapper .jstree-default-large .jstree-wholerow {
   height: 32px;
 }
-.jstree-default-large .jstree-node,
-.jstree-default-large .jstree-icon {
+html body div form div #cwrc_wrapper .jstree-default-large .jstree-node,
+html body div form div #cwrc_wrapper .jstree-default-large .jstree-icon {
   background-image: url("32px.png");
 }
-.jstree-default-large .jstree-node {
+html body div form div #cwrc_wrapper .jstree-default-large .jstree-node {
   background-position: -288px 0px;
   background-repeat: repeat-y;
 }
-.jstree-default-large .jstree-last {
+html body div form div #cwrc_wrapper .jstree-default-large .jstree-last {
   background: transparent;
 }
-.jstree-default-large .jstree-open > .jstree-ocl {
+html body div form div #cwrc_wrapper .jstree-default-large .jstree-open > .jstree-ocl {
   background-position: -128px 0px;
 }
-.jstree-default-large .jstree-closed > .jstree-ocl {
+html body div form div #cwrc_wrapper .jstree-default-large .jstree-closed > .jstree-ocl {
   background-position: -96px 0px;
 }
-.jstree-default-large .jstree-leaf > .jstree-ocl {
+html body div form div #cwrc_wrapper .jstree-default-large .jstree-leaf > .jstree-ocl {
   background-position: -64px 0px;
 }
-.jstree-default-large .jstree-themeicon {
+html body div form div #cwrc_wrapper .jstree-default-large .jstree-themeicon {
   background-position: -256px 0px;
 }
-.jstree-default-large > .jstree-no-dots .jstree-node,
-.jstree-default-large > .jstree-no-dots .jstree-leaf > .jstree-ocl {
+html body div form div #cwrc_wrapper .jstree-default-large > .jstree-no-dots .jstree-node,
+html body div form div #cwrc_wrapper .jstree-default-large > .jstree-no-dots .jstree-leaf > .jstree-ocl {
   background: transparent;
 }
-.jstree-default-large > .jstree-no-dots .jstree-open > .jstree-ocl {
+html body div form div #cwrc_wrapper .jstree-default-large > .jstree-no-dots .jstree-open > .jstree-ocl {
   background-position: -32px 0px;
 }
-.jstree-default-large > .jstree-no-dots .jstree-closed > .jstree-ocl {
+html body div form div #cwrc_wrapper .jstree-default-large > .jstree-no-dots .jstree-closed > .jstree-ocl {
   background-position: 0px 0px;
 }
-.jstree-default-large .jstree-disabled {
+html body div form div #cwrc_wrapper .jstree-default-large .jstree-disabled {
   background: transparent;
 }
-.jstree-default-large .jstree-disabled.jstree-hovered {
+html body div form div #cwrc_wrapper .jstree-default-large .jstree-disabled.jstree-hovered {
   background: transparent;
 }
-.jstree-default-large .jstree-disabled.jstree-clicked {
+html body div form div #cwrc_wrapper .jstree-default-large .jstree-disabled.jstree-clicked {
   background: #efefef;
 }
-.jstree-default-large .jstree-checkbox {
+html body div form div #cwrc_wrapper .jstree-default-large .jstree-checkbox {
   background-position: -160px 0px;
 }
-.jstree-default-large .jstree-checkbox:hover {
+html body div form div #cwrc_wrapper .jstree-default-large .jstree-checkbox:hover {
   background-position: -160px -32px;
 }
-.jstree-default-large.jstree-checkbox-selection .jstree-clicked > .jstree-checkbox,
-.jstree-default-large .jstree-checked > .jstree-checkbox {
+html body div form div #cwrc_wrapper .jstree-default-large.jstree-checkbox-selection .jstree-clicked > .jstree-checkbox,
+html body div form div #cwrc_wrapper .jstree-default-large .jstree-checked > .jstree-checkbox {
   background-position: -224px 0px;
 }
-.jstree-default-large.jstree-checkbox-selection .jstree-clicked > .jstree-checkbox:hover,
-.jstree-default-large .jstree-checked > .jstree-checkbox:hover {
+html body div form div #cwrc_wrapper .jstree-default-large.jstree-checkbox-selection .jstree-clicked > .jstree-checkbox:hover,
+html body div form div #cwrc_wrapper .jstree-default-large .jstree-checked > .jstree-checkbox:hover {
   background-position: -224px -32px;
 }
-.jstree-default-large .jstree-anchor > .jstree-undetermined {
+html body div form div #cwrc_wrapper .jstree-default-large .jstree-anchor > .jstree-undetermined {
   background-position: -192px 0px;
 }
-.jstree-default-large .jstree-anchor > .jstree-undetermined:hover {
+html body div form div #cwrc_wrapper .jstree-default-large .jstree-anchor > .jstree-undetermined:hover {
   background-position: -192px -32px;
 }
-.jstree-default-large .jstree-checkbox-disabled {
+html body div form div #cwrc_wrapper .jstree-default-large .jstree-checkbox-disabled {
   opacity: 0.8;
   filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'jstree-grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#jstree-grayscale");
   /* Firefox 10+ */
@@ -3790,116 +3800,116 @@ body {
   -webkit-filter: grayscale(100%);
   /* Chrome 19+ & Safari 6+ */
 }
-.jstree-default-large > .jstree-striped {
+html body div form div #cwrc_wrapper .jstree-default-large > .jstree-striped {
   background-size: auto 64px;
 }
-.jstree-default-large.jstree-rtl .jstree-node {
+html body div form div #cwrc_wrapper .jstree-default-large.jstree-rtl .jstree-node {
   background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAACAQMAAAB49I5GAAAABlBMVEUAAAAdHRvEkCwcAAAAAXRSTlMAQObYZgAAAAxJREFUCNdjAAMOBgAAGAAJMwQHdQAAAABJRU5ErkJggg==");
   background-position: 100% 1px;
   background-repeat: repeat-y;
 }
-.jstree-default-large.jstree-rtl .jstree-last {
+html body div form div #cwrc_wrapper .jstree-default-large.jstree-rtl .jstree-last {
   background: transparent;
 }
-.jstree-default-large.jstree-rtl .jstree-open > .jstree-ocl {
+html body div form div #cwrc_wrapper .jstree-default-large.jstree-rtl .jstree-open > .jstree-ocl {
   background-position: -128px -32px;
 }
-.jstree-default-large.jstree-rtl .jstree-closed > .jstree-ocl {
+html body div form div #cwrc_wrapper .jstree-default-large.jstree-rtl .jstree-closed > .jstree-ocl {
   background-position: -96px -32px;
 }
-.jstree-default-large.jstree-rtl .jstree-leaf > .jstree-ocl {
+html body div form div #cwrc_wrapper .jstree-default-large.jstree-rtl .jstree-leaf > .jstree-ocl {
   background-position: -64px -32px;
 }
-.jstree-default-large.jstree-rtl > .jstree-no-dots .jstree-node,
-.jstree-default-large.jstree-rtl > .jstree-no-dots .jstree-leaf > .jstree-ocl {
+html body div form div #cwrc_wrapper .jstree-default-large.jstree-rtl > .jstree-no-dots .jstree-node,
+html body div form div #cwrc_wrapper .jstree-default-large.jstree-rtl > .jstree-no-dots .jstree-leaf > .jstree-ocl {
   background: transparent;
 }
-.jstree-default-large.jstree-rtl > .jstree-no-dots .jstree-open > .jstree-ocl {
+html body div form div #cwrc_wrapper .jstree-default-large.jstree-rtl > .jstree-no-dots .jstree-open > .jstree-ocl {
   background-position: -32px -32px;
 }
-.jstree-default-large.jstree-rtl > .jstree-no-dots .jstree-closed > .jstree-ocl {
+html body div form div #cwrc_wrapper .jstree-default-large.jstree-rtl > .jstree-no-dots .jstree-closed > .jstree-ocl {
   background-position: 0px -32px;
 }
-.jstree-default-large .jstree-themeicon-custom {
+html body div form div #cwrc_wrapper .jstree-default-large .jstree-themeicon-custom {
   background-color: transparent;
   background-image: none;
   background-position: 0 0;
 }
-.jstree-default-large > .jstree-container-ul .jstree-loading > .jstree-ocl {
+html body div form div #cwrc_wrapper .jstree-default-large > .jstree-container-ul .jstree-loading > .jstree-ocl {
   background: url("throbber.gif") center center no-repeat;
 }
-.jstree-default-large .jstree-file {
+html body div form div #cwrc_wrapper .jstree-default-large .jstree-file {
   background: url("32px.png") -96px -64px no-repeat;
 }
-.jstree-default-large .jstree-folder {
+html body div form div #cwrc_wrapper .jstree-default-large .jstree-folder {
   background: url("32px.png") -256px 0px no-repeat;
 }
-.jstree-default-large > .jstree-container-ul > .jstree-node {
+html body div form div #cwrc_wrapper .jstree-default-large > .jstree-container-ul > .jstree-node {
   margin-left: 0;
   margin-right: 0;
 }
-#jstree-dnd.jstree-default-large {
+html body div form div #cwrc_wrapper #jstree-dnd.jstree-default-large {
   line-height: 32px;
   padding: 0 4px;
 }
-#jstree-dnd.jstree-default-large .jstree-ok,
-#jstree-dnd.jstree-default-large .jstree-er {
+html body div form div #cwrc_wrapper #jstree-dnd.jstree-default-large .jstree-ok,
+html body div form div #cwrc_wrapper #jstree-dnd.jstree-default-large .jstree-er {
   background-image: url("32px.png");
   background-repeat: no-repeat;
   background-color: transparent;
 }
-#jstree-dnd.jstree-default-large i {
+html body div form div #cwrc_wrapper #jstree-dnd.jstree-default-large i {
   background: transparent;
   width: 32px;
   height: 32px;
   line-height: 32px;
 }
-#jstree-dnd.jstree-default-large .jstree-ok {
+html body div form div #cwrc_wrapper #jstree-dnd.jstree-default-large .jstree-ok {
   background-position: 0px -64px;
 }
-#jstree-dnd.jstree-default-large .jstree-er {
+html body div form div #cwrc_wrapper #jstree-dnd.jstree-default-large .jstree-er {
   background-position: -32px -64px;
 }
-.jstree-default-large .jstree-ellipsis {
+html body div form div #cwrc_wrapper .jstree-default-large .jstree-ellipsis {
   overflow: hidden;
 }
-.jstree-default-large .jstree-ellipsis .jstree-anchor {
+html body div form div #cwrc_wrapper .jstree-default-large .jstree-ellipsis .jstree-anchor {
   width: calc(100% - 37px);
   text-overflow: ellipsis;
   overflow: hidden;
 }
-.jstree-default-large .jstree-ellipsis.jstree-no-icons .jstree-anchor {
+html body div form div #cwrc_wrapper .jstree-default-large .jstree-ellipsis.jstree-no-icons .jstree-anchor {
   width: calc(100% - 5px);
 }
-.jstree-default-large.jstree-rtl .jstree-node {
+html body div form div #cwrc_wrapper .jstree-default-large.jstree-rtl .jstree-node {
   background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAACAQMAAAAD0EyKAAAABlBMVEUAAAAdHRvEkCwcAAAAAXRSTlMAQObYZgAAAAxJREFUCNdjgIIGBgABCgCBvVLXcAAAAABJRU5ErkJggg==");
 }
-.jstree-default-large.jstree-rtl .jstree-last {
+html body div form div #cwrc_wrapper .jstree-default-large.jstree-rtl .jstree-last {
   background: transparent;
 }
 @media (max-width: 768px) {
-  #jstree-dnd.jstree-dnd-responsive {
+  html body div form div #cwrc_wrapper #jstree-dnd.jstree-dnd-responsive {
     line-height: 40px;
     font-weight: bold;
     font-size: 1.1em;
     text-shadow: 1px 1px white;
   }
-  #jstree-dnd.jstree-dnd-responsive > i {
+  html body div form div #cwrc_wrapper #jstree-dnd.jstree-dnd-responsive > i {
     background: transparent;
     width: 40px;
     height: 40px;
   }
-  #jstree-dnd.jstree-dnd-responsive > .jstree-ok {
+  html body div form div #cwrc_wrapper #jstree-dnd.jstree-dnd-responsive > .jstree-ok {
     background-image: url("40px.png");
     background-position: 0 -200px;
     background-size: 120px 240px;
   }
-  #jstree-dnd.jstree-dnd-responsive > .jstree-er {
+  html body div form div #cwrc_wrapper #jstree-dnd.jstree-dnd-responsive > .jstree-er {
     background-image: url("40px.png");
     background-position: -40px -200px;
     background-size: 120px 240px;
   }
-  #jstree-marker.jstree-dnd-responsive {
+  html body div form div #cwrc_wrapper #jstree-marker.jstree-dnd-responsive {
     border-left-width: 10px;
     border-top-width: 10px;
     border-bottom-width: 10px;
@@ -3907,153 +3917,152 @@ body {
   }
 }
 @media (max-width: 768px) {
-  .jstree-default-responsive {
+  html body div form div #cwrc_wrapper .jstree-default-responsive {
     /*
 	.jstree-open > .jstree-ocl,
 	.jstree-closed > .jstree-ocl { border-radius:20px; background-color:white; }
 	*/
   }
-  .jstree-default-responsive .jstree-icon {
+  html body div form div #cwrc_wrapper .jstree-default-responsive .jstree-icon {
     background-image: url("40px.png");
   }
-  .jstree-default-responsive .jstree-node,
-  .jstree-default-responsive .jstree-leaf > .jstree-ocl {
+  html body div form div #cwrc_wrapper .jstree-default-responsive .jstree-node,
+  html body div form div #cwrc_wrapper .jstree-default-responsive .jstree-leaf > .jstree-ocl {
     background: transparent;
   }
-  .jstree-default-responsive .jstree-node {
+  html body div form div #cwrc_wrapper .jstree-default-responsive .jstree-node {
     min-height: 40px;
     line-height: 40px;
     margin-left: 40px;
     min-width: 40px;
     white-space: nowrap;
   }
-  .jstree-default-responsive .jstree-anchor {
+  html body div form div #cwrc_wrapper .jstree-default-responsive .jstree-anchor {
     line-height: 40px;
     height: 40px;
   }
-  .jstree-default-responsive .jstree-icon,
-  .jstree-default-responsive .jstree-icon:empty {
+  html body div form div #cwrc_wrapper .jstree-default-responsive .jstree-icon,
+  html body div form div #cwrc_wrapper .jstree-default-responsive .jstree-icon:empty {
     width: 40px;
     height: 40px;
     line-height: 40px;
   }
-  .jstree-default-responsive > .jstree-container-ul > .jstree-node {
+  html body div form div #cwrc_wrapper .jstree-default-responsive > .jstree-container-ul > .jstree-node {
     margin-left: 0;
   }
-  .jstree-default-responsive.jstree-rtl .jstree-node {
+  html body div form div #cwrc_wrapper .jstree-default-responsive.jstree-rtl .jstree-node {
     margin-left: 0;
     margin-right: 40px;
     background: transparent;
   }
-  .jstree-default-responsive.jstree-rtl .jstree-container-ul > .jstree-node {
+  html body div form div #cwrc_wrapper .jstree-default-responsive.jstree-rtl .jstree-container-ul > .jstree-node {
     margin-right: 0;
   }
-  .jstree-default-responsive .jstree-ocl,
-  .jstree-default-responsive .jstree-themeicon,
-  .jstree-default-responsive .jstree-checkbox {
+  html body div form div #cwrc_wrapper .jstree-default-responsive .jstree-ocl,
+  html body div form div #cwrc_wrapper .jstree-default-responsive .jstree-themeicon,
+  html body div form div #cwrc_wrapper .jstree-default-responsive .jstree-checkbox {
     background-size: 120px 240px;
   }
-  .jstree-default-responsive .jstree-leaf > .jstree-ocl,
-  .jstree-default-responsive.jstree-rtl .jstree-leaf > .jstree-ocl {
+  html body div form div #cwrc_wrapper .jstree-default-responsive .jstree-leaf > .jstree-ocl,
+  html body div form div #cwrc_wrapper .jstree-default-responsive.jstree-rtl .jstree-leaf > .jstree-ocl {
     background: transparent;
   }
-  .jstree-default-responsive .jstree-open > .jstree-ocl {
+  html body div form div #cwrc_wrapper .jstree-default-responsive .jstree-open > .jstree-ocl {
     background-position: 0 0px !important;
   }
-  .jstree-default-responsive .jstree-closed > .jstree-ocl {
+  html body div form div #cwrc_wrapper .jstree-default-responsive .jstree-closed > .jstree-ocl {
     background-position: 0 -40px !important;
   }
-  .jstree-default-responsive.jstree-rtl .jstree-closed > .jstree-ocl {
+  html body div form div #cwrc_wrapper .jstree-default-responsive.jstree-rtl .jstree-closed > .jstree-ocl {
     background-position: -40px 0px !important;
   }
-  .jstree-default-responsive .jstree-themeicon {
+  html body div form div #cwrc_wrapper .jstree-default-responsive .jstree-themeicon {
     background-position: -40px -40px;
   }
-  .jstree-default-responsive .jstree-checkbox,
-  .jstree-default-responsive .jstree-checkbox:hover {
+  html body div form div #cwrc_wrapper .jstree-default-responsive .jstree-checkbox,
+  html body div form div #cwrc_wrapper .jstree-default-responsive .jstree-checkbox:hover {
     background-position: -40px -80px;
   }
-  .jstree-default-responsive.jstree-checkbox-selection .jstree-clicked > .jstree-checkbox,
-  .jstree-default-responsive.jstree-checkbox-selection .jstree-clicked > .jstree-checkbox:hover,
-  .jstree-default-responsive .jstree-checked > .jstree-checkbox,
-  .jstree-default-responsive .jstree-checked > .jstree-checkbox:hover {
+  html body div form div #cwrc_wrapper .jstree-default-responsive.jstree-checkbox-selection .jstree-clicked > .jstree-checkbox,
+  html body div form div #cwrc_wrapper .jstree-default-responsive.jstree-checkbox-selection .jstree-clicked > .jstree-checkbox:hover,
+  html body div form div #cwrc_wrapper .jstree-default-responsive .jstree-checked > .jstree-checkbox,
+  html body div form div #cwrc_wrapper .jstree-default-responsive .jstree-checked > .jstree-checkbox:hover {
     background-position: 0 -80px;
   }
-  .jstree-default-responsive .jstree-anchor > .jstree-undetermined,
-  .jstree-default-responsive .jstree-anchor > .jstree-undetermined:hover {
+  html body div form div #cwrc_wrapper .jstree-default-responsive .jstree-anchor > .jstree-undetermined,
+  html body div form div #cwrc_wrapper .jstree-default-responsive .jstree-anchor > .jstree-undetermined:hover {
     background-position: 0 -120px;
   }
-  .jstree-default-responsive .jstree-anchor {
+  html body div form div #cwrc_wrapper .jstree-default-responsive .jstree-anchor {
     font-weight: bold;
     font-size: 1.1em;
     text-shadow: 1px 1px white;
   }
-  .jstree-default-responsive > .jstree-striped {
+  html body div form div #cwrc_wrapper .jstree-default-responsive > .jstree-striped {
     background: transparent;
   }
-  .jstree-default-responsive .jstree-wholerow {
+  html body div form div #cwrc_wrapper .jstree-default-responsive .jstree-wholerow {
     border-top: 1px solid rgba(255, 255, 255, 0.7);
     border-bottom: 1px solid rgba(64, 64, 64, 0.2);
     background: #ebebeb;
     height: 40px;
   }
-  .jstree-default-responsive .jstree-wholerow-hovered {
+  html body div form div #cwrc_wrapper .jstree-default-responsive .jstree-wholerow-hovered {
     background: #e7f4f9;
   }
-  .jstree-default-responsive .jstree-wholerow-clicked {
+  html body div form div #cwrc_wrapper .jstree-default-responsive .jstree-wholerow-clicked {
     background: #beebff;
   }
-  .jstree-default-responsive .jstree-children .jstree-last > .jstree-wholerow {
+  html body div form div #cwrc_wrapper .jstree-default-responsive .jstree-children .jstree-last > .jstree-wholerow {
     box-shadow: inset 0 -6px 3px -5px #666666;
   }
-  .jstree-default-responsive .jstree-children .jstree-open > .jstree-wholerow {
+  html body div form div #cwrc_wrapper .jstree-default-responsive .jstree-children .jstree-open > .jstree-wholerow {
     box-shadow: inset 0 6px 3px -5px #666666;
     border-top: 0;
   }
-  .jstree-default-responsive .jstree-children .jstree-open + .jstree-open {
+  html body div form div #cwrc_wrapper .jstree-default-responsive .jstree-children .jstree-open + .jstree-open {
     box-shadow: none;
   }
-  .jstree-default-responsive .jstree-node,
-  .jstree-default-responsive .jstree-icon,
-  .jstree-default-responsive .jstree-node > .jstree-ocl,
-  .jstree-default-responsive .jstree-themeicon,
-  .jstree-default-responsive .jstree-checkbox {
+  html body div form div #cwrc_wrapper .jstree-default-responsive .jstree-node,
+  html body div form div #cwrc_wrapper .jstree-default-responsive .jstree-icon,
+  html body div form div #cwrc_wrapper .jstree-default-responsive .jstree-node > .jstree-ocl,
+  html body div form div #cwrc_wrapper .jstree-default-responsive .jstree-themeicon,
+  html body div form div #cwrc_wrapper .jstree-default-responsive .jstree-checkbox {
     background-image: url("40px.png");
     background-size: 120px 240px;
   }
-  .jstree-default-responsive .jstree-node {
+  html body div form div #cwrc_wrapper .jstree-default-responsive .jstree-node {
     background-position: -80px 0;
     background-repeat: repeat-y;
   }
-  .jstree-default-responsive .jstree-last {
+  html body div form div #cwrc_wrapper .jstree-default-responsive .jstree-last {
     background: transparent;
   }
-  .jstree-default-responsive .jstree-leaf > .jstree-ocl {
+  html body div form div #cwrc_wrapper .jstree-default-responsive .jstree-leaf > .jstree-ocl {
     background-position: -40px -120px;
   }
-  .jstree-default-responsive .jstree-last > .jstree-ocl {
+  html body div form div #cwrc_wrapper .jstree-default-responsive .jstree-last > .jstree-ocl {
     background-position: -40px -160px;
   }
-  .jstree-default-responsive .jstree-themeicon-custom {
+  html body div form div #cwrc_wrapper .jstree-default-responsive .jstree-themeicon-custom {
     background-color: transparent;
     background-image: none;
     background-position: 0 0;
   }
-  .jstree-default-responsive .jstree-file {
+  html body div form div #cwrc_wrapper .jstree-default-responsive .jstree-file {
     background: url("40px.png") 0 -160px no-repeat;
     background-size: 120px 240px;
   }
-  .jstree-default-responsive .jstree-folder {
+  html body div form div #cwrc_wrapper .jstree-default-responsive .jstree-folder {
     background: url("40px.png") -40px -40px no-repeat;
     background-size: 120px 240px;
   }
-  .jstree-default-responsive > .jstree-container-ul > .jstree-node {
+  html body div form div #cwrc_wrapper .jstree-default-responsive > .jstree-container-ul > .jstree-node {
     margin-left: 0;
     margin-right: 0;
   }
 }
-/* jstree overrides */
-#vakata-dnd {
+html body div form div #cwrc_wrapper #vakata-dnd {
   display: block;
   overflow: hidden;
   background-color: #fff;
@@ -4061,32 +4070,22 @@ body {
   border-radius: 4px;
   padding: 4px !important;
 }
-.vakata-context,
-.vakata-context .submenu ul {
+html body div form div #cwrc_wrapper .vakata-context,
+html body div form div #cwrc_wrapper .vakata-context .submenu ul {
   border: 1px solid #D4D0C8 !important;
   background-color: #fff !important;
   /*box-shadow: 1px 1px 2px #ccc;*/
   min-width: 165px !important;
   z-index: 100;
 }
-.vakata-context .submenu ul {
+html body div form div #cwrc_wrapper .vakata-context .submenu ul {
   overflow: auto;
 }
-.vakata-context li ins,
-#jqContextMenu li ins {
+html body div form div #cwrc_wrapper .vakata-context li ins,
+html body div form div #cwrc_wrapper #jqContextMenu li ins {
   margin: 2px 2px 0 2px !important;
 }
-/*
-.vakata-context .submenu > a span {
-    background-image: url("../img/menu_arrow.gif");
-    color: #fff;
-    display: block;
-    float: right;
-    width: 20px;
-    height: 20px;
-}
-*/
-.vakata-context .submenu .filterParent {
+html body div form div #cwrc_wrapper .vakata-context .submenu .filterParent {
   position: absolute;
   display: none;
   height: 26px;
@@ -4096,57 +4095,56 @@ body {
   border-width: 1px 1px 0px 1px !important;
   box-shadow: 2px 2px 2px #999999;
 }
-.vakata-context .submenu .filterParent span {
+html body div form div #cwrc_wrapper .vakata-context .submenu .filterParent span {
   margin: 2px 0.5em;
   font-size: 11px;
 }
-.vakata-context .submenu .filterParent input {
+html body div form div #cwrc_wrapper .vakata-context .submenu .filterParent input {
   margin: 2px 3px 2px 0;
   width: 90px;
   position: relative;
   font-size: 11px;
   border: 1px solid #D4D0C8;
 }
-.vakata-context li > a,
-.vakata-context .submenu .filterParent span {
+html body div form div #cwrc_wrapper .vakata-context li > a,
+html body div form div #cwrc_wrapper .vakata-context .submenu .filterParent span {
   font-family: Tahoma, Verdana, Arial, Helvetica !important;
   font-size: 11px !important;
   line-height: 22px !important;
 }
-.vakata-context li a:hover,
-.vakata-context li.vakata-hover > a {
+html body div form div #cwrc_wrapper .vakata-context li a:hover,
+html body div form div #cwrc_wrapper .vakata-context li.vakata-hover > a {
   color: #000 !important;
   background-color: #DBECF3 !important;
 }
-.jstree .jstree-wholerow {
+html body div form div #cwrc_wrapper .jstree .jstree-wholerow {
   /*height: 22px;*/
   border: none;
   border-bottom: 1px solid #d3d3d3;
 }
-.jstree .jstree-wholerow-hovered {
+html body div form div #cwrc_wrapper .jstree .jstree-wholerow-hovered {
   background: #eeeeee !important;
 }
-.jstree .jstree-wholerow-clicked {
+html body div form div #cwrc_wrapper .jstree .jstree-wholerow-clicked {
   background: #d3d3d3 !important;
 }
-.jstree .jstree-context {
+html body div form div #cwrc_wrapper .jstree .jstree-context {
   background: #d3d3d3 !important;
 }
-.jstree a.nodeSelected {
+html body div form div #cwrc_wrapper .jstree a.nodeSelected {
   font-weight: bold;
 }
-.jstree a.contentsSelected {
+html body div form div #cwrc_wrapper .jstree a.contentsSelected {
   font-weight: bold;
   font-style: italic;
 }
-.jstree-default .jstree-anchor {
+html body div form div #cwrc_wrapper .jstree-default .jstree-anchor {
   float: none;
 }
-.jstree-default .jstree-node {
+html body div form div #cwrc_wrapper .jstree-default .jstree-node {
   float: none !important;
   width: inherit !important;
 }
-/* end overrides */
 /* can't wrap these because otherwise they're TOO specific */
 /* tinymce context menu overrides */
 .mce-cwrc .mce-menu-item {
