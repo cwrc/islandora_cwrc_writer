@@ -11,19 +11,20 @@
     "islandora",
     "drupal"
   ],
-  "contributors": "Andrew MacDonald",
+  "author": "Andrew MacDonald",
   "license": "GPL-2.0",
   "bugs": {
     "url": "https://github.com/cwrc/Islandora-CWRC-Writer/issues"
   },
   "homepage": "https://github.com/cwrc/Islandora-CWRC-Writer#readme",
   "scripts": {
-    "build": "npm run clean && npm run copyfiles && npm run build:js",
+    "build": "npm run clean && npm run build:cwrc-writer && npm run copyfiles && npm run build:js",
     "clean": "rimraf build",
-    "copyfiles": "npm run copy:images && npm run copy:css && npm run copy:xml",
+    "build:cwrc-writer": "cd \"node_modules/cwrc-writer-base\" && npm run build && npm run build-scoped-css -- --global-var=\"parentId=#cwrc_wrapper\"",
+    "copy": "cd node_modules/cwrc-writer-base && npm run copy-bootstrap-fonts",
+    "copyfiles": "npm run copy:images && npm run copy:css",
     "copy:images": "copyfiles -u 3 \"node_modules/cwrc-writer-base/src/img/**/*\" build/",
-    "copy:css": "copyfiles -u 3 \"node_modules/cwrc-writer-base/src/css/**/*\" build/",
-    "copy:xml": "copyfiles -u 5 \"node_modules/cwrc-writer-base/src/js/schema/*/xml/*\" build/schema/",
+    "copy:css": "copyfiles -u 3 \"node_modules/cwrc-writer-base/build/**/*\" build/",
     "build:js": "mkdirp build/js && browserify js/app.js --standalone GitWriter > build/js/app.js --verbose -g babelify -g deamdify",
     "debugbuild:js": "mkdirp build/js && browserify js/app.js --standalone GitWriter > build/js/app.js --debug --verbose -g babelify -g deamdify",
     "watch": "watchify js/app.js --debug --standalone GitWriter -o build/js/app.js --verbose -g babelify -g deamdify"
@@ -37,7 +38,7 @@
   "dependencies": {
     "cwrc-public-entity-dialogs": "^1.10.0",
     "cwrc-tei-entities-lookup": "^1.2.4",
-    "cwrc-writer-base": "^2.30.5",
+    "cwrc-writer-base": "^2.31.1",
     "dbpedia-entity-lookup": "^0.4.1",
     "geonames-entity-lookup": "^1.1.6",
     "getty-entity-lookup": "^1.4.4",
@@ -54,9 +55,11 @@
     "browserify": "^13.0.1",
     "copyfiles": "^1.0.0",
     "deamdify": "0.3.0",
+    "less": "^3.9.0",
     "minifier": "^0.8.0",
     "minifyify": "^7.3.3",
     "mkdirp": "^0.5.1",
+    "path-exists-cli": "^1.0.0",
     "rimraf": "^2.6.3",
     "watchify": "^3.11.1"
   }
