@@ -74,3 +74,69 @@ a.cwrc .ui-button:active,
 .cwrc .ui-button.ui-state-active:hover {
   color: #455373 !important;
 }
+
+#cwrc_wrapper .cwrc {
+  line-height: 1em !important;
+}
+
+#cwrc_wrapper .cwrc.context-menu-root li {
+  width: auto !important;
+  float: none !important;
+}
+
+#cwrc_wrapper ul.entitiesList .info ul {
+  margin: 0 !important;
+}
+#cwrc_wrapper ul.entitiesList li {
+  width: auto !important;
+  float: none !important;
+}
+
+#cwrc_wrapper .cwrc .ui-widget,
+#cwrc_wrapper .cwrc .ui-widget-content,
+#cwrc_wrapper .cwrc form .ui-widget select {
+  font-size: 14px !important;
+}
+
+#cwrc_wrapper .cwrc .ui-state-active,
+#cwrc_wrapper .cwrc .ui-widget-content .ui-state-active,
+#cwrc_wrapper .cwrc .ui-widget-header .ui-state-active,
+#cwrc_wrapper a.cwrc .ui-button:active,
+#cwrc_wrapper .cwrc .ui-button:active,
+#cwrc_wrapper .cwrc .ui-button.ui-state-active:hover {
+border: 1px solid #455373 !important;
+background: #586B93 !important;
+font-weight: normal !important;
+color: #ffffff !important;
+}
+
+#cwrc_wrapper .cwrc .ui-tabs .ui-tabs-nav li {
+  border-bottom-width: 0px !important;
+}
+
+#cwrc_wrapper .cwrc .ui-dialog .ui-dialog-content {
+  border-width: 0 !important;
+}
+
+#cwrc_wrapper .cwrc .ui-dialog .ui-dialog-buttonpane {
+  border-color: #dddddd !important;
+  border-style: solid !important;
+  border-width: 1px 0 0 0 !important;
+}
+
+#cwrc_wrapper .cwrc .tabs .ui-tabs-nav a {
+  background-color: transparent !important;
+  transition: none !important;
+  margin: 0 !important;
+  line-height: 1.3em !important;
+}
+
+#cwrc_wrapper .cwrc a.jstree-anchor {
+  padding: 0 4px 0 1px !important;
+}
+
+#cwrc_wrapper ul.vakata-context li {
+  float: none !important;
+  width: auto !important;
+  margin: 0 !important;
+}
