@@ -75,6 +75,10 @@ a.cwrc .ui-button:active,
   color: #455373 !important;
 }
 
+html body div form #cwrc_wrapper {
+  padding: 0 !important;
+}
+
 #cwrc_wrapper .cwrc {
   line-height: 1em !important;
 }
