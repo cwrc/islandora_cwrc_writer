@@ -64,19 +64,19 @@
 .ui-dialog-content .link {
   border-color: #3265ff;
 }
-.nerve .entity[nerve] {
+.nerve .entity[_nerve] {
   border-width: 0px;
 }
-.nerve .entity.person[nerve] {
+.nerve .entity.person[_nerve] {
   color: #ff0000;
 }
-.nerve .entity.place[nerve] {
+.nerve .entity.place[_nerve] {
   color: #009999;
 }
-.nerve .entity.org[nerve] {
+.nerve .entity.org[_nerve] {
   color: #6d38d6;
 }
-.nerve .entity.title[nerve] {
+.nerve .entity.title[_nerve] {
   color: #e0be00;
 }
 .noteWrapper::before {
