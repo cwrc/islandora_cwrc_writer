@@ -105,7 +105,7 @@ Drupal.CWRCWriter = Drupal.CWRCWriter || {};
       config.buttons1 += ',|,fullscreen';
       config.container = config.id || layoutParentId;
       config.modules = {
-          west: ['structure','entities','relations'],
+          west: ['structure','entities','nerve'],
           south: ['selection', 'validation'],
           east: ['imageViewer']
       };

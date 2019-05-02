@@ -58,6 +58,15 @@
     padding: 0 4px 0 1px !important;
 }
 
+#cwrc_wrapper .cwrc .entitiesList .info a {
+    float: none !important;
+    display: inline !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    text-decoration: underline !important;
+    transition: none !important;
+}
+
 /*
 #cwrc_wrapper {
     padding: 0 !important;
