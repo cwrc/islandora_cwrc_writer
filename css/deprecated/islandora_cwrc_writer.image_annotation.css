@@ -1,0 +1,42 @@
+/**
+ * @file
+ * Defines the styles required to embed the Islandora Image Annotation Canvas.
+ */
+#islandora-image-annotation-create-annotation-button {
+  float: none !important;
+}
+/**
+ * Container element of the dialog box.
+ */
+.ui-dialog.cwrc {
+  /* High enough to show over top of 'Full Window' display. */
+  z-index: 1000 !important;
+}
+#islandora-image-annotation-dialog label {
+  display: block;
+  font-weight: bold;
+}
+.context-menu-list {
+  z-index: 65 !important;
+}
+.entitiesList .textimagelink .box {
+  background-image: url('../images/txt_img_lnk.png');
+}
+.entitiesList .textimagelink .box, .entitiesList .textimagelink.over {
+  background-color: #7F00FF;
+}
+.entitiesList .textimagelink.selected, .entitiesList .textimagelink.selected .box {
+  background-color: #7F00FF;
+}
+
+li.textimagelink:hover {
+  background-color: #818167 !important;
+}
+
+li.textimagelink .box {
+  background-color: #818167 !important;
+}
+
+li.textimagelink.selected {
+  background-color: #818167 !important;
+}

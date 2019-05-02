@@ -64,20 +64,32 @@
 .ui-dialog-content .link {
   border-color: #3265ff;
 }
-.nerve .entity[_nerve] {
-  border-width: 0px;
+.entity[_candidate] {
+  border-width: 0px !important;
 }
-.nerve .entity.person[_nerve] {
-  color: #ff0000;
+.entity.person[_candidate] {
+  color: #ff0000 !important;
 }
-.nerve .entity.place[_nerve] {
-  color: #009999;
+.entity.place[_candidate] {
+  color: #009999 !important;
 }
-.nerve .entity.org[_nerve] {
-  color: #6d38d6;
+.entity.org[_candidate] {
+  color: #6d38d6 !important;
 }
-.nerve .entity.title[_nerve] {
-  color: #e0be00;
+.entity.title[_candidate] {
+  color: #e0be00 !important;
+}
+.entity.date[_candidate] {
+  color: #ff7200 !important;
+}
+.entity.correction[_candidate] {
+  color: #ff3300 !important;
+}
+.entity.link[_candidate] {
+  color: #3265ff !important;
+}
+.entity.keyword[_candidate] {
+  color: #008040 !important;
 }
 .noteWrapper::before {
   cursor: pointer;

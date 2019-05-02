@@ -29,4 +29,3 @@ window.Drupal.CWRCWriterDialogs.registerEntitySources({
 })
 
 window.Drupal.CWRCWriter = require('cwrc-writer-base');
-

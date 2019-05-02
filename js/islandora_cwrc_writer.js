@@ -171,6 +171,8 @@ Drupal.CWRCWriter = Drupal.CWRCWriter || {};
       }
       
       writer = new Writer(config);
+
+      writer.utilities.addCSS('css/islandora-overrides.css');
       
       window.addEventListener('beforeunload', function() {
         // remove cookie specifying which collection to save new entities to (which was added by cwrc-entity-management-forms)

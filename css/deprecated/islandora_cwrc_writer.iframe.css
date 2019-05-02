@@ -1,0 +1,7 @@
+/**
+ * @file
+ * Styles that allow the CWRC-Writer to be embedded in an iframe.
+ */
+div.region {
+  height: 100%;
+}
