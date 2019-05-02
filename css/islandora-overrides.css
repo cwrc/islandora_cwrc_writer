@@ -6,6 +6,9 @@
     width: auto !important;
     float: none !important;
 }
+#cwrc_wrapper .cwrc .context-menu-item {
+    margin: 0 !important;
+}
 
 #cwrc_wrapper ul.entitiesList .info ul {
     margin: 0 !important;
@@ -13,6 +16,14 @@
 #cwrc_wrapper ul.entitiesList li {
     width: auto !important;
     float: none !important;
+}
+#cwrc_wrapper .cwrc .entitiesList .info a {
+    float: none !important;
+    display: inline !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    text-decoration: underline !important;
+    transition: none !important;
 }
 
 #cwrc_wrapper .cwrc .ui-widget,
@@ -56,15 +67,6 @@
 
 #cwrc_wrapper .cwrc a.jstree-anchor {
     padding: 0 4px 0 1px !important;
-}
-
-#cwrc_wrapper .cwrc .entitiesList .info a {
-    float: none !important;
-    display: inline !important;
-    padding: 0 !important;
-    margin: 0 !important;
-    text-decoration: underline !important;
-    transition: none !important;
 }
 
 /*
