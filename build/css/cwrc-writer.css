@@ -2251,11 +2251,6 @@ body {
 #cwrc_wrapper .attributeWidget label {
   display: inline;
 }
-#cwrc_wrapper .attributeWidget input,
-#cwrc_wrapper .attributeWidget select {
-  width: 80%;
-  border: 1px solid #ccc;
-}
 #cwrc_wrapper .attributeWidget .attributeSelector {
   flex: 1;
   display: flex;
@@ -2337,7 +2332,8 @@ body {
   position: relative;
   height: 200px;
 }
-#cwrc_wrapper .annotationDialog input[type=text] {
+#cwrc_wrapper .annotationDialog input[type=text],
+#cwrc_wrapper .annotationDialog select {
   border-radius: 3px;
   border: 1px solid #c5c5c5;
   padding: 3px 3px;

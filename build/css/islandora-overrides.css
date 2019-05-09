@@ -16,6 +16,7 @@
 #cwrc_wrapper ul.entitiesList li {
     width: auto !important;
     float: none !important;
+    line-height: 1em !important;
 }
 #cwrc_wrapper .cwrc .entitiesList .info a {
     float: none !important;
@@ -30,6 +31,7 @@
 #cwrc_wrapper .cwrc .ui-widget-content,
 #cwrc_wrapper .cwrc form .ui-widget select {
     font-size: 14px !important;
+    line-height: 1em !important;
 }
 
 /* TODO this overrides entity panel actions */
@@ -75,9 +77,13 @@
     border-width: 1px !important;
 }
 
-/*
+#cwrc_wrapper .cwrc .ui-selectmenu-menu li {
+    float: none !important;
+    width: inherit !important;
+    list-style: none !important;
+}
+
 #cwrc_wrapper {
     padding: 0 !important;
     border: 0 !important;
 }
-*/
