@@ -38,7 +38,7 @@
   "dependencies": {
     "cwrc-public-entity-dialogs": "^1.11.0",
     "cwrc-tei-entities-lookup": "^1.2.4",
-    "cwrc-writer-base": "^2.41.10",
+    "cwrc-writer-base": "^2.41.12",
     "dbpedia-entity-lookup": "^0.4.1",
     "geonames-entity-lookup": "^1.1.6",
     "getty-entity-lookup": "^1.4.4",
