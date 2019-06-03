@@ -285,6 +285,9 @@ Drupal.CWRCWriter = Drupal.CWRCWriter || {};
         // has the full body.
         if(!window.frameElement) {
           var height = $(document.body).height()-40;
+	  if ( height < 850) {
+	    height = 850;
+	  }
           $('#'+layoutParentId).height(height);
         }
         
