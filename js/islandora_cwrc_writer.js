@@ -105,9 +105,22 @@ Drupal.CWRCWriter = Drupal.CWRCWriter || {};
       config.buttons1 += ',|,fullscreen';
       config.container = config.id || layoutParentId;
       config.modules = {
-          west: ['structure','entities','nerve'],
-          south: ['selection', 'validation'],
-          east: ['imageViewer']
+          west: [
+            {id: 'structure', title: 'Markup'},
+            {id: 'entities', title: 'Entities'},
+            {id: 'nerve', title: 'NERVE', config: {
+              'nerveUrl': 'https://dh.sharcnet.ca/NerveService'
+            }}
+          ],
+          south: [
+            {id: 'selection', title: 'Selection'},
+            {id: 'validation', title: 'Validation', config: {
+              'validationUrl': 'https://validator.services.cwrc.ca/validator/validate.html'
+            }}
+          ],
+          east: [
+            {id: 'imageViewer', title: 'Image Viewer'}
+          ]
       };
       config.entityLookupDialogs = Dialogs;
       var baseUrl = config.baseUrl;
