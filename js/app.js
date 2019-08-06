@@ -1,7 +1,7 @@
 window.Drupal = window.Drupal || {};
 
 let cwrc = require('cwrc-tei-entities-lookup');
-cwrc.setEntityRoot('https://commons.cwrc.ca');
+cwrc.setEntityRoot(Drupal.settings.CWRCWriter.cwrcDialogs.repositoryBaseObjectUrl);
 cwrc.setSearchRoot(Drupal.settings.CWRCWriter.cwrcDialogs.cwrcApiUrl);
 cwrc.setProjectLookupConfig({
     projectLookupUrl: Drupal.settings.CWRCWriter.cwrcDialogs.projectLookupUrl,
