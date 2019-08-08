@@ -18,6 +18,7 @@ let geonames = require('geonames-entity-lookup');
 window.Drupal.CWRCWriterDialogs = require('cwrc-public-entity-dialogs');
 window.Drupal.CWRCWriterDialogs.showNoLinkButton(true);
 window.Drupal.CWRCWriterDialogs.showCreateNewButton(true);
+window.Drupal.CWRCWriterDialogs.setEntityCollectionsUrl(window.location.origin+'/islandora/get_entity_collections');
 window.Drupal.CWRCWriterDialogs.showEditButton(true);
 window.Drupal.CWRCWriterDialogs.setEntityFormsRoot(Drupal.settings.CWRCWriter.cwrcDialogs.entityFormsRootUrl);
 window.Drupal.CWRCWriterDialogs.setCollectionsRoot(Drupal.settings.CWRCWriter.cwrcDialogs.entityFormsCollectionUrl);
