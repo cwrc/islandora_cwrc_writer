@@ -7,7 +7,7 @@
   font-family: 'Lato';
   font-style: normal;
   font-weight: 400;
-  src: local('Lato Regular'), local('Lato-Regular'), url(https://fonts.gstatic.com/s/lato/v15/S6uyw4BMUTPHjxAwWw.ttf) format('truetype');
+  src: local('Lato Regular'), local('Lato-Regular'), url(https://fonts.gstatic.com/s/lato/v16/S6uyw4BMUTPHjxAwWw.ttf) format('truetype');
 }
 html,
 body {
@@ -195,6 +195,13 @@ body {
   background: url("../img/help.png") no-repeat scroll 0 0 transparent;
   padding-left: 20px;
 }
+#cwrc_wrapper .helpLink a {
+  color: #eee !important;
+  text-decoration: none;
+}
+#cwrc_wrapper .helpLink a:hover {
+  text-decoration: underline;
+}
 #cwrc_wrapper .fullscreenLink.out {
   background: url("../img/arrow_out.png") no-repeat scroll 0 0 transparent;
   padding-left: 20px;
@@ -278,26 +285,26 @@ body {
   font-family: Lato, Arial, Helvetica, sans-serif;
   font-size: 14px;
 }
-#cwrc_wrapper .cwrc h1 {
+#cwrc_wrapper .cwrc .ui-dialog h1 {
   font-size: 1.1em;
 }
-#cwrc_wrapper .cwrc h2 {
+#cwrc_wrapper .cwrc .ui-dialog h2 {
   font-size: 1em;
   line-height: 1.2em;
 }
-#cwrc_wrapper .cwrc h3 {
+#cwrc_wrapper .cwrc .ui-dialog h3 {
   font-size: 1em;
 }
-#cwrc_wrapper .cwrc h1,
+#cwrc_wrapper .cwrc .ui-dialog h1,
 #cwrc_wrapper h2,
 #cwrc_wrapper h3 {
   margin: 0;
 }
-#cwrc_wrapper .cwrc textarea {
+#cwrc_wrapper .cwrc .ui-dialog textarea {
   overflow: auto;
   resize: none;
 }
-#cwrc_wrapper .cwrc label {
+#cwrc_wrapper .cwrc .ui-dialog label {
   margin-right: 5px;
   display: inline;
 }
@@ -2225,6 +2232,12 @@ body {
 }
 #cwrc_wrapper .img.load:before {
   content: url(../img/folder_page.png);
+}
+#cwrc_wrapper .fas.exit:before {
+  content: "\f2f5";
+}
+#cwrc_wrapper .img.exit:before {
+  content: url(../img/door_in.png);
 }
 #cwrc_wrapper .fas.validate:before {
   content: "\f46c";
