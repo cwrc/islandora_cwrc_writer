@@ -219,15 +219,15 @@ Drupal.CWRCWriter = Drupal.CWRCWriter || {};
        * Overwrite the writer.saveAndExit
        */
       writer.saveAndExit = function() {
-          var docText = writer.converter.getDocumentContent(true);
-          $.ajax({
+          writer.converter.getDocumentContent(true, function(docText) {
+            $.ajax({
               url : baseUrl+'editor/documents/'+writer.currentDocId,
               type: 'PUT',
               dataType: 'json',
               data: {'doc':docText, 'schema':writer.schemaManager.getCurrentSchema()['pid']},
               success: function(data, status, xhr) {
                   writer.editor.isNotDirty = true;
-
+  
                   $.ajax({
                       url: Drupal.settings.basePath+'islandora/rest/v1/object/'+writer.currentDocId+'/lock',
                       type: 'DELETE',
@@ -242,7 +242,8 @@ Drupal.CWRCWriter = Drupal.CWRCWriter || {};
               error: function(xhr, status, error) {
                   displayError(xhr, writer.currentDocId);
               }
-           });
+            });
+          });
       };
 
       /**
