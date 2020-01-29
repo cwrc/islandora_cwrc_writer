@@ -149,8 +149,8 @@ Drupal.CWRCWriter = Drupal.CWRCWriter || {};
       config.storageDialogs = {
           save: function(writer) {
               var docId = writer.currentDocId;
-              var docText = writer.converter.getDocumentContent(true);
-              $.ajax({
+              writer.converter.getDocumentContent(true, function(docText) {
+                $.ajax({
                   url : baseUrl+'editor/documents/'+docId,
                   type: 'PUT',
                   dataType: 'json',
@@ -165,6 +165,7 @@ Drupal.CWRCWriter = Drupal.CWRCWriter || {};
                   error: function(xhr, status, error) {
                       displayError(xhr, docId);
                   }
+                });
               });
           },
           load: function(writer) {
