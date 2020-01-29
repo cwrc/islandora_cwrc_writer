@@ -56,6 +56,7 @@ function template_preprocess_islandora_cwrc_writer(array &$variables) {
   drupal_add_js($module_path.'/build/js/rdflib/rdflib.min.js');
   drupal_add_js($module_path.'/build/js/vendor.js');
   drupal_add_js($module_path.'/build/js/app.js');
+  drupal_add_css($module_path.'/build/css/islandora-overrides.css');
   drupal_add_css($module_path.'/build/css/cwrc-writer.css');
   
   $cwrc_writer_lib = libraries_load(ISLANDORA_CWRC_WRITER_LIB);
