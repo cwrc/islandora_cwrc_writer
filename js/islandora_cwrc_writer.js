@@ -98,7 +98,27 @@ Drupal.CWRCWriter = Drupal.CWRCWriter || {};
   function cwrcWriterInit($, Writer, Dialogs) {
       'use strict';
       var writer, config;
+      
       config = Drupal.settings.CWRCWriter;
+
+      // convert old schemas to new schema format
+      config.schema = {
+        schemas: []
+      };
+      for (var key in config.schemas) {
+        var schemaEntry = config.schemas[key];
+        config.schema.schemas.push({
+          pid: schemaEntry.pid, // islandora specific
+          aliases: schemaEntry.aliases, // islandora specific
+          id: key,
+          name: schemaEntry.name,
+          schemaMappingsId: schemaEntry.schemaMappingsId,
+          xmlUrl: [schemaEntry.url],
+          cssUrl: [schemaEntry.cssUrl]
+        })
+      }
+      delete config.schemas;
+      
       if (config.initial_mode == 'edit') {
           config.buttons1 += ',saveexitbutton';
       }
@@ -109,7 +129,7 @@ Drupal.CWRCWriter = Drupal.CWRCWriter || {};
             {id: 'structure', title: 'Markup'},
             {id: 'entities', title: 'Entities'},
             {id: 'nerve', title: 'NERVE', config: {
-              'nerveUrl': 'https://dh.sharcnet.ca/NerveService'
+              'nerveUrl': 'https://nerve.services.cwrc.ca'
             }}
           ],
           south: [
@@ -122,7 +142,9 @@ Drupal.CWRCWriter = Drupal.CWRCWriter || {};
             {id: 'imageViewer', title: 'Image Viewer'}
           ]
       };
+      
       config.entityLookupDialogs = Dialogs;
+
       var baseUrl = config.baseUrl;
       config.storageDialogs = {
           save: function(writer) {
@@ -132,7 +154,7 @@ Drupal.CWRCWriter = Drupal.CWRCWriter || {};
                   url : baseUrl+'editor/documents/'+docId,
                   type: 'PUT',
                   dataType: 'json',
-                  data: {'doc':docText, 'schema':writer.schemaManager.schemas[writer.schemaManager.schemaId]['pid']},
+                  data: {'doc':docText, 'schema':writer.schemaManager.getCurrentSchema()['pid']},
                   success: function(data, status, xhr) {
                       writer.dialogManager.show('message', {
                           title : 'Document Saved',
@@ -184,7 +206,8 @@ Drupal.CWRCWriter = Drupal.CWRCWriter || {};
       }
       
       writer = new Writer(config);
-
+      
+      writer.utilities.addCSS('css/bootstrap.css');
       writer.utilities.addCSS('css/islandora-overrides.css');
       
       window.addEventListener('beforeunload', function() {
@@ -200,7 +223,7 @@ Drupal.CWRCWriter = Drupal.CWRCWriter || {};
               url : baseUrl+'editor/documents/'+writer.currentDocId,
               type: 'PUT',
               dataType: 'json',
-              data: {'doc':docText, 'schema':writer.schemaManager.schemas[writer.schemaManager.schemaId]['pid']},
+              data: {'doc':docText, 'schema':writer.schemaManager.getCurrentSchema()['pid']},
               success: function(data, status, xhr) {
                   writer.editor.isNotDirty = true;
 
