@@ -17,7 +17,7 @@
 .entityHighlight.place {
   background-color: rgba(0, 153, 153, 0.2);
 }
-.entityHighlight.event {
+.entityHighlight.rs {
   background-color: rgba(0, 204, 0, 0.2);
 }
 .entityHighlight.org {
@@ -34,7 +34,7 @@
 }
 .showEntities .person,
 .ui-dialog-content .person {
-  border-color: #ff0000;
+  border-color: #ec9393;
 }
 .showEntities .date,
 .ui-dialog-content .date {
@@ -44,8 +44,8 @@
 .ui-dialog-content .place {
   border-color: #009999;
 }
-.showEntities .event,
-.ui-dialog-content .event {
+.showEntities .rs,
+.ui-dialog-content .rs {
   border-color: #00cc00;
 }
 .showEntities .org,
@@ -90,6 +90,9 @@
 }
 .entity.keyword[_candidate] {
   color: #008040 !important;
+}
+.entity.rs[_candidate] {
+  color: #00cc00 !important;
 }
 .noteWrapper::before {
   cursor: pointer;
