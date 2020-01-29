@@ -2,7 +2,6 @@ const path = require('path');
 const webpack = require('webpack');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
 const HtmlWebpackExternalsPlugin = require('html-webpack-externals-plugin');
 
 module.exports = {
@@ -19,6 +18,8 @@ module.exports = {
 		filename: 'js/[name].js',
 		path: path.resolve(__dirname, 'build'),
 		publicPath: '/',
+		library: 'GitWriter',
+		libraryTarget: 'umd'
     },
     
     plugins: [
