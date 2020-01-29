@@ -53,6 +53,8 @@ function template_preprocess_islandora_cwrc_writer(array &$variables) {
   
   // Load the CWRC-Writer.
   $module_path = drupal_get_path('module', 'islandora_cwrc_writer');
+  drupal_add_js($module_path.'/build/js/rdflib/rdflib.min.js');
+  drupal_add_js($module_path.'/build/js/vendor.js');
   drupal_add_js($module_path.'/build/js/app.js');
   drupal_add_css($module_path.'/build/css/style.css');
   drupal_add_css($module_path.'/build/css/cwrc12/jquery-ui.css');
