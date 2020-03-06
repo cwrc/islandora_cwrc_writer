@@ -68,7 +68,7 @@
    */
 
 /*!
-   * jsTree 3.3.8
+   * jsTree 3.3.9
    * http://jstree.com/
    *
    * Copyright (c) 2014 Ivan Bozhanov (http://vakata.com)
@@ -78,7 +78,7 @@
    */
 
 /*!
- * JavaScript Cookie v2.1.4
+ * JavaScript Cookie v2.2.1
  * https://github.com/js-cookie/js-cookie
  *
  * Copyright 2006, 2015 Klaus Hartl & Fagner Brack
