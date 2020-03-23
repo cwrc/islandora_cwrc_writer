@@ -1,3 +1,10 @@
+import viaf from 'viaf-entity-lookup';
+import dbpedia from 'dbpedia-entity-lookup';
+import wikidata from 'wikidata-entity-lookup';
+import getty from 'getty-entity-lookup';
+import geonames from 'geonames-entity-lookup';
+geonames.credentials.username = 'cwrcgeonames'; // TODO move to config?
+
 window.Drupal = window.Drupal || {};
 
 const cwrc = require('cwrc-tei-entities-lookup');
@@ -8,12 +15,6 @@ cwrc.setProjectLookupConfig({
     projectLogoRoot: Drupal.settings.CWRCWriter.cwrcDialogs.projectLogoRoot,
     cwrcProjectId: Drupal.settings.CWRCWriter.cwrcDialogs.cwrcProjectId
 });
-
-const viaf = require('viaf-entity-lookup')
-const dbpedia = require('dbpedia-entity-lookup');
-const wikidata = require('wikidata-entity-lookup');
-const getty = require('getty-entity-lookup');
-const geonames = require('geonames-entity-lookup');
 
 const EntityLookupDialogs = require('cwrc-public-entity-dialogs');
 EntityLookupDialogs.showNoLinkButton(true);
