@@ -658,6 +658,7 @@ function islandora_cwrc_writer_islandora_required_objects(IslandoraTuque $connec
         $event_schema,
         $biography_schema,
         $writing_schema,
+        $orlando_entry_schema,
         $entry_schema,
         $entity_collection,
         $person_entity_collection,
