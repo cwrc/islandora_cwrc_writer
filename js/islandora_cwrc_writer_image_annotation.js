@@ -73,53 +73,52 @@ function cwrcWriterInit($, Writer, Delegator) {
 
   writer.event('writerInitialized').subscribe(function (writer) {
     // When we change the schema we should update the document.
-    writer.event('schemaChanged').subscribe(function (schemaId) {
-      writer.schemaManager.loadSchema(schemaId, false, function() {
-        var defaultTEI =
-          '<TEI xmlns="http://www.tei-c.org/ns/1.0">' +
-          '<teiHeader>' +
-          '<fileDesc>' +
-          '<titleStmt>' +
-          '<title></title>' +
-          '</titleStmt>' +
-          '<publicationStmt>' +
-          '<p/>' +
-          '</publicationStmt>' +
-          '<sourceDesc>' +
-          '<p></p>' +
-          '</sourceDesc>' +
-          '</fileDesc>' +
-          '</teiHeader>' +
-          '<text>' +
-          '<body><p>Paste or type your text here</p></body>' +
-          '</text>' +
-          '</TEI>';
-        var defaultXML;
-        var root;
-        var defaultDoc;
-        var doc;
-        var parser = new DOMParser();
-        // We have to parse as HTML as HTML entities will break XML parsing in
-        // firefox.
-        doc = parser.parseFromString(writer.editor.getContent(), 'text/html');
-        // Embeds the document in the body tag.
-        root = doc.body.firstElementChild.getAttribute('_tag');
-        switch (writer.root) {
-          case 'TEI':
-            if (root !== 'TEI') {
-              defaultDoc = parser.parseFromString(defaultTEI, 'text/xml');
-              writer.converter.doProcessing(defaultDoc);
-            }
-            break;
-          default:
-            if (root !== writer.root) {
-              defaultXML = '<'+ writer.root + '></'+ writer.root + '>';
-              defaultDoc = parser.parseFromString(defaultXML, 'text/xml');
-              writer.converter.doProcessing(defaultDoc);
-            }
-            break;
-        }
-      });
+    writer.event('schemaChanged').subscribe(async function (schemaId) {
+      await writer.schemaManager.loadSchema(schemaId, false);
+      var defaultTEI =
+        '<TEI xmlns="http://www.tei-c.org/ns/1.0">' +
+        '<teiHeader>' +
+        '<fileDesc>' +
+        '<titleStmt>' +
+        '<title></title>' +
+        '</titleStmt>' +
+        '<publicationStmt>' +
+        '<p/>' +
+        '</publicationStmt>' +
+        '<sourceDesc>' +
+        '<p></p>' +
+        '</sourceDesc>' +
+        '</fileDesc>' +
+        '</teiHeader>' +
+        '<text>' +
+        '<body><p>Paste or type your text here</p></body>' +
+        '</text>' +
+        '</TEI>';
+      var defaultXML;
+      var root;
+      var defaultDoc;
+      var doc;
+      var parser = new DOMParser();
+      // We have to parse as HTML as HTML entities will break XML parsing in
+      // firefox.
+      doc = parser.parseFromString(writer.editor.getContent(), 'text/html');
+      // Embeds the document in the body tag.
+      root = doc.body.firstElementChild.getAttribute('_tag');
+      switch (writer.root) {
+        case 'TEI':
+          if (root !== 'TEI') {
+            defaultDoc = parser.parseFromString(defaultTEI, 'text/xml');
+            writer.converter.doProcessing(defaultDoc);
+          }
+          break;
+        default:
+          if (root !== writer.root) {
+            defaultXML = '<'+ writer.root + '></'+ writer.root + '>';
+            defaultDoc = parser.parseFromString(defaultXML, 'text/xml');
+            writer.converter.doProcessing(defaultDoc);
+          }
+          break;
+      }
     });
     // load modules then do the setup
     require(['jquery', 'modules/entitiesList', 'modules/relations',
