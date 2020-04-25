@@ -4,11 +4,14 @@ import getty from 'getty-entity-lookup';
 import viaf from 'viaf-entity-lookup';
 import wikidata from 'wikidata-entity-lookup';
 
+import cwrc from 'cwrc-tei-entities-lookup';
+import EntityLookupDialogs from 'cwrc-public-entity-dialogs';
+import CWRCWriter from 'cwrc-writer-base';
+
 geonames.credentials.username = 'cwrcgeonames'; // TODO move to config?
 
 window.Drupal = window.Drupal || {};
 
-const cwrc = require('cwrc-tei-entities-lookup');
 cwrc.setEntityRoot(Drupal.settings.CWRCWriter.cwrcDialogs.repositoryBaseObjectUrl);
 cwrc.setSearchRoot(Drupal.settings.CWRCWriter.cwrcDialogs.cwrcApiUrl);
 cwrc.setProjectLookupConfig({
@@ -17,7 +20,6 @@ cwrc.setProjectLookupConfig({
     cwrcProjectId: Drupal.settings.CWRCWriter.cwrcDialogs.cwrcProjectId
 });
 
-import EntityLookupDialogs from 'cwrc-public-entity-dialogs';
 EntityLookupDialogs.showNoLinkButton(true);
 EntityLookupDialogs.showCreateNewButton(true);
 EntityLookupDialogs.setEntityCollectionsUrl(window.location.origin+'/islandora/get_entity_collections');
@@ -33,4 +35,4 @@ EntityLookupDialogs.registerEntitySources({
 
 window.Drupal.CWRCWriterDialogs = EntityLookupDialogs;
 
-window.Drupal.CWRCWriter = require('cwrc-writer-base');
+window.Drupal.CWRCWriter = CWRCWriter;
