@@ -29,6 +29,7 @@ define('ISLANDORA_CWRC_WRITER_SCHEMA_RELATIONSHIP', 'hasSchema');
 define('ISLANDORA_CWRC_WRITER_SCHEMA_NOTE_TEMPLATE', 'hasEntityTemplateNote');
 define('ISLANDORA_CWRC_WRITER_SCHEMA_NOTE_ORLANDO_WRITING', 'note_writing.xml');
 define('ISLANDORA_CWRC_WRITER_SCHEMA_NOTE_ORLANDO_BIOGRAPHY', 'note_biography.xml');
+define('ISLANDORA_CWRC_WRITER_SCHEMA_NOTE_ORLANDO_ENTRY', 'note_entry.xml');
 define('ISLANDORA_CWRC_WRITER_SCHEMA_NOTE_ORLANDO_EVENT', 'note_events.xml');
 define('ISLANDORA_CWRC_WRITER_SCHEMA_NOTE_TEI', 'note.xml');
 define('ISLANDORA_CWRC_WRITER_SCHEMA_NOTE_ENTRY', 'note.xml');
@@ -408,6 +409,35 @@ function islandora_cwrc_writer_islandora_required_objects(IslandoraTuque $connec
 
 
   // -----------------------
+  // Orlando Entry Schema - bio/writing combined.
+  $orlando_entry_schema = $connection->repository->constructObject('cwrc:orlandoEntrySchema');
+  $orlando_entry_schema->owner = 'fedoraAdmin';
+  $orlando_entry_schema->label = 'Orlando Entry Schema';
+  $orlando_entry_schema->models = ISLANDORA_CWRC_WRITER_SCHEMA_CONTENT_MODEL;
+  $orlando_entry_schema->relationships->add(FEDORA_RELS_EXT_URI, 'isMemberOfCollection', ISLANDORA_CWRC_WRITER_SCHEMA_COLLECTION);
+  $tmp_mappings = array(
+      ISLANDORA_CWRC_WRITER_SCHEMA_MAPPING_RELATIONSHIP => ISLANDORA_CWRC_WRITER_SCHEMA_MAPPING_TEI,
+      ISLANDORA_CWRC_WRITER_SCHEMA_NOTE_TEMPLATE => ISLANDORA_CWRC_WRITER_SCHEMA_NOTE_ORLANDO_ENTRY,
+      ISLANDORA_CWRC_WRITER_SCHEMA_CITATION_TEMPLATE => '',
+    );
+  islandora_cwrc_writer_set_schema_mapping($orlando_entry_schema, ISLANDORA_CWRC_WRITER_SCHEMA_MAPPING_ORLANDO);
+  islandora_cwrc_writer_set_template_mapping($orlando_entry_schema, $tmp_mappings);
+
+  // Add the schema datastream.
+  $datastream = $orlando_entry_schema->constructDatastream('SCHEMA', 'R');
+  $datastream->label = 'SCHEMA';
+  $datastream->mimetype = 'application/xml';
+  $datastream->url = 'https://cwrc.ca/schemas/orlando_entry.rng';
+  $orlando_entry_schema->ingestDatastream($datastream);
+  // Add the CSS datastream.
+  $datastream = $orlando_entry_schema->constructDatastream('CSS', 'R');
+  $datastream->label = 'CSS';
+  $datastream->mimetype = 'text/css';
+  $datastream->url = 'https://cwrc.ca/templates/css/orlando_v2_cwrc-writer.css';
+  $orlando_entry_schema->ingestDatastream($datastream);
+
+
+  // -----------------------
   // Biography Schema.
   $biography_schema = $connection->repository->constructObject('cwrc:biographySchema');
   $biography_schema->owner = 'fedoraAdmin';
@@ -628,6 +658,7 @@ function islandora_cwrc_writer_islandora_required_objects(IslandoraTuque $connec
         $event_schema,
         $biography_schema,
         $writing_schema,
+        $orlando_entry_schema,
         $entry_schema,
         $entity_collection,
         $person_entity_collection,
