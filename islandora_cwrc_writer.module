@@ -398,7 +398,7 @@ function islandora_cwrc_writer_islandora_required_objects(IslandoraTuque $connec
   $datastream = $event_schema->constructDatastream('SCHEMA', 'R');
   $datastream->label = 'SCHEMA';
   $datastream->mimetype = 'application/xml';
-  $datastream->url = 'https://cwrc.ca/schemas/orlando_event_v2.rng';
+  $datastream->url = 'https://cwrc.ca/schemas/orlando_event.rng';
   $event_schema->ingestDatastream($datastream);
   // Add the CSS datastream.
   $datastream = $event_schema->constructDatastream('CSS', 'R');
