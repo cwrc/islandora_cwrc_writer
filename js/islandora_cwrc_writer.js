@@ -129,7 +129,7 @@ Drupal.CWRCWriter = Drupal.CWRCWriter || {};
             {id: 'structure', title: 'Markup'},
             {id: 'entities', title: 'Entities'},
             {id: 'nerve', title: 'NERVE', config: {
-              'nerveUrl': 'https://nerve.services.cwrc.ca'
+              'nerveUrl': 'https://nerve.services.cwrc.ca/nerve-uat/'
             }}
           ],
           south: [
