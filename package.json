@@ -39,7 +39,7 @@
     "dbpedia-entity-lookup": "^1.0.0",
     "geonames-entity-lookup": "^2.0.0",
     "getty-entity-lookup": "^2.0.0",
-    "html-webpack-plugin": "^4.2.0",
+    "html-webpack-plugin": "^4.2.1",
     "viaf-entity-lookup": "^2.0.0",
     "wikidata-entity-lookup": "^2.0.0"
   },
@@ -63,7 +63,7 @@
     "less": "^3.11.1",
     "mkdirp": "^1.0.4",
     "path-exists-cli": "^1.0.0",
-    "terser-webpack-plugin": "^2.3.5",
+    "terser-webpack-plugin": "^2.3.6",
     "webpack": "^4.43.0",
     "webpack-cli": "^3.3.11",
     "webpack-dev-middleware": "^3.7.2",
