@@ -3,16 +3,13 @@ const webpack = require('webpack');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const HtmlWebpackExternalsPlugin = require('html-webpack-externals-plugin');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 module.exports = {
 	entry: {
-        app: [
-            './js/app.js'
-        ]
+        app: ['./js/app.js']
     },
-
 	mode: 'none', // all mode defaults for dev and prod and set in the respective configs
-
 	output: {
 		filename: 'js/[name].js',
 		path: path.resolve(__dirname, 'build'),
@@ -20,29 +17,35 @@ module.exports = {
 		library: 'GitWriter',
 		libraryTarget: 'umd'
     },
-    
     plugins: [
 		new webpack.ProgressPlugin(),
-		new CleanWebpackPlugin({
-			cleanStaleWebpackAssets: false
+		new CleanWebpackPlugin({ cleanStaleWebpackAssets: false }),
+		new CopyWebpackPlugin({
+			patterns: [
+			{
+				//Copy CSS Overrides
+				context: 'css/',
+				from: '*.css',
+				to: ''
+			},
+			{
+				//Copy pre-compiled CSS required by tinyMCE
+				context: 'node_modules/cwrc-writer-base/src/css/tinymce/',
+				from: '*.css',
+				to: 'css/tinymce'
+			},
+			{
+				//Copy pre-compiled CSS to stylize the editor (must be recompiled after each change)
+				context: 'node_modules/cwrc-writer-base/src/css/build/',
+				from: 'editor.css',
+				to: 'css/editor.css',
+				toType: 'file',
+			}
+		]}),
+		new MiniCssExtractPlugin({
+			filename: '/css/[name].css',
+			chunkFilename: '/css/[id].css',
 		}),
-		new CopyWebpackPlugin([{
-			context: 'node_modules/cwrc-writer-base/build/css/',
-			from: '**/*',
-			to: 'css'
-		},{
-			context: 'node_modules/cwrc-writer-base/src/img/',
-			from: '**/*',
-			to: 'img'
-		},{
-			context: 'node_modules/cwrc-git-dialogs/src/css/',
-			from: 'bootstrap.css',
-			to: 'css'
-		},{
-			context: 'node_modules/bootstrap/fonts/',
-			from: '*',
-			to: 'fonts'
-		}]),
 		new HtmlWebpackExternalsPlugin({
 			externals: [{
 				module: 'rdflib',
@@ -59,8 +62,7 @@ module.exports = {
 	],
     
     module: {
-		rules: [
-			{
+		rules: [{
 				test: /\.(js|jsx)$/,
 				use: [{
 					loader: 'babel-loader',
@@ -82,19 +84,75 @@ module.exports = {
 						]
 					}
 				}]
-			}
+			},
+			{
+				test: /\.(le|c)ss$/,
+				use: [{
+						loader: MiniCssExtractPlugin.loader,
+						options: {
+							// you can specify a publicPath here
+							// by default it uses publicPath in webpackOptions.output
+							publicPath: '../',
+							esModule: true,
+							hmr: process.env.NODE_ENV === 'development', //allows to use this plugin in DEV
+						},
+					},
+					{ 	loader: 'css-loader', /* translates CSS into CommonJS*/  },
+					{
+						loader: 'less-loader', // compiles Less to CSS //more: https://itnext.io/webpack-and-less-a75e04aaf528
+						options: {
+							lessOptions: {
+								relativeUrls: 'local', //https://github.com/webpack-contrib/less-loader/issues/109,
+								globalVars: { parentId: '#cwrc_wrapper' }
+							},
+						},
+					},
+				],
+			},
+			{
+				test: /\.(woff(2)?|ttf|eot|svg)(\?v=\d+\.\d+\.\d+)?$/,
+				enforce: 'pre', // preload the jshint loader
+				use: [{
+					loader: 'url-loader',
+					options: {
+						query: { limit: 25000 }
+					}
+				}]
+			},
+			{
+				test: /\.(png|jpg|jpeg|gif|svg)$/i,
+				enforce: 'pre', // preload the jshint loader
+				// exclude: /node_modules/, // exclude any and all files in the node_modules folder
+				use: [{
+						loader: 'file-loader',
+						options: {
+							name: '[name].[ext]',
+							outputPath: 'img',
+						},
+					},
+					{
+						loader: 'image-webpack-loader',
+						options: { disable: true, /* webpack@2.x and newer */},
+					},
+				]
+			}	
 		]
 	},
-
 	optimization: {
 		splitChunks: {
             cacheGroups: {
                 commons: {
 					// don't include cwrc or entity lookup modules in vendor bundle
-                    test: /[\\/]node_modules[\\/](?!.*(cwrc|entity\-lookup))/,
+                    test: /[\\/]node_modules[\\/](?!.*(cwrc|entity-lookup))/,
                     name: 'vendor',
-                    chunks: 'initial'
-                }
+                    chunks: 'all'
+                },
+				styles: {
+					name: 'styles',
+					test: /\.css$/,
+					chunks: 'all',
+					enforce: true,
+				},
             }
         }
 	},
