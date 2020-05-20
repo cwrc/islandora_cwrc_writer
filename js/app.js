@@ -9,6 +9,9 @@ import EntityLookupDialogs from 'cwrc-public-entity-dialogs';
 
 import CWRCWriter from 'cwrc-writer-base';
 
+import '../css/bootstrap.less';
+import '../css/islandora-overrides.css';
+
 geonames.credentials.username = 'cwrcgeonames'; // TODO move to config?
 
 window.Drupal = window.Drupal || {};
