@@ -1,6 +1,6 @@
 {
   "name": "islandora-cwrc-writer",
-  "version": "0.9.1",
+  "version": "0.10.0",
   "description": "A wrapper to use CWRC-Writer with Islandora.",
   "keywords": [
     "cwrc",
