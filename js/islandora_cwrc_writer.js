@@ -122,7 +122,7 @@ Drupal.CWRCWriter = Drupal.CWRCWriter || {};
       if (config.initial_mode == 'edit') {
           config.buttons1 += ',saveexitbutton';
       }
-      config.buttons1 += ',|,fullscreen';
+      // config.buttons1 += ',|,fullscreen';
       config.container = config.id || layoutParentId;
       config.modules = {
           west: [
