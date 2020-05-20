@@ -105,7 +105,27 @@ function cwrcWriterInit($, Writer, Delegator) {
   config.delegator = Delegator;
   config.mode = 'xml';
   config.allowOverlap = false;
-  config.buttons1 = 'schematags,editTag,removeTag,|,addperson,addplace,adddate,addorg,addcitation,addtitle,addcorrection,addkeyword,addlink';
+  // config.buttons1 = 'schematags,editTag,removeTag,|,addperson,addplace,adddate,addorg,addcitation,addtitle,addcorrection,addkeyword,addlink';
+  config.buttons1 = [
+    'schematags',
+    '|',
+    'addperson',
+    'addplace',
+    'adddate',
+    'addorg',
+    'addcitation',
+    'addtitle',
+    'addcorrection',
+    'addkeyword',
+    'addlink',
+    'addrs',
+    '|',
+    'editTag',
+    'removeTag',
+    '|',
+  ];
+  config.buttons1 = config.buttons1.join(',');
+  
   writer = new Writer(config);
   writer.init(config.id);
   writer.event('writerInitialized').subscribe(doResize);
