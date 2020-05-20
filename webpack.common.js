@@ -31,7 +31,7 @@ module.exports = {
 			{
 				//Copy pre-compiled CSS required by tinyMCE
 				context: 'node_modules/cwrc-writer-base/src/css/tinymce/',
-				from: '*.css',
+				from: '*.**',
 				to: 'css/tinymce'
 			},
 			{
