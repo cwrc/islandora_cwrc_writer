@@ -23,6 +23,12 @@ module.exports = {
 		new CopyWebpackPlugin({
 			patterns: [
 			{
+				//copy images from Writer-Base
+				context: 'node_modules/cwrc-writer-base/src/img',
+				from: '*',
+				to: 'img'
+			},
+			{
 				//Copy pre-compiled CSS required by tinyMCE
 				context: 'node_modules/cwrc-writer-base/src/css/tinymce/',
 				from: '**/*',
