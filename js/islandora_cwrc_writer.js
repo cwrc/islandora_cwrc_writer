@@ -141,6 +141,7 @@ Drupal.CWRCWriter = Drupal.CWRCWriter || {};
 				'addkeyword',
 				'addlink',
 				'addrs',
+				'addtranslation',
 				'|',
 				'editTag',
 				'removeTag',
