@@ -9,8 +9,7 @@ import EntityLookupDialogs from 'cwrc-public-entity-dialogs';
 
 import CWRCWriter from 'cwrc-writer-base';
 
-import '../css/bootstrap.less';
-import '../css/islandora-overrides.css';
+import '../css/style.less';
 
 geonames.credentials.username = 'cwrcgeonames'; // TODO move to config?
 

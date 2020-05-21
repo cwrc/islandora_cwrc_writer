@@ -23,15 +23,9 @@ module.exports = {
 		new CopyWebpackPlugin({
 			patterns: [
 			{
-				//Copy CSS Overrides
-				context: 'css/',
-				from: '*.css',
-				to: ''
-			},
-			{
 				//Copy pre-compiled CSS required by tinyMCE
 				context: 'node_modules/cwrc-writer-base/src/css/tinymce/',
-				from: '*.**',
+				from: '**/*',
 				to: 'css/tinymce'
 			},
 			{
