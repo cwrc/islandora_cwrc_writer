@@ -152,8 +152,8 @@ Drupal.CWRCWriter = Drupal.CWRCWriter || {};
 				'validate',
 				'savebutton',
 				'saveexitbutton',
-				// '|',
-				// 'fullscreen'
+				'|',
+				'fullscreen'
 			  ];
 			config.buttons1 = config.buttons1.join(',');
 		}
