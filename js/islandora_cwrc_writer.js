@@ -102,6 +102,8 @@ Drupal.CWRCWriter = Drupal.CWRCWriter || {};
 		
 		config = Drupal.settings.CWRCWriter;
 
+		config.helpUrl = 'https://cwrc.ca/Documentation/project-editor/DITA_Files-Various_Applications/CWRC-Writer/CWRCWriter_Started_Splash.html';
+
 		// convert old schemas to new schema format
 		config.schema = {
 			schemas: []
@@ -123,7 +125,7 @@ Drupal.CWRCWriter = Drupal.CWRCWriter || {};
 		
 		//buttons
 		console.log(config.buttons1);
-		if (config.initial_mode == 'edit') {
+		if (config.initial_mode === 'edit') {
 			// config.buttons1 += ',saveexitbutton';
 
 			//OVERRIDE DRUPAL SETTINGS
