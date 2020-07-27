@@ -1,93 +1,102 @@
 const path = require('path');
-const webpack = require('webpack');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const HtmlWebpackExternalsPlugin = require('html-webpack-externals-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const WebpackBar = require('webpackbar');
 
 module.exports = {
 	entry: {
-        app: ['./js/app.js']
-    },
+		app: ['./js/app.js'],
+	},
 	mode: 'none', // all mode defaults for dev and prod and set in the respective configs
 	output: {
 		filename: 'js/[name].js',
 		path: path.resolve(__dirname, 'build'),
 		publicPath: '/',
 		library: 'GitWriter',
-		libraryTarget: 'umd'
-    },
-    plugins: [
-		new webpack.ProgressPlugin(),
+		libraryTarget: 'umd',
+	},
+	plugins: [
 		new CleanWebpackPlugin({ cleanStaleWebpackAssets: false }),
 		new CopyWebpackPlugin({
 			patterns: [
-			{
-				//copy images from Writer-Base
-				context: 'node_modules/cwrc-writer-base/src/img',
-				from: '*',
-				to: 'img'
-			},
-			{
-				//Copy pre-compiled CSS required by tinyMCE
-				context: 'node_modules/cwrc-writer-base/src/css/tinymce/',
-				from: '**/*',
-				to: 'css/tinymce'
-			},
-			{
-				//Copy pre-compiled CSS to stylize the editor (must be recompiled after each change)
-				context: 'node_modules/cwrc-writer-base/src/css/build/',
-				from: 'editor.css',
-				to: 'css/editor.css',
-				toType: 'file',
-			}
-		]}),
+				{
+					//copy images from Writer-Base
+					context: 'node_modules/cwrc-writer-base/src/img',
+					from: '*',
+					to: 'img',
+				},
+				{
+					//Copy pre-compiled CSS required by tinyMCE
+					context: 'node_modules/cwrc-writer-base/src/css/tinymce/',
+					from: '**/*',
+					to: 'css/tinymce',
+				},
+				{
+					//Copy pre-compiled CSS to stylize the editor (must be recompiled after each change)
+					context: 'node_modules/cwrc-writer-base/src/css/build/',
+					from: 'editor.css',
+					to: 'css/editor.css',
+					toType: 'file',
+				},
+			],
+		}),
 		new MiniCssExtractPlugin({
 			filename: '/css/[name].css',
 			chunkFilename: '/css/[id].css',
 		}),
 		new HtmlWebpackExternalsPlugin({
-			externals: [{
-				module: 'rdflib',
-				global: '$rdf',
-				entry: {
-					path: 'rdflib.min.js',
-					cwpPatternConfig: {
-						context: path.resolve(__dirname, 'node_modules/cwrc-writer-base/src/lib')
-					}
-				}
-			}],
-			outputPath: 'js'
-		})
+			externals: [
+				{
+					module: 'rdflib',
+					global: '$rdf',
+					entry: {
+						path: 'rdflib.min.js',
+						cwpPatternConfig: {
+							context: path.resolve(
+								__dirname,
+								'node_modules/cwrc-writer-base/src/lib'
+							),
+						},
+					},
+				},
+			],
+			outputPath: 'js',
+		}),
+		new WebpackBar({ color: '#0099ff' }),
 	],
-    
-    module: {
-		rules: [{
+	module: {
+		rules: [
+			{
 				test: /\.(js|jsx)$/,
-				use: [{
-					loader: 'babel-loader',
-					options: {
-						sourceType: 'unambiguous',
-						presets: [
-							'@babel/preset-env',
-							'@babel/preset-react'
-						],
-						plugins: [
-							'@babel/plugin-proposal-class-properties',
-							['@babel/plugin-transform-runtime', {
-								'absoluteRuntime': false,
-								'corejs': false,
-								'helpers': false,
-								'regenerator': true,
-								'useESModules': false
-							}]
-						]
-					}
-				}]
+				use: [
+					{
+						loader: 'babel-loader',
+						options: {
+							sourceType: 'unambiguous',
+							presets: ['@babel/preset-env', '@babel/preset-react'],
+							plugins: [
+								'@babel/plugin-proposal-class-properties',
+								[
+									'@babel/plugin-transform-runtime',
+									{
+										absoluteRuntime: false,
+										corejs: false,
+										helpers: false,
+										regenerator: true,
+										useESModules: false,
+									},
+								],
+							],
+						},
+					},
+				],
 			},
 			{
 				test: /\.(le|c)ss$/,
-				use: [{
+				use: [
+					{
 						loader: MiniCssExtractPlugin.loader,
 						options: {
 							// you can specify a publicPath here
@@ -97,13 +106,13 @@ module.exports = {
 							hmr: process.env.NODE_ENV === 'development', //allows to use this plugin in DEV
 						},
 					},
-					{ 	loader: 'css-loader', /* translates CSS into CommonJS*/  },
+					{ loader: 'css-loader' /* translates CSS into CommonJS*/ },
 					{
 						loader: 'less-loader', // compiles Less to CSS //more: https://itnext.io/webpack-and-less-a75e04aaf528
 						options: {
 							lessOptions: {
 								relativeUrls: 'local', //https://github.com/webpack-contrib/less-loader/issues/109,
-								globalVars: { parentId: '#cwrc_wrapper' }
+								globalVars: { parentId: '#cwrc_wrapper' },
 							},
 						},
 					},
@@ -112,18 +121,21 @@ module.exports = {
 			{
 				test: /\.(woff(2)?|ttf|eot)(\?v=\d+\.\d+\.\d+)?$/,
 				enforce: 'pre', // preload the jshint loader
-				use: [{
-					loader: 'url-loader',
-					options: {
-						query: { limit: 25000 }
-					}
-				}]
+				use: [
+					{
+						loader: 'url-loader',
+						options: {
+							query: { limit: 25000 },
+						},
+					},
+				],
 			},
 			{
 				test: /\.(png|jpg|jpeg|gif|svg)$/i,
 				enforce: 'pre', // preload the jshint loader
 				// exclude: /node_modules/, // exclude any and all files in the node_modules folder
-				use: [{
+				use: [
+					{
 						loader: 'file-loader',
 						options: {
 							name: '[name].[ext]',
@@ -132,37 +144,35 @@ module.exports = {
 					},
 					{
 						loader: 'image-webpack-loader',
-						options: { disable: true, /* webpack@2.x and newer */},
+						options: { disable: true /* webpack@2.x and newer */ },
 					},
-				]
-			}	
-		]
+				],
+			},
+		],
 	},
 	optimization: {
 		splitChunks: {
-            cacheGroups: {
-                commons: {
+			cacheGroups: {
+				commons: {
 					// don't include cwrc or entity lookup modules in vendor bundle
-                    test: /[\\/]node_modules[\\/](?!.*(cwrc|entity-lookup))/,
-                    name: 'vendor',
-                    chunks: 'all'
-                },
+					test: /[\\/]node_modules[\\/](?!.*(cwrc|entity-lookup))/,
+					name: 'vendor',
+					chunks: 'all',
+				},
 				styles: {
 					name: 'styles',
 					test: /\.css$/,
 					chunks: 'all',
 					enforce: true,
 				},
-            }
-        }
+			},
+		},
 	},
-
 	resolve: {
 		extensions: ['*', '.js', '.jsx'],
-		symlinks: false
+		symlinks: false,
 	},
-
 	node: {
-		fs: 'empty'
-	}
+		fs: 'empty',
+	},
 };
