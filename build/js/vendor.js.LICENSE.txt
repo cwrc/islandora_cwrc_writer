@@ -92,6 +92,13 @@ object-assign
  */
 
 /*!
+ * The buffer module from node.js, for the browser.
+ *
+ * @author   Feross Aboukhadijeh <http://feross.org>
+ * @license  MIT
+ */
+
+/*!
  * jQuery JavaScript Library v3.4.1
  * https://jquery.com/
  *
@@ -332,6 +339,8 @@ object-assign
  * http://jquery.org/license
  */
 
+/*! https://mths.be/punycode v1.4.1 by @mathias */
+
 /**
  * A better abstraction over CSS.
  *
@@ -417,6 +426,8 @@ object-assign
 //! author : Arjunkumar Krishnamoorthy : https://github.com/tk120404
 
 //! author : Armendarabyan : https://github.com/armendarabyan
+
+//! author : Atamyrat Abdyrahmanov : https://github.com/atamyratabdy
 
 //! author : Atolagbe Abisoye : https://github.com/andela-batolagbe
 
@@ -968,6 +979,8 @@ object-assign
 
 //! locale : Turkish [tr]
 
+//! locale : Turkmen [trk]
+
 //! locale : Ukrainian [uk]
 
 //! locale : Urdu [ur]
@@ -1002,4 +1015,10 @@ object-assign
 
 //! reference: http://jv.wikipedia.org/wiki/Basa_Jawa
 
-//! version : 2.26.0
+//! version : 2.27.0
+
+//!! Deliberately using an API that's deprecated in node.js because
+
+//!! Discussion: github.com/node-browser-compat/atob/pull/9
+
+//!! this file is for browsers and we expect them to cope with it.
