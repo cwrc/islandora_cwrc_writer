@@ -5,6 +5,7 @@ const { merge } = require('webpack-merge');
 const common = require('./webpack.common.js');
 
 module.exports = merge(common, {
+	// devtool: 'inline-cheap-module-source-map',
 	devtool: false,
 	cache: true,
 	performance: { hints: false },
@@ -30,7 +31,14 @@ module.exports = merge(common, {
 		new webpack.EvalSourceMapDevToolPlugin({
 			module: true,
 			columns: true,
-			exclude: [/jquery/, /tinymce.js/, /bootstrap/, /react/, /openseadragon/, /moment/],
+			exclude: [
+				// /jquery/,
+				// /tinymce.js/,
+				// /bootstrap/,
+				/react/,
+				/openseadragon/,
+				/moment/,
+			],
 		}),
 	],
 	devServer: {

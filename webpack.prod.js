@@ -23,8 +23,8 @@ module.exports = merge(common, {
 		minimize: true,
 		minimizer: [
 			new TerserPlugin({
-				cache: true,
-				parallel: true,
+				cache: true, //default
+				parallel: true, // default
 				sourceMap: true, //use sourceMapDevToolPlugin
 			}),
 			new OptimizeCSSAssetsPlugin({}),
