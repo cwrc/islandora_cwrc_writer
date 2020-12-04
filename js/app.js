@@ -25,10 +25,14 @@ cwrc.setProjectLookupConfig({
 
 EntityLookupDialogs.showNoLinkButton(true);
 EntityLookupDialogs.showCreateNewButton(true);
-EntityLookupDialogs.setEntityCollectionsUrl(`${window.location.origin}/islandora/get_entity_collections`);
+EntityLookupDialogs.setEntityCollectionsUrl(
+	`${window.location.origin}/islandora/get_entity_collections`
+);
 EntityLookupDialogs.showEditButton(true);
 EntityLookupDialogs.setEntityFormsRoot(Drupal.settings.CWRCWriter.cwrcDialogs.entityFormsRootUrl);
-EntityLookupDialogs.setCollectionsRoot(Drupal.settings.CWRCWriter.cwrcDialogs.entityFormsCollectionUrl);
+EntityLookupDialogs.setCollectionsRoot(
+	Drupal.settings.CWRCWriter.cwrcDialogs.entityFormsCollectionUrl
+);
 EntityLookupDialogs.registerEntitySources({
 	person: new Map()
 		.set('cwrc', cwrc)
@@ -51,11 +55,8 @@ EntityLookupDialogs.registerEntitySources({
 		.set('cwrc', cwrc)
 		.set('viaf', viaf)
 		.set('wikidata', wikidata)
-        .set('dbpedia', dbpedia),
-    rs: new Map()
-		.set('viaf', viaf)
-		.set('wikidata', wikidata)
-		.set('dbpedia', dbpedia)
+		.set('dbpedia', dbpedia),
+	rs: new Map().set('viaf', viaf).set('wikidata', wikidata).set('dbpedia', dbpedia),
 });
 
 window.Drupal.CWRCWriterDialogs = EntityLookupDialogs;
